@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chepatapa Apps</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #FDF6EF;
+      color: #2B2B2B;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 48px 24px 32px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #9E8E84;
+    }
+
+    main {
+      flex: 1;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      width: 100%;
+    }
+
+    .app-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s;
+    }
+
+    .app-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.10); }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      background: #E8625A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .app-icon span {
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+      font-family: Georgia, serif;
+    }
+
+    .app-info h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .app-info p {
+      font-size: 14px;
+      color: #9E8E84;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .app-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .app-links a {
+      font-size: 13px;
+      color: #E8625A;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .app-links a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #C4B5AC;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chepatapa Apps</h1>
+  </header>
+
+  <main>
+    <div class="app-card">
+      <div class="app-icon"><span>F</span></div>
+      <div class="app-info">
+        <h2>Flare</h2>
+        <p>Hot flash &amp; night sweat tracker. Know why your symptoms happen, not just when.</p>
+        <div class="app-links">
+          <a href="/flare/support">Support</a>
+          <a href="/flare/privacy">Privacy Policy</a>
+          <a href="/flare/terms">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Chepatapa Apps
+  </footer>
+</body>
+</html>

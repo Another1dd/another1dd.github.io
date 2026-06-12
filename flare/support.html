@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flare — Support</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #FDF6EF;
+      color: #2B2B2B;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 40px 24px 0;
+      max-width: 640px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .back {
+      font-size: 14px;
+      color: #E8625A;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 32px;
+    }
+
+    .back:hover { text-decoration: underline; }
+
+    .page-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 13px;
+      background: #E8625A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .app-icon span {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      font-family: Georgia, serif;
+    }
+
+    .page-title h1 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .page-title p {
+      font-size: 14px;
+      color: #9E8E84;
+      margin-top: 2px;
+    }
+
+    main {
+      flex: 1;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      width: 100%;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    .card h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #5C5050;
+      line-height: 1.6;
+    }
+
+    .card a {
+      color: #E8625A;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .card a:hover { text-decoration: underline; }
+
+    .faq-item { margin-bottom: 24px; }
+    .faq-item:last-child { margin-bottom: 0; }
+
+    .faq-item h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .faq-item p {
+      font-size: 14px;
+      color: #5C5050;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #C4B5AC;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back" href="/">&#8592; Chepatapa Apps</a>
+    <div class="page-title">
+      <div class="app-icon"><span>F</span></div>
+      <div>
+        <h1>Flare Support</h1>
+        <p>Hot Flash &amp; Night Sweat Tracker</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p>Have a question, found a bug, or need help with Flare? Email us at<br>
+        <a href="mailto:tsimafei.lemeshchanka@gmail.com?subject=Flare%20App%20%E2%80%94%20Support">tsimafei.lemeshchanka@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Is my data private?</h3>
+        <p>Yes. All data is stored locally on your device only. We never collect, transmit, or share your health data. No account is required.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I log a hot flash?</h3>
+        <p>Tap the "+ Log a Flash" button on the main screen. You can record intensity, duration, triggers, and notes. It takes under 30 seconds.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>When do I see my trigger insights?</h3>
+        <p>The Insights screen shows your personal trigger correlations after logging several episodes. The more you log, the more accurate your pattern report becomes.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I delete an entry?</h3>
+        <p>Tap any entry in the log to open it in edit mode. Scroll to the bottom and tap "Delete Entry".</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What happens if I delete the app?</h3>
+        <p>All your data will be deleted with the app. We recommend exporting your data before uninstalling if you want to keep a record.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is Flare available on Android?</h3>
+        <p>Currently iOS only. Android is on our roadmap.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Chepatapa Apps &middot; <a href="/flare/privacy" style="color:#C4B5AC">Privacy Policy</a> &middot; <a href="/flare/terms" style="color:#C4B5AC">Terms of Use</a>
+  </footer>
+</body>
+</html>
