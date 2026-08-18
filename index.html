@@ -112,13 +112,12 @@
   </header>
 
   <main>
-    <div class="app-card">
+    <div class="app-card" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.location = '/flare/';">
       <div class="app-icon"><span>F</span></div>
       <div class="app-info">
         <h2>Flare</h2>
         <p>Hot flash &amp; night sweat tracker. Know why your symptoms happen, not just when.</p>
         <div class="app-links">
-          <a href="/flare/">Visit Site &#8594;</a>
           <a href="/flare/support">Support</a>
           <a href="/flare/privacy">Privacy Policy</a>
           <a href="/flare/terms">Terms of Use</a>
