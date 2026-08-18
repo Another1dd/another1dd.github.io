@@ -7,6 +7,13 @@
   <meta name="description" content="Flare logs your hot flashes and night sweats, then shows which triggers — caffeine, alcohol, stress, spicy food, hot rooms — actually correlate with your episodes. Free, private, no account, nothing leaves your phone.">
   <link rel="canonical" href="https://another1dd.github.io/flare/">
 
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+
   <meta property="og:type" content="website">
   <meta property="og:title" content="Flare — Hot Flash & Night Sweat Tracker">
   <meta property="og:description" content="Find out which triggers actually cause your hot flashes, instead of guessing. Free, private, no account.">
@@ -27,10 +34,51 @@
     "@context": "https://schema.org",
     "@type": "MobileApplication",
     "name": "Flare",
+    "url": "https://another1dd.github.io/flare/",
+    "image": "https://another1dd.github.io/flare/assets/icon-1024.png",
+    "screenshot": [
+      "https://another1dd.github.io/flare/assets/screenshot-insights.png",
+      "https://another1dd.github.io/flare/assets/screenshot-add.png",
+      "https://another1dd.github.io/flare/assets/screenshot-log.png"
+    ],
     "operatingSystem": "iOS",
     "applicationCategory": "HealthApplication",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "description": "Hot flash and night sweat tracker that shows which triggers correlate with your episodes."
+    "description": "Hot flash and night sweat tracker that shows which triggers correlate with your episodes.",
+    "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What triggers hot flashes the most?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alcohol (especially red wine), caffeine, hot beverages regardless of caffeine content, spicy food, high-sodium or MSG-heavy meals, histamine-rich foods, and sugar are commonly reported triggers. Which ones actually apply to you is personal, which is why logging episodes against what preceded them is more reliable than a general list."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you get hot flashes without menopause?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. An overactive thyroid, anxiety or panic disorder, certain medications like niacin, and an ALDH2 alcohol-flush sensitivity can all cause similar sudden heat and flushing independent of menopause."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Flare free and does it require an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Flare is free, requires no account or sign-up, and stores every entry locally on the device only — nothing is sent to a server."
+        }
+      }
+    ]
   }
   </script>
 
@@ -114,7 +162,9 @@
     }
 
     .store-badge img {
-      height: 54px;
+      height: 48px;
+      width: 162px;
+      object-fit: contain;
       display: block;
     }
 
@@ -229,7 +279,7 @@
 
   <main>
     <section class="hero">
-      <img class="icon" src="assets/icon-1024.png" alt="Flare app icon">
+      <img class="icon" src="assets/icon-1024.png" alt="Flare app icon" width="1024" height="1024">
       <h1>Find out what actually triggers your hot flashes</h1>
       <p class="tagline">
         Flare logs each hot flash or night sweat along with what might have caused it —
@@ -256,9 +306,9 @@
         not apply to you.
       </p>
       <div class="screens">
-        <img src="assets/screenshot-insights.png" alt="Flare trigger correlation report screen" loading="lazy">
-        <img src="assets/screenshot-add.png" alt="Flare log a hot flash screen with trigger tags" loading="lazy">
-        <img src="assets/screenshot-log.png" alt="Flare entries log screen" loading="lazy">
+        <img src="assets/screenshot-insights.png" alt="Flare trigger correlation report screen" width="1320" height="2868" loading="lazy">
+        <img src="assets/screenshot-add.png" alt="Flare log a hot flash screen with trigger tags" width="1320" height="2868" loading="lazy">
+        <img src="assets/screenshot-log.png" alt="Flare entries log screen" width="1320" height="2868" loading="lazy">
       </div>
     </section>
 
@@ -307,6 +357,10 @@
             sensitivity can all cause similar flushing on their own.</p>
         </div>
       </div>
+      <p style="font-size:13px;color:#9E8E84;margin-top:16px;margin-bottom:0;">
+        General information, not medical advice. If your pattern doesn't match what you'd expect,
+        bring your logged data to a doctor rather than self-diagnosing from a list.
+      </p>
     </section>
 
     <section class="card">

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://another1dd.github.io/sitemap.xml
