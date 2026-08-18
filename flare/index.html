@@ -98,37 +98,25 @@
 
     .cta-row {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
       justify-content: center;
-    }
-
-    .btn {
-      display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 12px 22px;
-      border-radius: 12px;
-      font-size: 15px;
-      font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
+    }
+
+    .store-badge {
+      display: inline-block;
       border: none;
-      font-family: inherit;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      line-height: 0;
     }
 
-    .btn-primary {
-      background: #E8625A;
-      color: #fff;
+    .store-badge img {
+      height: 54px;
+      display: block;
     }
-    .btn-primary:hover { background: #D9534A; }
-
-    .btn-secondary {
-      background: #fff;
-      color: #2B2B2B;
-      border: 1px solid #E4D9CF;
-    }
-    .btn-secondary:hover { background: #F5EDE4; }
 
     .badge {
       font-size: 12px;
@@ -249,8 +237,12 @@
         ones actually correlate with your episodes, instead of guessing.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://apps.apple.com/app/id6776996876" id="ios-cta">Download on the App Store</a>
-        <button class="btn btn-secondary" id="android-cta">Get it on Google Play</button>
+        <a class="store-badge" href="https://apps.apple.com/app/id6776996876" id="ios-cta">
+          <img src="assets/app-store-badge.svg" alt="Download on the App Store">
+        </a>
+        <button class="store-badge" id="android-cta">
+          <img src="assets/google-play-badge.svg" alt="Get it on Google Play">
+        </button>
       </div>
       <p class="badge">Free &middot; No account &middot; Nothing leaves your phone</p>
     </section>
