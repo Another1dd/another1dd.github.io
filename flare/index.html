@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flare — Hot Flash & Night Sweat Tracker That Finds Your Triggers</title>
+  <meta name="description" content="Flare logs your hot flashes and night sweats, then shows which triggers — caffeine, alcohol, stress, spicy food, hot rooms — actually correlate with your episodes. Free, private, no account, nothing leaves your phone.">
+  <link rel="canonical" href="https://another1dd.github.io/flare/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Flare — Hot Flash & Night Sweat Tracker">
+  <meta property="og:description" content="Find out which triggers actually cause your hot flashes, instead of guessing. Free, private, no account.">
+  <meta property="og:url" content="https://another1dd.github.io/flare/">
+  <meta property="og:image" content="https://another1dd.github.io/flare/assets/icon-1024.png">
+  <meta name="twitter:card" content="summary">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKP79Q00ES"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-SKP79Q00ES');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Flare",
+    "operatingSystem": "iOS",
+    "applicationCategory": "HealthApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Hot flash and night sweat tracker that shows which triggers correlate with your episodes."
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #FDF6EF;
+      color: #2B2B2B;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3 { font-family: Georgia, serif; }
+
+    header {
+      padding: 40px 24px 0;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back {
+      font-size: 14px;
+      color: #E8625A;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back:hover { text-decoration: underline; }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 0 32px;
+    }
+
+    .hero img.icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(232,98,90,0.25);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .hero p.tagline {
+      font-size: 17px;
+      color: #5C5050;
+      line-height: 1.6;
+      max-width: 480px;
+      margin-bottom: 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: #E8625A;
+      color: #fff;
+    }
+    .btn-primary:hover { background: #D9534A; }
+
+    .btn-secondary {
+      background: #fff;
+      color: #2B2B2B;
+      border: 1px solid #E4D9CF;
+    }
+    .btn-secondary:hover { background: #F5EDE4; }
+
+    .badge {
+      font-size: 12px;
+      color: #9E8E84;
+      margin-top: 10px;
+    }
+
+    section.card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    section.card h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    section.card p {
+      font-size: 15px;
+      color: #5C5050;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .screens {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 8px 0 16px;
+      margin: 8px -8px 0;
+    }
+    .screens img {
+      height: 420px;
+      border-radius: 18px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+
+    .trigger-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .trigger-item h3 {
+      font-size: 15px;
+      color: #E8625A;
+      margin-bottom: 6px;
+    }
+    .trigger-item p {
+      font-size: 14px;
+      color: #5C5050;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #C4B5AC;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    footer a { color: #C4B5AC; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* Android "coming soon" modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(43,43,43,0.45);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 10;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      max-width: 360px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    }
+    .modal-box h3 { font-size: 18px; margin-bottom: 10px; }
+    .modal-box p { font-size: 14px; color: #5C5050; line-height: 1.6; margin-bottom: 20px; }
+    .modal-box button {
+      background: #E8625A;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back" href="/">&#8592; Chepatapa Apps</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="icon" src="assets/icon-1024.png" alt="Flare app icon">
+      <h1>Find out what actually triggers your hot flashes</h1>
+      <p class="tagline">
+        Flare logs each hot flash or night sweat along with what might have caused it —
+        caffeine, alcohol, stress, poor sleep, spicy food, hot rooms — then shows you which
+        ones actually correlate with your episodes, instead of guessing.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://apps.apple.com/app/id6776996876" id="ios-cta">Download on the App Store</a>
+        <button class="btn btn-secondary" id="android-cta">Get it on Google Play</button>
+      </div>
+      <p class="badge">Free &middot; No account &middot; Nothing leaves your phone</p>
+    </section>
+
+    <section class="card">
+      <h2>See your pattern, not just your log</h2>
+      <p>
+        Most trackers only tell you when a flash happened. Flare tracks what came before it too,
+        and after a few days of logging builds a correlation report showing which triggers show
+        up most often — so you can act on your own pattern instead of general advice that may
+        not apply to you.
+      </p>
+      <div class="screens">
+        <img src="assets/screenshot-insights.png" alt="Flare trigger correlation report screen" loading="lazy">
+        <img src="assets/screenshot-add.png" alt="Flare log a hot flash screen with trigger tags" loading="lazy">
+        <img src="assets/screenshot-log.png" alt="Flare entries log screen" loading="lazy">
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Common hot flash triggers</h2>
+      <p>Everyone's trigger list looks a little different, but these come up the most:</p>
+      <div class="trigger-grid">
+        <div class="trigger-item">
+          <h3>Alcohol, especially red wine</h3>
+          <p>Alcohol widens blood vessels near the skin (vasodilation), which produces that
+            sudden flush of heat.</p>
+        </div>
+        <div class="trigger-item">
+          <h3>Caffeine</h3>
+          <p>Stimulates the same adrenergic pathways involved in your body's temperature
+            response — separate from any effect of hot liquid itself.</p>
+        </div>
+        <div class="trigger-item">
+          <h3>Hot beverages, even decaf</h3>
+          <p>Tea, coffee, or soup can trigger a flash purely from temperature, independent of
+            caffeine content.</p>
+        </div>
+        <div class="trigger-item">
+          <h3>Spicy food</h3>
+          <p>Capsaicin activates heat-sensing receptors that overlap with the pathways involved
+            in a hot flash.</p>
+        </div>
+        <div class="trigger-item">
+          <h3>High-sodium and MSG-heavy meals</h3>
+          <p>Takeout, processed soups, and cured meats are often reported, likely tied to fluid
+            shifts rather than heat directly.</p>
+        </div>
+        <div class="trigger-item">
+          <h3>Histamine-rich foods</h3>
+          <p>Aged cheese, cured meats, fermented foods, and red wine can trigger a reaction
+            separate from alcohol content alone.</p>
+        </div>
+        <div class="trigger-item">
+          <h3>Sugar and refined carbs</h3>
+          <p>Less about heat directly, more about a blood sugar swing feeding into the same
+            stress response.</p>
+        </div>
+        <div class="trigger-item">
+          <h3>Non-menopause causes</h3>
+          <p>An overactive thyroid, anxiety, certain medications (niacin), and an ALDH2 alcohol
+            sensitivity can all cause similar flushing on their own.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Private by design</h2>
+      <p>
+        No account, no server, no sign-up. Every entry stays on your device. Flare was built
+        this way from day one — your health data is yours, not a data set.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Chepatapa Apps &middot;
+    <a href="/flare/privacy">Privacy Policy</a> &middot;
+    <a href="/flare/terms">Terms of Use</a> &middot;
+    <a href="/flare/support">Support</a>
+  </footer>
+
+  <div class="modal-overlay" id="android-modal">
+    <div class="modal-box">
+      <h3>Coming to Google Play</h3>
+      <p>Flare is iOS-only for now. An Android version is on the roadmap — thanks for the interest, it genuinely helps prioritize it.</p>
+      <button id="android-modal-close">Got it</button>
+    </div>
+  </div>
+
+  <script>
+    function trackEvent(name) {
+      if (typeof gtag === 'function') gtag('event', name);
+    }
+
+    document.getElementById('ios-cta').addEventListener('click', function () {
+      trackEvent('ios_cta_click');
+    });
+
+    var modal = document.getElementById('android-modal');
+    document.getElementById('android-cta').addEventListener('click', function () {
+      trackEvent('android_interest_click');
+      modal.classList.add('open');
+    });
+    document.getElementById('android-modal-close').addEventListener('click', function () {
+      modal.classList.remove('open');
+    });
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) modal.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
