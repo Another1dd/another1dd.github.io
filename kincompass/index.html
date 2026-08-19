@@ -297,6 +297,9 @@
         <button class="store-badge" id="ios-cta">
           <img src="assets/app-store-badge.svg" alt="Download on the App Store">
         </button>
+        <button class="store-badge" id="android-cta">
+          <img src="assets/google-play-badge.svg" alt="Get it on Google Play">
+        </button>
       </div>
       <p class="badge">Free &middot; No account &middot; Nothing leaves your phone</p>
     </section>
@@ -403,16 +406,35 @@
     </div>
   </div>
 
+  <div class="modal-overlay" id="android-modal">
+    <div class="modal-box">
+      <h3>Coming to Google Play</h3>
+      <p>Kin Compass is iOS-only for now, with iOS currently in App Store review. An Android version is planned next — thanks for the interest, it genuinely helps prioritize it.</p>
+      <button id="android-modal-close">Got it</button>
+    </div>
+  </div>
+
   <script>
-    var modal = document.getElementById('ios-modal');
+    var iosModal = document.getElementById('ios-modal');
     document.getElementById('ios-cta').addEventListener('click', function () {
-      modal.classList.add('open');
+      iosModal.classList.add('open');
     });
     document.getElementById('ios-modal-close').addEventListener('click', function () {
-      modal.classList.remove('open');
+      iosModal.classList.remove('open');
     });
-    modal.addEventListener('click', function (e) {
-      if (e.target === modal) modal.classList.remove('open');
+    iosModal.addEventListener('click', function (e) {
+      if (e.target === iosModal) iosModal.classList.remove('open');
+    });
+
+    var androidModal = document.getElementById('android-modal');
+    document.getElementById('android-cta').addEventListener('click', function () {
+      androidModal.classList.add('open');
+    });
+    document.getElementById('android-modal-close').addEventListener('click', function () {
+      androidModal.classList.remove('open');
+    });
+    androidModal.addEventListener('click', function (e) {
+      if (e.target === androidModal) androidModal.classList.remove('open');
     });
   </script>
 </body>
