@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kin Compass — ADHD Parenting Routines &amp; Scripts</title>
+  <meta name="description" content="Kin Compass gives parents of ADHD preschoolers ready-made routines and calm scripts for tantrums and transitions. Free, private, no account required.">
+  <link rel="canonical" href="https://another1dd.github.io/kincompass/">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kin Compass — ADHD Parenting Routines & Scripts">
+  <meta property="og:description" content="Ready-made routines and calm scripts for tantrums and transitions, for parents of ADHD preschoolers. Free, private, no account.">
+  <meta property="og:url" content="https://another1dd.github.io/kincompass/">
+  <meta property="og:image" content="https://another1dd.github.io/kincompass/assets/icon-1024.png">
+  <meta name="twitter:card" content="summary">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Kin Compass",
+    "url": "https://another1dd.github.io/kincompass/",
+    "image": "https://another1dd.github.io/kincompass/assets/icon-1024.png",
+    "screenshot": [
+      "https://another1dd.github.io/kincompass/assets/screenshot-today.png",
+      "https://another1dd.github.io/kincompass/assets/screenshot-routine.png",
+      "https://another1dd.github.io/kincompass/assets/screenshot-script.png",
+      "https://another1dd.github.io/kincompass/assets/screenshot-wins.png"
+    ],
+    "operatingSystem": "iOS",
+    "applicationCategory": "HealthApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Ready-made daily routines and communication scripts for parents of preschoolers with ADHD.",
+    "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What ages is Kin Compass designed for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kin Compass is built for parents of preschoolers ages 3–5 with an ADHD diagnosis or going through an evaluation. The routines and scripts are written for that specific stage, not adapted from a general kids' planner."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an account, and is my child's information private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No account or sign-up. Every routine, script, and win stays on your device — nothing about your child is ever sent to a server."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Kin Compass available yet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kin Compass is finished and currently completing Apple's App Store review. It'll be live very soon — tap the App Store button above for the latest status."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #FDF6EF;
+      color: #2B2B2B;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3 { font-family: Georgia, serif; }
+
+    header {
+      padding: 40px 24px 0;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back {
+      font-size: 14px;
+      color: #4F8A6E;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back:hover { text-decoration: underline; }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 0 32px;
+    }
+
+    .hero img.icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(79,138,110,0.25);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .hero p.tagline {
+      font-size: 17px;
+      color: #5C5050;
+      line-height: 1.6;
+      max-width: 480px;
+      margin-bottom: 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .store-badge {
+      display: inline-block;
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      line-height: 0;
+    }
+
+    .store-badge img {
+      height: 48px;
+      width: 162px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .badge {
+      font-size: 12px;
+      color: #9E8E84;
+      margin-top: 10px;
+    }
+
+    section.card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    section.card h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    section.card p {
+      font-size: 15px;
+      color: #5C5050;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .screens {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 8px 0 16px;
+      margin: 8px -8px 0;
+    }
+    .screens img {
+      height: 420px;
+      width: auto;
+      border-radius: 18px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .feature-item h3 {
+      font-size: 15px;
+      color: #4F8A6E;
+      margin-bottom: 6px;
+    }
+    .feature-item p {
+      font-size: 14px;
+      color: #5C5050;
+      line-height: 1.6;
+    }
+
+    .faq-item h3 {
+      font-size: 16px;
+      color: #4F8A6E;
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+
+    .faq-item p {
+      font-size: 14px;
+      color: #5C5050;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #C4B5AC;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    footer a { color: #C4B5AC; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* "In review" modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(43,43,43,0.45);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 10;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      max-width: 360px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    }
+    .modal-box h3 { font-size: 18px; margin-bottom: 10px; }
+    .modal-box p { font-size: 14px; color: #5C5050; line-height: 1.6; margin-bottom: 20px; }
+    .modal-box button {
+      background: #4F8A6E;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back" href="/">&#8592; Chepatapa Apps</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="icon" src="assets/icon-1024.png" alt="Kin Compass app icon" width="1024" height="1024">
+      <h1>Know what to do next with your ADHD preschooler</h1>
+      <p class="tagline">
+        Kin Compass gives parents of preschoolers (ages 3–5) with ADHD ready-made daily
+        routines and step-by-step scripts for tantrums, transitions, and refusals — plus a
+        simple way to track what worked.
+      </p>
+      <div class="cta-row">
+        <button class="store-badge" id="ios-cta">
+          <img src="assets/app-store-badge.svg" alt="Download on the App Store">
+        </button>
+      </div>
+      <p class="badge">Free &middot; No account &middot; Nothing leaves your phone</p>
+    </section>
+
+    <section class="card">
+      <h2>A calm plan for the hardest moments</h2>
+      <p>
+        Most planners hand you a blank template and leave you to fill it in. Kin Compass
+        starts with ready-made routines built for how an ADHD preschooler actually moves
+        through the day, and scripts for the exact words to say when things fall apart —
+        so you're never freezing in the moment.
+      </p>
+      <div class="screens">
+        <img src="assets/screenshot-today.png" alt="Kin Compass today dashboard showing the current routine and next steps" width="1320" height="2868" loading="lazy">
+        <img src="assets/screenshot-routine.png" alt="Kin Compass routine templates screen with morning, daycare, dinner, and bedtime routines" width="1320" height="2868" loading="lazy">
+        <img src="assets/screenshot-script.png" alt="Kin Compass what to say screen with communication scripts for meltdowns" width="1320" height="2868" loading="lazy">
+        <img src="assets/screenshot-wins.png" alt="Kin Compass wins screen tracking what worked this week" width="1320" height="2868" loading="lazy">
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What's inside</h2>
+      <p>Everything a first-time ADHD parent needs, nothing you have to build yourself:</p>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h3>Ready-made routines</h3>
+          <p>Morning, daycare, dinner, bedtime — visual step cards built for how an ADHD
+            preschooler moves through the day. Edit, reorder, and save your own.</p>
+        </div>
+        <div class="feature-item">
+          <h3>"What to say" scripts</h3>
+          <p>The exact words for tantrums, transitions, and refusals, plus the why behind
+            each one, grounded in behavioral therapy.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Alarm reminders</h3>
+          <p>Reliable alerts for every routine step, not silent notifications you'll miss.
+            Set quiet hours so bedtime stays calm.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Win tracking</h3>
+          <p>Log what worked in one tap. Small wins add up and push back against burnout.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Tips &amp; resources</h3>
+          <p>Short, practical reads on meltdowns, sleep, screen time, and transitions.</p>
+        </div>
+      </div>
+      <p style="font-size:13px;color:#9E8E84;margin-top:16px;margin-bottom:0;">
+        General information, not a substitute for professional guidance. If your child's
+        needs go beyond what a routine or script can address, bring what you've logged to
+        their pediatrician or therapist.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Private by design</h2>
+      <p>
+        No account, no server, no sign-up. Every routine, script, and win stays on your
+        device. Kin Compass was built this way from day one — your child's information is
+        yours, never a data set.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-item">
+        <h3>What ages is Kin Compass designed for?</h3>
+        <p>
+          Kin Compass is built for parents of preschoolers ages 3–5 with an ADHD diagnosis
+          or going through an evaluation. The routines and scripts are written for that
+          specific stage, not adapted from a general kids' planner.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need an account, and is my child's information private?</h3>
+        <p>
+          No account or sign-up. Every routine, script, and win stays on your device —
+          nothing about your child is ever sent to a server.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3>Is Kin Compass available yet?</h3>
+        <p>
+          Kin Compass is finished and currently completing Apple's App Store review. It'll
+          be live very soon — tap the App Store button above for the latest status.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Chepatapa Apps &middot;
+    <a href="/kincompass/privacy">Privacy Policy</a> &middot;
+    <a href="/kincompass/terms">Terms of Use</a> &middot;
+    <a href="/kincompass/support">Support</a>
+  </footer>
+
+  <div class="modal-overlay" id="ios-modal">
+    <div class="modal-box">
+      <h3>Coming to the App Store</h3>
+      <p>Kin Compass is finished and currently in Apple's review queue — it'll be live very soon. Thanks for your interest, it genuinely helps to know people are waiting.</p>
+      <button id="ios-modal-close">Got it</button>
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById('ios-modal');
+    document.getElementById('ios-cta').addEventListener('click', function () {
+      modal.classList.add('open');
+    });
+    document.getElementById('ios-modal-close').addEventListener('click', function () {
+      modal.classList.remove('open');
+    });
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) modal.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
