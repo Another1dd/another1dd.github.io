@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="ZXLJsdxUxTmoqbbwLorggpEP5Yp06xNDV9qlrpCvVac" />
-  <meta name="description" content="Chepatapa Apps builds Flare, a hot flash and night sweat tracker for menopause, and Kin Compass, a routines app for parents of preschoolers with ADHD.">
-  <title>Chepatapa Apps — Flare &amp; Kin Compass</title>
+  <meta name="description" content="Chepatapa Apps builds mobile apps (Flare, Kin Compass) and developer SaaS tools (Perchly, Publy).">
+  <title>Chepatapa Apps — Mobile Apps &amp; SaaS Tools</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
@@ -36,6 +36,19 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #9E8E84;
+    }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #9E8E84;
+      margin-bottom: 12px;
+    }
+
+    .section-label:not(:first-child) {
+      margin-top: 40px;
     }
 
     main {
@@ -77,6 +90,10 @@
       font-weight: 700;
       color: #fff;
       font-family: Georgia, serif;
+    }
+
+    .app-icon span.wide {
+      font-size: 24px;
     }
 
     .app-info h2 {
@@ -121,6 +138,8 @@
   </header>
 
   <main>
+    <h2 class="section-label">Mobile Apps</h2>
+
     <div class="app-card" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.location = '/flare/';">
       <div class="app-icon"><span>F</span></div>
       <div class="app-info">
@@ -146,6 +165,24 @@
         </div>
       </div>
     </div>
+
+    <h2 class="section-label">SaaS Products</h2>
+
+    <a class="app-card" href="https://perchly.dev" target="_blank" rel="noopener">
+      <div class="app-icon" style="background: #FF7A3D;"><span class="wide">Pe</span></div>
+      <div class="app-info">
+        <h2>Perchly</h2>
+        <p>Private Swift Package Manager registry for teams. Ship internal packages without going public.</p>
+      </div>
+    </a>
+
+    <a class="app-card" href="https://publy.dev" target="_blank" rel="noopener" style="margin-top: 16px;">
+      <div class="app-icon" style="background: #22D3EE;"><span class="wide">Pu</span></div>
+      <div class="app-info">
+        <h2>Publy</h2>
+        <p>Private Dart &amp; Flutter package registry for teams. The pub.dev alternative that stays private.</p>
+      </div>
+    </a>
   </main>
 
   <footer>
