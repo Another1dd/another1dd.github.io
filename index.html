@@ -92,10 +92,6 @@
       font-family: Georgia, serif;
     }
 
-    .app-icon span.wide {
-      font-size: 24px;
-    }
-
     .app-info h2 {
       font-size: 20px;
       font-weight: 700;
@@ -168,21 +164,44 @@
 
     <h2 class="section-label">SaaS Products</h2>
 
-    <a class="app-card" href="https://perchly.dev" target="_blank" rel="noopener">
-      <div class="app-icon" style="background: #FF7A3D;"><span class="wide">Pe</span></div>
+    <div class="app-card" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://perchly.dev', '_blank');">
+      <div class="app-icon" style="background: transparent;">
+        <svg width="72" height="72" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="256" height="256" rx="64" fill="#1A1A24"/>
+          <rect x="44" y="168" width="168" height="16" rx="8" fill="#C2571E"/>
+          <circle cx="168" cy="140" r="36" fill="#FF7A3D"/>
+          <circle cx="76" cy="162" r="14" fill="#F8F8FC"/>
+        </svg>
+      </div>
       <div class="app-info">
         <h2>Perchly</h2>
         <p>Private Swift Package Manager registry for teams. Ship internal packages without going public.</p>
+        <div class="app-links">
+          <a href="https://perchly.dev/login" target="_blank" rel="noopener">Get Started</a>
+          <a href="https://perchly.dev/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+          <a href="https://perchly.dev/terms" target="_blank" rel="noopener">Terms of Use</a>
+        </div>
       </div>
-    </a>
+    </div>
 
-    <a class="app-card" href="https://publy.dev" target="_blank" rel="noopener" style="margin-top: 16px;">
-      <div class="app-icon" style="background: #22D3EE;"><span class="wide">Pu</span></div>
+    <div class="app-card" style="margin-top: 16px; cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://publy.dev', '_blank');">
+      <div class="app-icon" style="background: transparent;">
+        <svg width="72" height="72" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28" rx="6" fill="#0a161f"/>
+          <circle cx="9" cy="20" r="2.5" fill="#22d3ee"/>
+          <path d="M9 20L20 9M20 9H14M20 9V15" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
       <div class="app-info">
         <h2>Publy</h2>
         <p>Private Dart &amp; Flutter package registry for teams. The pub.dev alternative that stays private.</p>
+        <div class="app-links">
+          <a href="https://publy.dev/login" target="_blank" rel="noopener">Get Started</a>
+          <a href="https://publy.dev/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+          <a href="https://publy.dev/terms" target="_blank" rel="noopener">Terms of Use</a>
+        </div>
       </div>
-    </a>
+    </div>
   </main>
 
   <footer>
