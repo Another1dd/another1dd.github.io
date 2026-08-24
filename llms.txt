@@ -1,0 +1,20 @@
+# Chepatapa Apps
+
+> Independent studio building small, privacy-first mobile apps and developer tools. Built and maintained by one developer, Tsimafei Lemeshchanka, largely with an AI-assisted (Claude Code) workflow.
+
+## Mobile apps
+
+- [Flare](https://another1dd.github.io/flare/): Hot flash and night sweat tracker for menopause. Logs each episode against possible triggers (caffeine, alcohol, stress, spicy food, hot rooms) and shows which ones actually correlate with your episodes, instead of guessing. Free, no account, local-only storage. Live on the iOS App Store.
+- [Kin Compass](https://another1dd.github.io/kincompass/): Daily routines and communication scripts for parents of preschoolers (ages 3-5) with ADHD. Ready-made routines, "what to say" scripts for tantrums/transitions/refusals, and win tracking. Free, no account, local-only storage. Submitted for iOS App Store review.
+- [Bloomelle](https://another1dd.github.io/bloomelle/): Menstrual cycle-phase planning coach — forecasts the coming week and suggests which days may suit workouts, focus work, big decisions, or rest. Explicitly not a symptom tracker. Currently in development, no fixed release date yet.
+
+## Developer tools (SaaS)
+
+- [Perchly](https://perchly.dev): Private Swift Package Manager registry for teams, built on the real SE-0292 package registry protocol (not a proxy or git wrapper). Free tier plus paid Starter/Team plans.
+- [Publy](https://publy.dev): Private Dart and Flutter package registry for teams — the pub.dev alternative that stays private. Free tier plus paid plans.
+
+## About
+
+- [Build log](https://another1dd.github.io/build-log/): How these five products get built by one developer sharing a single Flutter SDK, and the AI-assisted workflow behind them.
+- [GitHub](https://github.com/Another1dd)
+- [LinkedIn](https://www.linkedin.com/in/timophei-lemeshchenko/)

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How Chepatapa Apps' five products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.">
+  <meta name="color-scheme" content="light dark">
+  <title>Build Log — Chepatapa Apps</title>
+  <link rel="canonical" href="https://another1dd.github.io/build-log/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Build Log — Chepatapa Apps">
+  <meta property="og:description" content="How five products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.">
+  <meta property="og:url" content="https://another1dd.github.io/build-log/">
+  <meta property="og:image" content="https://another1dd.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Chepatapa Apps gets built",
+    "url": "https://another1dd.github.io/build-log/",
+    "datePublished": "2026-08-24",
+    "dateModified": "2026-08-24",
+    "author": { "@type": "Person", "name": "Tsimafei Lemeshchanka", "url": "https://github.com/Another1dd" },
+    "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @view-transition {
+      navigation: auto;
+    }
+
+    :root {
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84;
+      --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #9E6B4A;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#1E1815; --surface:#2A231F; --text:#F3EAE2; --text-muted:#C7B8AC; --text-faint:#9C8B7D; --text-faintest:#7A6C60; --border:rgba(255,255,255,0.08); --shadow:rgba(0,0,0,0.35); --accent:#D9A46F; }
+    }
+    [data-theme="dark"] {
+      --bg: #1E1815; --surface: #2A231F; --text: #F3EAE2; --text-muted: #C7B8AC; --text-faint: #9C8B7D; --text-faintest: #7A6C60; --border: rgba(255,255,255,0.08); --shadow: rgba(0,0,0,0.35); --accent: #D9A46F;
+    }
+    [data-theme="light"] {
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84; --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #9E6B4A;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    h1, h2 { font-family: 'Fraunces', Georgia, serif; }
+
+    .theme-toggle {
+      position: fixed; top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+      display: flex; align-items: center; justify-content: center; cursor: pointer;
+      box-shadow: 0 2px 10px var(--shadow); transition: transform 0.2s ease; z-index: 20;
+    }
+    .theme-toggle:hover { transform: scale(1.06); }
+    .theme-toggle svg { width: 18px; height: 18px; stroke: var(--text); }
+    .theme-toggle .icon-moon { display: none; }
+    @media (prefers-color-scheme: dark) {
+      .theme-toggle .icon-sun { display: none; }
+      .theme-toggle .icon-moon { display: block; }
+    }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+    [data-theme="light"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
+    header {
+      padding: 40px 24px 0;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .back {
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back:hover { text-decoration: underline; }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .hero {
+      padding: 32px 0 8px;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero p.dek {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    section.card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+
+    section.card h2 {
+      font-size: 21px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    section.card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    section.card p:last-child { margin-bottom: 0; }
+
+    section.card a { color: var(--accent); }
+
+    .timeline {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .timeline li {
+      display: flex;
+      gap: 16px;
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .timeline li:first-child { border-top: none; padding-top: 0; }
+
+    .timeline time {
+      flex-shrink: 0;
+      width: 88px;
+      font-size: 13px;
+      color: var(--text-faint);
+      padding-top: 2px;
+    }
+
+    .timeline .entry p {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    .timeline .entry span.tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-top: 2px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-faintest);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+  </button>
+
+  <header>
+    <a class="back" href="/">&#8592; Chepatapa Apps</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>How this all gets built</h1>
+      <p class="dek">
+        Five products, one developer, one shared codebase underneath. Notes on how Flare, Kin
+        Compass, Bloomelle, Perchly, and Publy actually get made — updated as things ship.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>One developer, five products</h2>
+      <p>
+        Chepatapa Apps isn't a company in any formal sense — it's Tsimafei Lemeshchanka building
+        small, focused apps and developer tools solo, alongside a full-time job. Flare (hot flash
+        tracking) and Kin Compass (ADHD parenting routines) are consumer iOS apps; Perchly and
+        Publy are private package registries for Swift and Dart/Flutter teams; Bloomelle (cycle-phase
+        planning) is the newest, still in development.
+      </p>
+      <p>
+        The apps are deliberately small in scope — no team, no funding, no roadmap beyond "does
+        this solve a real problem for a specific person." Perchly and Publy exist because Publy's
+        own team/org/billing layer turned out to be almost entirely reusable for a second,
+        unrelated package-registry protocol.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>One SDK, not five codebases</h2>
+      <p>
+        Flare, Kin Compass, and Bloomelle share <code>another1DD_flutter_sdk</code>, a local
+        package monorepo with the Redux state container, dependency injection wiring, navigation,
+        theming, and localization every app needs. Kin Compass started as a literal clone of
+        Flare's skeleton with the hot-flash domain code stripped out; Bloomelle was scaffolded the
+        same way from Flare a few months later. New apps start from a working, battle-tested
+        foundation instead of a blank Flutter project.
+      </p>
+      <p>
+        Perchly and Publy follow the same idea on the web side: Perchly's org/auth/billing layer
+        was ported from Publy's, because a private package registry's account and subscription
+        model doesn't actually depend on whether it's serving Swift packages or Dart packages.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Built with Claude Code</h2>
+      <p>
+        Most of the day-to-day implementation across all five projects — and this site — is done
+        with Claude Code. Each feature starts as a written spec and plan checked into the repo
+        before any code exists, gets implemented against that plan, and goes through an
+        adversarial review pass looking specifically for what the plan or the implementation got
+        wrong, before it's considered done. That discipline is what makes solo development at
+        this pace hold together — the spec is the source of truth, not memory of what was decided
+        three weeks ago.
+      </p>
+      <p>
+        It doesn't replace product decisions or judgment calls — positioning, what not to build,
+        what a screen should actually say — those stay human. It replaces the hours of
+        boilerplate and repetition that used to be the real cost of running five codebases alone.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Timeline</h2>
+      <ul class="timeline">
+        <li>
+          <time datetime="2026-05-18">May 2026</time>
+          <div class="entry"><p>Flare started.</p></div>
+        </li>
+        <li>
+          <time datetime="2026-06-12">Jun 2026</time>
+          <div class="entry"><p>This site goes up.</p></div>
+        </li>
+        <li>
+          <time datetime="2026-06-29">Jun 2026</time>
+          <div class="entry"><p>Kin Compass started, cloned from Flare's skeleton.</p></div>
+        </li>
+        <li>
+          <time datetime="2026-07-16">Jul 2026</time>
+          <div class="entry"><p>Publy started.</p></div>
+        </li>
+        <li>
+          <time datetime="2026-07-30">Jul 2026</time>
+          <div class="entry"><p>Perchly started, reusing Publy's org/auth/billing layer.</p></div>
+        </li>
+        <li>
+          <time datetime="2026-08">Aug 2026</time>
+          <div class="entry"><p>Flare live on the iOS App Store. <span class="tag">Shipped</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-08-21">Aug 2026</time>
+          <div class="entry"><p>Bloomelle started.</p></div>
+        </li>
+        <li>
+          <time datetime="2026-08-24">Aug 2026</time>
+          <div class="entry"><p>Kin Compass submitted for App Store review. <span class="tag">In review</span></p></div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Chepatapa Apps &middot; <a href="/" style="color:var(--text-faintest)">Home</a>
+  </footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = (document.documentElement.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>

@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="ZXLJsdxUxTmoqbbwLorggpEP5Yp06xNDV9qlrpCvVac" />
   <meta name="description" content="Chepatapa Apps builds mobile apps (Flare, Kin Compass) and developer SaaS tools (Perchly, Publy).">
+  <meta name="color-scheme" content="light dark">
   <title>Chepatapa Apps — Mobile Apps &amp; SaaS Tools</title>
   <link rel="canonical" href="https://another1dd.github.io/">
 
@@ -24,7 +31,12 @@
     "name": "Chepatapa Apps",
     "url": "https://another1dd.github.io/",
     "logo": "https://another1dd.github.io/assets/favicon-512.png",
-    "sameAs": ["https://perchly.dev", "https://publy.dev"]
+    "sameAs": [
+      "https://perchly.dev",
+      "https://publy.dev",
+      "https://github.com/Another1dd",
+      "https://www.linkedin.com/in/timophei-lemeshchenko/"
+    ]
   }
   </script>
 
@@ -42,14 +54,45 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    @view-transition {
+      navigation: auto;
+    }
+
+    :root {
+      --bg: #FDF6EF;
+      --surface: #fff;
+      --text: #2B2B2B;
+      --text-muted: #5C5050;
+      --text-faint: #9E8E84;
+      --text-faintest: #C4B5AC;
+      --border: rgba(58,48,40,0.06);
+      --border-hover: rgba(58,48,40,0.1);
+      --shadow: rgba(58,48,40,0.05);
+      --shadow-hover: rgba(58,48,40,0.10);
+      --brand-shadow: rgba(58,48,40,0.22);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#1E1815; --surface:#2A231F; --text:#F3EAE2; --text-muted:#C7B8AC; --text-faint:#9C8B7D; --text-faintest:#7A6C60; --border:rgba(255,255,255,0.08); --border-hover:rgba(255,255,255,0.14); --shadow:rgba(0,0,0,0.35); --shadow-hover:rgba(0,0,0,0.45); --brand-shadow:rgba(0,0,0,0.4); }
+    }
+
+    [data-theme="dark"] {
+      --bg: #1E1815; --surface: #2A231F; --text: #F3EAE2; --text-muted: #C7B8AC; --text-faint: #9C8B7D; --text-faintest: #7A6C60; --border: rgba(255,255,255,0.08); --border-hover: rgba(255,255,255,0.14); --shadow: rgba(0,0,0,0.35); --shadow-hover: rgba(0,0,0,0.45); --brand-shadow: rgba(0,0,0,0.4);
+    }
+
+    [data-theme="light"] {
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84; --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --border-hover: rgba(58,48,40,0.1); --shadow: rgba(58,48,40,0.05); --shadow-hover: rgba(58,48,40,0.10); --brand-shadow: rgba(58,48,40,0.22);
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #FDF6EF;
-      color: #2B2B2B;
+      background: var(--bg);
+      color: var(--text);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       position: relative;
+      transition: background 0.2s ease, color 0.2s ease;
     }
 
     /* subtle grain — breaks up the flat fill without adding any real texture asset */
@@ -62,6 +105,39 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 10px var(--shadow);
+      transition: transform 0.2s ease, background 0.2s ease;
+      z-index: 20;
+    }
+
+    .theme-toggle:hover { transform: scale(1.06); }
+    .theme-toggle svg { width: 18px; height: 18px; stroke: var(--text); }
+    .theme-toggle .icon-moon { display: none; }
+
+    @media (prefers-color-scheme: dark) {
+      .theme-toggle .icon-sun { display: none; }
+      .theme-toggle .icon-moon { display: block; }
+    }
+
+    [data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+    [data-theme="light"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
     header {
       max-width: 760px;
       margin: 0 auto;
@@ -73,7 +149,7 @@
       width: 56px;
       height: 56px;
       border-radius: 15px;
-      box-shadow: 0 8px 22px rgba(58,48,40,0.22);
+      box-shadow: 0 8px 22px var(--brand-shadow);
       margin-bottom: 22px;
     }
 
@@ -88,7 +164,7 @@
 
     header p.about {
       font-size: 15px;
-      color: #5C5050;
+      color: var(--text-muted);
       line-height: 1.65;
       max-width: 480px;
       margin: 0 auto;
@@ -99,7 +175,7 @@
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #9E8E84;
+      color: var(--text-faint);
       margin-bottom: 14px;
     }
 
@@ -124,23 +200,23 @@
     }
 
     .app-card {
-      background: #fff;
-      border: 1px solid rgba(58,48,40,0.06);
+      background: var(--surface);
+      border: 1px solid var(--border);
       border-radius: 20px;
       padding: 28px;
       display: flex;
       align-items: flex-start;
       gap: 20px;
-      box-shadow: 0 2px 14px rgba(58,48,40,0.05);
+      box-shadow: 0 2px 14px var(--shadow);
       text-decoration: none;
       color: inherit;
       cursor: pointer;
-      transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+      transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease, background 0.2s ease;
     }
 
     .app-card:hover {
-      box-shadow: 0 10px 28px rgba(58,48,40,0.10);
-      border-color: rgba(58,48,40,0.1);
+      box-shadow: 0 10px 28px var(--shadow-hover);
+      border-color: var(--border-hover);
       transform: translateY(-2px);
     }
 
@@ -150,7 +226,7 @@
     }
 
     .app-card:focus-visible {
-      outline: 2px solid var(--accent, #2B2B2B);
+      outline: 2px solid var(--accent, var(--text));
       outline-offset: 3px;
     }
 
@@ -174,7 +250,7 @@
 
     .app-info p {
       font-size: 14px;
-      color: #9E8E84;
+      color: var(--text-faint);
       line-height: 1.5;
       margin-bottom: 16px;
     }
@@ -194,6 +270,11 @@
 
     .app-links a:hover { text-decoration: underline; }
 
+    @media (prefers-color-scheme: dark) {
+      .app-links a { color: var(--accent-dark, var(--accent, #E8625A)); }
+    }
+    [data-theme="dark"] .app-links a { color: var(--accent-dark, var(--accent, #E8625A)); }
+
     .tag-coming-soon {
       display: inline-block;
       background: #C97B90;
@@ -212,11 +293,18 @@
       text-align: center;
       padding: 24px;
       font-size: 13px;
-      color: #C4B5AC;
+      color: var(--text-faintest);
     }
+
+    footer a { color: var(--text-faintest); }
   </style>
 </head>
 <body>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+  </button>
+
   <header>
     <img class="brand-mark" src="/assets/favicon-512.png" alt="Chepatapa Apps logo" width="56" height="56">
     <h1>Chepatapa Apps</h1>
@@ -275,7 +363,7 @@
     <h2 class="section-label">SaaS Products</h2>
 
     <div class="app-grid">
-      <div class="app-card" style="--accent:#C2571E" onclick="if (!event.target.closest('a')) window.open('https://perchly.dev', '_blank');">
+      <div class="app-card" style="--accent:#C2571E; --accent-dark:#FF7A3D" onclick="if (!event.target.closest('a')) window.open('https://perchly.dev', '_blank');">
         <div class="app-icon" style="background: transparent;">
           <svg width="72" height="72" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="256" height="256" rx="64" fill="#1A1A24"/>
@@ -295,7 +383,7 @@
         </div>
       </div>
 
-      <div class="app-card" style="--accent:#0E7490" onclick="if (!event.target.closest('a')) window.open('https://publy.dev', '_blank');">
+      <div class="app-card" style="--accent:#0E7490; --accent-dark:#22d3ee" onclick="if (!event.target.closest('a')) window.open('https://publy.dev', '_blank');">
         <div class="app-icon" style="background: transparent;">
           <svg width="72" height="72" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="28" height="28" rx="6" fill="#0a161f"/>
@@ -317,7 +405,17 @@
   </main>
 
   <footer>
-    &copy; 2026 Chepatapa Apps
+    &copy; 2026 Chepatapa Apps &middot; <a href="/build-log/">Build Log</a>
   </footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = (document.documentElement.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
 </body>
 </html>
