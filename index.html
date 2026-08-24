@@ -9,7 +9,7 @@
   <link rel="canonical" href="https://another1dd.github.io/">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Chepatapa Apps — Mobile Apps &amp; SaaS Tools">
+  <meta property="og:title" content="Chepatapa Apps — Mobile Apps & SaaS Tools">
   <meta property="og:description" content="Chepatapa Apps builds mobile apps (Flare, Kin Compass) and developer SaaS tools (Perchly, Publy).">
   <meta property="og:url" content="https://another1dd.github.io/">
   <meta property="og:image" content="https://another1dd.github.io/assets/og-image.png">
@@ -34,6 +34,11 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -44,27 +49,49 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      position: relative;
+    }
+
+    /* subtle grain — breaks up the flat fill without adding any real texture asset */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
     header {
-      padding: 48px 24px 32px;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 40px;
       text-align: center;
     }
 
+    .brand-mark {
+      width: 56px;
+      height: 56px;
+      border-radius: 15px;
+      box-shadow: 0 8px 22px rgba(58,48,40,0.22);
+      margin-bottom: 22px;
+    }
+
     header h1 {
-      font-size: 13px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 40px;
       font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #9E8E84;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin-bottom: 14px;
     }
 
     header p.about {
       font-size: 15px;
       color: #5C5050;
-      line-height: 1.6;
+      line-height: 1.65;
       max-width: 480px;
-      margin: 12px auto 0;
+      margin: 0 auto;
     }
 
     .section-label {
@@ -73,41 +100,65 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #9E8E84;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .section-label:not(:first-child) {
-      margin-top: 40px;
+      margin-top: 48px;
     }
 
     main {
       flex: 1;
-      max-width: 480px;
+      max-width: 760px;
       margin: 0 auto;
       padding: 0 24px 64px;
       width: 100%;
+      position: relative;
+    }
+
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+      align-items: stretch;
     }
 
     .app-card {
       background: #fff;
+      border: 1px solid rgba(58,48,40,0.06);
       border-radius: 20px;
       padding: 28px;
       display: flex;
       align-items: flex-start;
       gap: 20px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 14px rgba(58,48,40,0.05);
       text-decoration: none;
       color: inherit;
-      transition: box-shadow 0.2s;
+      cursor: pointer;
+      transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
     }
 
-    .app-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.10); }
+    .app-card:hover {
+      box-shadow: 0 10px 28px rgba(58,48,40,0.10);
+      border-color: rgba(58,48,40,0.1);
+      transform: translateY(-2px);
+    }
+
+    .app-card:active {
+      transform: translateY(0);
+      transition-duration: 0.1s;
+    }
+
+    .app-card:focus-visible {
+      outline: 2px solid var(--accent, #2B2B2B);
+      outline-offset: 3px;
+    }
 
     .app-icon {
       width: 72px;
       height: 72px;
       border-radius: 16px;
-      background: #E8625A;
+      background: var(--accent, #E8625A);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -122,8 +173,9 @@
     }
 
     .app-info h3 {
+      font-family: 'Fraunces', Georgia, serif;
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: 4px;
     }
 
@@ -142,7 +194,7 @@
 
     .app-links a {
       font-size: 13px;
-      color: #E8625A;
+      color: var(--accent, #E8625A);
       text-decoration: none;
       font-weight: 500;
     }
@@ -173,6 +225,7 @@
 </head>
 <body>
   <header>
+    <img class="brand-mark" src="/assets/favicon-512.png" alt="Chepatapa Apps logo" width="56" height="56">
     <h1>Chepatapa Apps</h1>
     <p class="about">
       Chepatapa Apps is an independent studio building small, privacy-first mobile apps and
@@ -185,82 +238,86 @@
   <main>
     <h2 class="section-label">Mobile Apps</h2>
 
-    <div class="app-card" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.location = '/flare/';">
-      <div class="app-icon"><span>F</span></div>
-      <div class="app-info">
-        <h3>Flare</h3>
-        <p>Hot flash &amp; night sweat tracker. Know why your symptoms happen, not just when.</p>
-        <div class="app-links">
-          <a href="/flare/support">Support</a>
-          <a href="/flare/privacy">Privacy Policy</a>
-          <a href="/flare/terms">Terms of Use</a>
+    <div class="app-grid">
+      <div class="app-card" style="--accent:#E8625A" onclick="if (!event.target.closest('a')) window.location = '/flare/';">
+        <div class="app-icon"><span>F</span></div>
+        <div class="app-info">
+          <h3>Flare</h3>
+          <p>Hot flash &amp; night sweat tracker. Know why your symptoms happen, not just when.</p>
+          <div class="app-links">
+            <a href="/flare/support">Support</a>
+            <a href="/flare/privacy">Privacy Policy</a>
+            <a href="/flare/terms">Terms of Use</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="app-card" style="margin-top: 16px; cursor: pointer;" onclick="if (!event.target.closest('a')) window.location = '/kincompass/';">
-      <div class="app-icon" style="background: #4F8A6E;"><span>K</span></div>
-      <div class="app-info">
-        <h3>Kin Compass</h3>
-        <p>Daily routines &amp; communication scripts for parents of preschoolers with ADHD.</p>
-        <div class="app-links">
-          <a href="/kincompass/support">Support</a>
-          <a href="/kincompass/privacy">Privacy Policy</a>
-          <a href="/kincompass/terms">Terms of Use</a>
+      <div class="app-card" style="--accent:#4F8A6E" onclick="if (!event.target.closest('a')) window.location = '/kincompass/';">
+        <div class="app-icon"><span>K</span></div>
+        <div class="app-info">
+          <h3>Kin Compass</h3>
+          <p>Daily routines &amp; communication scripts for parents of preschoolers with ADHD.</p>
+          <div class="app-links">
+            <a href="/kincompass/support">Support</a>
+            <a href="/kincompass/privacy">Privacy Policy</a>
+            <a href="/kincompass/terms">Terms of Use</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="app-card" style="margin-top: 16px; cursor: pointer;" onclick="if (!event.target.closest('a')) window.location = '/bloomelle/';">
-      <div class="app-icon" style="background: transparent; overflow: hidden;"><img src="/bloomelle/assets/icon-1024.png" alt="Bloomelle app icon" style="width:100%;height:100%;display:block;"></div>
-      <div class="app-info">
-        <h3>Bloomelle <span class="tag-coming-soon">Coming soon</span></h3>
-        <p>Cycle-phase planning coach. Forecasts your week and suggests good days for workouts, focus, and rest.</p>
-        <div class="app-links">
-          <a href="/bloomelle/support">Support</a>
-          <a href="/bloomelle/privacy">Privacy Policy</a>
-          <a href="/bloomelle/terms">Terms of Use</a>
+      <div class="app-card" style="--accent:#C97B90" onclick="if (!event.target.closest('a')) window.location = '/bloomelle/';">
+        <div class="app-icon" style="background: transparent; overflow: hidden;"><img src="/bloomelle/assets/icon-1024.png" alt="Bloomelle app icon" style="width:100%;height:100%;display:block;"></div>
+        <div class="app-info">
+          <h3>Bloomelle <span class="tag-coming-soon">Coming soon</span></h3>
+          <p>Cycle-phase planning coach. Forecasts your week and suggests good days for workouts, focus, and rest.</p>
+          <div class="app-links">
+            <a href="/bloomelle/support">Support</a>
+            <a href="/bloomelle/privacy">Privacy Policy</a>
+            <a href="/bloomelle/terms">Terms of Use</a>
+          </div>
         </div>
       </div>
     </div>
 
     <h2 class="section-label">SaaS Products</h2>
 
-    <div class="app-card" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://perchly.dev', '_blank');">
-      <div class="app-icon" style="background: transparent;">
-        <svg width="72" height="72" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="256" height="256" rx="64" fill="#1A1A24"/>
-          <rect x="44" y="168" width="168" height="16" rx="8" fill="#C2571E"/>
-          <circle cx="168" cy="140" r="36" fill="#FF7A3D"/>
-          <circle cx="76" cy="162" r="14" fill="#F8F8FC"/>
-        </svg>
-      </div>
-      <div class="app-info">
-        <h3>Perchly</h3>
-        <p>Private Swift Package Manager registry for teams. Ship internal packages without going public.</p>
-        <div class="app-links">
-          <a href="https://perchly.dev/docs/getting-started" target="_blank" rel="noopener">Get Started</a>
-          <a href="https://perchly.dev/privacy" target="_blank" rel="noopener">Privacy Policy</a>
-          <a href="https://perchly.dev/terms" target="_blank" rel="noopener">Terms of Use</a>
+    <div class="app-grid">
+      <div class="app-card" style="--accent:#C2571E" onclick="if (!event.target.closest('a')) window.open('https://perchly.dev', '_blank');">
+        <div class="app-icon" style="background: transparent;">
+          <svg width="72" height="72" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="256" height="256" rx="64" fill="#1A1A24"/>
+            <rect x="44" y="168" width="168" height="16" rx="8" fill="#C2571E"/>
+            <circle cx="168" cy="140" r="36" fill="#FF7A3D"/>
+            <circle cx="76" cy="162" r="14" fill="#F8F8FC"/>
+          </svg>
+        </div>
+        <div class="app-info">
+          <h3>Perchly</h3>
+          <p>Private Swift Package Manager registry for teams. Ship internal packages without going public.</p>
+          <div class="app-links">
+            <a href="https://perchly.dev/docs/getting-started" target="_blank" rel="noopener">Get Started</a>
+            <a href="https://perchly.dev/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+            <a href="https://perchly.dev/terms" target="_blank" rel="noopener">Terms of Use</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="app-card" style="margin-top: 16px; cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://publy.dev', '_blank');">
-      <div class="app-icon" style="background: transparent;">
-        <svg width="72" height="72" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="28" height="28" rx="6" fill="#0a161f"/>
-          <circle cx="9" cy="20" r="2.5" fill="#22d3ee"/>
-          <path d="M9 20L20 9M20 9H14M20 9V15" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <div class="app-info">
-        <h3>Publy</h3>
-        <p>Private Dart &amp; Flutter package registry for teams. The pub.dev alternative that stays private.</p>
-        <div class="app-links">
-          <a href="https://publy.dev/docs/getting-started" target="_blank" rel="noopener">Get Started</a>
-          <a href="https://publy.dev/privacy" target="_blank" rel="noopener">Privacy Policy</a>
-          <a href="https://publy.dev/terms" target="_blank" rel="noopener">Terms of Use</a>
+      <div class="app-card" style="--accent:#0E7490" onclick="if (!event.target.closest('a')) window.open('https://publy.dev', '_blank');">
+        <div class="app-icon" style="background: transparent;">
+          <svg width="72" height="72" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="28" rx="6" fill="#0a161f"/>
+            <circle cx="9" cy="20" r="2.5" fill="#22d3ee"/>
+            <path d="M9 20L20 9M20 9H14M20 9V15" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="app-info">
+          <h3>Publy</h3>
+          <p>Private Dart &amp; Flutter package registry for teams. The pub.dev alternative that stays private.</p>
+          <div class="app-links">
+            <a href="https://publy.dev/docs/getting-started" target="_blank" rel="noopener">Get Started</a>
+            <a href="https://publy.dev/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+            <a href="https://publy.dev/terms" target="_blank" rel="noopener">Terms of Use</a>
+          </div>
         </div>
       </div>
     </div>
