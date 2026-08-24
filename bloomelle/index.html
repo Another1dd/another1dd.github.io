@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloomelle — Plan Your Week Around Your Cycle</title>
+  <meta name="description" content="Bloomelle forecasts your coming week by cycle phase and suggests good days for workouts, focus, decisions, and rest. Free, private, no account.">
+  <link rel="canonical" href="https://another1dd.github.io/bloomelle/">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bloomelle — Plan Your Week Around Your Cycle">
+  <meta property="og:description" content="Forecasts your coming week by cycle phase and suggests good days for workouts, focus, decisions, and rest. Free, private, no account.">
+  <meta property="og:url" content="https://another1dd.github.io/bloomelle/">
+  <meta property="og:image" content="https://another1dd.github.io/bloomelle/assets/icon-1024.png">
+  <meta name="twitter:card" content="summary">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Bloomelle",
+    "url": "https://another1dd.github.io/bloomelle/",
+    "image": "https://another1dd.github.io/bloomelle/assets/icon-1024.png",
+    "screenshot": [
+      "https://another1dd.github.io/bloomelle/assets/screenshot-forecast.png",
+      "https://another1dd.github.io/bloomelle/assets/screenshot-today.png",
+      "https://another1dd.github.io/bloomelle/assets/screenshot-checkin.png"
+    ],
+    "operatingSystem": "iOS",
+    "applicationCategory": "LifestyleApplication",
+    "description": "A cycle-phase planning coach that forecasts the coming week and suggests good days for workouts, focus, decisions, and rest.",
+    "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Bloomelle a symptom tracker?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Bloomelle doesn't log symptoms day by day — it forecasts your coming week from your last period start date and average cycle length, and suggests which days may suit workouts, focus work, big decisions, or rest."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this based on science?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many people notice real patterns across their cycle, but the research on phase-based performance is still limited and mixed. Bloomelle frames every suggestion as \"may suit,\" never a guarantee, and it's a planning tool, not medical advice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When will Bloomelle be available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bloomelle is currently in development, with no fixed release date yet. Check back on this page for updates."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #FDF6EF;
+      color: #2B2426;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3 { font-family: Georgia, serif; }
+
+    header {
+      padding: 40px 24px 0;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back {
+      font-size: 14px;
+      color: #C97B90;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back:hover { text-decoration: underline; }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 0 32px;
+    }
+
+    .hero img.icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(201,123,144,0.3);
+      margin-bottom: 20px;
+    }
+
+    .pill {
+      display: inline-block;
+      background: #C97B90;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .hero p.tagline {
+      font-size: 17px;
+      color: #5C5050;
+      line-height: 1.6;
+      max-width: 480px;
+      margin-bottom: 28px;
+    }
+
+    .cta-pill {
+      display: inline-block;
+      background: #C97B90;
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 16px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .badge {
+      font-size: 12px;
+      color: #9E8E84;
+      margin-top: 10px;
+    }
+
+    section.card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    section.card h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    section.card p {
+      font-size: 15px;
+      color: #5C5050;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .screens {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 8px 0 16px;
+      margin: 8px -8px 0;
+    }
+    .screens img {
+      height: 420px;
+      width: auto;
+      border-radius: 18px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .feature-item h3 {
+      font-size: 15px;
+      color: #C97B90;
+      margin-bottom: 6px;
+    }
+    .feature-item p {
+      font-size: 14px;
+      color: #5C5050;
+      line-height: 1.6;
+    }
+
+    .faq-item h3 {
+      font-size: 16px;
+      color: #C97B90;
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+
+    .faq-item p {
+      font-size: 14px;
+      color: #5C5050;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #C4B5AC;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    footer a { color: #C4B5AC; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* "In development" modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(43,36,38,0.45);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 10;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      max-width: 360px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    }
+    .modal-box h3 { font-size: 18px; margin-bottom: 10px; }
+    .modal-box p { font-size: 14px; color: #5C5050; line-height: 1.6; margin-bottom: 20px; }
+    .modal-box button {
+      background: #C97B90;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back" href="/">&#8592; Chepatapa Apps</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="icon" src="assets/icon-1024.png" alt="Bloomelle app icon" width="1024" height="1024">
+      <span class="pill">Coming soon</span>
+      <h1>Plan your week, not just your day</h1>
+      <p class="tagline">
+        Bloomelle forecasts the days ahead from your cycle so you can pick the right moment
+        for workouts, focus work, big decisions, or rest — before it sneaks up on you.
+        Not a symptom tracker.
+      </p>
+      <div class="cta-row">
+        <button class="cta-pill" id="notify-cta">Coming Soon &mdash; iOS</button>
+      </div>
+      <p class="badge">Free &middot; No account &middot; Nothing leaves your phone</p>
+    </section>
+
+    <section class="card">
+      <h2>See your week, not just today</h2>
+      <p>
+        Most cycle tools tell you what's happening right now and leave you to remember it
+        tomorrow. Bloomelle takes your last period start date and average cycle length and
+        turns them into a 7-day-ahead forecast, so you can plan a workout, a big decision, or
+        a lighter day before you get there — not after.
+      </p>
+      <div class="screens">
+        <img src="assets/screenshot-forecast.png" alt="Bloomelle onboarding screen showing a week-ahead forecast strip" width="375" height="844" loading="lazy">
+        <img src="assets/screenshot-today.png" alt="Bloomelle home dashboard showing today's phase and suggestions for workout, focus, decisions, and rest" width="375" height="764" loading="lazy">
+        <img src="assets/screenshot-checkin.png" alt="Bloomelle daily check-in screen for energy, focus, mood, and whether today's suggestion fit" width="375" height="844" loading="lazy">
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What's inside</h2>
+      <p>Four simple pieces, nothing you have to fill in every day:</p>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h3>Week-ahead forecast</h3>
+          <p>Your last period start date and average cycle length turn into today's phase
+            plus a 7-day-ahead strip — no manual logging required.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Daily suggestions</h3>
+          <p>Softened, non-prescriptive picks for workouts, focus work, big decisions, and
+            rest — always "may suit," never a guarantee.</p>
+        </div>
+        <div class="feature-item">
+          <h3>2-input setup</h3>
+          <p>Just a start date and a cycle length to begin. Both stay editable, since most
+            people don't have an exact 28-day cycle.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Daily check-in</h3>
+          <p>A ten-second log of energy, focus, and mood, plus whether that day's suggestion
+            actually fit — the ritual that makes this more than a one-time calculator.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Not a substitute for medical advice</h2>
+      <p>
+        Many people notice real patterns across their cycle, but the science behind
+        phase-based performance is still limited and mixed — Bloomelle's forecast is a
+        planning tool built around what you notice, not a diagnosis or a clinical
+        recommendation. If something about your cycle concerns you, talk to a doctor rather
+        than relying on an app.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Private by design</h2>
+      <p>
+        No account, no server, no sign-up. Your cycle dates and check-ins stay on your
+        device. Bloomelle was built this way from day one — your data is yours, never a
+        data set.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-item">
+        <h3>Is Bloomelle a symptom tracker?</h3>
+        <p>
+          No. Bloomelle doesn't log symptoms day by day — it forecasts your coming week
+          from your last period start date and average cycle length, and suggests which
+          days may suit workouts, focus work, big decisions, or rest.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this based on science?</h3>
+        <p>
+          Many people notice real patterns across their cycle, but the research on
+          phase-based performance is still limited and mixed. Bloomelle frames every
+          suggestion as "may suit," never a guarantee, and it's a planning tool, not
+          medical advice.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3>When will Bloomelle be available?</h3>
+        <p>
+          Bloomelle is currently in development, with no fixed release date yet. Check
+          back on this page for updates.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Chepatapa Apps &middot;
+    <a href="/bloomelle/privacy">Privacy Policy</a> &middot;
+    <a href="/bloomelle/terms">Terms of Use</a> &middot;
+    <a href="/bloomelle/support">Support</a>
+  </footer>
+
+  <div class="modal-overlay" id="notify-modal">
+    <div class="modal-box">
+      <h3>Bloomelle is in development</h3>
+      <p>We're building Bloomelle right now — there's no fixed release date yet. Thanks for your interest, check back here for updates.</p>
+      <button id="notify-modal-close">Got it</button>
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById('notify-modal');
+    document.getElementById('notify-cta').addEventListener('click', function () {
+      modal.classList.add('open');
+    });
+    document.getElementById('notify-modal-close').addEventListener('click', function () {
+      modal.classList.remove('open');
+    });
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) modal.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

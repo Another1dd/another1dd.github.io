@@ -141,6 +141,20 @@
 
     .app-links a:hover { text-decoration: underline; }
 
+    .tag-coming-soon {
+      display: inline-block;
+      background: #C97B90;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 999px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
     footer {
       text-align: center;
       padding: 24px;
@@ -179,6 +193,19 @@
           <a href="/kincompass/support">Support</a>
           <a href="/kincompass/privacy">Privacy Policy</a>
           <a href="/kincompass/terms">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-card" style="margin-top: 16px; cursor: pointer;" onclick="if (!event.target.closest('a')) window.location = '/bloomelle/';">
+      <div class="app-icon" style="background: transparent; overflow: hidden;"><img src="/bloomelle/assets/icon-1024.png" alt="" style="width:100%;height:100%;display:block;"></div>
+      <div class="app-info">
+        <h3>Bloomelle <span class="tag-coming-soon">Coming soon</span></h3>
+        <p>Cycle-phase planning coach. Forecasts your week and suggests good days for workouts, focus, and rest.</p>
+        <div class="app-links">
+          <a href="/bloomelle/support">Support</a>
+          <a href="/bloomelle/privacy">Privacy Policy</a>
+          <a href="/bloomelle/terms">Terms of Use</a>
         </div>
       </div>
     </div>
