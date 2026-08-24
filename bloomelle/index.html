@@ -80,6 +80,17 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Bloomelle", "item": "https://another1dd.github.io/bloomelle/" }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -237,11 +248,15 @@
       padding: 8px 0 16px;
       margin: 8px -8px 0;
     }
+    .screens picture {
+      flex-shrink: 0;
+      display: block;
+    }
     .screens img {
       height: 420px;
       width: auto;
       border-radius: 18px;
-      flex-shrink: 0;
+      display: block;
       box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     }
 
@@ -356,9 +371,18 @@
         a lighter day before you get there — not after.
       </p>
       <div class="screens">
-        <img src="assets/screenshot-forecast.png" alt="Bloomelle onboarding screen showing a week-ahead forecast strip" width="375" height="844" loading="lazy">
-        <img src="assets/screenshot-today.png" alt="Bloomelle home dashboard showing today's phase and suggestions for workout, focus, decisions, and rest" width="375" height="764" loading="lazy">
-        <img src="assets/screenshot-checkin.png" alt="Bloomelle daily check-in screen for energy, focus, mood, and whether today's suggestion fit" width="375" height="844" loading="lazy">
+        <picture>
+          <source srcset="assets/screenshot-forecast.webp" type="image/webp">
+          <img src="assets/screenshot-forecast.png" alt="Bloomelle onboarding screen showing a week-ahead forecast strip" width="375" height="844" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/screenshot-today.webp" type="image/webp">
+          <img src="assets/screenshot-today.png" alt="Bloomelle home dashboard showing today's phase and suggestions for workout, focus, decisions, and rest" width="375" height="764" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/screenshot-checkin.webp" type="image/webp">
+          <img src="assets/screenshot-checkin.png" alt="Bloomelle daily check-in screen for energy, focus, mood, and whether today's suggestion fit" width="375" height="844" loading="lazy">
+        </picture>
       </div>
     </section>
 

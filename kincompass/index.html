@@ -90,6 +90,17 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Kin Compass", "item": "https://another1dd.github.io/kincompass/" }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -245,11 +256,15 @@
       padding: 8px 0 16px;
       margin: 8px -8px 0;
     }
+    .screens picture {
+      flex-shrink: 0;
+      display: block;
+    }
     .screens img {
       height: 420px;
       width: auto;
       border-radius: 18px;
-      flex-shrink: 0;
+      display: block;
       box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     }
 
@@ -368,10 +383,22 @@
         so you're never freezing in the moment.
       </p>
       <div class="screens">
-        <img src="assets/screenshot-today.png" alt="Kin Compass today dashboard showing the current routine and next steps" width="1320" height="2868" loading="lazy">
-        <img src="assets/screenshot-routine.png" alt="Kin Compass routine templates screen with morning, daycare, dinner, and bedtime routines" width="1320" height="2868" loading="lazy">
-        <img src="assets/screenshot-script.png" alt="Kin Compass what to say screen with communication scripts for meltdowns" width="1320" height="2868" loading="lazy">
-        <img src="assets/screenshot-wins.png" alt="Kin Compass wins screen tracking what worked this week" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="assets/screenshot-today.webp" type="image/webp">
+          <img src="assets/screenshot-today.png" alt="Kin Compass today dashboard showing the current routine and next steps" width="1320" height="2868" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/screenshot-routine.webp" type="image/webp">
+          <img src="assets/screenshot-routine.png" alt="Kin Compass routine templates screen with morning, daycare, dinner, and bedtime routines" width="1320" height="2868" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/screenshot-script.webp" type="image/webp">
+          <img src="assets/screenshot-script.png" alt="Kin Compass what to say screen with communication scripts for meltdowns" width="1320" height="2868" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/screenshot-wins.webp" type="image/webp">
+          <img src="assets/screenshot-wins.png" alt="Kin Compass wins screen tracking what worked this week" width="1320" height="2868" loading="lazy">
+        </picture>
       </div>
     </section>
 

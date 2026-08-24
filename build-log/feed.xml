@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chepatapa Apps — Build Log</title>
+    <link>https://another1dd.github.io/build-log/</link>
+    <atom:link href="https://another1dd.github.io/build-log/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>How Chepatapa Apps' five products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 24 Aug 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Kin Compass submitted for App Store review</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-08-24-kincompass-review</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Kin Compass, the daily routines and communication scripts app for parents of preschoolers with ADHD, has been submitted for Apple App Store review.</description>
+    </item>
+
+    <item>
+      <title>Bloomelle started</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-08-21-bloomelle-started</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Bloomelle, a menstrual cycle-phase planning coach, started development — scaffolded from Flare's skeleton like Kin Compass before it.</description>
+    </item>
+
+    <item>
+      <title>Flare live on the iOS App Store</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-08-flare-live</guid>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Flare, the hot flash and night sweat tracker, went live on the iOS App Store.</description>
+    </item>
+
+    <item>
+      <title>Perchly started</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-07-30-perchly-started</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Perchly, a private Swift Package Manager registry, started development, reusing Publy's org/auth/billing layer.</description>
+    </item>
+
+    <item>
+      <title>Publy started</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-07-16-publy-started</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Publy, a private Dart and Flutter package registry, started development.</description>
+    </item>
+
+    <item>
+      <title>Kin Compass started</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-06-29-kincompass-started</guid>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Kin Compass started development, cloned from Flare's skeleton.</description>
+    </item>
+
+    <item>
+      <title>This site goes up</title>
+      <link>https://another1dd.github.io/</link>
+      <guid isPermaLink="false">build-log-2026-06-12-site-up</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description>another1dd.github.io goes up as the Chepatapa Apps homepage.</description>
+    </item>
+
+    <item>
+      <title>Flare started</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-05-18-flare-started</guid>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+      <description>Flare, the hot flash and night sweat tracker, started development.</description>
+    </item>
+  </channel>
+</rss>

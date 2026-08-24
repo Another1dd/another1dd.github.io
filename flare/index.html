@@ -89,6 +89,17 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Flare", "item": "https://another1dd.github.io/flare/" }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -244,11 +255,15 @@
       padding: 8px 0 16px;
       margin: 8px -8px 0;
     }
+    .screens picture {
+      flex-shrink: 0;
+      display: block;
+    }
     .screens img {
       height: 420px;
       width: auto;
       border-radius: 18px;
-      flex-shrink: 0;
+      display: block;
       box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     }
 
@@ -367,9 +382,18 @@
         not apply to you.
       </p>
       <div class="screens">
-        <img src="assets/screenshot-insights.png" alt="Flare trigger correlation report screen" width="1320" height="2868" loading="lazy">
-        <img src="assets/screenshot-add.png" alt="Flare log a hot flash screen with trigger tags" width="1320" height="2868" loading="lazy">
-        <img src="assets/screenshot-log.png" alt="Flare entries log screen" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="assets/screenshot-insights.webp" type="image/webp">
+          <img src="assets/screenshot-insights.png" alt="Flare trigger correlation report screen" width="1320" height="2868" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/screenshot-add.webp" type="image/webp">
+          <img src="assets/screenshot-add.png" alt="Flare log a hot flash screen with trigger tags" width="1320" height="2868" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/screenshot-log.webp" type="image/webp">
+          <img src="assets/screenshot-log.png" alt="Flare entries log screen" width="1320" height="2868" loading="lazy">
+        </picture>
       </div>
     </section>
 
