@@ -1,0 +1,14 @@
+{
+  "name": "Chepatapa Apps",
+  "short_name": "Chepatapa",
+  "description": "Independent studio building small, privacy-first mobile apps and developer tools.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#FDF6EF",
+  "theme_color": "#FDF6EF",
+  "icons": [
+    { "src": "/assets/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

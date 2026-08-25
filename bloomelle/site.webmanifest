@@ -1,0 +1,14 @@
+{
+  "name": "Bloomelle — Cycle-Phase Planning Coach",
+  "short_name": "Bloomelle",
+  "description": "Forecasts your coming week by cycle phase and suggests good days for workouts, focus, decisions, and rest.",
+  "start_url": "/bloomelle/",
+  "scope": "/bloomelle/",
+  "display": "browser",
+  "background_color": "#FDF6EF",
+  "theme_color": "#C97B90",
+  "icons": [
+    { "src": "/bloomelle/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/bloomelle/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

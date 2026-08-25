@@ -1,0 +1,14 @@
+{
+  "name": "Flare — Hot Flash & Night Sweat Tracker",
+  "short_name": "Flare",
+  "description": "Hot flash and night sweat tracker. Know why your symptoms happen, not just when.",
+  "start_url": "/flare/",
+  "scope": "/flare/",
+  "display": "browser",
+  "background_color": "#FDF6EF",
+  "theme_color": "#E8625A",
+  "icons": [
+    { "src": "/flare/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/flare/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
