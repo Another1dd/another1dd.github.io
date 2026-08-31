@@ -31,14 +31,6 @@
   <meta property="og:image" content="https://another1dd.github.io/flare/assets/icon-1024.png">
   <meta name="twitter:card" content="summary">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKP79Q00ES"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-SKP79Q00ES');
-  </script>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -373,7 +365,7 @@
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-    import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+    import { getAnalytics, isSupported, logEvent } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
     import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
     const firebaseConfig = {
@@ -387,8 +379,9 @@
     };
 
     const app = initializeApp(firebaseConfig);
+    window.firebaseLogEvent = logEvent;
     isSupported().then((supported) => {
-      if (supported && firebaseConfig.measurementId) getAnalytics(app);
+      if (supported && firebaseConfig.measurementId) window.firebaseAnalytics = getAnalytics(app);
     });
 
     const db = getFirestore(app);
@@ -584,7 +577,7 @@
 
   <script>
     function trackEvent(name) {
-      if (typeof gtag === 'function') gtag('event', name);
+      if (window.firebaseAnalytics) window.firebaseLogEvent(window.firebaseAnalytics, name);
     }
 
     document.getElementById('ios-cta').addEventListener('click', function () {
