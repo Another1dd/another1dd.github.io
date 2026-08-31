@@ -86,7 +86,7 @@
         "name": "Is Kin Compass available yet?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Kin Compass is finished and currently completing Apple's App Store review. It'll be live very soon — tap the App Store button above for the latest status."
+          "text": "Kin Compass is currently in development, with no fixed release date yet — leave your email above and we'll let you know as soon as it's available."
         }
       }
     ]
@@ -186,6 +186,19 @@
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(79,138,110,0.25);
       margin-bottom: 20px;
+    }
+
+    .pill {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
     }
 
     .hero h1 {
@@ -346,11 +359,36 @@
       cursor: pointer;
       font-family: inherit;
     }
+    .modal-box button:disabled { opacity: 0.6; cursor: default; }
+    .waitlist-form {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .waitlist-input {
+      flex: 1;
+      min-width: 0;
+      border: 1px solid var(--shadow);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 14px;
+      font-family: inherit;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .waitlist-status {
+      font-size: 13px;
+      color: var(--accent-text);
+      line-height: 1.5;
+      margin-bottom: 12px;
+      min-height: 1em;
+    }
   </style>
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
     import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
     const firebaseConfig = {
       apiKey: "AIzaSyDywtnSEO4OoyXkmSl8Zi-B1mN1lSHRGPg",
@@ -366,6 +404,40 @@
     isSupported().then((supported) => {
       if (supported && firebaseConfig.measurementId) getAnalytics(app);
     });
+
+    const db = getFirestore(app);
+
+    function wireWaitlistForm(platform) {
+      const form = document.getElementById('waitlist-form-' + platform);
+      const status = document.getElementById('waitlist-status-' + platform);
+      const submit = document.getElementById('waitlist-submit-' + platform);
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        var email = document.getElementById('waitlist-email-' + platform).value.trim();
+        if (!email) return;
+
+        submit.disabled = true;
+        status.textContent = '';
+
+        try {
+          await addDoc(collection(db, 'kincompass_waitlist'), {
+            email: email,
+            platform: platform,
+            createdAt: serverTimestamp()
+          });
+          form.hidden = true;
+          status.textContent = "You're on the list — thanks! We'll email you when Kin Compass launches.";
+        } catch (err) {
+          status.textContent = 'Something went wrong — please try again.';
+          submit.disabled = false;
+        }
+      });
+    }
+
+    wireWaitlistForm('ios');
+    wireWaitlistForm('android');
   </script>
 </head>
 <body>
@@ -380,6 +452,7 @@
   <main>
     <section class="hero">
       <img class="icon" src="assets/icon-1024.png" alt="Kin Compass app icon" width="1024" height="1024">
+      <span class="pill">Coming soon</span>
       <h1>Know what to do next with your ADHD preschooler</h1>
       <p class="tagline">
         Kin Compass gives parents of preschoolers (ages 3–5) with ADHD ready-made daily
@@ -489,8 +562,8 @@
       <div class="faq-item">
         <h3>Is Kin Compass available yet?</h3>
         <p>
-          Kin Compass is finished and currently completing Apple's App Store review. It'll
-          be live very soon — tap the App Store button above for the latest status.
+          Kin Compass is currently in development, with no fixed release date yet — leave
+          your email above and we'll let you know as soon as it's available.
         </p>
       </div>
     </section>
@@ -506,16 +579,26 @@
   <div class="modal-overlay" id="ios-modal">
     <div class="modal-box">
       <h3>Coming to the App Store</h3>
-      <p>Kin Compass is finished and currently in Apple's review queue — it'll be live very soon. Thanks for your interest, it genuinely helps to know people are waiting.</p>
-      <button id="ios-modal-close">Got it</button>
+      <p>Kin Compass is still in development, with no fixed release date yet. Leave your email and we'll let you know the moment it's live.</p>
+      <form class="waitlist-form" id="waitlist-form-ios">
+        <input type="email" id="waitlist-email-ios" class="waitlist-input" placeholder="you@example.com" required autocomplete="email">
+        <button type="submit" id="waitlist-submit-ios">Notify me</button>
+      </form>
+      <p id="waitlist-status-ios" class="waitlist-status" role="status"></p>
+      <button id="ios-modal-close">Maybe later</button>
     </div>
   </div>
 
   <div class="modal-overlay" id="android-modal">
     <div class="modal-box">
       <h3>Coming to Google Play</h3>
-      <p>Kin Compass is iOS-only for now, with iOS currently in App Store review. An Android version is planned next — thanks for the interest, it genuinely helps prioritize it.</p>
-      <button id="android-modal-close">Got it</button>
+      <p>Kin Compass is iOS-first for now, with no fixed date for Android yet. Leave your email and we'll let you know when it's available.</p>
+      <form class="waitlist-form" id="waitlist-form-android">
+        <input type="email" id="waitlist-email-android" class="waitlist-input" placeholder="you@example.com" required autocomplete="email">
+        <button type="submit" id="waitlist-submit-android">Notify me</button>
+      </form>
+      <p id="waitlist-status-android" class="waitlist-status" role="status"></p>
+      <button id="android-modal-close">Maybe later</button>
     </div>
   </div>
 

@@ -205,6 +205,13 @@
       margin-bottom: 28px;
     }
 
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .cta-pill {
       display: inline-block;
       background: #C97B90;
@@ -402,6 +409,7 @@
       try {
         await addDoc(collection(db, 'bloomelle_waitlist'), {
           email: email,
+          platform: window.selectedPlatform,
           createdAt: serverTimestamp()
         });
         waitlistForm.hidden = true;
@@ -433,7 +441,8 @@
         Not a symptom tracker.
       </p>
       <div class="cta-row">
-        <button class="cta-pill" id="notify-cta">Coming Soon &mdash; iOS</button>
+        <button class="cta-pill" id="notify-cta-ios" data-platform="ios">Coming Soon &mdash; iOS</button>
+        <button class="cta-pill" id="notify-cta-android" data-platform="android">Coming Soon &mdash; Android</button>
       </div>
       <p class="badge">Free &middot; No account &middot; Nothing leaves your phone</p>
     </section>
@@ -560,7 +569,14 @@
 
   <script>
     var modal = document.getElementById('notify-modal');
-    document.getElementById('notify-cta').addEventListener('click', function () {
+    window.selectedPlatform = 'ios';
+
+    document.getElementById('notify-cta-ios').addEventListener('click', function () {
+      window.selectedPlatform = 'ios';
+      modal.classList.add('open');
+    });
+    document.getElementById('notify-cta-android').addEventListener('click', function () {
+      window.selectedPlatform = 'android';
       modal.classList.add('open');
     });
     document.getElementById('notify-modal-close').addEventListener('click', function () {
