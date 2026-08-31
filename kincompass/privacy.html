@@ -165,6 +165,26 @@
       color: var(--text-faintest);
     }
   </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDywtnSEO4OoyXkmSl8Zi-B1mN1lSHRGPg",
+      authDomain: "kincompass-application.firebaseapp.com",
+      projectId: "kincompass-application",
+      storageBucket: "kincompass-application.firebasestorage.app",
+      messagingSenderId: "705453130960",
+      appId: "1:705453130960:web:54bfac0f5f658b88ad0ad5",
+      measurementId: "G-EV9P3GLVGM"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    isSupported().then((supported) => {
+      if (supported && firebaseConfig.measurementId) getAnalytics(app);
+    });
+  </script>
 </head>
 <body>
   <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
@@ -191,6 +211,11 @@
 
       <h2>Cookies and Tracking Technologies</h2>
       <p>The Application or its third-party SDKs may use cookies, SDKs, pixels, and similar technologies to support functionality, analytics, or service delivery. Where required by applicable law, the Service Provider will obtain consent before using non-essential tracking technologies.</p>
+
+      <hr>
+
+      <h2>This Website</h2>
+      <p>Separately from the Kin Compass app described above, this website (the page you are reading) uses Google Analytics for Firebase to understand visits and improve the site; this applies only to the website and not to the Application, which does not send analytics data off your device.</p>
 
       <hr>
 

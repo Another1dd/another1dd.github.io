@@ -188,6 +188,26 @@
       color: var(--text-faintest);
     }
   </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDywtnSEO4OoyXkmSl8Zi-B1mN1lSHRGPg",
+      authDomain: "kincompass-application.firebaseapp.com",
+      projectId: "kincompass-application",
+      storageBucket: "kincompass-application.firebasestorage.app",
+      messagingSenderId: "705453130960",
+      appId: "1:705453130960:web:54bfac0f5f658b88ad0ad5",
+      measurementId: "G-EV9P3GLVGM"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    isSupported().then((supported) => {
+      if (supported && firebaseConfig.measurementId) getAnalytics(app);
+    });
+  </script>
 </head>
 <body>
   <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">

@@ -346,6 +346,26 @@
       font-family: inherit;
     }
   </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCzC_iFfw0Kf5nd7CHSCS4UWx-K3Y1mOzk",
+      authDomain: "flare-application.firebaseapp.com",
+      projectId: "flare-application",
+      storageBucket: "flare-application.firebasestorage.app",
+      messagingSenderId: "6276641966",
+      appId: "1:6276641966:web:1ba633adaefad48bf1a93f",
+      measurementId: "G-SKP79Q00ES"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    isSupported().then((supported) => {
+      if (supported && firebaseConfig.measurementId) getAnalytics(app);
+    });
+  </script>
 </head>
 <body>
   <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">

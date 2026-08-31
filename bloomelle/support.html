@@ -184,6 +184,26 @@
       color: var(--text-faintest);
     }
   </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAtVSq4A0zvqYXwJtVw5r-UYoIHxFGiAOo",
+      authDomain: "bloomelle-application.firebaseapp.com",
+      projectId: "bloomelle-application",
+      storageBucket: "bloomelle-application.firebasestorage.app",
+      messagingSenderId: "773791989725",
+      appId: "1:773791989725:web:883fd5eacb172848d4c034",
+      measurementId: "G-Z6DLFT2NMY"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    isSupported().then((supported) => {
+      if (supported && firebaseConfig.measurementId) getAnalytics(app);
+    });
+  </script>
 </head>
 <body>
   <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">

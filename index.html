@@ -301,6 +301,26 @@
 
     footer a { color: var(--text-faintest); }
   </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAH-_cLeGQ0xl_I3KNf2nfcYaQx56mCA2c",
+      authDomain: "chepatapa-hub.firebaseapp.com",
+      projectId: "chepatapa-hub",
+      storageBucket: "chepatapa-hub.firebasestorage.app",
+      messagingSenderId: "1048752122508",
+      appId: "1:1048752122508:web:9fd38afd9cb77665e4e9a9",
+      measurementId: "G-69NWKV76PR"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    isSupported().then((supported) => {
+      if (supported && firebaseConfig.measurementId) getAnalytics(app);
+    });
+  </script>
 </head>
 <body>
   <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">

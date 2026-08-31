@@ -338,7 +338,80 @@
       cursor: pointer;
       font-family: inherit;
     }
+    .modal-box button:disabled { opacity: 0.6; cursor: default; }
+    #waitlist-form {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .waitlist-input {
+      flex: 1;
+      min-width: 0;
+      border: 1px solid var(--shadow);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 14px;
+      font-family: inherit;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .waitlist-status {
+      font-size: 13px;
+      color: var(--accent-text);
+      line-height: 1.5;
+      margin-bottom: 12px;
+      min-height: 1em;
+    }
   </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAtVSq4A0zvqYXwJtVw5r-UYoIHxFGiAOo",
+      authDomain: "bloomelle-application.firebaseapp.com",
+      projectId: "bloomelle-application",
+      storageBucket: "bloomelle-application.firebasestorage.app",
+      messagingSenderId: "773791989725",
+      appId: "1:773791989725:web:883fd5eacb172848d4c034",
+      measurementId: "G-Z6DLFT2NMY"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    isSupported().then((supported) => {
+      if (supported && firebaseConfig.measurementId) getAnalytics(app);
+    });
+
+    const db = getFirestore(app);
+
+    const waitlistForm = document.getElementById('waitlist-form');
+    const waitlistStatus = document.getElementById('waitlist-status');
+    const waitlistSubmit = document.getElementById('waitlist-submit');
+
+    waitlistForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      var email = document.getElementById('waitlist-email').value.trim();
+      if (!email) return;
+
+      waitlistSubmit.disabled = true;
+      waitlistStatus.textContent = '';
+
+      try {
+        await addDoc(collection(db, 'bloomelle_waitlist'), {
+          email: email,
+          createdAt: serverTimestamp()
+        });
+        waitlistForm.hidden = true;
+        waitlistStatus.textContent = "You're on the list — thanks! We'll email you when Bloomelle launches.";
+      } catch (err) {
+        waitlistStatus.textContent = 'Something went wrong — please try again.';
+        waitlistSubmit.disabled = false;
+      }
+    });
+  </script>
 </head>
 <body>
   <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
@@ -475,8 +548,13 @@
   <div class="modal-overlay" id="notify-modal">
     <div class="modal-box">
       <h3>Bloomelle is in development</h3>
-      <p>We're building Bloomelle right now — there's no fixed release date yet. Thanks for your interest, check back here for updates.</p>
-      <button id="notify-modal-close">Got it</button>
+      <p>We're building Bloomelle right now — there's no fixed release date yet. Leave your email and we'll let you know the moment it launches.</p>
+      <form id="waitlist-form">
+        <input type="email" id="waitlist-email" class="waitlist-input" placeholder="you@example.com" required autocomplete="email">
+        <button type="submit" id="waitlist-submit">Notify me</button>
+      </form>
+      <p id="waitlist-status" class="waitlist-status" role="status"></p>
+      <button id="notify-modal-close">Maybe later</button>
     </div>
   </div>
 
