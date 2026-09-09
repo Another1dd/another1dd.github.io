@@ -46,6 +46,8 @@
     "operatingSystem": "iOS",
     "applicationCategory": "HealthApplication",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "installUrl": "https://apps.apple.com/app/id6776996876",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "4" },
     "description": "Hot flash and night sweat tracker that shows which triggers correlate with your episodes.",
     "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
   }
@@ -215,6 +217,29 @@
       width: 162px;
       object-fit: contain;
       display: block;
+    }
+
+    .store-badge.pending {
+      position: relative;
+    }
+    .store-badge.pending img {
+      filter: grayscale(1);
+      opacity: 0.55;
+    }
+    .store-badge.pending::after {
+      content: "Coming soon";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: #fff;
+      background: rgba(43,43,43,0.6);
+      border-radius: 8px;
+      pointer-events: none;
     }
 
     .badge {
@@ -425,7 +450,7 @@
 
   <main>
     <section class="hero">
-      <img class="icon" src="assets/icon-1024.png" alt="Flare app icon" width="1024" height="1024">
+      <img class="icon" src="assets/icon-192.png" alt="Flare app icon" width="88" height="88">
       <h1>Find out what actually triggers your hot flashes</h1>
       <p class="tagline">
         Flare logs each hot flash or night sweat along with what might have caused it —
@@ -436,7 +461,7 @@
         <a class="store-badge" href="https://apps.apple.com/app/id6776996876" id="ios-cta">
           <img src="assets/app-store-badge.svg" alt="Download on the App Store">
         </a>
-        <button class="store-badge" id="android-cta">
+        <button class="store-badge pending" id="android-cta">
           <img src="assets/google-play-badge.svg" alt="Get it on Google Play">
         </button>
       </div>
@@ -556,7 +581,7 @@
   </main>
 
   <footer>
-    &copy; 2026 Chepatapa Apps &middot;
+    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot;
     <a href="/flare/privacy">Privacy Policy</a> &middot;
     <a href="/flare/terms">Terms of Use</a> &middot;
     <a href="/flare/support">Support</a>
