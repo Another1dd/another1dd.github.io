@@ -6,7 +6,15 @@
     <atom:link href="https://another1dd.github.io/build-log/feed.xml" rel="self" type="application/rss+xml"/>
     <description>How Chepatapa Apps' five products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Why Google Couldn't See 12 of My 14 Pages</title>
+      <link>https://another1dd.github.io/build-log/why-google-couldnt-see-my-app-pages/</link>
+      <guid isPermaLink="true">https://another1dd.github.io/build-log/why-google-couldnt-see-my-app-pages/</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <description>A valid sitemap, clean robots.txt, no crawl errors — and Google still only knew about 2 of 14 pages. The bug was a div with an onclick handler where a real link should've been.</description>
+    </item>
 
     <item>
       <title>Kin Compass submitted for App Store review</title>

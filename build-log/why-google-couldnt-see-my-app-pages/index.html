@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A valid sitemap, clean robots.txt, no crawl errors — and Google still only knew about 2 of my 14 pages. The bug turned out to be a div with an onclick handler where a real link should've been.">
+  <meta name="color-scheme" content="light dark">
+  <title>Why Google Couldn't See 12 of My 14 Pages — Chepatapa Apps Build Log</title>
+  <link rel="canonical" href="https://another1dd.github.io/build-log/why-google-couldnt-see-my-app-pages/">
+  <meta name="theme-color" content="#FDF6EF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1E1815" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Why Google Couldn't See 12 of My 14 Pages">
+  <meta property="og:description" content="A valid sitemap, clean robots.txt, no crawl errors — and Google still only knew about 2 of my 14 pages. The bug turned out to be a div with an onclick handler where a real link should've been.">
+  <meta property="og:url" content="https://another1dd.github.io/build-log/why-google-couldnt-see-my-app-pages/">
+  <meta property="og:image" content="https://another1dd.github.io/assets/og-image-buildlog.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Why Google Couldn't See 12 of My 14 Pages",
+    "url": "https://another1dd.github.io/build-log/why-google-couldnt-see-my-app-pages/",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "author": { "@type": "Person", "name": "Tsimafei Lemeshchanka", "url": "https://github.com/Another1dd" },
+    "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Build Log", "item": "https://another1dd.github.io/build-log/" },
+      { "@type": "ListItem", "position": 3, "name": "Why Google Couldn't See 12 of My 14 Pages", "item": "https://another1dd.github.io/build-log/why-google-couldnt-see-my-app-pages/" }
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @font-face {
+      font-family: 'Fraunces';
+      font-style: normal;
+      font-weight: 500 600;
+      font-display: swap;
+      src: url('/assets/fonts/fraunces-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @view-transition {
+      navigation: auto;
+    }
+
+    :root {
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84;
+      --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #9E6B4A;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#1E1815; --surface:#2A231F; --text:#F3EAE2; --text-muted:#C7B8AC; --text-faint:#9C8B7D; --text-faintest:#7A6C60; --border:rgba(255,255,255,0.08); --shadow:rgba(0,0,0,0.35); --accent:#D9A46F; }
+    }
+    [data-theme="dark"] {
+      --bg: #1E1815; --surface: #2A231F; --text: #F3EAE2; --text-muted: #C7B8AC; --text-faint: #9C8B7D; --text-faintest: #7A6C60; --border: rgba(255,255,255,0.08); --shadow: rgba(0,0,0,0.35); --accent: #D9A46F;
+    }
+    [data-theme="light"] {
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84; --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #9E6B4A;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    h1, h2 { font-family: 'Fraunces', Georgia, serif; }
+
+    .theme-toggle {
+      position: fixed; top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+      display: flex; align-items: center; justify-content: center; cursor: pointer;
+      box-shadow: 0 2px 10px var(--shadow); transition: transform 0.2s ease; z-index: 20;
+    }
+    .theme-toggle:hover { transform: scale(1.06); }
+    .theme-toggle svg { width: 18px; height: 18px; stroke: var(--text); }
+    .theme-toggle .icon-moon { display: none; }
+    @media (prefers-color-scheme: dark) {
+      .theme-toggle .icon-sun { display: none; }
+      .theme-toggle .icon-moon { display: block; }
+    }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+    [data-theme="light"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
+    header {
+      padding: 40px 24px 0;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .back {
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back:hover { text-decoration: underline; }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .hero {
+      padding: 32px 0 8px;
+    }
+
+    .hero p.kicker {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero p.dek {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    section.card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+
+    section.card h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    section.card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    section.card p:last-child { margin-bottom: 0; }
+
+    section.card code {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 1px 6px;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    section.card a { color: var(--accent); }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 8px 0 16px;
+    }
+    .before-after div {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .before-after .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 4px;
+    }
+    .before-after .value {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-faintest);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    footer a { color: var(--text-faintest); }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+  </button>
+
+  <header>
+    <a class="back" href="/build-log/">&#8592; Build Log</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="kicker">Sep 2026 &middot; SEO / build notes</p>
+      <h1>Why Google Couldn't See 12 of My 14 Pages</h1>
+      <p class="dek">
+        The sitemap was valid. robots.txt was clean. Zero crawl errors reported. And Google
+        still only knew about 2 of the 14 pages on this site. Here's what was actually wrong,
+        and why it took a service account and a URL inspection API call to find it instead of
+        just looking at the page.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>The symptom</h2>
+      <p>
+        Chepatapa Apps has 14 pages: the homepage, a build log, and three app landing pages
+        (Flare, Kin Compass, Bloomelle) each with support, privacy, and terms subpages. The
+        sitemap listed all 14. Search Console had accepted it with zero warnings and zero
+        errors. By any normal check, everything was fine.
+      </p>
+      <p>
+        Except URL Inspection told a different story: the homepage and <code>/flare/</code>
+        were "Submitted and indexed." Every other page &mdash; including <code>/kincompass/</code>
+        and <code>/bloomelle/</code>, the two newer apps &mdash; came back "URL is unknown to
+        Google." Not "crawled, not indexed." Unknown. Google had never even tried.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>What I ruled out first</h2>
+      <p>
+        The obvious suspects were all clean: sitemap XML validated, <code>lastmod</code> dates
+        were current, robots.txt allowed everything (including the usual AI crawlers), no
+        <code>noindex</code> anywhere, no redirect chains, every URL returned a plain 200. The
+        last full crawl of the homepage was over three weeks stale, which pointed at a crawl
+        budget problem rather than a straightforward block &mdash; a small, brand-new domain
+        just doesn't get revisited often. That was a real factor, but not the actual cause.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>The actual bug</h2>
+      <p>
+        The homepage's three app cards were <code>&lt;div&gt;</code> elements with a JavaScript
+        <code>onclick</code> handler that ran <code>window.location = '/flare/'</code> and so on.
+        The only real <code>&lt;a href&gt;</code> tags inside each card pointed to the
+        support/privacy/terms subpages &mdash; the primary link to the app page itself didn't
+        exist as an actual link.
+      </p>
+      <p>
+        It worked perfectly for a human: click the card, the JS fires, you land on the app page.
+        It looked completely normal in the browser. But Googlebot doesn't execute arbitrary
+        onclick handlers to discover new URLs &mdash; it follows <code>href</code> attributes.
+        As far as a crawler reading the homepage's HTML was concerned, <code>/kincompass/</code>
+        and <code>/bloomelle/</code> simply weren't linked from anywhere on the one page Google
+        already knew about. Sitemap presence alone doesn't make up for that on a low-authority
+        domain with almost no other signal pointing at those URLs.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>The fix, and what else got cleaned up</h2>
+      <p>
+        Wrapped each card's icon and title in a real <code>&lt;a href="/flare/"&gt;</code>,
+        left the <code>onclick</code> in place as a progressive enhancement for the
+        click-anywhere behavior instead of the only path in. Same pattern for all three cards.
+      </p>
+      <p>
+        While in there: swapped the 500&ndash;600KB homepage app icons for the 15&ndash;19KB
+        versions that already existed for the web manifest, added explicit
+        <code>width</code>/<code>height</code> so the layout doesn't shift while they load,
+        self-hosted the one Google Font the homepage used instead of a render-blocking request,
+        and added an <a href="https://www.indexnow.org/" target="_blank" rel="noopener">IndexNow</a>
+        key so Bing and Yandex get pinged directly on changes instead of waiting to notice.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>What happened next</h2>
+      <div class="before-after">
+        <div>
+          <div class="label">Before</div>
+          <div class="value">2 / 14 indexed</div>
+        </div>
+        <div>
+          <div class="label">Same day</div>
+          <div class="value">5 / 14 indexed</div>
+        </div>
+      </div>
+      <p>
+        <code>/kincompass/</code>, <code>/bloomelle/</code>, and <code>/build-log/</code> all
+        got crawled and indexed the same day the fix shipped &mdash; a domain that had gone
+        three-plus weeks without a single crawl got visited within hours of becoming reachable
+        again. The nine support/privacy/terms subpages are still catching up; they're a second
+        hop deeper in the link graph, discoverable only through the app pages that were
+        themselves just unlocked, so they're following on the next crawl pass rather than
+        instantly.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>The takeaway</h2>
+      <p>
+        A navigation pattern can be functionally invisible to a crawler while looking completely
+        normal to every person who tests it by clicking around. Sitemap validity and a clean
+        robots.txt tell you the site isn't blocking anything &mdash; they don't tell you the
+        site is actually linked together. The only way to catch this kind of thing is to look
+        at what's literally in the HTML, not what renders after a click.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/build-log/">Build Log</a>
+  </footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = (document.documentElement.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>
