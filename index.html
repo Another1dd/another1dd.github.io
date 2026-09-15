@@ -194,7 +194,13 @@
     }
 
     .site-nav {
-      margin-top: 22px;
+      position: fixed;
+      top: 20px;
+      right: 72px;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      height: 40px;
     }
 
     .site-nav a {
@@ -204,14 +210,24 @@
       text-transform: uppercase;
       color: var(--text-faint);
       text-decoration: none;
-      border-bottom: 1px solid var(--border-hover);
-      padding-bottom: 2px;
-      transition: color 0.2s ease, border-color 0.2s ease;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      box-shadow: 0 2px 10px var(--shadow);
+      transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+      white-space: nowrap;
     }
 
     .site-nav a:hover {
       color: var(--text);
-      border-color: var(--text-faint);
+      border-color: var(--border-hover);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 420px) {
+      .site-nav { right: 64px; }
+      .site-nav a { font-size: 12px; padding: 8px 10px; }
     }
 
     main {
@@ -351,6 +367,10 @@
   </script>
 </head>
 <body>
+  <nav class="site-nav">
+    <a href="/build-log/">Build Log</a>
+  </nav>
+
   <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
     <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
     <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
@@ -365,9 +385,6 @@
       package registries for Swift and Dart/Flutter teams. Built and maintained by one
       developer, Tsimafei Lemeshchanka.
     </p>
-    <nav class="site-nav">
-      <a href="/build-log/">Build Log</a>
-    </nav>
   </header>
 
   <main>
