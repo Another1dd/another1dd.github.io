@@ -5,7 +5,7 @@
 ## Mobile apps
 
 - [Flare](https://another1dd.github.io/flare/): Hot flash and night sweat tracker for menopause. Logs each episode against possible triggers (caffeine, alcohol, stress, spicy food, hot rooms) and shows which ones actually correlate with your episodes, instead of guessing. Free, no account, local-only storage. Live on the iOS App Store.
-- [Kin Compass](https://another1dd.github.io/kincompass/): Daily routines and communication scripts for parents of preschoolers (ages 3-5) with ADHD. Ready-made routines, "what to say" scripts for tantrums/transitions/refusals, and win tracking. Free, no account, local-only storage. Submitted for iOS App Store review.
+- [Kin Compass](https://another1dd.github.io/kincompass/): Daily routines and communication scripts for parents of preschoolers (ages 3-5) with ADHD. Ready-made routines, "what to say" scripts for tantrums/transitions/refusals, and win tracking. Free, no account, local-only storage. Live on the iOS App Store.
 - [Bloomelle](https://another1dd.github.io/bloomelle/): Menstrual cycle-phase planning coach — forecasts the coming week and suggests which days may suit workouts, focus work, big decisions, or rest. Explicitly not a symptom tracker. Currently in development, no fixed release date yet.
 
 ## Developer tools (SaaS)

@@ -6,7 +6,15 @@
     <atom:link href="https://another1dd.github.io/build-log/feed.xml" rel="self" type="application/rss+xml"/>
     <description>How Chepatapa Apps' five products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Kin Compass live on the iOS App Store</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-09-24-kincompass-live</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Kin Compass, the daily routines and communication scripts app for parents of preschoolers with ADHD, went live on the iOS App Store.</description>
+    </item>
 
     <item>
       <title>Why Google Couldn't See 12 of My 14 Pages</title>

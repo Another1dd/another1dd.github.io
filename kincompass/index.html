@@ -47,6 +47,7 @@
     "operatingSystem": "iOS",
     "applicationCategory": "HealthApplication",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "installUrl": "https://apps.apple.com/app/id6791076115",
     "description": "Ready-made daily routines and communication scripts for parents of preschoolers with ADHD.",
     "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
   }
@@ -78,7 +79,7 @@
         "name": "Is Kin Compass available yet?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Kin Compass is currently in development, with no fixed release date yet — leave your email above and we'll let you know as soon as it's available."
+          "text": "Yes. Kin Compass is free on the iOS App Store. An Android version is on the roadmap — leave your email and we'll let you know when it's available."
         }
       }
     ]
@@ -341,7 +342,7 @@
     footer a { color: var(--text-faintest); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
-    /* "In review" modal */
+    /* Android "coming soon" modal */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -443,7 +444,7 @@
             createdAt: serverTimestamp()
           });
           form.hidden = true;
-          status.textContent = "You're on the list — thanks! We'll email you when Kin Compass launches.";
+          status.textContent = "You're on the list — thanks! We'll email you when Kin Compass launches on Android.";
         } catch (err) {
           status.textContent = 'Something went wrong — please try again.';
           submit.disabled = false;
@@ -451,7 +452,6 @@
       });
     }
 
-    wireWaitlistForm('ios');
     wireWaitlistForm('android');
   </script>
 </head>
@@ -467,7 +467,6 @@
   <main>
     <section class="hero">
       <img class="icon" src="assets/icon-192.png" alt="Kin Compass app icon" width="88" height="88">
-      <span class="pill">Coming soon</span>
       <h1>Know what to do next with your ADHD preschooler</h1>
       <p class="tagline">
         Kin Compass gives parents of preschoolers (ages 3–5) with ADHD ready-made daily
@@ -475,9 +474,9 @@
         simple way to track what worked.
       </p>
       <div class="cta-row">
-        <button class="store-badge pending" id="ios-cta">
+        <a class="store-badge" href="https://apps.apple.com/app/id6791076115" id="ios-cta">
           <img src="assets/app-store-badge.svg" alt="Download on the App Store">
-        </button>
+        </a>
         <button class="store-badge pending" id="android-cta">
           <img src="assets/google-play-badge.svg" alt="Get it on Google Play">
         </button>
@@ -577,8 +576,8 @@
       <div class="faq-item">
         <h3>Is Kin Compass available yet?</h3>
         <p>
-          Kin Compass is currently in development, with no fixed release date yet — leave
-          your email above and we'll let you know as soon as it's available.
+          Yes. Kin Compass is free on the iOS App Store. An Android version is on the
+          roadmap — leave your email and we'll let you know when it's available.
         </p>
       </div>
     </section>
@@ -591,23 +590,10 @@
     <a href="/kincompass/support">Support</a>
   </footer>
 
-  <div class="modal-overlay" id="ios-modal">
-    <div class="modal-box">
-      <h3>Coming to the App Store</h3>
-      <p>Kin Compass is still in development, with no fixed release date yet. Leave your email and we'll let you know the moment it's live.</p>
-      <form class="waitlist-form" id="waitlist-form-ios">
-        <input type="email" id="waitlist-email-ios" class="waitlist-input" placeholder="you@example.com" required autocomplete="email">
-        <button type="submit" id="waitlist-submit-ios">Notify me</button>
-      </form>
-      <p id="waitlist-status-ios" class="waitlist-status" role="status"></p>
-      <button id="ios-modal-close">Maybe later</button>
-    </div>
-  </div>
-
   <div class="modal-overlay" id="android-modal">
     <div class="modal-box">
       <h3>Coming to Google Play</h3>
-      <p>Kin Compass is iOS-first for now, with no fixed date for Android yet. Leave your email and we'll let you know when it's available.</p>
+      <p>Kin Compass is iOS-only for now, with no fixed date for Android yet. Leave your email and we'll let you know when it's available.</p>
       <form class="waitlist-form" id="waitlist-form-android">
         <input type="email" id="waitlist-email-android" class="waitlist-input" placeholder="you@example.com" required autocomplete="email">
         <button type="submit" id="waitlist-submit-android">Notify me</button>
@@ -618,17 +604,6 @@
   </div>
 
   <script>
-    var iosModal = document.getElementById('ios-modal');
-    document.getElementById('ios-cta').addEventListener('click', function () {
-      iosModal.classList.add('open');
-    });
-    document.getElementById('ios-modal-close').addEventListener('click', function () {
-      iosModal.classList.remove('open');
-    });
-    iosModal.addEventListener('click', function (e) {
-      if (e.target === iosModal) iosModal.classList.remove('open');
-    });
-
     var androidModal = document.getElementById('android-modal');
     document.getElementById('android-cta').addEventListener('click', function () {
       androidModal.classList.add('open');
