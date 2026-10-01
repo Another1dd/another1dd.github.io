@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta name="color-scheme" content="light dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naveli — Privacy Policy</title>
+  <meta name="description" content="Naveli's privacy policy: your recovery details stay on your device, what limited technical data our service providers process, and your rights.">
+  <link rel="canonical" href="https://another1dd.github.io/naveli/privacy">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Naveli", "item": "https://another1dd.github.io/naveli/" },
+      { "@type": "ListItem", "position": 3, "name": "Privacy Policy", "item": "https://another1dd.github.io/naveli/privacy" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @view-transition {
+      navigation: auto;
+    }
+
+    :root {
+      --bg: #F8F4F7; --surface: #fff; --text: #33302B; --text-muted: #4A4642;
+      --text-faint: #33302B99; --text-faintest: #B8AFA3; --border: #E7E0D6;
+      --shadow: rgba(0,0,0,0.05); --accent: #9A64A8; --accent-text: #7D478A;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#1C171E; --surface:#282130; --text:#F1EAF3; --text-muted:#C6B9CA; --text-faint:#9A8C9E; --text-faintest:#76697A; --border:rgba(255,255,255,0.08); --shadow:rgba(0,0,0,0.35); --accent-text:#C9A0D4; }
+    }
+    [data-theme="dark"] {
+      --bg: #1C171E; --surface: #282130; --text: #F1EAF3; --text-muted: #C6B9CA; --text-faint: #9A8C9E; --text-faintest: #76697A; --border: rgba(255,255,255,0.08); --shadow: rgba(0,0,0,0.35); --accent-text: #C9A0D4;
+    }
+    [data-theme="light"] {
+      --bg: #F8F4F7; --surface: #fff; --text: #33302B; --text-muted: #4A4642; --text-faint: #33302B99; --text-faintest: #B8AFA3; --border: #E7E0D6; --shadow: rgba(0,0,0,0.05); --accent-text: #7D478A;
+    }
+
+    .theme-toggle {
+      position: fixed; top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+      display: flex; align-items: center; justify-content: center; cursor: pointer;
+      box-shadow: 0 2px 10px var(--shadow); transition: transform 0.2s ease; z-index: 20;
+    }
+    .theme-toggle:hover { transform: scale(1.06); }
+    .theme-toggle svg { width: 18px; height: 18px; stroke: var(--text); }
+    .theme-toggle .icon-moon { display: none; }
+    @media (prefers-color-scheme: dark) {
+      .theme-toggle .icon-sun { display: none; }
+      .theme-toggle .icon-moon { display: block; }
+    }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+    [data-theme="light"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 40px 24px 0;
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .back {
+      font-size: 14px;
+      color: var(--accent-text);
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 32px;
+    }
+
+    .back:hover { text-decoration: underline; }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 14px;
+      color: var(--text-faint);
+      margin-bottom: 40px;
+    }
+
+    main {
+      flex: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      width: 100%;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin: 28px 0 10px;
+      color: var(--text);
+    }
+
+    h2:first-child { margin-top: 0; }
+
+    p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: 8px 0 12px 20px;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
+
+    a { color: var(--accent-text); }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-faintest);
+    }
+  </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAH-_cLeGQ0xl_I3KNf2nfcYaQx56mCA2c",
+      authDomain: "chepatapa-hub.firebaseapp.com",
+      projectId: "chepatapa-hub",
+      storageBucket: "chepatapa-hub.firebasestorage.app",
+      messagingSenderId: "1048752122508",
+      appId: "1:1048752122508:web:9fd38afd9cb77665e4e9a9",
+      measurementId: "G-69NWKV76PR"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    isSupported().then((supported) => {
+      if (supported && firebaseConfig.measurementId) getAnalytics(app);
+    });
+  </script>
+</head>
+<body>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+  </button>
+  <header>
+    <a class="back" href="/naveli/support">&#8592; Naveli Support</a>
+    <h1>Privacy Policy</h1>
+    <p>Naveli &middot; Effective date: 2026-10-01</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <p>This privacy policy applies to the Naveli app for mobile devices, together with any related services operated by Tsimafei Lemeshchanka (collectively, the "Application"). Tsimafei Lemeshchanka is hereby referred to as the "Service Provider".</p>
+      <p>In short: Naveli has no account and no server of its own. The recovery details you enter stay on your device and are never sent to the Service Provider. A small amount of technical data is processed by the service providers listed below so the Application can work, sell its subscription, and be kept free of crashes.</p>
+
+      <hr>
+
+      <h2>Recovery Details Stay on Your Device</h2>
+      <p>To tailor sequences to you, the Application asks for and stores the following on your device only:</p>
+      <ul>
+        <li>Your baby's birth date (used to work out your recovery stage)</li>
+        <li>Your delivery type (vaginal birth, C-section, or not sure)</li>
+        <li>Whether you've told the Application that your provider has cleared you for more exercise</li>
+        <li>Your answer to the core (diastasis recti) self-check</li>
+        <li>The sequence you're in the middle of, so you can resume it</li>
+        <li>Your reminder settings (whether daily reminders are on, and at what time)</li>
+      </ul>
+      <p>None of this is sent to the Service Provider or to any third party, and none of it is included in analytics events or crash reports. The Application does not require an account and does not collect your name, email address, or contact details.</p>
+      <p>Because this data lives in the Application's storage on your device, it may be included in your device's own backups (for example iCloud Backup or Android backup) if you have them turned on. Those backups are handled by Apple or Google under their own terms and your account settings, not by the Service Provider.</p>
+
+      <hr>
+
+      <h2>Technical Data Processed by Service Providers</h2>
+      <p>The Application uses the following third-party services, each with its own privacy policy:</p>
+      <ul>
+        <li><strong>Google Analytics for Firebase</strong> &mdash; anonymous usage events, such as which screens are opened, whether onboarding was completed, paywall views and subscription events, and settings changes (for example turning reminders on or off). Firebase also processes an app-instance identifier, device and operating-system information, app version, and approximate location derived from your IP address. Events never include your birth date, delivery type, clearance status, or core-check answer.</li>
+        <li><strong>Firebase Crashlytics</strong> &mdash; crash and error reports (stack traces, device model, operating-system version, app version) linked to a random installation identifier generated by the Application, used to find and fix bugs.</li>
+        <li><strong>Firebase Remote Config</strong> &mdash; fetches configuration values for the Application (for example whether to show the rating prompt); this involves your device contacting Google's servers with an app-instance identifier.</li>
+        <li><strong>Adapty</strong> &mdash; manages the Naveli+ subscription. Adapty processes a random identifier generated by the Application, your purchase and subscription status and the related App Store or Google Play transaction information, IP address, and basic device and app information (such as operating-system and app version).</li>
+        <li><strong>Apple App Store / Google Play</strong> &mdash; process all payments. The Service Provider never receives your payment card details.</li>
+      </ul>
+      <p>The Application does not use advertising identifiers, does not show ads, and does not sell or share your personal information for advertising.</p>
+      <p>The Service Provider may disclose information as required by law, for protection purposes, or with trusted service providers who comply with this policy.</p>
+
+      <hr>
+
+      <h2>Notifications</h2>
+      <p>If you turn on daily reminders, the Application schedules them as local notifications on your device. They are not sent from a server, and no push-notification token is collected. You can turn reminders off in the Application's Settings or in your device settings at any time.</p>
+
+      <hr>
+
+      <h2>Health Information</h2>
+      <p>The Service Provider does not collect health data. The recovery details described above are entered by you, stored on your device, and used only on your device to choose suitable sequences. The Application does not read from or write to Apple Health, Health Connect, or any other health platform.</p>
+
+      <hr>
+
+      <h2>Deleting Your Data</h2>
+      <p>You can erase everything the Application stores about your recovery at any time with <strong>Settings &rarr; Delete All Data</strong>. This removes your details, core-check answer, in-progress sequence, and reminder settings, and cancels scheduled reminders. Uninstalling the Application also removes its data from your device (copies may remain in device backups you made earlier until those backups are replaced or deleted).</p>
+      <p>Because the Service Provider does not hold your recovery details, there is nothing to delete on our side. To ask about data held by Firebase or Adapty in connection with your installation, contact <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a>.</p>
+
+      <hr>
+
+      <h2>This Website</h2>
+      <p>Separately from the Naveli app described above, this website (the page you are reading) uses Google Analytics for Firebase to understand visits and improve the site. This applies only to the website.</p>
+
+      <hr>
+
+      <h2>Your Rights</h2>
+      <p>You may request access to, correction of, or deletion of your personal data held by the Service Provider. To exercise these rights, or to withdraw consent where processing is based on consent, contact the Service Provider at <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a>.</p>
+
+      <hr>
+
+      <h2>Your California Privacy Rights (CCPA/CPRA)</h2>
+      <p>If you are a California resident, you have the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale or sharing of personal information, and the right to non-discrimination for exercising these rights. The Service Provider does not sell or share personal information. To exercise your CCPA/CPRA rights, contact the Service Provider at <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a>.</p>
+
+      <hr>
+
+      <h2>International Data Transfers</h2>
+      <p>The Service Provider's third-party service providers may process technical data in countries outside your country of residence, including outside the European Economic Area (EEA). Where applicable law requires safeguards for international transfers, appropriate mechanisms are used, including Standard Contractual Clauses approved by the European Commission.</p>
+
+      <hr>
+
+      <h2>Data Retention Policy</h2>
+      <ul>
+        <li><strong>Recovery details you enter:</strong> Kept on your device only, until you use Delete All Data or uninstall the Application</li>
+        <li><strong>Automatically collected technical data:</strong> Retained by the service providers above for up to 24 months from collection, or as set by their own retention policies</li>
+        <li><strong>Subscription records:</strong> Retained as long as needed to provide the subscription and as required by applicable law</li>
+        <li><strong>Aggregated and anonymized data:</strong> Retained indefinitely as it no longer identifies you</li>
+      </ul>
+
+      <hr>
+
+      <h2>Children</h2>
+      <p>The Application is intended for adults recovering after giving birth. It is not directed at children, and the Service Provider does not knowingly collect personal data from children under 16. Contact <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a> if you are aware of any issue related to children's data.</p>
+
+      <hr>
+
+      <h2>Security</h2>
+      <p>The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains. Recovery details stored on your device are protected by your device's own security, such as your passcode.</p>
+
+      <hr>
+
+      <h2>Data Breach Notification</h2>
+      <p>If a data breach occurs that affects your personal data, the Service Provider will notify you in accordance with applicable legal requirements.</p>
+
+      <hr>
+
+      <h2>Changes</h2>
+      <p>The Service Provider may update this Privacy Policy from time to time. You will be notified of material changes by posting the updated Privacy Policy with an effective date. Previous versions are available upon request via <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a>.</p>
+
+      <hr>
+
+      <h2>Contact Us</h2>
+      <p>If you have any questions regarding privacy while using the Application, please contact the Service Provider via email at <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Chepatapa Apps &middot; <a href="/naveli/support" style="color:var(--text-faintest)">Support</a> &middot; <a href="/naveli/terms" style="color:var(--text-faintest)">Terms of Use</a>
+  </footer>
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = (document.documentElement.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>
