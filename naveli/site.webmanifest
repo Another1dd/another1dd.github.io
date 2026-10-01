@@ -1,0 +1,14 @@
+{
+  "name": "Naveli — Postpartum Recovery Yoga",
+  "short_name": "Naveli",
+  "description": "Postpartum recovery yoga built for your stage and delivery type, with pelvic-floor safety cues in every sequence.",
+  "start_url": "/naveli/",
+  "scope": "/naveli/",
+  "display": "browser",
+  "background_color": "#F8F4F7",
+  "theme_color": "#9A64A8",
+  "icons": [
+    { "src": "/naveli/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/naveli/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
