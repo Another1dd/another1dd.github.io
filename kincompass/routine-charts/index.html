@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free printable visual routine charts for preschoolers: morning, after-daycare, dinner and bedtime. Four simple PDFs in A4 and US Letter, made for ADHD-friendly routines. No signup.">
+  <meta name="color-scheme" content="light dark">
+  <title>Free Printable Routine Charts for Preschoolers — Kin Compass</title>
+  <link rel="canonical" href="https://another1dd.github.io/kincompass/routine-charts/">
+  <meta name="theme-color" content="#FDF6EF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1E1815" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Free Printable Routine Charts for Preschoolers">
+  <meta property="og:description" content="Free printable visual routine charts for preschoolers: morning, after-daycare, dinner and bedtime. Four simple PDFs in A4 and US Letter, made for ADHD-friendly routines. No signup.">
+  <meta property="og:url" content="https://another1dd.github.io/kincompass/routine-charts/">
+  <meta property="og:image" content="https://another1dd.github.io/kincompass/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "headline": "Free Printable Routine Charts for Preschoolers",
+    "url": "https://another1dd.github.io/kincompass/routine-charts/",
+    "datePublished": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "about": "Printable visual routine charts for preschoolers",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "@id": "https://another1dd.github.io/#tsimafei-lemeshchanka",
+      "name": "Tsimafei Lemeshchanka",
+      "url": "https://github.com/Another1dd",
+      "jobTitle": "Developer",
+      "sameAs": [
+        "https://github.com/Another1dd",
+        "https://www.linkedin.com/in/timophei-lemeshchenko/"
+      ]
+    },
+    "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Kin Compass", "item": "https://another1dd.github.io/kincompass/" },
+      { "@type": "ListItem", "position": 3, "name": "Routine charts", "item": "https://another1dd.github.io/kincompass/routine-charts/" }
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @font-face {
+      font-family: 'Fraunces';
+      font-style: normal;
+      font-weight: 500 600;
+      font-display: swap;
+      src: url('/assets/fonts/fraunces-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @view-transition {
+      navigation: auto;
+    }
+
+    :root {
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84;
+      --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #44765E;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#1E1815; --surface:#2A231F; --text:#F3EAE2; --text-muted:#C7B8AC; --text-faint:#9C8B7D; --text-faintest:#7A6C60; --border:rgba(255,255,255,0.08); --shadow:rgba(0,0,0,0.35); --accent:#599B7C; }
+    }
+    [data-theme="dark"] {
+      --bg: #1E1815; --surface: #2A231F; --text: #F3EAE2; --text-muted: #C7B8AC; --text-faint: #9C8B7D; --text-faintest: #7A6C60; --border: rgba(255,255,255,0.08); --shadow: rgba(0,0,0,0.35); --accent: #599B7C;
+    }
+    [data-theme="light"] {
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84; --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #44765E;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    h1, h2 { font-family: 'Fraunces', Georgia, serif; }
+
+    .theme-toggle {
+      position: fixed; top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+      display: flex; align-items: center; justify-content: center; cursor: pointer;
+      box-shadow: 0 2px 10px var(--shadow); transition: transform 0.2s ease; z-index: 20;
+    }
+    .theme-toggle:hover { transform: scale(1.06); }
+    .theme-toggle svg { width: 18px; height: 18px; stroke: var(--text); }
+    .theme-toggle .icon-moon { display: none; }
+    @media (prefers-color-scheme: dark) {
+      .theme-toggle .icon-sun { display: none; }
+      .theme-toggle .icon-moon { display: block; }
+    }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+    [data-theme="light"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
+    header {
+      padding: 40px 24px 0;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .back {
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back:hover { text-decoration: underline; }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .hero {
+      padding: 32px 0 8px;
+    }
+
+    .hero p.kicker {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero p.dek {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    section.card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+
+    section.card h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    section.card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    section.card p:last-child { margin-bottom: 0; }
+
+    section.card code {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 1px 6px;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    section.card a { color: var(--accent); }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 8px 0 16px;
+    }
+    .before-after div {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .before-after .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 4px;
+    }
+    .before-after .value {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-faintest);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    footer a { color: var(--text-faintest); }
+    .charts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 8px; }
+    @media (max-width: 560px) { .charts { grid-template-columns: 1fr; } }
+    .chart { border: 1px solid var(--border); border-radius: 14px; padding: 16px; background: var(--bg); }
+    .chart h3 { font-family: 'Fraunces', Georgia, serif; font-size: 20px; color: var(--accent); margin-bottom: 2px; }
+    .chart .blurb { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; }
+    .chart .step { display: flex; align-items: center; gap: 10px; border: 2px solid #4F8A6E; border-radius: 12px; padding: 6px 10px; margin-bottom: 6px; font-size: 14px; font-weight: 600; color: var(--text); }
+    .chart .step .n { width: 14px; text-align: center; color: #4F8A6E; }
+    .chart .step .b { width: 30px; height: 30px; border-radius: 50%; background: rgba(79,138,110,0.14); display: flex; align-items: center; justify-content: center; flex: none; }
+    .chart .step .ic { width: 18px; height: 18px; fill: var(--accent); }
+    .chart .step .age { margin-left: auto; font-size: 11px; font-weight: 500; color: var(--text-faint); }
+    .chart .dl { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+    .chart .dl a { font-size: 13px; font-weight: 600; text-decoration: none; padding: 7px 12px; border-radius: 8px; border: 1px solid var(--accent); color: var(--accent); }
+    .chart .dl a:first-child { background: var(--accent); color: var(--bg); }
+    .cta-row { margin-top: 14px; }
+    .cta-row img { height: 44px; width: auto; }
+    details { border-top: 1px solid var(--border); padding: 12px 0; }
+    details:last-of-type { border-bottom: 1px solid var(--border); }
+    summary { cursor: pointer; font-weight: 600; font-size: 15px; }
+    details p { margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+  </button>
+
+  <header>
+    <a class="back" href="/kincompass/">&#8592; Kin Compass</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="kicker">Free printables &middot; Kin Compass</p>
+      <h1>Free Printable Routine Charts for Preschoolers</h1>
+      <p class="dek">
+        Four one-page visual schedules for the parts of the day that tend to go sideways:
+        mornings, the hour after daycare, dinner, and bedtime. Print one, stick it at your
+        child's eye level, and point to it instead of repeating yourself. No signup, no email.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Pick a chart</h2>
+      <div class="charts">
+        <div class="chart">
+          <h3>Morning Routine</h3>
+          <p class="blurb">Wake up to out the door.</p>
+          <div class="step"><span class="n">1</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M129 -424 121 -432C112 -440 99 -440 91 -432C82 -423 82 -410 91 -402L99 -394C107 -385 121 -385 129 -394C137 -402 137 -416 129 -424ZM64 -288H42C31 -288 21 -279 21 -267C21 -255 31 -246 42 -246H64C76 -245 85 -255 85 -266V-267C85 -279 76 -288 64 -288ZM256 -500C244 -500 235 -491 235 -479V-459C235 -447 244 -438 256 -438C268 -437 277 -447 277 -458V-479C277 -491 268 -500 256 -500ZM421 -432C413 -440 400 -440 391 -432L383 -424C375 -415 375 -402 383 -394C391 -385 405 -385 413 -394L421 -402C430 -410 430 -423 421 -432ZM383 -110 391 -101C399 -93 413 -93 421 -101C429 -110 429 -123 421 -131L413 -140C404 -148 391 -148 383 -140C374 -131 374 -118 383 -110ZM427 -267C427 -255 436 -246 448 -246H469C481 -246 490 -255 490 -267C490 -279 481 -288 469 -288H448C436 -288 427 -279 427 -267ZM256 -395C185 -395 128 -337 128 -267C128 -196 185 -139 256 -139C327 -139 384 -196 384 -267C384 -337 327 -395 256 -395ZM256 -33C268 -33 277 -42 277 -54V-75C277 -86 268 -96 256 -96C244 -96 235 -86 235 -75V-54C235 -42 244 -33 256 -33ZM91 -102C99 -93 112 -93 121 -102L129 -110C137 -118 137 -132 129 -140C121 -148 107 -148 99 -140L90 -132C82 -123 82 -110 91 -102Z"/></svg></span>Wake up</div><div class="step"><span class="n">2</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M461 -124 277 -261V-281C313 -291 337 -327 329 -367C324 -395 301 -418 273 -425C236 -433 202 -413 188 -383C181 -368 192 -352 207 -352C215 -352 223 -357 226 -364C231 -376 243 -384 256 -384C274 -384 288 -370 288 -352C288 -334 273 -320 255 -320C244 -320 235 -310 235 -299V-261L51 -124C35 -111 44 -85 64 -85H448C468 -85 477 -111 461 -124ZM128 -128 256 -224 384 -128H128Z"/></svg></span>Wash up &amp; get dressed</div><div class="step"><span class="n">3</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M341 -384V-256C341 -233 361 -213 384 -213H405V-64C405 -52 415 -43 427 -43C438 -43 448 -52 448 -64V-445C448 -459 435 -469 422 -466C375 -455 341 -416 341 -384ZM235 -320H192V-448C192 -460 182 -469 171 -469C159 -469 149 -460 149 -448V-320H107V-448C107 -460 97 -469 85 -469C74 -469 64 -460 64 -448V-320C64 -273 102 -235 149 -235V-64C149 -52 159 -43 171 -43C182 -43 192 -52 192 -64V-235C239 -235 277 -273 277 -320V-448C277 -460 268 -469 256 -469C244 -469 235 -460 235 -448V-320Z"/></svg></span>Breakfast</div><div class="step"><span class="n">4</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M427 -341V-85C427 -62 407 -43 384 -43H128C105 -43 85 -62 85 -85V-341C85 -381 113 -414 149 -424V-437C149 -455 164 -469 181 -469C199 -469 213 -455 213 -437V-427H299V-437C299 -455 313 -469 331 -469C348 -469 363 -455 363 -437V-424C399 -414 427 -381 427 -341ZM128 -235C128 -223 138 -213 149 -213H341V-192C341 -180 351 -171 363 -171C374 -171 384 -180 384 -192V-235C384 -246 374 -256 363 -256H149C138 -256 128 -246 128 -235Z"/></svg></span>Pack backpack<span class=age>Age 4–5</span></div><div class="step"><span class="n">5</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M461 -124 277 -261V-281C313 -291 337 -327 329 -367C324 -395 301 -418 273 -425C236 -433 202 -413 188 -383C181 -368 192 -352 207 -352C215 -352 223 -357 226 -364C231 -376 243 -384 256 -384C274 -384 288 -370 288 -352C288 -334 273 -320 255 -320C244 -320 235 -310 235 -299V-261L51 -124C35 -111 44 -85 64 -85H448C468 -85 477 -111 461 -124ZM128 -128 256 -224 384 -128H128Z"/></svg></span>Put on shoes &amp; coat</div>
+          <div class="dl">
+            <a href="/kincompass/routine-charts/pdf/kin-compass-morning-routine-a4.pdf" download>Download PDF (A4)</a>
+            <a href="/kincompass/routine-charts/pdf/kin-compass-morning-routine-letter.pdf" download>US Letter</a>
+          </div>
+        </div>
+        <div class="chart">
+          <h3>After-Daycare Routine</h3>
+          <p class="blurb">The hard hour between daycare and dinner.</p>
+          <div class="step"><span class="n">1</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M478 -252C485 -261 483 -275 474 -282L269 -438C261 -444 250 -444 243 -438L128 -350V-363C128 -374 118 -384 107 -384C95 -384 85 -374 85 -363V-318L38 -282C29 -275 27 -261 34 -252C41 -243 55 -241 64 -248L85 -264V-85C85 -74 95 -64 107 -64H235V-171C235 -182 244 -192 256 -192C268 -192 277 -182 277 -171V-64H405C417 -64 427 -74 427 -85V-264L448 -248C457 -241 471 -243 478 -252ZM112 -405C97 -405 86 -422 93 -436C104 -456 125 -469 149 -469C157 -469 165 -474 168 -481C172 -487 179 -491 186 -491C202 -491 213 -474 205 -460C194 -440 173 -427 149 -427C141 -427 134 -422 130 -415C127 -409 120 -405 112 -405Z"/></svg></span>Arrive home</div><div class="step"><span class="n">2</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M400 -330 375 -340C362 -345 348 -336 346 -322L330 -149H363L418 -288C425 -304 417 -323 400 -330ZM137 -340 112 -330C95 -323 87 -304 94 -288L149 -149H181L166 -322C164 -336 150 -345 137 -340ZM285 -384H227C208 -384 193 -368 195 -349L213 -150H299L317 -349C319 -368 304 -384 285 -384ZM68 -219 47 -178C42 -170 42 -161 44 -153C50 -131 74 -123 95 -133L117 -144L87 -218C84 -227 72 -227 68 -219ZM465 -178 444 -219C440 -227 428 -227 425 -218L395 -144L417 -133C437 -123 462 -131 468 -153C470 -161 470 -170 465 -178Z"/></svg></span>Snack</div><div class="step"><span class="n">3</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M256 -469C138 -469 43 -374 43 -256C43 -138 138 -43 256 -43C285 -43 309 -67 309 -96C309 -109 304 -122 296 -132C294 -134 293 -136 293 -139C293 -145 298 -149 304 -149H341C412 -149 469 -207 469 -277C469 -383 374 -469 256 -469ZM373 -235C356 -235 341 -249 341 -267C341 -284 356 -299 373 -299C391 -299 405 -284 405 -267C405 -249 391 -235 373 -235ZM309 -320C292 -320 277 -334 277 -352C277 -370 292 -384 309 -384C327 -384 341 -370 341 -352C341 -334 327 -320 309 -320ZM107 -267C107 -284 121 -299 139 -299C156 -299 171 -284 171 -267C171 -249 156 -235 139 -235C121 -235 107 -249 107 -267ZM235 -352C235 -334 220 -320 203 -320C185 -320 171 -334 171 -352C171 -370 185 -384 203 -384C220 -384 235 -370 235 -352Z"/></svg></span>Quiet activity<span class=age>Age 4–5</span></div><div class="step"><span class="n">4</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M460 -169 437 -332C431 -374 395 -405 353 -405H159C117 -405 81 -374 75 -332L52 -169C47 -136 72 -107 105 -107C120 -107 134 -112 144 -123L192 -171H320L368 -123C378 -112 392 -107 406 -107C440 -107 465 -136 460 -169ZM235 -277H192V-235H171V-277H128V-299H171V-341H192V-299H235V-277ZM320 -299C308 -299 299 -308 299 -320C299 -332 308 -341 320 -341C332 -341 341 -332 341 -320C341 -308 332 -299 320 -299ZM363 -235C351 -235 341 -244 341 -256C341 -268 351 -277 363 -277C374 -277 384 -268 384 -256C384 -244 374 -235 363 -235Z"/></svg></span>Free play</div>
+          <div class="dl">
+            <a href="/kincompass/routine-charts/pdf/kin-compass-after-daycare-routine-a4.pdf" download>Download PDF (A4)</a>
+            <a href="/kincompass/routine-charts/pdf/kin-compass-after-daycare-routine-letter.pdf" download>US Letter</a>
+          </div>
+        </div>
+        <div class="chart">
+          <h3>Dinner Routine</h3>
+          <p class="blurb">From hand-washing to clearing the table.</p>
+          <div class="step"><span class="n">1</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M41 -260C29 -249 21 -232 21 -214V-85C21 -50 50 -21 85 -21H377C391 -21 404 -31 405 -45C407 -61 394 -75 379 -75H267C261 -75 256 -79 256 -85C256 -91 261 -96 267 -96H420C434 -96 447 -106 448 -120C450 -136 437 -149 422 -149H267C261 -149 256 -154 256 -160C256 -166 261 -171 267 -171H441C455 -171 468 -181 469 -195C471 -211 458 -224 443 -224H267C261 -224 256 -229 256 -235C256 -241 261 -245 267 -245H399C412 -245 425 -255 427 -269C428 -285 416 -299 400 -299H189L221 -354C223 -358 224 -361 224 -366C224 -371 222 -376 218 -381L209 -390C201 -399 188 -399 179 -391L41 -260ZM395 -341C424 -341 448 -365 448 -395C448 -421 418 -462 403 -481C399 -486 391 -486 387 -481C371 -462 341 -421 341 -395C341 -365 365 -341 395 -341ZM288 -320C306 -320 320 -334 320 -352C320 -364 306 -384 296 -396C292 -401 284 -401 280 -396C270 -384 256 -364 256 -352C256 -334 270 -320 288 -320Z"/></svg></span>Wash hands</div><div class="step"><span class="n">2</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M341 -277H320V-427C320 -462 291 -491 256 -491C221 -491 192 -462 192 -427V-277H171C112 -277 64 -230 64 -171V-64C64 -41 83 -21 107 -21H405C429 -21 448 -41 448 -64V-171C448 -230 400 -277 341 -277ZM405 -64H363V-128C363 -140 353 -149 341 -149C330 -149 320 -140 320 -128V-64H277V-128C277 -140 268 -149 256 -149C244 -149 235 -140 235 -128V-64H192V-128C192 -140 182 -149 171 -149C159 -149 149 -140 149 -128V-64H107V-171C107 -206 135 -235 171 -235H341C377 -235 405 -206 405 -171V-64Z"/></svg></span>Help set the table<span class=age>Age 4–5</span></div><div class="step"><span class="n">3</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M61 -89 82 -67C84 -65 87 -64 90 -64H422C425 -64 428 -65 430 -67L451 -89C458 -95 453 -107 444 -107H68C59 -107 54 -95 61 -89ZM64 -128H426C432 -198 377 -256 309 -256C259 -256 216 -224 199 -180C191 -185 181 -188 171 -190V-320H208C234 -320 256 -342 256 -368H432C441 -368 448 -375 448 -384C448 -393 441 -400 432 -400H256C256 -426 234 -448 208 -448H80C71 -448 64 -441 64 -432C64 -423 71 -416 80 -416H85V-400H80C71 -400 64 -393 64 -384C64 -375 71 -368 80 -368H85V-352H80C71 -352 64 -345 64 -336C64 -327 71 -320 80 -320H85V-162C76 -153 69 -141 64 -128ZM171 -416H213V-400H171V-416ZM171 -368H213V-352H171V-368ZM117 -416H139V-400H117V-416ZM117 -368H139V-352H117V-368ZM117 -320H139V-191C131 -189 124 -187 117 -184V-320Z"/></svg></span>Dinner</div><div class="step"><span class="n">4</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M341 -384V-256C341 -233 361 -213 384 -213H405V-64C405 -52 415 -43 427 -43C438 -43 448 -52 448 -64V-445C448 -459 435 -469 422 -466C375 -455 341 -416 341 -384ZM235 -320H192V-448C192 -460 182 -469 171 -469C159 -469 149 -460 149 -448V-320H107V-448C107 -460 97 -469 85 -469C74 -469 64 -460 64 -448V-320C64 -273 102 -235 149 -235V-64C149 -52 159 -43 171 -43C182 -43 192 -52 192 -64V-235C239 -235 277 -273 277 -320V-448C277 -460 268 -469 256 -469C244 -469 235 -460 235 -448V-320Z"/></svg></span>Clear the table</div>
+          <div class="dl">
+            <a href="/kincompass/routine-charts/pdf/kin-compass-dinner-routine-a4.pdf" download>Download PDF (A4)</a>
+            <a href="/kincompass/routine-charts/pdf/kin-compass-dinner-routine-letter.pdf" download>US Letter</a>
+          </div>
+        </div>
+        <div class="chart">
+          <h3>Bedtime Routine</h3>
+          <p class="blurb">Bath to lights out.</p>
+          <div class="step"><span class="n">1</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M107 -363C107 -386 126 -405 149 -405C173 -405 192 -386 192 -363C192 -339 173 -320 149 -320C126 -320 107 -339 107 -363ZM448 -235H427V-409C427 -442 400 -469 366 -469C350 -469 335 -463 324 -452L297 -425C294 -426 290 -427 286 -427C278 -427 270 -424 263 -420L322 -361C326 -368 329 -375 329 -384C329 -388 328 -391 327 -395L354 -422C357 -425 362 -427 366 -427C376 -427 384 -419 384 -409V-235H238C231 -239 226 -244 220 -250L191 -283C186 -288 181 -291 176 -294C169 -297 162 -299 154 -299C128 -298 107 -277 107 -251V-235H64C52 -235 43 -225 43 -213V-107C43 -83 62 -64 85 -64C85 -52 95 -43 107 -43H405C417 -43 427 -52 427 -64C450 -64 469 -83 469 -107V-213C469 -225 460 -235 448 -235Z"/></svg></span>Bath</div><div class="step"><span class="n">2</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M461 -124 277 -261V-281C313 -291 337 -327 329 -367C324 -395 301 -418 273 -425C236 -433 202 -413 188 -383C181 -368 192 -352 207 -352C215 -352 223 -357 226 -364C231 -376 243 -384 256 -384C274 -384 288 -370 288 -352C288 -334 273 -320 255 -320C244 -320 235 -310 235 -299V-261L51 -124C35 -111 44 -85 64 -85H448C468 -85 477 -111 461 -124ZM128 -128 256 -224 384 -128H128Z"/></svg></span>Put on PJs</div><div class="step"><span class="n">3</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M149 -213C114 -213 85 -185 85 -149C85 -121 61 -107 43 -107C62 -81 96 -64 128 -64C175 -64 213 -102 213 -149C213 -185 185 -213 149 -213ZM442 -413 413 -442C405 -450 391 -450 383 -442L192 -251L251 -192L442 -383C450 -391 450 -405 442 -413Z"/></svg></span>Brush teeth<span class=age>Age 4–5</span></div><div class="step"><span class="n">4</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M373 -416C332 -416 287 -407 256 -384C225 -407 180 -416 139 -416C108 -416 75 -411 47 -399C32 -392 21 -377 21 -360V-119C21 -91 47 -71 74 -78C95 -83 117 -85 139 -85C172 -85 207 -80 236 -66C249 -59 263 -59 276 -66C304 -80 340 -85 373 -85C394 -85 417 -83 438 -78C464 -71 490 -91 490 -119V-360C490 -377 480 -392 464 -399C437 -411 404 -416 373 -416ZM448 -144C448 -131 436 -121 422 -124C406 -127 390 -128 373 -128C337 -128 285 -114 256 -96V-341C285 -359 337 -373 373 -373C393 -373 412 -371 431 -367C441 -365 448 -356 448 -346V-144ZM298 -277C291 -277 285 -281 283 -288C280 -297 285 -306 293 -308C326 -319 369 -322 408 -318C416 -317 423 -309 422 -300C421 -291 413 -285 404 -286C369 -290 332 -287 303 -278C301 -278 300 -277 298 -277ZM298 -220C291 -220 285 -225 283 -231C280 -240 285 -249 293 -252C326 -262 369 -266 408 -261C416 -260 423 -252 422 -243C421 -235 413 -228 404 -229C369 -233 332 -230 303 -221C301 -221 300 -220 298 -220ZM298 -164C291 -164 285 -168 283 -175C280 -183 285 -192 293 -195C326 -205 369 -209 408 -204C416 -203 423 -195 422 -187C421 -178 413 -172 404 -173C369 -177 332 -173 303 -164C301 -164 300 -164 298 -164Z"/></svg></span>Story time</div><div class="step"><span class="n">5</span><span class="b"><svg class="ic" viewBox="0 -512 512 512" aria-hidden="true"><path d="M247 -463C298 -476 347 -469 388 -449C396 -446 397 -436 390 -431C335 -393 299 -329 299 -256C299 -183 335 -119 390 -81C397 -76 396 -66 388 -63C361 -50 331 -43 299 -43C170 -43 67 -157 88 -290C101 -374 165 -443 247 -463Z"/></svg></span>Lights out</div>
+          <div class="dl">
+            <a href="/kincompass/routine-charts/pdf/kin-compass-bedtime-routine-a4.pdf" download>Download PDF (A4)</a>
+            <a href="/kincompass/routine-charts/pdf/kin-compass-bedtime-routine-letter.pdf" download>US Letter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>How to use a visual routine chart</h2>
+      <p>
+        A chart works because it moves the nagging off you and onto the paper: &ldquo;what's
+        next on the chart?&rdquo; is a calmer sentence than &ldquo;put your shoes on, again.&rdquo;
+        A few things make it stick.
+      </p>
+      <p>
+        Go through the chart together once when everyone is calm, not in the middle of a rush.
+        Hang it where the routine happens, at your child's eye level. Keep to the same order
+        every day, and let your child tick the circle themselves; finishing a step is the reward
+        in itself, and a quick &ldquo;you did the first two!&rdquo; goes a long way.
+      </p>
+      <p>
+        Visual schedules are a common tool in parent training for young children, including
+        children with ADHD. They're a support, not a treatment, and they don't replace advice
+        from your child's pediatrician or therapist.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Want it to remind you, too?</h2>
+      <p>
+        The printed chart can't beep. Kin Compass has the same routines as ready-made templates
+        with reminders, a calm &ldquo;what to say&rdquo; script for the moments a routine falls
+        apart, and a wins screen your child can see. Free to start, no account.
+      </p>
+      <div class="cta-row">
+        <a href="https://apps.apple.com/app/id6791076115"><img src="/kincompass/assets/app-store-badge.svg" alt="Download Kin Compass on the App Store" height="44"></a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Questions</h2>
+      <details><summary>Are these charts really free?</summary><p>Yes. Download and print as many as you like for your own family, classroom, or therapy practice. Please don't resell them or republish the files; link to this page instead.</p></details><details><summary>What age are they for?</summary><p>They're written for ages 3 to 5. A few steps are tagged &ldquo;Age 4&ndash;5&rdquo;; for a younger child, cross those out or cover them with tape so the chart stays short.</p></details><details><summary>Do I need the app?</summary><p>No. The printable charts work on their own. The Kin Compass app adds reminders, a &ldquo;what to say&rdquo; script for tantrums and transitions, and a way to track wins, but nothing here requires an account or an email.</p></details><details><summary>Can I change the steps?</summary><p>Print one, then write or draw over it, or cut the steps apart and rearrange them. In the app you can edit each routine, add your own steps, and set reminders.</p></details>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/kincompass/">Kin Compass</a> &middot; <a href="/build-log/">Build Log</a>
+  </footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = (document.documentElement.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>

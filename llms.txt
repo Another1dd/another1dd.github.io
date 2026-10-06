@@ -9,6 +9,8 @@
 - [Bloomelle](https://another1dd.github.io/bloomelle/): Menstrual cycle-phase planning coach — forecasts the coming week and suggests which days may suit workouts, focus work, big decisions, or rest. Explicitly not a symptom tracker. Submitted for iOS App Store review; Android build in closed testing.
 - [Naveli](https://another1dd.github.io/naveli/): Postpartum recovery yoga. Stage-based sequences (early recovery, around the 6-week check, beyond 6 weeks), routing by delivery type (vaginal or C-section), pelvic-floor safety cues in every sequence, and a diastasis recti self-check. No account, local-only storage of recovery details. Currently in development, no fixed release date yet.
 
+- [Kin Compass printable routine charts](https://another1dd.github.io/kincompass/routine-charts/): Four free one-page visual routine charts for preschoolers (morning, after-daycare, dinner, bedtime) as A4 and US Letter PDFs. No signup.
+
 ## Developer tools (SaaS)
 
 - [Perchly](https://perchly.dev): Private Swift Package Manager registry for teams, built on the real SE-0292 package registry protocol (not a proxy or git wrapper). Free tier plus paid Starter/Team plans.
