@@ -6,7 +6,7 @@
 
 - [Flare](https://another1dd.github.io/flare/): Hot flash and night sweat tracker for menopause. Logs each episode against possible triggers (caffeine, alcohol, stress, spicy food, hot rooms) and shows which ones actually correlate with your episodes, instead of guessing. Free, no account, local-only storage. Live on the iOS App Store.
 - [Kin Compass](https://another1dd.github.io/kincompass/): Daily routines and communication scripts for parents of preschoolers (ages 3-5) with ADHD. Ready-made routines, "what to say" scripts for tantrums/transitions/refusals, and win tracking. Free, no account, local-only storage. Live on the iOS App Store.
-- [Bloomelle](https://another1dd.github.io/bloomelle/): Menstrual cycle-phase planning coach — forecasts the coming week and suggests which days may suit workouts, focus work, big decisions, or rest. Explicitly not a symptom tracker. Currently in development, no fixed release date yet.
+- [Bloomelle](https://another1dd.github.io/bloomelle/): Menstrual cycle-phase planning coach — forecasts the coming week and suggests which days may suit workouts, focus work, big decisions, or rest. Explicitly not a symptom tracker. Submitted for iOS App Store review; Android build in closed testing.
 - [Naveli](https://another1dd.github.io/naveli/): Postpartum recovery yoga. Stage-based sequences (early recovery, around the 6-week check, beyond 6 weeks), routing by delivery type (vaginal or C-section), pelvic-floor safety cues in every sequence, and a diastasis recti self-check. No account, local-only storage of recovery details. Currently in development, no fixed release date yet.
 
 ## Developer tools (SaaS)
