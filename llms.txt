@@ -16,6 +16,6 @@
 
 ## About
 
-- [Build log](https://another1dd.github.io/build-log/): How these five products get built by one developer sharing a single Flutter SDK, and the AI-assisted workflow behind them.
+- [Build log](https://another1dd.github.io/build-log/): How these six products get built by one developer sharing a single Flutter SDK, and the AI-assisted workflow behind them.
 - [GitHub](https://github.com/Another1dd)
 - [LinkedIn](https://www.linkedin.com/in/timophei-lemeshchenko/)

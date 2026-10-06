@@ -4,9 +4,57 @@
     <title>Chepatapa Apps — Build Log</title>
     <link>https://another1dd.github.io/build-log/</link>
     <atom:link href="https://another1dd.github.io/build-log/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>How Chepatapa Apps' five products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.</description>
+    <description>How Chepatapa Apps' six products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Starting Naveli: Clone Bloomelle, Then Delete It</title>
+      <link>https://another1dd.github.io/build-log/starting-naveli-from-bloomelle/</link>
+      <guid isPermaLink="true">https://another1dd.github.io/build-log/starting-naveli-from-bloomelle/</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Naveli started as a copy of Bloomelle: 482 files in one commit, then a 7,400-line deletion of the cycle domain. What a scaffold clone keeps and what it has to throw away.</description>
+    </item>
+
+    <item>
+      <title>Naveli onboarding built</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-10-06-naveli-onboarding</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Naveli's six-step onboarding flow was built and tested end to end.</description>
+    </item>
+
+    <item>
+      <title>Flare 1.2.2 submitted for review</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-10-05-flare-122</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Flare 1.2.2 was submitted for iOS App Store review.</description>
+    </item>
+
+    <item>
+      <title>Bloomelle submitted for iOS review</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-09-29-bloomelle-review</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Bloomelle was submitted for iOS App Store review, with the Android build in closed testing.</description>
+    </item>
+
+    <item>
+      <title>Kin Compass 1.1 live on the iOS App Store</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-09-30-kincompass-11</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Kin Compass 1.1 went live on the iOS App Store with home-screen widgets and an invite-a-friend referral.</description>
+    </item>
+
+    <item>
+      <title>Naveli started</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-09-25-naveli-started</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Naveli, a postpartum recovery yoga app, started development, bootstrapped from Bloomelle's scaffold.</description>
+    </item>
 
     <item>
       <title>Kin Compass live on the iOS App Store</title>

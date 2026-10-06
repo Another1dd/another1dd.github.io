@@ -9,7 +9,7 @@
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="How Chepatapa Apps' five products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.">
+  <meta name="description" content="How Chepatapa Apps' six products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.">
   <meta name="color-scheme" content="light dark">
   <title>Build Log — Chepatapa Apps</title>
   <link rel="canonical" href="https://another1dd.github.io/build-log/">
@@ -19,7 +19,7 @@
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="Build Log — Chepatapa Apps">
-  <meta property="og:description" content="How five products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.">
+  <meta property="og:description" content="How six products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.">
   <meta property="og:url" content="https://another1dd.github.io/build-log/">
   <meta property="og:image" content="https://another1dd.github.io/assets/og-image-buildlog.png">
   <meta property="og:image:width" content="1200">
@@ -40,7 +40,7 @@
     "headline": "How Chepatapa Apps gets built",
     "url": "https://another1dd.github.io/build-log/",
     "datePublished": "2026-08-24",
-    "dateModified": "2026-09-15",
+    "dateModified": "2026-10-06",
     "author": {
       "@type": "Person",
       "@id": "https://another1dd.github.io/#tsimafei-lemeshchanka",
@@ -254,13 +254,14 @@
     </section>
 
     <section class="card">
-      <h2>One developer, five products</h2>
+      <h2>One developer, six products</h2>
       <p>
         Chepatapa Apps isn't a company in any formal sense — it's Tsimafei Lemeshchanka building
         small, focused apps and developer tools solo, alongside a full-time job. Flare (hot flash
         tracking) and Kin Compass (ADHD parenting routines) are consumer iOS apps; Perchly and
         Publy are private package registries for Swift and Dart/Flutter teams; Bloomelle (cycle-phase
-        planning) is the newest, still in development.
+        planning) is in App Store review, and Naveli (postpartum recovery yoga) is the newest,
+        still in development.
       </p>
       <p>
         The apps are deliberately small in scope — no team, no funding, no roadmap beyond "does
@@ -271,13 +272,13 @@
     </section>
 
     <section class="card">
-      <h2>One SDK, not five codebases</h2>
+      <h2>One SDK, not six codebases</h2>
       <p>
-        Flare, Kin Compass, and Bloomelle share <code>another1DD_flutter_sdk</code>, a local
+        Flare, Kin Compass, Bloomelle, and Naveli share <code>another1DD_flutter_sdk</code>, a local
         package monorepo with the Redux state container, dependency injection wiring, navigation,
         theming, and localization every app needs. Kin Compass started as a literal clone of
         Flare's skeleton with the hot-flash domain code stripped out; Bloomelle was scaffolded the
-        same way from Flare a few months later. New apps start from a working, battle-tested
+        same way from Flare a few months later, and Naveli the same way from Bloomelle. New apps start from a working, battle-tested
         foundation instead of a blank Flutter project.
       </p>
       <p>
@@ -290,7 +291,7 @@
     <section class="card">
       <h2>Built with Claude Code</h2>
       <p>
-        Most of the day-to-day implementation across all five projects — and this site — is done
+        Most of the day-to-day implementation across all six projects — and this site — is done
         with Claude Code. Each feature starts as a written spec and plan checked into the repo
         before any code exists, gets implemented against that plan, and goes through an
         adversarial review pass looking specifically for what the plan or the implementation got
@@ -301,7 +302,7 @@
       <p>
         It doesn't replace product decisions or judgment calls — positioning, what not to build,
         what a screen should actually say — those stay human. It replaces the hours of
-        boilerplate and repetition that used to be the real cost of running five codebases alone.
+        boilerplate and repetition that used to be the real cost of running six codebases alone.
       </p>
     </section>
 
@@ -350,6 +351,26 @@
         <li>
           <time datetime="2026-09-24">Sep 2026</time>
           <div class="entry"><p>Kin Compass live on the iOS App Store. <span class="tag">Shipped</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-09-25">Sep 2026</time>
+          <div class="entry"><p>Naveli started, bootstrapped from Bloomelle's scaffold. <a href="/build-log/starting-naveli-from-bloomelle/">Wrote up how the clone-then-delete went.</a> <span class="tag">Post</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-09-29">Sep 2026</time>
+          <div class="entry"><p>Bloomelle submitted for iOS App Store review, with the Android build in closed testing. <span class="tag">In review</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-09-30">Sep 2026</time>
+          <div class="entry"><p>Kin Compass 1.1 live on the iOS App Store: home-screen widgets and an invite-a-friend referral. <span class="tag">Shipped</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-10-05">Oct 2026</time>
+          <div class="entry"><p>Flare 1.2.2 submitted for App Store review. <span class="tag">In review</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-10-06">Oct 2026</time>
+          <div class="entry"><p>Naveli's six-step onboarding built and tested end to end.</p></div>
         </li>
       </ul>
     </section>
