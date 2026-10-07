@@ -1,0 +1,145 @@
+{
+ "slug": "what-to-say-after-a-tantrum",
+ "published": "2026-10-07",
+ "updated": "2026-10-07",
+ "title": "What to say to your child after a tantrum",
+ "meta_description": "A four-step script for talking to a preschooler after a tantrum: wait for real calm, restore closeness, name what happened, ask one simple question. Plus how to reconnect when siblings watched.",
+ "query": "how to talk to child after tantrum",
+ "kicker": "Scripts &middot; After a meltdown",
+ "summary": "Once the tantrum is over, the temptation is to explain, lecture or ask \"why did you do that?\". A sequence that tends to work better: wait until your child is genuinely calm, reconnect first, name what happened in a sentence, and ask one simple question about next time. Below is the exact wording, why it tends to help, and what to do when siblings watched.",
+ "app_ids": [
+  "after_meltdown",
+  "after_meltdown_siblings_watching"
+ ],
+ "steps": [
+  {
+   "title": "Wait for real calm",
+   "phrase": "Come sit with me. Here's some water.",
+   "tip": "Quiet isn't always ready. Wait until your child can make eye contact and take in what you say."
+  },
+  {
+   "title": "Restore closeness",
+   "phrase": "That was hard. I love you. We're totally okay.",
+   "tip": "Reconnect before any lesson, so your child doesn't only hear blame."
+  },
+  {
+   "title": "Name what happened",
+   "phrase": "You were very angry when… That makes sense.",
+   "tip": "A simple, accepting description of what happened often helps children make sense of a big feeling."
+  },
+  {
+   "title": "One simple question",
+   "phrase": "What do you think would help next time?",
+   "tip": "A solution that comes from your child tends to stick better than one handed down, and it gives them some say."
+  }
+ ],
+ "why": [
+  "CDC's emotion-coaching guidance puts the same order in writing. It says to wait until you and your child are both calm before emotion coaching, and its steps run: notice, connect with eye contact or a gentle touch, listen with empathy and without judgment, name the emotion in simple words, and find good solutions. The script above is those steps in short sentences.",
+  "Naming the emotion and then asking for a solution also follows CDC's description of the last step, which is setting limits for behavior while validating feelings: \"that makes sense\" is the validation, and \"what would help next time?\" starts the problem-solving.",
+  "If your child did something unsafe, the conversation can include a clear, brief limit (\"we don't hit\"). Keep it to one sentence and keep it warm, so the connection you just rebuilt isn't lost."
+ ],
+ "variations_title": "When siblings watched",
+ "variations_intro": "A child who melted down in front of brothers or sisters can feel embarrassed on top of the original upset. Reconnect with them first, then give the room a short, calm frame, then move on:",
+ "variations_steps": [
+  {
+   "title": "Reconnect with the child first",
+   "phrase": "That was hard. I love you. We're okay.",
+   "tip": "Repair the relationship before explaining anything to anyone else."
+  },
+  {
+   "title": "Give the room a calm frame",
+   "phrase": "That was a big feeling. Everyone's okay now.",
+   "tip": "A short, neutral statement to everyone present helps stop siblings from turning it into a story."
+  },
+  {
+   "title": "Return to normal quickly",
+   "phrase": "Who's ready for the next thing on our list?",
+   "tip": "A fast return to routine tells everyone the moment has passed and isn't the whole day."
+  }
+ ],
+ "variations_after": "A predictable daily rhythm can make the next thing on the list easier: see the free <a href=\"/kincompass/routine-charts/\">printable routine charts</a>.",
+ "extra_sections": [
+  {
+   "title": "What it can sound like",
+   "dialogue": [
+    [
+     "You (once the crying has stopped)",
+     "Come sit with me. Here's some water."
+    ],
+    [
+     "You (after a few minutes)",
+     "That was hard. I love you. We're totally okay."
+    ],
+    [
+     "You",
+     "You were very angry when the tablet went off. That makes sense."
+    ],
+    [
+     "You",
+     "What do you think would help next time?"
+    ],
+    [
+     "Child",
+     "Five more minutes."
+    ],
+    [
+     "You",
+     "Let's try a five-minute warning next time."
+    ]
+   ],
+   "after": "Notice that you didn't ask why they did it. \"Why\" questions can be hard for preschoolers to answer and can sound like blame."
+  },
+  {
+   "title": "When your child won't talk",
+   "paragraphs": [
+    "Plenty of preschoolers can't or won't answer the question, and that's fine. Skip it, offer a hug or a quiet activity together, and try the \"what would help\" question another day. Praise the moments they recover well: CDC's guidance on praise says specific praise right after a behavior works best, so \"I saw you take deep breaths\" tells your child exactly what you liked.",
+    "If your child can't settle, hits or hurts themselves, or the meltdowns are frequent and long, bring it up with your child's pediatrician."
+   ]
+  }
+ ],
+ "avoid": [
+  "Starting the conversation while your child is still crying or tense. Wait until they are calm.",
+  "Asking \"why did you do that?\". It can be a hard question for a preschooler to answer, and it can sound like blame.",
+  "Turning the talk into a lecture. One sentence about what happened and one question is enough."
+ ],
+ "sources": [
+  {
+   "title": "CDC: Tips for Noticing and Naming Emotions",
+   "url": "https://www.cdc.gov/parenting-toddlers/noticing-and-naming/emotion-coaching.html",
+   "note": "The five steps of emotion coaching, and what to do first during a tantrum: safety, staying close, waiting until everyone is calm."
+  },
+  {
+   "title": "CDC: How to Use Time-In",
+   "url": "https://www.cdc.gov/parenting-toddlers/responding-to-behavior/time-in.html",
+   "note": "Staying with your child during hard moments to offer support and reassurance."
+  },
+  {
+   "title": "CDC: Tips for Using Praise and Rewards",
+   "url": "https://www.cdc.gov/parenting-toddlers/responding-to-behavior/using-rewards.html",
+   "note": "Specific praise, praise right after the behavior, and positive attention."
+  },
+  {
+   "title": "CDC: Parent Training in Behavior Management",
+   "url": "https://www.cdc.gov/adhd/treatment/behavior-therapy.html",
+   "note": "What parent training for ADHD teaches, and the advice to talk to your child's doctor."
+  }
+ ],
+ "faq": [
+  {
+   "q": "How long should I wait before talking?",
+   "a": "Until your child is calm and can look at you, not just quiet. For some children that's a few minutes, for others closer to an hour. CDC's emotion-coaching guidance says to wait until you are both calm."
+  },
+  {
+   "q": "Should I make them apologize?",
+   "a": "A brief repair that fits the situation, such as helping to tidy up or drawing a picture for the person they upset, is often more useful than insisting on a scripted \"sorry\"."
+  },
+  {
+   "q": "My child has ADHD. Is this different?",
+   "a": "These scripts rest on similar principles to the ones CDC says parent training teaches: structure, positive communication and consistency. CDC recommends parent training in behavior management as the first treatment for ADHD in children under 6, and suggests talking to your child's doctor about it. Whether a child has ADHD is a question for a clinician; these scripts are practical communication techniques, not a treatment."
+  }
+ ],
+ "related": [
+  "tantrum-in-the-store",
+  "preschooler-not-listening"
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "slug": "child-wont-leave-the-park",
+ "published": "2026-10-07",
+ "updated": "2026-10-07",
+ "title": "What to say when your child won't leave the park",
+ "meta_description": "A four-step script for leaving the park, daycare or any fun place without a meltdown: a heads-up, a choice, naming the feeling, then something to look forward to. Plus what to do if it escalates in public.",
+ "query": "toddler won't leave the park",
+ "kicker": "Scripts &middot; Transitions",
+ "summary": "When a preschooler doesn't want to leave the park, daycare or a friend's house, shouting \"time to go\" rarely works. A sequence that tends to help: give a heads-up, offer a choice you can live with, name the feeling, and point to what comes next. Below is the exact wording and what to do if it escalates in public.",
+ "app_ids": [
+  "garden_pickup",
+  "transition_playground_to_car",
+  "public_meltdown_park"
+ ],
+ "steps": [
+  {
+   "title": "Give a heads-up",
+   "phrase": "In 5 minutes we go home. Finish your last game.",
+   "tip": "Ending something fun without warning is hard for most young children. A heads-up gives them time to wrap up."
+  },
+  {
+   "title": "Give a choice",
+   "phrase": "Will you walk, or shall I carry you?",
+   "tip": "A small choice gives your child some control. Only offer options you're genuinely happy with."
+  },
+  {
+   "title": "Name the feeling",
+   "phrase": "It's sad to leave when you're having fun. I understand.",
+   "tip": "Many parents find that acknowledging the feeling calms things faster than persuading."
+  },
+  {
+   "title": "Bridge to what's next",
+   "phrase": "Your favourite dinner is waiting at home.",
+   "tip": "A pleasant thing ahead gives your child something to move toward instead of only something to lose."
+  }
+ ],
+ "why": [
+  "The heads-up is the same idea as CDC's advice to explain before you give a direction: say what is about to happen, then say what you want your child to do. CDC's routines guidance adds that predictability helps children feel secure and know what to expect.",
+  "The choice follows CDC's guidance on giving limited choices, which it says helps children develop independence and decision-making skills. Naming the feeling draws on what's often called emotion coaching; CDC's page on responding to behavior mentions emotion coaching as a way to help calm emotional situations.",
+  "The scripts are a sequence, not a trick. If your child is already deep in a meltdown, skip to \"Variations and when it escalates\" below."
+ ],
+ "variations_title": "Variations and when it escalates",
+ "variations_intro": "A few adjustments depending on the situation.",
+ "variations_steps": [
+  {
+   "title": "Give a job for leaving",
+   "phrase": "Can you be the one who holds the car keys?",
+   "tip": "A small job turns leaving into something your child does, not something done to them."
+  },
+  {
+   "title": "Bridge to the next pleasure",
+   "phrase": "In the car, you can pick the music.",
+   "tip": "A specific, immediate next thing is easier to accept than a vague one."
+  },
+  {
+   "title": "If it turns into a scene: move away from the crowd",
+   "phrase": "Let's walk over here together.",
+   "tip": "Fewer onlookers means less added stress for both of you."
+  },
+  {
+   "title": "Keep your own voice low",
+   "phrase": "[Quiet, steady tone] I'm right here.",
+   "tip": "A lowered voice tends to invite de-escalation instead of matching your child's intensity."
+  },
+  {
+   "title": "Name it, then bridge forward",
+   "phrase": "Leaving the park is hard. Let's go find the car and put on some music.",
+   "tip": "Naming the feeling first and then giving a concrete next step moves things on without dismissing it."
+  }
+ ],
+ "variations_after": "If the hour after daycare is the hard part of your day, a visual routine can help: see the free <a href=\"/kincompass/routine-charts/\">printable after-daycare routine chart</a>.",
+ "avoid": [
+  "Announcing \"we're leaving now\" with no warning. A heads-up costs you a minute and often saves ten.",
+  "Offering a choice you won't honour, such as \"do you want to leave?\". Offer options you're happy with: walk or carry, this exit or that.",
+  "Long explanations or negotiation at the peak of the meltdown. Keep it short and calm, and talk more later."
+ ],
+ "sources": [
+  {
+   "title": "CDC: Tips for Giving Directions",
+   "url": "https://www.cdc.gov/parenting-toddlers/communication/giving-directions.html",
+   "note": "One direction at a time, limited choices, explaining before a direction, and getting your child's attention first."
+  },
+  {
+   "title": "CDC: Tips for Relying on Routines and Rules",
+   "url": "https://www.cdc.gov/parenting-toddlers/structure-rules/index.html",
+   "note": "Routines help children know what to expect; introduce changes when everyone is calm."
+  },
+  {
+   "title": "CDC: Tips for Responding to Behavior",
+   "url": "https://www.cdc.gov/parenting-toddlers/responding-to-behavior/index.html",
+   "note": "Mentions emotion coaching as a way to help calm emotional situations."
+  },
+  {
+   "title": "CDC: Parent Training in Behavior Management",
+   "url": "https://www.cdc.gov/adhd/treatment/behavior-therapy.html",
+   "note": "What parent training for ADHD teaches, and the advice to talk to your child's doctor."
+  }
+ ],
+ "faq": [
+  {
+   "q": "How much warning should I give?",
+   "a": "There's no fixed rule. Many parents use about five minutes, then a short reminder shortly before. Adjust to your child; some need more time, some do better with a shorter countdown."
+  },
+  {
+   "q": "What if my child melts down anyway?",
+   "a": "Move away from onlookers, keep your voice low and steady, name the feeling briefly, and then give one concrete next step. Save longer conversations for later, when everyone is calm."
+  },
+  {
+   "q": "My child has ADHD. Is this different?",
+   "a": "These scripts rest on similar principles to the ones CDC says parent training teaches: structure, positive communication and consistency. CDC recommends parent training in behavior management as the first treatment for ADHD in children under 6, and suggests talking to your child's doctor about it. Whether a child has ADHD is a question for a clinician; these scripts are practical communication techniques, not a treatment."
+  }
+ ],
+ "related": [
+  "tantrum-in-the-store",
+  "what-to-say-after-a-tantrum"
+ ],
+ "extra_sections": [
+  {
+   "title": "What it can sound like",
+   "dialogue": [
+    [
+     "You",
+     "We have five more minutes at the park. Finish your last turn on the slide."
+    ],
+    [
+     "You (a few minutes later)",
+     "Two more minutes, then we go."
+    ],
+    [
+     "Child",
+     "No! I don't want to!"
+    ],
+    [
+     "You",
+     "I know. It's sad to leave when you're having fun. Will you walk to the car, or shall I carry you?"
+    ],
+    [
+     "Child",
+     "Walk."
+    ],
+    [
+     "You",
+     "Walk it is. And in the car you can pick the music."
+    ]
+   ],
+   "after": "The whole thing takes about a minute of talking. The warning and the choice do most of the work, so there's less to negotiate at the end."
+  },
+  {
+   "title": "When it doesn't work the first time",
+   "paragraphs": [
+    "The first few times may still end in tears, and that's fine. Keep the wording short and the same each time, and follow through calmly on whichever option your child didn't pick: if the choice was \"walk or be carried\" and they don't walk, carry them.",
+    "Timing matters too. Leaving is often harder when a child is tired or hungry, so try to head out before that point, and keep a snack for the car. If every outing ends this way, a predictable after-daycare routine can help."
+   ]
+  }
+ ]
+}

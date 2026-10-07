@@ -1,0 +1,150 @@
+{
+ "slug": "tantrum-in-the-store",
+ "published": "2026-10-07",
+ "updated": "2026-10-07",
+ "title": "What to do when your child has a tantrum in the store",
+ "meta_description": "A five-step script for a meltdown in the shop: calm yourself, signal safety, don't leave or demand, name the feeling, then reconnect. Plus what to do when the problem is noise and crowds.",
+ "query": "child tantrum in store what to do",
+ "kicker": "Scripts &middot; Tantrums",
+ "summary": "When a preschooler melts down in the middle of a shop, the instinct is to talk, bargain or hurry. The sequence below does the opposite: you calm yourself first, say very little, stay close, and save the talking for later. Here is the exact wording, why it tends to help, and what to do when the cause is noise and crowds rather than a refused toy.",
+ "app_ids": [
+  "tantrum_store",
+  "sensory_overload_crowd"
+ ],
+ "steps": [
+  {
+   "title": "Calm yourself first",
+   "phrase": "[Slow breath. Get down to the child's level. No words.]",
+   "tip": "CDC's guidance on emotional outbursts says to take a deep breath before you respond, because engaging while frustrated can dismiss your child's feelings."
+  },
+  {
+   "title": "Signal safety",
+   "phrase": "You're safe. I'm here.",
+   "tip": "One short, steady phrase is easier to take in than a lecture when your child is upset."
+  },
+  {
+   "title": "Don't leave, don't demand",
+   "phrase": "I'm here. I'm not rushing you.",
+   "tip": "At the peak, long explanations rarely land. Staying close and giving time and space matches CDC's advice."
+  },
+  {
+   "title": "Name the feeling",
+   "phrase": "You're upset we didn't get the toy. I understand.",
+   "tip": "Naming the emotion in simple words is a core step of emotion coaching. Acknowledging the feeling does not mean changing your answer."
+  },
+  {
+   "title": "Restore closeness",
+   "phrase": "That was hard. Come here, I'll hug you.",
+   "tip": "Keep the debrief for later at home, when you're both calm. Right now closeness matters most."
+  }
+ ],
+ "why": [
+  "CDC's emotion-coaching guidance for parents of toddlers and preschoolers gives the order this script follows. During a tantrum or strong distress it says to first make sure your child and others are safe, stay close and give your child time and space to calm down, and wait until you are both calm before coaching. It also says to manage your own emotions first, for example with a deep breath, because engaging while frustrated can dismiss your child's feelings.",
+  "CDC also describes staying with your child during hard moments, offering support and reassurance, as time-in. That's the idea behind \"I'm here, I'm not rushing you\": you aren't trying to end the meltdown, you're keeping the connection while it passes.",
+  "The feeling is acknowledged, but the answer doesn't change. CDC's guidance on responding to behavior warns that giving in to a tantrum rewards it and makes future tantrums more likely, so \"I understand you're upset we didn't get the toy\" works best when the toy still stays on the shelf."
+ ],
+ "variations_title": "If it's noise and crowds, not the toy",
+ "variations_intro": "Sometimes a meltdown has little to do with what you said no to. A loud, crowded shop or event can simply be too much for some children, and reasoning with them doesn't help. Reducing the input tends to come first:",
+ "variations_steps": [
+  {
+   "title": "Move to less input, fast",
+   "phrase": "Let's step outside for a minute.",
+   "tip": "Getting away from the noise usually works faster than trying to calm your child inside it."
+  },
+  {
+   "title": "Offer something to hold or block sound",
+   "phrase": "Here — squeeze this. Cover your ears if you want.",
+   "tip": "Something to squeeze, or a way to muffle noise, gives your child something manageable to focus on."
+  },
+  {
+   "title": "Decide together whether to go back",
+   "phrase": "Do you want to try going back in, or are we done for today?",
+   "tip": "A say in the next step gives some control back after an overwhelming moment."
+  }
+ ],
+ "variations_after": "If shopping trips are a regular battleground, a predictable plan before you go can help: see the free <a href=\"/kincompass/routine-charts/\">printable routine charts</a> for a visual way to show what happens next.",
+ "extra_sections": [
+  {
+   "title": "What it can sound like",
+   "dialogue": [
+    [
+     "You",
+     "[Take a slow breath. Crouch down. Say nothing for a few seconds.]"
+    ],
+    [
+     "Child",
+     "(crying) I WANT IT!"
+    ],
+    [
+     "You",
+     "You're safe. I'm here."
+    ],
+    [
+     "You (after a minute)",
+     "I'm here. I'm not rushing you."
+    ],
+    [
+     "You (as the crying eases)",
+     "You're upset we didn't get the toy. I understand."
+    ],
+    [
+     "You",
+     "That was hard. Come here, I'll hug you."
+    ]
+   ],
+   "after": "The toy stays on the shelf, and the conversation about what to do next time waits until you're home and calm."
+  },
+  {
+   "title": "When it doesn't go smoothly",
+   "paragraphs": [
+    "Some meltdowns last a long time, and some start before you've reached step one. That doesn't mean the script failed. Keep your own voice low and steady, keep your child safe, and if you need to leave the store with your child, that's fine; the same steps work in the car park.",
+    "Tired and hungry children often find things harder, so shopping before nap time or a meal can make meltdowns more likely. A snack in your bag and a short list can help. If tantrums are very frequent, very long, or involve hurting themselves or others, mention it to your child's pediatrician."
+   ]
+  }
+ ],
+ "avoid": [
+  "Bargaining or buying the toy to end it. CDC's guidance says giving in to tantrums makes them more likely.",
+  "Explaining or lecturing at the peak. Words rarely land then, so save them for later.",
+  "Demanding that your child stop, or walking away from them. Staying close and calm works better."
+ ],
+ "sources": [
+  {
+   "title": "CDC: Tips for Noticing and Naming Emotions",
+   "url": "https://www.cdc.gov/parenting-toddlers/noticing-and-naming/emotion-coaching.html",
+   "note": "The five steps of emotion coaching, and what to do first during a tantrum: safety, staying close, waiting until everyone is calm."
+  },
+  {
+   "title": "CDC: How to Use Time-In",
+   "url": "https://www.cdc.gov/parenting-toddlers/responding-to-behavior/time-in.html",
+   "note": "Staying with your child during hard moments to offer support and reassurance."
+  },
+  {
+   "title": "CDC: Tips for Responding to Behavior",
+   "url": "https://www.cdc.gov/parenting-toddlers/responding-to-behavior/index.html",
+   "note": "Following through, and why giving in to a tantrum can make tantrums more likely."
+  },
+  {
+   "title": "CDC: Parent Training in Behavior Management",
+   "url": "https://www.cdc.gov/adhd/treatment/behavior-therapy.html",
+   "note": "What parent training for ADHD teaches, and the advice to talk to your child's doctor."
+  }
+ ],
+ "faq": [
+  {
+   "q": "Is it a tantrum or sensory overload?",
+   "a": "It can be hard to tell and sometimes it's both. A useful clue is the setting: if the trigger was a refusal, expect a tantrum. If the setting was loud or crowded and your child seems overwhelmed, reduce the noise first. The first steps, staying calm and close, are the same either way."
+  },
+  {
+   "q": "Should I leave the store?",
+   "a": "If your child is safe and you can wait, staying close while it passes is fine. If the environment is part of the problem, or you need a quiet moment, stepping outside is completely reasonable."
+  },
+  {
+   "q": "My child has ADHD. Is this different?",
+   "a": "These scripts rest on similar principles to the ones CDC says parent training teaches: structure, positive communication and consistency. CDC recommends parent training in behavior management as the first treatment for ADHD in children under 6, and suggests talking to your child's doctor about it. Whether a child has ADHD is a question for a clinician; these scripts are practical communication techniques, not a treatment."
+  }
+ ],
+ "related": [
+  "what-to-say-after-a-tantrum",
+  "child-wont-leave-the-park"
+ ]
+}

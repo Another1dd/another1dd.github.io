@@ -6,7 +6,15 @@
     <atom:link href="https://another1dd.github.io/build-log/feed.xml" rel="self" type="application/rss+xml"/>
     <description>How Chepatapa Apps' six products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Scripts library for Kin Compass</title>
+      <link>https://another1dd.github.io/kincompass/scripts/</link>
+      <guid isPermaLink="false">build-log-2026-10-07-scripts-library</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Six pages with the exact words for hard moments with a preschooler (getting dressed, leaving the park, tantrums, bedtime), each with reasoning and CDC sources.</description>
+    </item>
 
     <item>
       <title>Free printable hot flash diary</title>

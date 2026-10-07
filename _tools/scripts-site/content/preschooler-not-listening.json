@@ -1,0 +1,136 @@
+{
+ "slug": "preschooler-not-listening",
+ "published": "2026-10-07",
+ "updated": "2026-10-07",
+ "title": "What to say when your preschooler doesn't listen",
+ "meta_description": "A three-step script for a preschooler who doesn't seem to hear you: get attention first, say it once and short, then ask for a repeat-back. Plus what to do when they tune you out during play.",
+ "query": "preschooler doesn't listen",
+ "kicker": "Scripts &middot; Directions",
+ "summary": "When you've said it three times and nothing happens, repeating it louder rarely helps. The usual fix is to change the order: get your child's attention first, say the instruction once and keep it short, then check that it landed. Below is the exact wording, why it tends to help, and what to do when your child is absorbed in play.",
+ "app_ids": [
+  "not_listening_first_time",
+  "ignoring_during_play"
+ ],
+ "steps": [
+  {
+   "title": "Get attention before the instruction",
+   "phrase": "[Say their name, wait for eye contact] — I need you to hear this one.",
+   "tip": "CDC advises making sure your child hears and pays attention to a direction, which means being close and making eye contact."
+  },
+  {
+   "title": "Say it once, short",
+   "phrase": "Shoes on, by the door.",
+   "tip": "Young children have a short attention span, so a short, single instruction is easier to follow than a full sentence or a list."
+  },
+  {
+   "title": "Ask for a repeat-back",
+   "phrase": "What are you going to do?",
+   "tip": "A quick repeat-back is a simple way to check that the instruction landed, and it works as a gentle reminder."
+  }
+ ],
+ "why": [
+  "Each step has a counterpart in CDC's guidance for parents of toddlers and preschoolers on giving directions. It says to get your child's attention first, by being close and making eye contact, to give one instruction at a time because young children have a short attention span, and to explain before you give a direction.",
+  "When your child follows the instruction, notice it. CDC's guidance on praise says specific praise right after the behavior works best, for example \"I saw that you put your shoes on!\", because your child knows exactly what you liked.",
+  "The repeat-back isn't from CDC's guidance, it's a practical check. If your child can tell you what they're about to do, you know the instruction landed, and you haven't had to repeat it a fourth time."
+ ],
+ "variations_title": "When your child tunes you out during play",
+ "variations_intro": "A child deep in play often doesn't register a call from another room, even though they can hear. Coming closer usually works better than calling louder:",
+ "variations_steps": [
+  {
+   "title": "Close the distance",
+   "phrase": "[Walk over instead of calling out]",
+   "tip": "The problem is often distance and competing stimulation, not volume."
+  },
+  {
+   "title": "Touch base, then speak",
+   "phrase": "[A light touch on the shoulder] — hey, I need one minute.",
+   "tip": "A gentle physical cue plus a short sentence tends to get through better than words alone."
+  },
+  {
+   "title": "Give a finishing point",
+   "phrase": "Finish that piece, then come find me.",
+   "tip": "A concrete stopping point respects what they're absorbed in instead of yanking them out of it."
+  }
+ ],
+ "variations_after": "For tasks that happen every day, a visual routine can replace the repeated instructions: see the free <a href=\"/kincompass/routine-charts/\">printable routine charts</a>.",
+ "extra_sections": [
+  {
+   "title": "What it can sound like",
+   "dialogue": [
+    [
+     "You",
+     "[Walk over. Crouch down. Say their name and wait for eye contact.] I need you to hear this one."
+    ],
+    [
+     "You",
+     "Shoes on, by the door."
+    ],
+    [
+     "You",
+     "What are you going to do?"
+    ],
+    [
+     "Child",
+     "Put my shoes on by the door."
+    ],
+    [
+     "You (a minute later)",
+     "I saw you put your shoes on. Thank you."
+    ]
+   ],
+   "after": "One instruction, said once, from close by, with a short check and a specific thank-you."
+  },
+  {
+   "title": "When it still doesn't land",
+   "paragraphs": [
+    "If your child consistently doesn't seem to hear you, even after you've closed the distance and made eye contact, ask your pediatrician about a hearing check, since a hearing problem is one possible reason a child doesn't respond. Frequent difficulty following instructions, together with other concerns about attention, is also worth raising with them.",
+    "Day to day, keep the instruction short, keep your tone neutral, and avoid stacking several steps into one sentence. A routine chart or a visual cue works well for things you ask for every day."
+   ]
+  }
+ ],
+ "avoid": [
+  "Calling instructions from another room. Walk over and get attention first.",
+  "Stacking several steps into one sentence, such as \"get your shoes, put on your coat, and find your bag\". One instruction at a time is easier.",
+  "Repeating the same instruction louder. If it didn't land the first time, change how you say it."
+ ],
+ "sources": [
+  {
+   "title": "CDC: Tips for Giving Directions",
+   "url": "https://www.cdc.gov/parenting-toddlers/communication/giving-directions.html",
+   "note": "One direction at a time, limited choices, explaining before a direction, and getting your child's attention first."
+  },
+  {
+   "title": "CDC: Tips for Using Praise and Rewards",
+   "url": "https://www.cdc.gov/parenting-toddlers/responding-to-behavior/using-rewards.html",
+   "note": "Specific praise, praise right after the behavior, and positive attention."
+  },
+  {
+   "title": "CDC: Tips for Relying on Routines and Rules",
+   "url": "https://www.cdc.gov/parenting-toddlers/structure-rules/index.html",
+   "note": "Routines help children know what to expect; consistency, predictability and follow-through."
+  },
+  {
+   "title": "CDC: Parent Training in Behavior Management",
+   "url": "https://www.cdc.gov/adhd/treatment/behavior-therapy.html",
+   "note": "What parent training for ADHD teaches, and the advice to talk to your child's doctor."
+  }
+ ],
+ "faq": [
+  {
+   "q": "Why does my preschooler ignore me?",
+   "a": "Often they simply haven't taken it in: they were absorbed in something, you were far away, or the instruction was too long. Getting close, getting eye contact and keeping it short fixes many cases. If it's constant, ask your pediatrician."
+  },
+  {
+   "q": "Should I check their hearing?",
+   "a": "If your child often doesn't respond even when you're close and have their attention, it's reasonable to ask your pediatrician about a hearing check."
+  },
+  {
+   "q": "My child has ADHD. Is this different?",
+   "a": "These scripts rest on similar principles to the ones CDC says parent training teaches: structure, positive communication and consistency. CDC recommends parent training in behavior management as the first treatment for ADHD in children under 6, and suggests talking to your child's doctor about it. Whether a child has ADHD is a question for a clinician; these scripts are practical communication techniques, not a treatment."
+  }
+ ],
+ "related": [
+  "preschooler-refuses-to-get-dressed",
+  "what-to-say-after-a-tantrum"
+ ]
+}

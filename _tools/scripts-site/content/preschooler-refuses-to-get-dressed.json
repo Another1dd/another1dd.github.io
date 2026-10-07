@@ -1,0 +1,140 @@
+{
+ "slug": "preschooler-refuses-to-get-dressed",
+ "published": "2026-10-07",
+ "updated": "2026-10-07",
+ "title": "What to say when your preschooler refuses to get dressed",
+ "meta_description": "A three-step script for mornings when a preschooler won't get dressed: choose the night before, one instruction at a time, then something to look forward to. Plus what to do if the clothes themselves are the problem.",
+ "query": "preschooler refuses to get dressed",
+ "kicker": "Scripts &middot; Mornings",
+ "summary": "If your preschooler digs in every morning when it's time to get dressed, three small changes usually help: let them choose the clothes the night before, give one instruction at a time instead of a list, and connect getting dressed to something they want. Below is the exact wording, why it tends to work, and what to try when the clothes themselves are the problem.",
+ "app_ids": [
+  "getting_dressed",
+  "sensory_overload_clothing"
+ ],
+ "steps": [
+  {
+   "title": "Prepare the night before",
+   "phrase": "Tomorrow you choose — blue shirt or green?",
+   "tip": "Taking the decision out of the morning leaves one less thing to argue about when everyone is rushed."
+  },
+  {
+   "title": "One instruction at a time",
+   "phrase": "First put on your undies. I'll wait.",
+   "tip": "A list of five steps is a lot to hold in mind. One step, then the next, gives your child a small win each time."
+  },
+  {
+   "title": "Link it to something they want",
+   "phrase": "Once you're dressed — breakfast and cartoons.",
+   "tip": "Something they're looking forward to gives getting dressed a reason."
+  }
+ ],
+ "why": [
+  "None of these steps is exotic. CDC's guidance for parents of toddlers and preschoolers says young children have a short attention span, so it's best to give one instruction at a time. The same page suggests giving limited choices and uses getting dressed as its example: let your child pick between two options.",
+  "It also suggests explaining before you give a direction, and making sure your child is paying attention first, which means being close and making eye contact. That's why the script starts with a calm choice and an explanation (\"once you're dressed\") rather than a command from across the room.",
+  "Choosing the night before moves the decision to a calmer moment. CDC's routines guidance makes a related point: routines help children know what to expect, and changes are easier to introduce when everyone is calm rather than upset."
+ ],
+ "variations_title": "If the clothes themselves are the problem",
+ "variations_intro": "Sometimes the refusal isn't about getting dressed at all. A scratchy tag, a seam across the toes, or a stiff fabric can be genuinely uncomfortable for some children, and arguing about whether it \"really\" bothers them adds a second fight to the first. If you suspect that, try this instead:",
+ "variations_steps": [
+  {
+   "title": "Believe it, don't argue",
+   "phrase": "Okay, that one's bothering you. Let's find another.",
+   "tip": "Skipping the debate over whether the discomfort is real avoids a second battle."
+  },
+  {
+   "title": "Offer a comfortable alternative",
+   "phrase": "Here's the soft one — no tag, no seams.",
+   "tip": "Keeping one or two outfits your child already finds comfortable ready removes the daily gamble."
+  },
+  {
+   "title": "Adjust rather than force",
+   "phrase": "Let's cut the tag out together.",
+   "tip": "A small fix, such as cutting out a tag or wearing something inside out, often solves what forcing it never will."
+  }
+ ],
+ "variations_after": "If mornings are generally hard, not just dressing, a visual routine can take the nagging off you: see the free <a href=\"/kincompass/routine-charts/\">printable morning routine chart</a>.",
+ "avoid": [
+  "Giving the whole sequence at once (\"get dressed, brush your teeth, find your shoes\"). One instruction at a time is easier to follow.",
+  "Open-ended choices such as \"what do you want to wear?\". Two options is usually enough, and CDC's guidance recommends limited choices.",
+  "Debating whether a tag or seam is really uncomfortable. Believe the complaint first, then solve it."
+ ],
+ "sources": [
+  {
+   "title": "CDC: Tips for Giving Directions",
+   "url": "https://www.cdc.gov/parenting-toddlers/communication/giving-directions.html",
+   "note": "One direction at a time, limited choices, explaining before a direction, and getting your child's attention first."
+  },
+  {
+   "title": "CDC: Positive Parenting Tips for Preschoolers (3 to 5 years)",
+   "url": "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html",
+   "note": "Offering a limited selection of simple choices, such as what to wear."
+  },
+  {
+   "title": "CDC: Tips for Relying on Routines and Rules",
+   "url": "https://www.cdc.gov/parenting-toddlers/structure-rules/index.html",
+   "note": "Routines help children know what to expect; introduce changes when everyone is calm."
+  },
+  {
+   "title": "CDC: Parent Training in Behavior Management",
+   "url": "https://www.cdc.gov/adhd/treatment/behavior-therapy.html",
+   "note": "What parent training for ADHD teaches, and the advice to talk to your child's doctor."
+  }
+ ],
+ "faq": [
+  {
+   "q": "Is it normal for a preschooler to refuse to get dressed?",
+   "a": "It's very common, and it often reflects a wish for control more than defiance. If refusals are constant, come with intense distress, or are part of a wider pattern, mention it to your child's pediatrician."
+  },
+  {
+   "q": "How many clothing choices should I offer?",
+   "a": "Two. CDC's guidance recommends limited choices, and gives the example of letting a child choose between two options for getting dressed."
+  },
+  {
+   "q": "My child has ADHD. Does this change anything?",
+   "a": "These scripts rest on similar principles to the ones CDC says parent training teaches: structure, positive communication and consistency. CDC recommends parent training in behavior management as the first treatment for ADHD in children under 6, and suggests talking to your child's doctor about it. Whether a child has ADHD is a question for a clinician; these scripts are practical communication techniques, not a treatment."
+  }
+ ],
+ "related": [
+  "preschooler-not-listening",
+  "keeps-getting-out-of-bed"
+ ],
+ "extra_sections": [
+  {
+   "title": "What it can sound like",
+   "dialogue": [
+    [
+     "Evening",
+     "Tomorrow you choose: blue shirt or green?"
+    ],
+    [
+     "Child",
+     "Green."
+    ],
+    [
+     "You",
+     "Green it is. I'll put it on your chair."
+    ],
+    [
+     "Morning",
+     "It's clothes time. First, undies. I'll wait."
+    ],
+    [
+     "You (after a pause)",
+     "Undies are on. Now the green shirt."
+    ],
+    [
+     "You",
+     "Once you're dressed, it's breakfast."
+    ]
+   ],
+   "after": "Notice what's missing: no repeated commands and no list. You say the step once, wait, and move to the next one when it's done."
+  },
+  {
+   "title": "When it doesn't work the first time",
+   "paragraphs": [
+    "A new routine usually takes more than one morning. Expect some pushback in the first few days and keep your wording the same so your child learns what to expect. If your child freezes at a step, make it smaller: just socks, then the next thing.",
+    "If the answer is still no, resist the urge to repeat the instruction louder. Stay close, give it a minute, and calmly offer the choice again. Mornings where everything is late are the hardest time to start; try the routine on a weekend first, when there's no clock."
+   ]
+  }
+ ]
+}

@@ -10,6 +10,7 @@
 - [Naveli](https://another1dd.github.io/naveli/): Postpartum recovery yoga. Stage-based sequences (early recovery, around the 6-week check, beyond 6 weeks), routing by delivery type (vaginal or C-section), pelvic-floor safety cues in every sequence, and a diastasis recti self-check. No account, local-only storage of recovery details. Currently in development, no fixed release date yet.
 
 - [Kin Compass printable routine charts](https://another1dd.github.io/kincompass/routine-charts/): Four free one-page visual routine charts for preschoolers (morning, after-daycare, dinner, bedtime) as A4 and US Letter PDFs. No signup.
+- [Kin Compass scripts](https://another1dd.github.io/kincompass/scripts/): Six practical scripts for hard moments with a preschooler (refusing to get dressed, leaving the park, tantrum in the store, talking after a tantrum, not listening, getting out of bed), each with exact wording, reasoning and CDC sources. Practical communication techniques, not medical advice.
 
 - [Flare printable hot flash diary](https://another1dd.github.io/flare/trigger-diary/): Free two-page printable diary (A4 and US Letter PDF) for logging hot flashes, intensity, duration and 11 common triggers, with a tally sheet to see which triggers show up most. No signup.
 

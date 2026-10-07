@@ -1,0 +1,140 @@
+{
+ "slug": "keeps-getting-out-of-bed",
+ "published": "2026-10-07",
+ "updated": "2026-10-07",
+ "title": "What to say when your child keeps getting out of bed",
+ "meta_description": "A script for bedtime stalling and a child who keeps leaving their room: name the pattern kindly, offer one last choice, end with a fixed goodnight, and keep every return short and boring.",
+ "query": "toddler keeps getting out of bed",
+ "kicker": "Scripts &middot; Bedtime",
+ "summary": "When bedtime turns into ten more requests, or your child keeps walking out after lights out, long conversations tend to make it last longer. What usually helps is the opposite: one last bounded choice, a fixed goodnight, and a short, calm, boring return to bed every time. Below is the exact wording and why it tends to work.",
+ "app_ids": [
+  "bedtime_stalling",
+  "bedtime_wont_stay_in_bed"
+ ],
+ "steps": [
+  {
+   "title": "Name the pattern kindly",
+   "phrase": "I see you — one more thing, one more thing. Let's do the last one now.",
+   "tip": "Saying it out loud without irritation can take the heat out of the stalling."
+  },
+  {
+   "title": "Offer one bounded choice",
+   "phrase": "One song or one page — you pick, then lights out.",
+   "tip": "One final choice satisfies the wish for control without opening the door to endless requests."
+  },
+  {
+   "title": "End with a fixed goodnight phrase",
+   "phrase": "Same as always: goodnight, I love you, see you in the morning.",
+   "tip": "A phrase repeated every night becomes a familiar signal that the day is over."
+  }
+ ],
+ "why": [
+  "CDC's guidance on routines and rules says routines help children feel safe and know what to expect, and it names consistency, predictability and follow-through as the key principles. Its bedtime example is as short as \"brush, book, bed\". A fixed goodnight phrase is the end of that same routine.",
+  "The bounded choice follows CDC's advice on limited choices, which it says helps children build independence and decision-making. \"One song or one page\" gives control without turning bedtime into a negotiation.",
+  "Keeping every return calm and brief is about not turning each trip out of bed into an event. CDC's guidance on redirecting attention away from minor, attention-seeking behavior notes that behavior can briefly get worse before it improves and that consistency is essential, which is why the same calm response every time matters more than what you say."
+ ],
+ "variations_title": "When your child keeps coming out of the room",
+ "variations_intro": "If the stalling has turned into repeated trips out of the bedroom after lights out, make each return short, calm and predictable:",
+ "variations_steps": [
+  {
+   "title": "Keep the return short and boring",
+   "phrase": "Back to bed. I love you. Goodnight.",
+   "tip": "A brief, low-energy response gives less to react to than a long conversation."
+  },
+  {
+   "title": "Walk them back yourself",
+   "phrase": "Come on, I'll walk with you.",
+   "tip": "Walking together avoids a standoff at the doorway and keeps things calm."
+  },
+  {
+   "title": "Reassure once, then repeat the routine",
+   "phrase": "I'm right here in the house. Same as every night.",
+   "tip": "Predictability, not length, is what eventually settles the pattern."
+  }
+ ],
+ "variations_after": "A picture routine can make the evening sequence clear to your child: see the free <a href=\"/kincompass/routine-charts/\">printable bedtime routine chart</a>.",
+ "extra_sections": [
+  {
+   "title": "What it can sound like",
+   "dialogue": [
+    [
+     "Child",
+     "One more hug! And water! And my other teddy!"
+    ],
+    [
+     "You",
+     "I see you: one more thing, one more thing. Let's do the last one now."
+    ],
+    [
+     "You",
+     "One song or one page. You pick, then lights out."
+    ],
+    [
+     "Child",
+     "One page."
+    ],
+    [
+     "You (after the page)",
+     "Same as always: goodnight, I love you, see you in the morning."
+    ],
+    [
+     "You (if they come out later)",
+     "Back to bed. I love you. Goodnight."
+    ]
+   ],
+   "after": "The words barely change from night to night. That sameness is what makes it work."
+  },
+  {
+   "title": "When it doesn't work, and when to adapt",
+   "paragraphs": [
+    "This approach is for stalling, not fear. If your child seems genuinely frightened or upset, comfort them. CDC's guidance on withholding attention says it isn't appropriate when a child is genuinely distressed and needs reassurance.",
+    "Expect a few rough nights at first. If the pattern continues for weeks, or sleep problems come with snoring, daytime sleepiness or other concerns, mention it to your child's pediatrician. Praise in the morning also helps: CDC's guidance on praise says specific praise works best, so \"you stayed in bed all night\" gives your child something to be proud of."
+   ]
+  }
+ ],
+ "avoid": [
+  "Long conversations at the bedroom door. The more there is to react to, the longer it lasts.",
+  "Offering open-ended choices at bedtime. \"One song or one page\" is better than \"what do you want?\".",
+  "Using this approach when your child is genuinely scared. Comfort comes first."
+ ],
+ "sources": [
+  {
+   "title": "CDC: Tips for Relying on Routines and Rules",
+   "url": "https://www.cdc.gov/parenting-toddlers/structure-rules/index.html",
+   "note": "Routines help children know what to expect; consistency, predictability and follow-through."
+  },
+  {
+   "title": "CDC: Tips for Giving Directions",
+   "url": "https://www.cdc.gov/parenting-toddlers/communication/giving-directions.html",
+   "note": "One direction at a time, limited choices, explaining before a direction, and getting your child's attention first."
+  },
+  {
+   "title": "CDC: Tips for Using Ignoring",
+   "url": "https://www.cdc.gov/parenting-toddlers/discipline-consequences/ignoring.html",
+   "note": "When withholding attention is and isn't appropriate, and what to expect (behavior may intensify first)."
+  },
+  {
+   "title": "CDC: Tips for Using Praise and Rewards",
+   "url": "https://www.cdc.gov/parenting-toddlers/responding-to-behavior/using-rewards.html",
+   "note": "Specific praise, praise right after the behavior, and positive attention."
+  }
+ ],
+ "faq": [
+  {
+   "q": "How many times should I walk them back?",
+   "a": "As many times as it takes, calmly and the same way each time. Expect more trips at first. The calm sameness is what eventually reduces them."
+  },
+  {
+   "q": "What if my child is genuinely scared?",
+   "a": "Comfort them. This approach is for stalling, not fear. CDC's guidance on withholding attention is clear that it isn't appropriate when a child is genuinely distressed."
+  },
+  {
+   "q": "My child has ADHD. Is this different?",
+   "a": "These scripts rest on similar principles to the ones CDC says parent training teaches: structure, positive communication and consistency. CDC recommends parent training in behavior management as the first treatment for ADHD in children under 6, and suggests talking to your child's doctor about it. Whether a child has ADHD is a question for a clinician; these scripts are practical communication techniques, not a treatment."
+  }
+ ],
+ "related": [
+  "preschooler-refuses-to-get-dressed",
+  "preschooler-not-listening"
+ ]
+}
