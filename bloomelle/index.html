@@ -24,6 +24,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="shortcut icon" href="/assets/favicon.ico">
 
+  <meta name="apple-itunes-app" content="app-id=6805390003">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bloomelle — Plan Your Week Around Your Cycle">
   <meta property="og:description" content="Forecasts your coming week by cycle phase and suggests good days for workouts, focus, decisions, and rest. Free, private, no account.">
@@ -47,6 +48,7 @@
     ],
     "operatingSystem": "iOS",
     "applicationCategory": "LifestyleApplication",
+    "installUrl": "https://apps.apple.com/us/app/bloomelle-cycle-sync-coach/id6805390003",
     "description": "A cycle-phase planning coach that forecasts the coming week and suggests good days for workouts, focus, decisions, and rest.",
     "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
   }
@@ -78,7 +80,7 @@
         "name": "When will Bloomelle be available?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Bloomelle is currently in development, with no fixed release date yet. Check back on this page for updates."
+          "text": "Yes. Bloomelle is free on the iOS App Store. An Android version is in testing — leave your email and we'll let you know when it's available."
         }
       }
     ]
@@ -442,7 +444,7 @@
           createdAt: serverTimestamp()
         });
         waitlistForm.hidden = true;
-        waitlistStatus.textContent = "You're on the list — thanks! We'll email you when Bloomelle launches.";
+        waitlistStatus.textContent = "You're on the list — thanks! We'll email you when Bloomelle launches on Android.";
       } catch (err) {
         waitlistStatus.textContent = 'Something went wrong — please try again.';
         waitlistSubmit.disabled = false;
@@ -462,7 +464,6 @@
   <main>
     <section class="hero">
       <img class="icon" src="assets/icon-192.png" alt="Bloomelle app icon" width="88" height="88">
-      <span class="pill">Coming soon</span>
       <h1>Plan your week, not just your day</h1>
       <p class="tagline">
         Bloomelle forecasts the days ahead from your cycle so you can pick the right moment
@@ -470,9 +471,9 @@
         Not a symptom tracker.
       </p>
       <div class="cta-row">
-        <button class="store-badge pending" id="notify-cta-ios" data-platform="ios">
+        <a class="store-badge" href="https://apps.apple.com/us/app/bloomelle-cycle-sync-coach/id6805390003" id="ios-cta">
           <img src="assets/app-store-badge.svg" alt="Download on the App Store">
-        </button>
+        </a>
         <button class="store-badge pending" id="notify-cta-android" data-platform="android">
           <img src="assets/google-play-badge.svg" alt="Get it on Google Play">
         </button>
@@ -571,10 +572,10 @@
         </p>
       </div>
       <div class="faq-item">
-        <h3>When will Bloomelle be available?</h3>
+        <h3>Is Bloomelle available yet?</h3>
         <p>
-          Bloomelle is currently in development, with no fixed release date yet. Check
-          back on this page for updates.
+          Yes. Bloomelle is free on the iOS App Store. An Android version is in testing
+          — leave your email and we'll let you know when it's available.
         </p>
       </div>
     </section>
@@ -590,8 +591,8 @@
 
   <div class="modal-overlay" id="notify-modal">
     <div class="modal-box">
-      <h3>Bloomelle is in development</h3>
-      <p>We're building Bloomelle right now — there's no fixed release date yet. Leave your email and we'll let you know the moment it launches.</p>
+      <h3>Coming to Google Play</h3>
+      <p>Bloomelle is iOS-only for now, and the Android version is in testing. Leave your email and we'll let you know when it's available.</p>
       <form id="waitlist-form">
         <input type="email" id="waitlist-email" class="waitlist-input" placeholder="you@example.com" required autocomplete="email">
         <button type="submit" id="waitlist-submit">Notify me</button>
@@ -603,12 +604,8 @@
 
   <script>
     var modal = document.getElementById('notify-modal');
-    window.selectedPlatform = 'ios';
+    window.selectedPlatform = 'android';
 
-    document.getElementById('notify-cta-ios').addEventListener('click', function () {
-      window.selectedPlatform = 'ios';
-      modal.classList.add('open');
-    });
     document.getElementById('notify-cta-android').addEventListener('click', function () {
       window.selectedPlatform = 'android';
       modal.classList.add('open');
