@@ -1,0 +1,135 @@
+{
+ "published": "2026-10-08",
+ "updated": "2026-10-08",
+ "slug": "preparing-for-the-doctor-or-a-haircut",
+ "title": "How to prepare your preschooler for the doctor or a haircut",
+ "meta_description": "A three-step script for preparing a preschooler for a doctor's visit, plus a script for a haircut: preview the order of events, be honest about what might feel uncomfortable, and offer one small choice.",
+ "query": "how to prepare preschooler for doctor visit haircut",
+ "kicker": "Scripts &middot; New experiences",
+ "summary": "A new place, a doctor, a haircut: for some preschoolers the unknown is harder than the thing itself. What usually helps is a short preview of what will happen, honesty about anything that might feel uncomfortable, and one small choice at the moment itself. Below is the exact wording for a doctor's visit and for a haircut.",
+ "app_ids": [
+  "doctor_visit",
+  "haircut"
+ ],
+ "steps": [
+  {
+   "title": "Preview what will happen",
+   "phrase": "First we check in, then we wait, then the doctor looks in your ears.",
+   "tip": "A short, ordered preview leaves less of the unknown to worry about."
+  },
+  {
+   "title": "Name what might feel uncomfortable",
+   "phrase": "The band-aid part might sting for a second. That's okay.",
+   "tip": "Being honest about discomfort builds more trust than promising it won't hurt."
+  },
+  {
+   "title": "Give one small choice on the spot",
+   "phrase": "Do you want to sit on my lap or on the chair?",
+   "tip": "A small choice in the moment gives your child some control when it matters."
+  }
+ ],
+ "why": [
+  "CDC's page on making shots less stressful for children makes the same points. It says to prepare your child honestly, telling them to expect a little pinch that passes quickly, and suggests words like \"pressure\" or \"poke\" instead of \"pain\" or \"shot\". It recommends distraction right before the shot, such as a favorite song, a story or being silly, bringing something comforting like a favorite toy, blanket or book, and speaking calmly and staying upbeat, because your calm voice reassures children.",
+  "The small choice follows CDC's guidance on limited choices, which says it helps children build independence and decision-making. At the doctor, \"lap or chair?\" is the kind of choice you can offer, since the visit itself isn't up for negotiation.",
+  "The previews are short on purpose: a few simple sentences are easier for a preschooler to take in than a long explanation."
+ ],
+ "variations_title": "Getting a haircut",
+ "variations_intro": "Haircuts stack up several things at once: the buzz of the clippers, falling hair and sitting still. Breaking it into small, previewed pieces tends to make it easier:",
+ "variations_steps": [
+  {
+   "title": "Preview the sequence",
+   "phrase": "We sit, the clippers buzz a little, then it's snip snip and done.",
+   "tip": "Knowing the order of events in advance reduces surprise."
+  },
+  {
+   "title": "Offer a distraction tool",
+   "phrase": "Bring your tablet or count the snips with me.",
+   "tip": "A distraction task takes some of the attention that would otherwise fixate on discomfort."
+  },
+  {
+   "title": "Celebrate finishing, not perfection",
+   "phrase": "You sat through the whole thing. That was hard and you did it.",
+   "tip": "Praising the effort of getting through something uncomfortable builds confidence for next time."
+  }
+ ],
+ "variations_after": "CDC's guidance on praise says specific praise right after the behavior works best: \"you sat still for the whole cut\" tells your child exactly what you noticed.",
+ "extra_sections": [
+  {
+   "title": "What it can sound like",
+   "dialogue": [
+    [
+     "You (the day before)",
+     "Tomorrow we're going to the doctor. First we check in, then we wait, then the doctor looks in your ears."
+    ],
+    [
+     "You",
+     "The band-aid part might sting for a second. That's okay."
+    ],
+    [
+     "You (at the clinic)",
+     "Do you want to sit on my lap or on the chair?"
+    ],
+    [
+     "You (during)",
+     "[Sing their favorite song or point out something fun on the wall.]"
+    ],
+    [
+     "You (after)",
+     "You did it. That was hard and you stayed so calm."
+    ]
+   ],
+   "after": "Keep it short and calm. A few sentences the day before is plenty."
+  },
+  {
+   "title": "When it's still very hard",
+   "paragraphs": [
+    "If your child is very frightened of medical visits or haircuts, tell the doctor or the stylist beforehand so they can go slowly, and consider a practice visit where nothing happens, just a look around. If distress is intense or keeps getting worse, talk to your child's pediatrician."
+   ]
+  }
+ ],
+ "avoid": [
+  "Promising it won't hurt. If it does, your child learns not to trust what you say.",
+  "Threatening a child with the doctor or a shot as a consequence.",
+  "Scolding a child for not being brave. Fear isn't misbehavior."
+ ],
+ "sources": [
+  {
+   "title": "CDC: Make Shots Less Stressful for Your Child",
+   "url": "https://www.cdc.gov/vaccines-children/before-during-after-shots/less-stress.html",
+   "note": "Preparing a child honestly, distraction and comfort items, and staying calm and upbeat."
+  },
+  {
+   "title": "CDC: Tips for Giving Directions",
+   "url": "https://www.cdc.gov/parenting-toddlers/communication/giving-directions.html",
+   "note": "One direction at a time, limited choices, explaining before a direction, and getting your child's attention first."
+  },
+  {
+   "title": "CDC: Tips for Using Praise and Rewards",
+   "url": "https://www.cdc.gov/parenting-toddlers/responding-to-behavior/using-rewards.html",
+   "note": "Specific praise, praise right after the behavior, and positive attention."
+  },
+  {
+   "title": "CDC: Parent Training in Behavior Management",
+   "url": "https://www.cdc.gov/adhd/treatment/behavior-therapy.html",
+   "note": "What parent training for ADHD teaches, and the advice to talk to your child's doctor."
+  }
+ ],
+ "faq": [
+  {
+   "q": "How far ahead should I tell my child?",
+   "a": "For a preschooler, the day before or the same morning is usually enough, in a few simple sentences."
+  },
+  {
+   "q": "Should I tell my child it won't hurt?",
+   "a": "It's better to be honest. CDC suggests telling children to expect a little pinch that passes quickly, using words like \"pressure\" or \"poke\" rather than \"pain\" or \"shot\"."
+  },
+  {
+   "q": "My child has ADHD. Is this different?",
+   "a": "These scripts rest on similar principles to the ones CDC says parent training teaches: structure, positive communication and consistency. CDC recommends parent training in behavior management as the first treatment for ADHD in children under 6, and suggests talking to your child's doctor about it. Whether a child has ADHD is a question for a clinician; these scripts are practical communication techniques, not a treatment."
+  }
+ ],
+ "related": [
+  "preschooler-refuses-to-get-dressed",
+  "what-to-say-after-a-tantrum"
+ ]
+}

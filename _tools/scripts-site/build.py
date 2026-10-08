@@ -65,7 +65,8 @@ def check_phrases(pages, en_path):
             for k, v in en.items():
                 if k.startswith(f'playbook.script.{sid}.') and k.endswith('_phrase'):
                     known.add(norm(v))
-        for step in page['steps'] + page.get('variations_steps', []):
+        extra_steps = [st for sec in page.get('extra_sections', []) for st in sec.get('steps', [])]
+        for step in page['steps'] + page.get('variations_steps', []) + extra_steps:
             if norm(step['phrase']) not in known:
                 print(f"warning: {page['slug']}: phrase not found in en.json: {step['phrase']!r}", file=sys.stderr)
 
@@ -179,6 +180,8 @@ def render_page(page, by_slug):
                 f'<p><span class="who">{esc(w)}</span>{esc(t)}</p>' for w, t in sec['dialogue']) + '</div>'
             if sec.get('after'):
                 body += f'<p>{esc(sec["after"])}</p>'
+        if sec.get('steps'):
+            body += steps_html(sec['steps'])
         for p in sec.get('paragraphs', []):
             body += f'<p>{esc(p)}</p>'
         extra += f'\n    <section class="card">\n      <h2>{esc(sec["title"])}</h2>\n      {body}\n    </section>\n'

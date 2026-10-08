@@ -1,0 +1,123 @@
+{
+ "published": "2026-10-08",
+ "updated": "2026-10-08",
+ "slug": "preschooler-slow-in-the-morning",
+ "title": "What to say when mornings are always a rush with your preschooler",
+ "meta_description": "A three-step script for slow, stressful mornings: a visual morning order, time-left calls instead of 'hurry', and a built-in buffer. Based on CDC guidance on routines and directions.",
+ "query": "preschooler slow in the morning always late",
+ "kicker": "Scripts &middot; Mornings",
+ "summary": "When mornings never move fast enough, repeating \"hurry up\" rarely makes anything faster. What tends to help is making the order of things visible, calling out the time left instead of telling your child to hurry, and starting a little earlier so nobody has to rush. Below is the exact wording and how it fits with CDC's guidance on routines.",
+ "app_ids": [
+  "morning_delay"
+ ],
+ "steps": [
+  {
+   "title": "Post a visual morning order",
+   "phrase": "Check the picture list — what's next?",
+   "tip": "A picture list shows the order of steps, so your child doesn't need to hold the whole sequence in mind."
+  },
+  {
+   "title": "Call out time left, not just \"hurry\"",
+   "phrase": "Ten minutes until we leave.",
+   "tip": "A specific time gives your child something concrete to act on. \"Hurry up\" doesn't."
+  },
+  {
+   "title": "Build in a buffer, not a rush",
+   "phrase": "We're starting five minutes earlier today so no one has to rush.",
+   "tip": "A little extra time removes the daily squeeze that turns mornings into a fight."
+  }
+ ],
+ "why": [
+  "CDC's guidance says routines and rules help children feel safe and know what to expect, and that routines should be kept simple and tailored to your child. A picture list is a way of making the morning routine visible. The same page names consistency, predictability and follow-through as the key principles, which is why the order of the morning should look the same most days.",
+  "CDC's tips on giving directions say young children have a short attention span, so it's best to give one instruction at a time, and to explain before you give a direction. \"Ten minutes until we leave\" explains what is coming, and \"check the picture list\" replaces a stack of spoken instructions.",
+  "CDC's guidance on praise says specific praise right after the behavior works best. When a step is done, \"you put your shoes on before the timer ran out\" tells your child exactly what went well."
+ ],
+ "variations_title": "Make the evening do the work",
+ "variations_intro": "Much of a smooth morning happens the night before: choosing clothes together, packing the bag, and putting shoes by the door. Fewer decisions in the morning means fewer places to get stuck.",
+ "variations_steps": [],
+ "variations_after": "For a ready-made visual sequence, print the free <a href=\"/kincompass/routine-charts/\">morning routine chart</a>. If getting dressed is the sticking point, see <a href=\"/kincompass/scripts/preschooler-refuses-to-get-dressed/\">what to say when your preschooler refuses to get dressed</a>.",
+ "extra_sections": [
+  {
+   "title": "What it can sound like",
+   "dialogue": [
+    [
+     "You (at breakfast)",
+     "Ten minutes until we leave."
+    ],
+    [
+     "Child",
+     "(still playing)"
+    ],
+    [
+     "You",
+     "Check the picture list. What's next?"
+    ],
+    [
+     "Child",
+     "Shoes."
+    ],
+    [
+     "You",
+     "Shoes it is. I'll wait by the door."
+    ],
+    [
+     "You (as they put them on)",
+     "You did your shoes before the timer. Thank you."
+    ]
+   ],
+   "after": "The list does the reminding, and you do the praising."
+  },
+  {
+   "title": "When it still doesn't work",
+   "paragraphs": [
+    "A visual routine can take a week or two to settle in. Keep it the same every day, keep your own voice calm, and resist adding steps. If one step is always the sticking point, such as getting dressed or breakfast, give that step its own plan.",
+    "If mornings are hard no matter what you try, or you're worried about your child's attention or behavior more broadly, mention it to your child's pediatrician."
+   ]
+  }
+ ],
+ "avoid": [
+  "Repeating \"hurry up\". It gives your child nothing concrete to do.",
+  "Adding more steps to the list when it isn't working. Fewer, simpler steps work better.",
+  "Rescuing your child from every step. Let the picture list do the reminding."
+ ],
+ "sources": [
+  {
+   "title": "CDC: Tips for Relying on Routines and Rules",
+   "url": "https://www.cdc.gov/parenting-toddlers/structure-rules/index.html",
+   "note": "Routines help children know what to expect; consistency, predictability and follow-through."
+  },
+  {
+   "title": "CDC: Tips for Giving Directions",
+   "url": "https://www.cdc.gov/parenting-toddlers/communication/giving-directions.html",
+   "note": "One direction at a time, limited choices, explaining before a direction, and getting your child's attention first."
+  },
+  {
+   "title": "CDC: Tips for Using Praise and Rewards",
+   "url": "https://www.cdc.gov/parenting-toddlers/responding-to-behavior/using-rewards.html",
+   "note": "Specific praise, praise right after the behavior, and positive attention."
+  },
+  {
+   "title": "CDC: Parent Training in Behavior Management",
+   "url": "https://www.cdc.gov/adhd/treatment/behavior-therapy.html",
+   "note": "What parent training for ADHD teaches, and the advice to talk to your child's doctor."
+  }
+ ],
+ "faq": [
+  {
+   "q": "How many steps should the morning list have?",
+   "a": "As few as you can: three to five steps is usually plenty for a preschooler. CDC's guidance says to keep routines simple."
+  },
+  {
+   "q": "What if my child can't read?",
+   "a": "Use pictures or photos. Preschoolers don't need to read; they need to see the order of things."
+  },
+  {
+   "q": "My child has ADHD. Is this different?",
+   "a": "These scripts rest on similar principles to the ones CDC says parent training teaches: structure, positive communication and consistency. CDC recommends parent training in behavior management as the first treatment for ADHD in children under 6, and suggests talking to your child's doctor about it. Whether a child has ADHD is a question for a clinician; these scripts are practical communication techniques, not a treatment."
+  }
+ ],
+ "related": [
+  "preschooler-refuses-to-get-dressed",
+  "preschooler-not-listening"
+ ]
+}

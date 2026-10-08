@@ -1,0 +1,153 @@
+{
+ "published": "2026-10-08",
+ "updated": "2026-10-08",
+ "slug": "siblings-fighting-over-a-toy",
+ "title": "What to say when siblings fight over a toy",
+ "meta_description": "A three-step script for two children grabbing the same toy: stop the grab, set a visible turn, and name a fairness rule. Plus what to do when a sibling sets off a meltdown, and when one child says you look at the other first.",
+ "query": "siblings fighting over toys what to say",
+ "kicker": "Scripts &middot; Siblings",
+ "summary": "Two children, one toy, and a grab: it tends to escalate fast. What usually helps is to stop the action without shaming either child, give each a visible turn, and use one fairness rule every time. Below is the exact wording, plus what to say when a sibling sets off a meltdown and when one child says you always look at the other first.",
+ "app_ids": [
+  "sibling_toy_conflict",
+  "tantrum_sibling_trigger",
+  "sibling_attention_rivalry"
+ ],
+ "steps": [
+  {
+   "title": "Stop the grab, not the feeling",
+   "phrase": "Hands off the toy. You can both be upset about this.",
+   "tip": "Separating the action from the emotion helps stop the escalation without shaming either child."
+  },
+  {
+   "title": "Set a visible turn",
+   "phrase": "Two minutes each. I'll set the timer — you'll both see it.",
+   "tip": "A timer both children can see turns \"it's not fair\" into something they can check for themselves."
+  },
+  {
+   "title": "Name the fairness rule",
+   "phrase": "Whoever had it first goes first. Next time, you go first.",
+   "tip": "A rule you use every time saves you from judging who deserves what in the moment."
+  }
+ ],
+ "why": [
+  "CDC's guidance for toddlers and preschoolers says to try distraction and redirection first, and if that doesn't work, to remove a toy or activity your child likes. Its tips on giving directions say to give one clear, simple warning phrased as a statement, in a neutral tone, and to follow through. \"Hands off the toy\" is that direction, and a toy that cannot be shared for a moment is the natural consequence.",
+  "Sharing and turn-taking are skills preschoolers are still learning. CDC's tips for preschoolers say to encourage your child to play with other children, so they can learn the value of sharing and friendship. CDC's guidance on praise adds that specific praise right after the behavior works best, so \"you gave your brother a turn, thank you\" is worth saying out loud.",
+  "The timer and the fairness rule aren't from CDC, they're practical techniques. They help because both children can see the same clock and the same rule, so you don't have to be the judge each time."
+ ],
+ "variations_title": "When a sibling sets off a meltdown",
+ "variations_intro": "Sometimes teasing or taking one child's thing sets off a full meltdown. In the moment, trying to sort out both children's roles tends to make it worse. Separate first, comfort the upset child, and talk about fairness later:",
+ "variations_steps": [
+  {
+   "title": "Separate before sorting blame",
+   "phrase": "Let's take a break from each other for a minute.",
+   "tip": "A little distance helps both children calm down before anyone can think about what happened."
+  },
+  {
+   "title": "Stay with the upset one first",
+   "phrase": "I see you. That was upsetting.",
+   "tip": "The child in the middle of a meltdown needs to settle before either child needs a lecture."
+  },
+  {
+   "title": "Debrief both, later, together",
+   "phrase": "Let's talk about what happened, now that we're both calm.",
+   "tip": "A shared conversation once things are calm helps both children practise repairing, without picking a winner."
+  }
+ ],
+ "variations_after": "For the calm-and-close sequence in the middle of a meltdown, see <a href=\"/kincompass/scripts/tantrum-in-the-store/\">what to do when your child has a tantrum in the store</a>.",
+ "extra_sections": [
+  {
+   "title": "When one child says you always look at the other first",
+   "steps": [
+    {
+     "title": "Don't defend, name it",
+     "phrase": "You feel like I looked at your brother first. That's a real feeling.",
+     "tip": "Arguing (\"that's not true\") tends to start a debate. Naming what they feel usually ends it sooner."
+    },
+    {
+     "title": "Give a concrete turn",
+     "phrase": "Your turn now — tell me about your drawing.",
+     "tip": "A real turn right now is more convincing than a promise that you love them both equally."
+    },
+    {
+     "title": "Plan one-on-one time",
+     "phrase": "Tonight, just you and me for ten minutes before bed.",
+     "tip": "A planned slot of one-on-one time gives each child something to look forward to."
+    }
+   ],
+   "paragraphs": [
+    "CDC's guidance on praise and rewards describes positive attention, such as affection, praise and focused time together, as a powerful reward for young children. That's the idea behind a regular one-on-one slot."
+   ]
+  },
+  {
+   "title": "What it can sound like",
+   "dialogue": [
+    [
+     "Child A",
+     "I had it first!"
+    ],
+    [
+     "Child B",
+     "No, I did!"
+    ],
+    [
+     "You",
+     "Hands off the toy. You can both be upset about this."
+    ],
+    [
+     "You",
+     "Two minutes each. I'll set the timer. You'll both see it."
+    ],
+    [
+     "You",
+     "Whoever had it first goes first. Next time, you go first."
+    ]
+   ],
+   "after": "One rule, said the same way each time, saves you from re-judging the same fight every day."
+  }
+ ],
+ "avoid": [
+  "Asking who started it. It invites a competition for who's to blame.",
+  "Taking sides in the moment. Stop the action first and decide fairness later.",
+  "Making a new rule every time. One consistent rule is easier to follow and to remember."
+ ],
+ "sources": [
+  {
+   "title": "CDC: Tips for Using Time-Out",
+   "url": "https://www.cdc.gov/parenting-toddlers/time-out/index.html",
+   "note": "Distraction and redirection first, one clear warning, and removing a toy or activity before anything else."
+  },
+  {
+   "title": "CDC: Tips for Giving Directions",
+   "url": "https://www.cdc.gov/parenting-toddlers/communication/giving-directions.html",
+   "note": "One direction at a time, limited choices, explaining before a direction, and getting your child's attention first."
+  },
+  {
+   "title": "CDC: Positive Parenting Tips for Preschoolers (3 to 5 years)",
+   "url": "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html",
+   "note": "Screen time limits and a family media plan, limited choices, and encouraging play with other children."
+  },
+  {
+   "title": "CDC: Tips for Using Praise and Rewards",
+   "url": "https://www.cdc.gov/parenting-toddlers/responding-to-behavior/using-rewards.html",
+   "note": "Specific praise, praise right after the behavior, and positive attention."
+  }
+ ],
+ "faq": [
+  {
+   "q": "Should I step in when siblings fight?",
+   "a": "For physical grabbing or hurting, yes, right away. For a minor squabble, giving them a moment to sort it out can be fine. If someone could get hurt, step in."
+  },
+  {
+   "q": "What if the timer doesn't work?",
+   "a": "Give it a few days of using it the same way. If the toy is still the problem, putting the toy away for a few minutes is a reasonable consequence, which CDC lists as an option when distraction doesn't work."
+  },
+  {
+   "q": "My child has ADHD. Is this different?",
+   "a": "These scripts rest on similar principles to the ones CDC says parent training teaches: structure, positive communication and consistency. CDC recommends parent training in behavior management as the first treatment for ADHD in children under 6, and suggests talking to your child's doctor about it. Whether a child has ADHD is a question for a clinician; these scripts are practical communication techniques, not a treatment."
+  }
+ ],
+ "related": [
+  "tantrum-in-the-store",
+  "what-to-say-after-a-tantrum"
+ ]
+}

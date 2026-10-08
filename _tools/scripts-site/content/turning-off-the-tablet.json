@@ -1,0 +1,128 @@
+{
+ "published": "2026-10-08",
+ "updated": "2026-10-08",
+ "slug": "turning-off-the-tablet",
+ "title": "What to say when it's time to turn off the tablet or TV",
+ "meta_description": "A four-step script for ending screen time without a meltdown: a visible timer, a clear stopping point, something to look forward to, and a way to help the body switch. Plus how to set the rules before the screen comes on.",
+ "query": "toddler meltdown when turning off tablet",
+ "kicker": "Scripts &middot; Screens",
+ "summary": "Turning off a tablet or TV is one of the most common daily flashpoints with a preschooler. Shouting \"time's up\" tends to start a fight. A sequence that usually works better: a visible warning, a clear stopping point, something to look forward to, and a short physical reset. Below is the exact wording and how to set the rules before the screen comes on.",
+ "app_ids": [
+  "screen_transition"
+ ],
+ "steps": [
+  {
+   "title": "Warn with a timer",
+   "phrase": "In 5 minutes we turn off. Here's the timer — it will show.",
+   "tip": "A visual timer can be easier to follow than words, because your child can see time running down."
+  },
+  {
+   "title": "Let them finish",
+   "phrase": "You can finish this episode. Then we turn off.",
+   "tip": "A clear stopping point turns \"just a bit more\" into \"this is the last one\"."
+  },
+  {
+   "title": "Link it to something they want",
+   "phrase": "First we turn off, then we go [something they want].",
+   "tip": "A pleasant thing waiting on the other side makes switching easier."
+  },
+  {
+   "title": "Help the body switch",
+   "phrase": "Screen off. Stretch, stand up. What are we doing next?",
+   "tip": "A little movement helps many children shift from sitting and watching to the next thing."
+  }
+ ],
+ "why": [
+  "The structure follows CDC's guidance for parents of toddlers and preschoolers. For directions it says to explain before you give them, and to give one clear, simple warning phrased as a statement rather than a question, in a neutral tone, then follow through. The timer is the warning, and the choice of when to stop (\"this episode\") is the clear statement.",
+  "CDC's tips for preschoolers also suggest keeping the TV out of your child's bedroom, keeping quality programming to about an hour a day, and developing a family media use plan. A media plan matters here because the hardest part of turning a screen off is often that the rules were never clear in the first place.",
+  "Cooperation is worth noticing. CDC's guidance on praise says specific praise right after the behavior works best, so a quick \"you turned it off on your own, thank you\" helps the next time go smoothly."
+ ],
+ "variations_title": "Set the rules before the screen comes on",
+ "variations_intro": "Much of the fight happens because the rules are made up in the moment. If you agree them before the screen goes on, turning it off is just following the plan. CDC suggests a family media plan; for a preschooler it can be as simple as: how long, which show, and what comes after.",
+ "variations_steps": [],
+ "variations_after": "A routine your child can see can take the sting out of the end of screen time: see the free <a href=\"/kincompass/routine-charts/\">printable routine charts</a>.",
+ "extra_sections": [
+  {
+   "title": "What it can sound like",
+   "dialogue": [
+    [
+     "You (before the screen goes on)",
+     "One episode, then we put on shoes and go to the park."
+    ],
+    [
+     "You (during)",
+     "In 5 minutes we turn off. Here's the timer. It will show."
+    ],
+    [
+     "Child",
+     "No! One more!"
+    ],
+    [
+     "You",
+     "You can finish this episode. Then we turn off."
+    ],
+    [
+     "You (when it ends)",
+     "Screen off. Stretch, stand up. What are we doing next?"
+    ],
+    [
+     "Child",
+     "Park!"
+    ]
+   ],
+   "after": "The rule was set before the screen went on, the warning was visible, and the next thing was something your child wanted."
+  },
+  {
+   "title": "When it still ends in tears",
+   "paragraphs": [
+    "A few meltdowns at the start are normal. Stay calm, keep the wording the same, and follow through: the screen goes off at the stopping point you named. If your child melts down, see \"What to do when your child has a tantrum in the store\" for the calm-and-close sequence; the same steps apply at home.",
+    "Some families find a trial of a few days, with the same timer and the same rule every day, is enough for a pattern to settle. If screen time is a constant battle or your child seems unable to disengage from it, mention it to your pediatrician."
+   ]
+  }
+ ],
+ "avoid": [
+  "Switching the screen off with no warning. A heads-up costs a minute and avoids most of the fight.",
+  "Changing the rule in the moment (\"fine, one more\"). Decide the stopping point in advance and keep it.",
+  "Using the screen as the only reward or calming tool, so that taking it away feels like losing everything."
+ ],
+ "sources": [
+  {
+   "title": "CDC: Tips for Giving Directions",
+   "url": "https://www.cdc.gov/parenting-toddlers/communication/giving-directions.html",
+   "note": "One direction at a time, limited choices, explaining before a direction, and getting your child's attention first."
+  },
+  {
+   "title": "CDC: Positive Parenting Tips for Preschoolers (3 to 5 years)",
+   "url": "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html",
+   "note": "Screen time limits and a family media plan, limited choices, and encouraging play with other children."
+  },
+  {
+   "title": "CDC: Tips for Using Time-Out",
+   "url": "https://www.cdc.gov/parenting-toddlers/time-out/index.html",
+   "note": "Distraction and redirection first, one clear warning, and removing a toy or activity before anything else."
+  },
+  {
+   "title": "CDC: Tips for Using Praise and Rewards",
+   "url": "https://www.cdc.gov/parenting-toddlers/responding-to-behavior/using-rewards.html",
+   "note": "Specific praise, praise right after the behavior, and positive attention."
+  }
+ ],
+ "faq": [
+  {
+   "q": "How much screen time is OK for a preschooler?",
+   "a": "CDC's tips for parents of preschoolers suggest keeping the TV out of the bedroom and limiting quality programming to about an hour a day, with a family media plan. Your pediatrician can help you adapt that to your child."
+  },
+  {
+   "q": "Should I use a timer?",
+   "a": "Many parents find a visual timer helpful, because a young child can see time running down. There's no single right way; the key is that the warning is clear and the stopping point doesn't move."
+  },
+  {
+   "q": "My child has ADHD. Is this different?",
+   "a": "These scripts rest on similar principles to the ones CDC says parent training teaches: structure, positive communication and consistency. CDC recommends parent training in behavior management as the first treatment for ADHD in children under 6, and suggests talking to your child's doctor about it. Whether a child has ADHD is a question for a clinician; these scripts are practical communication techniques, not a treatment."
+  }
+ ],
+ "related": [
+  "child-wont-leave-the-park",
+  "tantrum-in-the-store"
+ ]
+}

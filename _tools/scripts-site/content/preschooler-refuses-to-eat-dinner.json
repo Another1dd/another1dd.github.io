@@ -1,0 +1,118 @@
+{
+ "published": "2026-10-08",
+ "updated": "2026-10-08",
+ "slug": "preschooler-refuses-to-eat-dinner",
+ "title": "What to say when your preschooler refuses to eat dinner",
+ "meta_description": "A three-step script for dinner standoffs: offer a choice within limits, keep one familiar food on the plate, and drop the pressure to finish. Based on CDC guidance on picky eating.",
+ "query": "preschooler refuses to eat dinner what to say",
+ "kicker": "Scripts &middot; Mealtimes",
+ "summary": "When a preschooler says \"I'm not eating that\", pushing, bargaining or hiding the vegetables tends to turn dinner into a standoff. What usually works better is giving a small choice, keeping something familiar on the plate, and taking the pressure off. Below is the exact wording and what CDC says about picky eating.",
+ "app_ids": [
+  "mealtime_refusal"
+ ],
+ "steps": [
+  {
+   "title": "Offer a choice within limits",
+   "phrase": "You can have the chicken or the pasta — which one?",
+   "tip": "A choice between two options you're happy with gives your child some control without turning dinner into a free-for-all."
+  },
+  {
+   "title": "Keep one familiar food on the plate",
+   "phrase": "Here's your bread too, next to the new thing.",
+   "tip": "Something familiar on the plate makes trying something new feel less risky."
+  },
+  {
+   "title": "Don't negotiate mid-bite",
+   "phrase": "You don't have to finish it. One bite if you want to try.",
+   "tip": "Taking away the pressure to finish tends to lead to more real eating than insisting."
+  }
+ ],
+ "why": [
+  "CDC's page on picky eaters says that favoring just a few foods or not wanting foods to touch on the plate is normal, and that these behaviors often fade by about age 5. It also says it may take 8 to 10 exposures before a young child is willing to try a new food, so one refusal doesn't mean \"never\".",
+  "The first two steps follow CDC's suggestions directly: give your child a selection of foods to try and let them pick which one to try that day, and serve a new food alongside one your child already likes. CDC's guidance on limited choices makes a similar point about independence: offer options you're happy with.",
+  "The \"no pressure to finish\" step isn't something CDC addresses on the picky-eater page. It's a common practical suggestion, and it fits with CDC's emphasis on keeping things playful and repeating exposures rather than forcing a bite."
+ ],
+ "variations_title": "Small ways to make trying new foods easier",
+ "variations_intro": "CDC also suggests making it playful, such as asking how a new food looks, feels, smells and tastes, and eating the food yourself first so your child can see you enjoy it. A few other practical ideas:",
+ "variations_steps": [],
+ "variations_after": "A predictable evening can help too: see the free <a href=\"/kincompass/routine-charts/\">printable dinner routine chart</a>.",
+ "extra_sections": [
+  {
+   "title": "What it can sound like",
+   "dialogue": [
+    [
+     "Child",
+     "I'm not eating that!"
+    ],
+    [
+     "You",
+     "You can have the chicken or the pasta. Which one?"
+    ],
+    [
+     "Child",
+     "Pasta."
+    ],
+    [
+     "You",
+     "Pasta it is. Here's your bread too, next to the green beans."
+    ],
+    [
+     "You (later)",
+     "You don't have to finish it. One bite if you want to try."
+    ]
+   ],
+   "after": "If the answer is no today, that's fine. Offer the same food again another day; repeated, low-pressure exposure is the point."
+  },
+  {
+   "title": "When to ask for help",
+   "paragraphs": [
+    "Picky eating is common and usually passes, but talk to your child's pediatrician if your child eats a very small number of foods, is losing weight or isn't growing as expected, gags or chokes often, or if mealtimes are consistently distressing for everyone."
+   ]
+  }
+ ],
+ "avoid": [
+  "Bargaining with dessert as a reward for finishing. It tends to make the main course feel like a price to pay.",
+  "Hiding or disguising foods without telling your child. It can backfire if your child notices.",
+  "Making a separate meal every time. Keep one familiar food on the plate instead."
+ ],
+ "sources": [
+  {
+   "title": "CDC: Picky Eaters and What to Do",
+   "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/picky-eaters.html",
+   "note": "Picky eating is common, new foods can take 8 to 10 tries, and pairing new foods with familiar ones."
+  },
+  {
+   "title": "CDC: Positive Parenting Tips for Preschoolers (3 to 5 years)",
+   "url": "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html",
+   "note": "Screen time limits and a family media plan, limited choices, and encouraging play with other children."
+  },
+  {
+   "title": "CDC: Tips for Giving Directions",
+   "url": "https://www.cdc.gov/parenting-toddlers/communication/giving-directions.html",
+   "note": "One direction at a time, limited choices, explaining before a direction, and getting your child's attention first."
+  },
+  {
+   "title": "CDC: Parent Training in Behavior Management",
+   "url": "https://www.cdc.gov/adhd/treatment/behavior-therapy.html",
+   "note": "What parent training for ADHD teaches, and the advice to talk to your child's doctor."
+  }
+ ],
+ "faq": [
+  {
+   "q": "Is it normal for a preschooler to be a picky eater?",
+   "a": "Yes. CDC says that favoring just a few foods or not wanting foods to touch is normal and often fades by about age 5. If you're worried about growth or variety, ask your pediatrician."
+  },
+  {
+   "q": "How many times should I offer a new food?",
+   "a": "CDC says it can take 8 to 10 exposures before a young child accepts a new food. Offer it again without pressure."
+  },
+  {
+   "q": "My child has ADHD. Is this different?",
+   "a": "These scripts rest on similar principles to the ones CDC says parent training teaches: structure, positive communication and consistency. CDC recommends parent training in behavior management as the first treatment for ADHD in children under 6, and suggests talking to your child's doctor about it. Whether a child has ADHD is a question for a clinician; these scripts are practical communication techniques, not a treatment."
+  }
+ ],
+ "related": [
+  "preschooler-refuses-to-get-dressed",
+  "preschooler-slow-in-the-morning"
+ ]
+}
