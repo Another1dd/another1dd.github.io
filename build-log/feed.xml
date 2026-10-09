@@ -6,7 +6,15 @@
     <atom:link href="https://another1dd.github.io/build-log/feed.xml" rel="self" type="application/rss+xml"/>
     <description>How Chepatapa Apps' six products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Bloomelle: weekly cycle planner and a cycles section</title>
+      <link>https://another1dd.github.io/bloomelle/weekly-planner/</link>
+      <guid isPermaLink="false">build-log-2026-10-09-bloomelle-planner</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description>A free printable weekly cycle planner (A4 and US Letter) and a sourced section on cycle length and phases added to the Bloomelle pages.</description>
+    </item>
 
     <item>
       <title>Five more Kin Compass scripts</title>

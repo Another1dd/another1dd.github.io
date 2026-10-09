@@ -49,6 +49,7 @@
     "operatingSystem": "iOS",
     "applicationCategory": "LifestyleApplication",
     "installUrl": "https://apps.apple.com/us/app/bloomelle-cycle-sync-coach/id6805390003",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "description": "A cycle-phase planning coach that forecasts the coming week and suggests good days for workouts, focus, decisions, and rest.",
     "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
   }
@@ -77,10 +78,34 @@
       },
       {
         "@type": "Question",
-        "name": "When will Bloomelle be available?",
+        "name": "Is Bloomelle available yet?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes. Bloomelle is free on the iOS App Store. An Android version is in testing — leave your email and we'll let you know when it's available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an account, and where does my data go?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No account and no sign-up. Your cycle dates and check-ins stay on your device."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is a typical cycle, and what if mine is irregular?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A cycle is often quoted as 28 days, but sources such as the NHS and the US Office on Women's Health describe a normal range of roughly 21 to 38 days, and it can change from month to month. Bloomelle starts from your own average cycle length, which you can edit at any time. If your cycles are very irregular, the forecast will be less reliable, and it's worth talking to a doctor about anything that concerns you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a printable version?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. There's a free printable weekly cycle planner with a daily check-in and a notes page, in A4 and US Letter. No signup."
         }
       }
     ]
@@ -400,6 +425,8 @@
       margin-bottom: 12px;
       min-height: 1em;
     }
+  
+    section.card a { color: var(--accent-text); }
   </style>
 
   <script type="module">
@@ -533,6 +560,36 @@
     </section>
 
     <section class="card">
+      <h2>Cycles are different for everyone</h2>
+      <p>
+        The textbook cycle is 28 days, but real ones vary. The
+        <a href="https://www.nhs.uk/conditions/periods/" rel="noopener">NHS</a> says cycles commonly run
+        from every 21 to 35 days, and the US
+        <a href="https://womenshealth.gov/menstrual-cycle/your-menstrual-cycle" rel="noopener">Office on Women's Health</a>
+        describes 24 to 38 days as regular, adding that length can change from month to month and
+        with age. That's why Bloomelle starts from your own average cycle length, which you can
+        edit any time, instead of assuming 28 days.
+      </p>
+      <p>
+        The four phases in a minute, per
+        <a href="https://my.clevelandclinic.org/health/articles/10132-menstrual-cycle" rel="noopener">Cleveland Clinic</a>:
+        the menstrual phase starts on the first day of your period; the follicular phase runs from
+        the start of the period until ovulation, with estrogen rising; ovulation is when an egg is
+        released, around the middle of a typical 28-day cycle; and the luteal phase runs from
+        ovulation until the next period, with progesterone rising and then falling.
+      </p>
+      <p>
+        How much the phase matters for planning your week is less clear. A
+        <a href="https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2023.1054542/full" rel="noopener">2023 review</a>
+        of strength and resistance training concluded it is premature to say that cycle phase
+        meaningfully changes performance, recommended an individual approach, and noted that
+        cycle-related symptoms can affect some people, so tracking how you feel can help. That's
+        why Bloomelle's suggestions are starting points, and the daily check-in shows what
+        actually fits you.
+      </p>
+    </section>
+
+    <section class="card">
       <h2>Not a substitute for medical advice</h2>
       <p>
         Many people notice real patterns across their cycle, but the science behind
@@ -540,6 +597,15 @@
         planning tool built around what you notice, not a diagnosis or a clinical
         recommendation. If something about your cycle concerns you, talk to a doctor rather
         than relying on an app.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Free printable weekly planner</h2>
+      <p>
+        Prefer paper? Download a one-page week planner with a daily check-in and a notes page.
+        Free, no signup.
+        <a href="/bloomelle/weekly-planner/" style="color:var(--accent-text);">Get the printable planner &rarr;</a>
       </p>
     </section>
 
@@ -576,6 +642,24 @@
         <p>
           Yes. Bloomelle is free on the iOS App Store. An Android version is in testing
           — leave your email and we'll let you know when it's available.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need an account, and where does my data go?</h3>
+        <p>
+          No account and no sign-up. Your cycle dates and check-ins stay on your device.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3>How long is a typical cycle, and what if mine is irregular?</h3>
+        <p>
+          A cycle is often quoted as 28 days, but sources such as the NHS and the US Office on Women's Health describe a normal range of roughly 21 to 38 days, and it can change from month to month. Bloomelle starts from your own average cycle length, which you can edit at any time. If your cycles are very irregular, the forecast will be less reliable, and it's worth talking to a doctor about anything that concerns you.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3>Is there a printable version?</h3>
+        <p>
+          Yes. There's a <a href="/bloomelle/weekly-planner/">free printable weekly cycle planner</a> with a daily check-in and a notes page, in A4 and US Letter. No signup.
         </p>
       </div>
     </section>

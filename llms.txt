@@ -11,6 +11,7 @@
 
 - [Kin Compass printable routine charts](https://another1dd.github.io/kincompass/routine-charts/): Four free one-page visual routine charts for preschoolers (morning, after-daycare, dinner, bedtime) as A4 and US Letter PDFs. No signup.
 - [Kin Compass scripts](https://another1dd.github.io/kincompass/scripts/): Eleven practical scripts for hard moments with a preschooler (refusing to get dressed, leaving the park, tantrum in the store, talking after a tantrum, not listening, getting out of bed, turning off the tablet, siblings fighting over a toy, refusing dinner, slow mornings, preparing for the doctor or a haircut), each with exact wording, reasoning and CDC sources. Practical communication techniques, not medical advice.
+- [Bloomelle printable weekly cycle planner](https://another1dd.github.io/bloomelle/weekly-planner/): Free two-page printable (A4 and US Letter PDF) for planning workouts, focus work, big decisions and rest around the menstrual cycle, with a daily check-in and a notes page. Cites NHS, Office on Women's Health, Cleveland Clinic and a 2023 evidence review; not medical advice. No signup.
 
 - [Flare printable hot flash diary](https://another1dd.github.io/flare/trigger-diary/): Free two-page printable diary (A4 and US Letter PDF) for logging hot flashes, intensity, duration and 11 common triggers, with a tally sheet to see which triggers show up most. No signup.
 
