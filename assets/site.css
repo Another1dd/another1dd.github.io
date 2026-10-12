@@ -41,9 +41,14 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 10px max(20px, calc((100% - 1160px) / 2));
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid var(--border);
 }
 .site-brand {
   display: inline-flex;
@@ -103,7 +108,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 [data-theme="light"] .theme-toggle .icon-moon { display: none; }
 
 @media (max-width: 480px) {
-  .site-bar { padding: 10px 14px; }
+  .site-bar { padding: 8px 14px; }
   .site-brand span { display: none; }
   .site-links a { padding: 8px 10px; font-size: 12px; }
 }

@@ -235,7 +235,7 @@
     .trig span { font-size: 13px; border: 1px solid var(--border); border-radius: 999px; padding: 4px 11px; color: var(--text-muted); }
     @media (prefers-color-scheme: dark) {
 }
-    .calc-form { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: end; }
+    .calc-form { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: start; }
     @media (max-width: 640px) { .calc-form { grid-template-columns: 1fr; } }
     .calc-form label { display: block; font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
     .calc-form input { width: 100%; font: inherit; font-size: 16px; color: var(--text); background: var(--bg); border: 1px solid var(--text-faint); border-radius: 10px; padding: 10px 12px; }
@@ -255,9 +255,30 @@
     .calc-table tr.now td { background: color-mix(in srgb, var(--accent) 12%, transparent); font-weight: 600; }
     .calc-wrap { overflow-x: auto; }
     .chip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap; }
-    .chip::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c, var(--accent)); }
+    .chip::before { content: ""; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--c, var(--accent)); }
     .ph-period { --c: #C2415F; } .ph-fol { --c: #4F8A6E; } .ph-ovu { --c: #D08A1E; } .ph-lut { --c: #7D5BA6; } .ph-late { --c: #8A7F78; }
     .calc-h3 { font-family: 'Fraunces', Georgia, serif; font-size: 17px; color: var(--text); margin: 18px 0 4px; }
+    .res-hero { display: flex; align-items: center; gap: 20px; margin-bottom: 18px; }
+    .res-day { flex: none; width: 104px; height: 104px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: color-mix(in srgb, var(--accent) 14%, var(--bg)); border: 2px solid var(--accent); }
+    .res-day-n { font-family: 'Fraunces', Georgia, serif; font-size: 40px; line-height: 1; font-weight: 600; color: var(--text); }
+    .res-day-l { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-top: 4px; }
+    .res-main .calc-summary { margin-bottom: 4px; }
+    @media (max-width: 480px) { .res-hero { gap: 14px; } .res-day { width: 84px; height: 84px; } .res-day-n { font-size: 32px; } .calc-summary { font-size: 19px; } }
+    .phase-bar { position: relative; display: flex; gap: 3px; height: 14px; margin: 30px 0 14px; }
+    .phase-bar span { border-radius: 7px; background: var(--c); opacity: 0.9; }
+    .phase-bar i { position: absolute; top: -12px; width: 0; height: 0; margin-left: -6px; border: 6px solid transparent; border-top: 9px solid var(--text); border-bottom: 0; }
+    .phase-bar i::after { content: "today"; position: absolute; top: -17px; left: 50%; transform: translateX(-50%); font: 600 11px/1 system-ui, sans-serif; letter-spacing: 0.04em; color: var(--text); }
+    .phase-legend { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 10px; margin-bottom: 8px; }
+    .phase-legend li { font-size: 13px; color: var(--text-muted); padding: 10px 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); }
+    .phase-legend li.now { border-color: var(--c); box-shadow: inset 0 0 0 1px var(--c); }
+    .phase-legend .chip { display: flex; margin-bottom: 3px; }
+    .week { list-style: none; display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-top: 8px; }
+    .week li { text-align: center; padding: 10px 4px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg); border-top: 4px solid var(--c); }
+    .week li.now { background: color-mix(in srgb, var(--c) 16%, var(--bg)); border-color: var(--c); }
+    .week .wd { display: block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); }
+    .week .wn { display: block; font-family: 'Fraunces', Georgia, serif; font-size: 22px; color: var(--text); margin: 2px 0; }
+    .week .wp { display: block; font-size: 11px; line-height: 1.25; color: var(--text-muted); }
+    @media (max-width: 640px) { .week { grid-template-columns: repeat(7, 78px); overflow-x: auto; padding-bottom: 6px; } }
   </style>
 </head>
 <body>
@@ -312,16 +333,20 @@
     </section>
 
     <section class="card calc-out" id="calc-out" hidden aria-live="polite">
-      <h2>Your estimate</h2>
-      <p class="calc-summary" id="out-summary"></p>
-      <p class="calc-sub" id="out-next"></p>
+      <div class="res-hero">
+        <div class="res-day"><span class="res-day-n" id="out-day"></span><span class="res-day-l">cycle day</span></div>
+        <div class="res-main">
+          <p class="calc-summary" id="out-summary"></p>
+          <p class="calc-sub" id="out-next"></p>
+        </div>
+      </div>
       <div class="calc-note" id="out-note" hidden></div>
 
-      <h3 class="calc-h3">The next 7 days</h3>
-      <div class="calc-wrap"><table class="calc-table"><thead><tr><th>Date</th><th>Cycle day</th><th>Phase</th></tr></thead><tbody id="out-week"></tbody></table></div>
+      <div class="phase-bar" id="out-bar" role="img" aria-label="Cycle timeline"></div>
+      <ul class="phase-legend" id="out-phases"></ul>
 
-      <h3 class="calc-h3">Phases in this cycle</h3>
-      <div class="calc-wrap"><table class="calc-table"><thead><tr><th>Phase</th><th>Days</th><th>Dates</th></tr></thead><tbody id="out-phases"></tbody></table></div>
+      <h3 class="calc-h3">The next 7 days</h3>
+      <ol class="week" id="out-week"></ol>
 
       <h3 class="calc-h3">Next expected periods</h3>
       <p class="calc-sub" id="out-future"></p>
@@ -450,18 +475,22 @@
         var note = document.getElementById('out-note');
         if (r.late) { note.hidden = false; note.textContent = 'If your period has already started, enter that new first day. If it\'s late, this estimate no longer applies; talk to a doctor if you\'re worried or this keeps happening.'; }
         else note.hidden = true;
-        var rows = '';
-        for (var i = 0; i < 7; i++) {
-          var ms = todayMs + i * DAY, d = Math.floor((ms - startMs) / DAY) + 1, ph = phaseFor(d, L, P);
-          rows += '<tr' + (i === 0 ? ' class="now"' : '') + '><td>' + fmt(ms, false) + (i === 0 ? ' (today)' : '') + '</td><td>' + d + '</td><td>' + chip(ph) + '</td></tr>';
+        document.getElementById('out-day').textContent = r.day;
+        var wd = '', i;
+        for (i = 0; i < 7; i++) {
+          var ms = todayMs + i * DAY, d = Math.floor((ms - startMs) / DAY) + 1, ph = phaseFor(d, L, P), dt = new Date(ms);
+          wd += '<li class="' + ph.cls + (i === 0 ? ' now' : '') + '"><span class="wd">' + (i === 0 ? 'Today' : dt.toLocaleDateString('en-US', { weekday: 'short', timeZone: 'UTC' })) + '</span><span class="wn">' + dt.getUTCDate() + '</span><span class="wp">' + ph.name + '</span></li>';
         }
-        document.getElementById('out-week').innerHTML = rows;
-        var prow = '';
+        document.getElementById('out-week').innerHTML = wd;
+        var bar = '', leg = '';
+        function short(ms) { return fmt(ms, false).replace(/^\w+, /, ''); }
         r.phases.forEach(function (p) {
           var cur = !r.late && r.day >= p.from && r.day <= p.to;
-          prow += '<tr' + (cur ? ' class="now"' : '') + '><td>' + chip(p) + '</td><td>' + (p.from === p.to ? 'Day ' + p.from : 'Days ' + p.from + ' to ' + p.to) + '</td><td>' + fmt(startMs + (p.from - 1) * DAY, false) + ' to ' + fmt(startMs + (p.to - 1) * DAY, false) + '</td></tr>';
+          bar += '<span class="' + p.cls + '" style="flex:' + (p.to - p.from + 1) + '"></span>';
+          leg += '<li class="' + p.cls + (cur ? ' now' : '') + '">' + chip(p) + (p.from === p.to ? 'Day ' + p.from : 'Days ' + p.from + ' to ' + p.to) + '<br>' + short(startMs + (p.from - 1) * DAY) + ' to ' + short(startMs + (p.to - 1) * DAY) + '</li>';
         });
-        document.getElementById('out-phases').innerHTML = prow;
+        document.getElementById('out-bar').innerHTML = bar + (r.late ? '' : '<i style="left:' + ((r.day - 0.5) / L * 100) + '%"></i>');
+        document.getElementById('out-phases').innerHTML = leg;
         var fut = [], base = r.nextStart;
         while (base <= todayMs) base += L * DAY;
         for (var k = 0; k < 3; k++) fut.push(fmt(base + k * L * DAY, true));
