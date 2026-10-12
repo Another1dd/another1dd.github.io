@@ -1,0 +1,7 @@
+.mcp.json
+
+# Local planning docs, not published
+docs/
+
+# Local assistant settings
+.claude/

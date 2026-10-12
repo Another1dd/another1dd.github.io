@@ -25,6 +25,14 @@
     </item>
 
     <item>
+      <title>Bloomelle: free cycle calculator</title>
+      <link>https://another1dd.github.io/bloomelle/cycle-calculator/</link>
+      <guid isPermaLink="false">build-log-2026-10-12-cycle-calculator</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <description>A free cycle calculator that shows the next expected period, the current cycle day and phase, and the next seven days. It runs in the browser and stores nothing.</description>
+    </item>
+
+    <item>
       <title>Bloomelle: weekly cycle planner and a cycles section</title>
       <link>https://another1dd.github.io/bloomelle/weekly-planner/</link>
       <guid isPermaLink="false">build-log-2026-10-09-bloomelle-planner</guid>

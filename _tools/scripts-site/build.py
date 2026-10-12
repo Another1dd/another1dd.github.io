@@ -86,6 +86,7 @@ def head(title, desc, url, og_image, jsonld_blocks, kicker_type='article'):
     ld = '\n'.join(f'  <script type="application/ld+json">\n  {json.dumps(b, ensure_ascii=False)}\n  </script>\n' for b in jsonld_blocks)
     with open(os.path.join(HERE, 'style.css'), encoding='utf-8') as fh:
         css = fh.read()
+    bar = SITE_BAR
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,16 +124,27 @@ def head(title, desc, url, og_image, jsonld_blocks, kicker_type='article'):
 {ld}
   <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 
+  <link rel="stylesheet" href="/assets/site.css">
   <style>
 {css}
   </style>
 </head>
 <body>
-  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
-  </button>
+  {bar}
 '''
+
+
+SITE_BAR = '''<div class="site-bar">
+    <a class="site-brand" href="/"><img src="/assets/favicon-32x32.png" alt="" width="28" height="28"><span>Chepatapa Apps</span></a>
+    <nav class="site-links" aria-label="Site">
+      <a href="/about/">About</a>
+      <a href="/build-log/">Build Log</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+    </nav>
+  </div>'''
 
 
 FOOT = '''
@@ -207,6 +219,7 @@ def render_page(page, by_slug):
       <p class="kicker">{page['kicker']}</p>
       <h1>{esc(page['title'])}</h1>
       <p class="dek">{esc(page['summary'])}</p>
+      <p class="dek" style="font-size:13px;">Last reviewed {page['updated']} &middot; Sources are listed at the bottom of the page.</p>
     </section>
 
     <section class="card">

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free cycle calculator: enter the first day of your last period and your cycle length to see your next expected period, your current cycle day and phase, and the days ahead. Runs in your browser, nothing is stored.">
+  <meta name="color-scheme" content="light dark">
+  <title>Free Cycle Calculator: Next Period and Cycle Phases — Bloomelle</title>
+  <link rel="canonical" href="https://another1dd.github.io/bloomelle/cycle-calculator/">
+  <meta name="theme-color" content="#FDF6EF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1E1815" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Free Cycle Calculator: Next Period and Cycle Phases">
+  <meta property="og:description" content="Free cycle calculator: enter the first day of your last period and your cycle length to see your next expected period, your current cycle day and phase, and the days ahead. Runs in your browser, nothing is stored.">
+  <meta property="og:url" content="https://another1dd.github.io/bloomelle/cycle-calculator/">
+  <meta property="og:image" content="https://another1dd.github.io/bloomelle/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "headline": "Free Cycle Calculator: Next Period and Cycle Phases",
+    "url": "https://another1dd.github.io/bloomelle/cycle-calculator/",
+    "datePublished": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "about": "Menstrual cycle calculator",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "@id": "https://another1dd.github.io/#tsimafei-lemeshchanka",
+      "name": "Tsimafei Lemeshchanka",
+      "url": "https://github.com/Another1dd",
+      "jobTitle": "Developer",
+      "sameAs": [
+        "https://github.com/Another1dd",
+        "https://www.linkedin.com/in/timophei-lemeshchenko/"
+      ]
+    },
+    "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Bloomelle", "item": "https://another1dd.github.io/bloomelle/" },
+      { "@type": "ListItem", "position": 3, "name": "Cycle calculator", "item": "https://another1dd.github.io/bloomelle/cycle-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is the next period date calculated?", "acceptedAnswer": {"@type": "Answer", "text": "It adds your cycle length to the first day of your last period. A cycle is counted from the first day of one period to the day before the next one starts, so a 28-day cycle that began on the 1st puts the next period on the 29th."}}, {"@type": "Question", "name": "How accurate is it?", "acceptedAnswer": {"@type": "Answer", "text": "It's an estimate, and it works best when your cycles are fairly regular. Sources describe normal cycle lengths of roughly 21 to 38 days, and a cycle can change from month to month and with age, so use your own average of the last few cycles and expect the real date to be a few days either way."}}, {"@type": "Question", "name": "Does it show fertile days or work as contraception?", "acceptedAnswer": {"@type": "Answer", "text": "No. The phase markers are a rough guide for planning your week, not a fertility tool, and they must not be used to prevent or to plan a pregnancy. For that, talk to a doctor."}}, {"@type": "Question", "name": "Is my data stored or sent anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. The calculation runs entirely in your browser. Nothing you enter is stored, saved on this device or sent to a server, and this page has no analytics."}}]}
+  </script>
+
+  <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+    :root {
+      --accent: #B14865;
+    }
+    @media (prefers-color-scheme: dark) {
+:root {
+      --accent:#C97B90;
+    }
+}
+    [data-theme="dark"] {
+      --accent: #C97B90;
+    }
+    [data-theme="light"] {
+      --accent: #B14865;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    h1, h2 { font-family: 'Fraunces', Georgia, serif; }
+    header {
+      padding: 40px 24px 0;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .back {
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back:hover { text-decoration: underline; }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+    .hero {
+      padding: 32px 0 8px;
+    }
+    .hero p.kicker {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .hero p.dek {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    section.card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+    section.card h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    section.card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    section.card p:last-child { margin-bottom: 0; }
+    section.card code {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 1px 6px;
+      font-size: 13px;
+      color: var(--text);
+    }
+    section.card a { color: var(--accent); }
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 8px 0 16px;
+    }
+    .before-after div {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .before-after .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 4px;
+    }
+    .before-after .value {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    footer a { color: var(--text-muted); }
+    .charts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 8px; }
+    @media (max-width: 560px) {
+.charts { grid-template-columns: 1fr; }
+}
+    .chart { border: 1px solid var(--border); border-radius: 14px; padding: 16px; background: var(--bg); }
+    .chart h3 { font-family: 'Fraunces', Georgia, serif; font-size: 20px; color: var(--accent); margin-bottom: 2px; }
+    .chart .blurb { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; }
+    .chart .step { display: flex; align-items: center; gap: 10px; border: 2px solid #C97B90; border-radius: 12px; padding: 6px 10px; margin-bottom: 6px; font-size: 14px; font-weight: 600; color: var(--text); }
+    .chart .step .n { width: 14px; text-align: center; color: #C97B90; }
+    .chart .step .b { width: 30px; height: 30px; border-radius: 50%; background: rgba(79,138,110,0.14); display: flex; align-items: center; justify-content: center; flex: none; }
+    .chart .step .ic { width: 18px; height: 18px; fill: var(--accent); }
+    .chart .step .age { margin-left: auto; font-size: 11px; font-weight: 500; color: var(--text-faint); }
+    .chart .dl { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+    .chart .dl a { font-size: 13px; font-weight: 600; text-decoration: none; padding: 7px 12px; border-radius: 8px; border: 1px solid var(--accent); color: var(--accent); }
+    .chart .dl a:first-child { background: var(--accent); color: var(--bg); }
+    .cta-row { margin-top: 14px; }
+    .cta-row img { height: 44px; width: auto; }
+    details { border-top: 1px solid var(--border); padding: 12px 0; }
+    details:last-of-type { border-bottom: 1px solid var(--border); }
+    summary { cursor: pointer; font-weight: 600; font-size: 15px; }
+    details p { margin-top: 8px; }
+    .dl { display: flex; gap: 8px; flex-wrap: wrap; }
+    .dl a { font-size: 14px; font-weight: 600; text-decoration: none; padding: 9px 14px; border-radius: 8px; border: 1px solid var(--accent); color: var(--accent); }
+    .dl a:first-child { background: var(--accent); color: var(--bg); }
+    .trig { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .trig span { font-size: 13px; border: 1px solid var(--border); border-radius: 999px; padding: 4px 11px; color: var(--text-muted); }
+    @media (prefers-color-scheme: dark) {
+}
+    .calc-form { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: end; }
+    @media (max-width: 640px) { .calc-form { grid-template-columns: 1fr; } }
+    .calc-form label { display: block; font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+    .calc-form input { width: 100%; font: inherit; font-size: 16px; color: var(--text); background: var(--bg); border: 1px solid var(--text-faint); border-radius: 10px; padding: 10px 12px; }
+    .calc-form .hint { font-size: 12px; color: var(--text-faint); margin-top: 4px; }
+    .calc-btn { grid-column: 1 / -1; justify-self: start; font: inherit; font-size: 15px; font-weight: 600; color: #fff; background: var(--accent); border: 0; border-radius: 10px; padding: 11px 20px; cursor: pointer; }
+    [data-theme="dark"] .calc-btn { color: var(--bg); }
+    @media (prefers-color-scheme: dark) { .calc-btn { color: var(--bg); } }
+    [data-theme="light"] .calc-btn { color: #fff; }
+    .calc-error { color: var(--accent); font-size: 14px; margin-top: 10px; min-height: 1.2em; }
+    .calc-out[hidden] { display: none; }
+    .calc-summary { font-family: 'Fraunces', Georgia, serif; font-size: 22px; line-height: 1.35; color: var(--text); margin-bottom: 6px; }
+    .calc-sub { font-size: 15px; color: var(--text-muted); margin-bottom: 4px; }
+    .calc-note { font-size: 14px; color: var(--text-muted); border-left: 4px solid var(--accent); background: var(--bg); padding: 10px 14px; border-radius: 0 10px 10px 0; margin: 14px 0; }
+    .calc-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 8px 0 4px; }
+    .calc-table th, .calc-table td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .calc-table th { font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-faint); }
+    .calc-table tr.now td { background: color-mix(in srgb, var(--accent) 12%, transparent); font-weight: 600; }
+    .calc-wrap { overflow-x: auto; }
+    .chip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap; }
+    .chip::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c, var(--accent)); }
+    .ph-period { --c: #C2415F; } .ph-fol { --c: #4F8A6E; } .ph-ovu { --c: #D08A1E; } .ph-lut { --c: #7D5BA6; } .ph-late { --c: #8A7F78; }
+    .calc-h3 { font-family: 'Fraunces', Georgia, serif; font-size: 17px; color: var(--text); margin: 18px 0 4px; }
+  </style>
+</head>
+<body>
+  <div class="site-bar">
+    <a class="site-brand" href="/"><img src="/assets/favicon-32x32.png" alt="" width="28" height="28"><span>Chepatapa Apps</span></a>
+    <nav class="site-links" aria-label="Site">
+      <a href="/about/">About</a>
+      <a href="/build-log/">Build Log</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+    </nav>
+  </div>
+
+  <header>
+    <a class="back" href="/bloomelle/">&#8592; Bloomelle</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="kicker">Free tool &middot; Bloomelle</p>
+      <h1>Free Cycle Calculator: Next Period and Cycle Phases</h1>
+      <p class="dek">
+        Enter the first day of your last period and how long your cycle usually is. You'll see
+        when your next period is expected, which day of the cycle it is today, roughly which
+        phase you're in, and what the next few days look like. It runs in your browser, nothing is
+        stored or sent anywhere.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Your cycle</h2>
+      <form class="calc-form" id="calc-form" novalidate>
+        <div>
+          <label for="start">First day of your last period</label>
+          <input type="date" id="start" required>
+        </div>
+        <div>
+          <label for="len">Usual cycle length (days)</label>
+          <input type="number" id="len" min="21" max="45" value="28" inputmode="numeric" required>
+          <div class="hint">Often 21 to 38 days</div>
+        </div>
+        <div>
+          <label for="plen">Period length (days)</label>
+          <input type="number" id="plen" min="2" max="10" value="5" inputmode="numeric" required>
+          <div class="hint">Usually 3 to 7 days</div>
+        </div>
+        <button class="calc-btn" type="submit">Show my cycle</button>
+      </form>
+      <p class="calc-error" id="calc-error" role="alert"></p>
+    </section>
+
+    <section class="card calc-out" id="calc-out" hidden aria-live="polite">
+      <h2>Your estimate</h2>
+      <p class="calc-summary" id="out-summary"></p>
+      <p class="calc-sub" id="out-next"></p>
+      <div class="calc-note" id="out-note" hidden></div>
+
+      <h3 class="calc-h3">The next 7 days</h3>
+      <div class="calc-wrap"><table class="calc-table"><thead><tr><th>Date</th><th>Cycle day</th><th>Phase</th></tr></thead><tbody id="out-week"></tbody></table></div>
+
+      <h3 class="calc-h3">Phases in this cycle</h3>
+      <div class="calc-wrap"><table class="calc-table"><thead><tr><th>Phase</th><th>Days</th><th>Dates</th></tr></thead><tbody id="out-phases"></tbody></table></div>
+
+      <h3 class="calc-h3">Next expected periods</h3>
+      <p class="calc-sub" id="out-future"></p>
+      <p class="calc-sub" style="margin-top:12px;font-size:13px;color:var(--text-faint);">Estimates assume a regular cycle. Real dates can be a few days earlier or later.</p>
+    </section>
+
+    <section class="card">
+      <h2>How the phases are estimated</h2>
+      <p>
+        Day 1 is the first day of your period. The
+        <a href="https://my.clevelandclinic.org/health/articles/10132-menstrual-cycle" rel="noopener">Cleveland Clinic</a>
+        describes four phases: the menstrual phase, when the period happens; the follicular phase,
+        which runs from the start of the period until ovulation; ovulation, when an egg is released;
+        and the luteal phase, from ovulation until the next period. This calculator shows them in that
+        order, as period, follicular, around ovulation and luteal.
+      </p>
+      <p>
+        Ovulation is placed about 14 days before your next period. The
+        <a href="https://www.nhs.uk/conditions/periods/" rel="noopener">NHS</a> puts it roughly 12 to 16
+        days before, so treat the "around ovulation" days as a rough marker and not as a precise date. The
+        <a href="https://womenshealth.gov/menstrual-cycle/your-menstrual-cycle" rel="noopener">Office on Women's Health</a>
+        notes that cycle length can differ from month to month, which is why an average of your last few
+        cycles gives a better estimate than a single one.
+      </p>
+      <p class="disclaimer" style="font-size:13px;color:var(--text-faint);">
+        This is not a fertility tool and must not be used to prevent or plan a pregnancy, and it isn't medical
+        advice. If your cycles are very irregular, or something about your cycle worries you, talk to a doctor.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Want a forecast that updates itself?</h2>
+      <p>
+        Bloomelle turns your last period start date and average cycle length into a week-ahead forecast,
+        with suggestions for workouts, focus work, big decisions and rest, plus a ten-second daily
+        check-in. Free to download, no account, and your dates stay on your phone. There's also a
+        <a href="/bloomelle/weekly-planner/">free printable weekly planner</a>.
+      </p>
+      <div class="cta-row">
+        <a href="https://apps.apple.com/us/app/bloomelle-cycle-sync-coach/id6805390003?pt=128995653&amp;ct=web_cycle_calc&amp;mt=8"><img src="/bloomelle/assets/app-store-badge.svg" alt="Download Bloomelle on the App Store" height="44"></a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Questions</h2>
+      <details><summary>How is the next period date calculated?</summary><p>It adds your cycle length to the first day of your last period. A cycle is counted from the first day of one period to the day before the next one starts, so a 28-day cycle that began on the 1st puts the next period on the 29th.</p></details><details><summary>How accurate is it?</summary><p>It's an estimate, and it works best when your cycles are fairly regular. Sources describe normal cycle lengths of roughly 21 to 38 days, and a cycle can change from month to month and with age, so use your own average of the last few cycles and expect the real date to be a few days either way.</p></details><details><summary>Does it show fertile days or work as contraception?</summary><p>No. The phase markers are a rough guide for planning your week, not a fertility tool, and they must not be used to prevent or to plan a pregnancy. For that, talk to a doctor.</p></details><details><summary>Is my data stored or sent anywhere?</summary><p>No. The calculation runs entirely in your browser. Nothing you enter is stored, saved on this device or sent to a server, and this page has no analytics.</p></details>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/bloomelle/">Bloomelle</a> &middot; <a href="/about/">About</a> &middot; <a href="/build-log/">Build Log</a>
+  </footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = (document.documentElement.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+
+  <script>
+    (function () {
+      var DAY = 86400000;
+      function utc(d) { return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()); }
+      function fmt(ms, withYear) {
+        return new Date(ms).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: withYear ? 'numeric' : undefined, timeZone: 'UTC' });
+      }
+      // Phase boundaries for a cycle of length L and a period of P days (all 1-based cycle days).
+      function phases(L, P) {
+        var ov = Math.max(L - 14, P + 2);
+        var list = [
+          { key: 'period', cls: 'ph-period', name: 'Period', from: 1, to: P },
+          { key: 'fol', cls: 'ph-fol', name: 'Follicular', from: P + 1, to: ov - 2 },
+          { key: 'ovu', cls: 'ph-ovu', name: 'Around ovulation', from: ov - 1, to: ov + 1 },
+          { key: 'lut', cls: 'ph-lut', name: 'Luteal', from: ov + 2, to: L }
+        ];
+        return list.filter(function (p) { return p.from <= p.to; });
+      }
+      function phaseFor(day, L, P) {
+        if (day > L) return { cls: 'ph-late', name: 'Past expected cycle length' };
+        var list = phases(L, P);
+        for (var i = 0; i < list.length; i++) if (day >= list[i].from && day <= list[i].to) return list[i];
+        return list[list.length - 1];
+      }
+      // Pure calculation, so it can be tested without the DOM.
+      window.cycleCalc = function (startMs, todayMs, L, P) {
+        var since = Math.floor((todayMs - startMs) / DAY);
+        var day = since + 1;
+        var nextStart = startMs + L * DAY;
+        var late = since >= L;
+        var steps = 0;
+        while (nextStart <= todayMs - L * DAY) { nextStart += L * DAY; steps++; }
+        return { day: day, late: late, nextStart: startMs + L * DAY, phase: phaseFor(day, L, P), phases: phases(L, P), L: L, P: P };
+      };
+      var form = document.getElementById('calc-form');
+      var err = document.getElementById('calc-error');
+      var out = document.getElementById('calc-out');
+      var startEl = document.getElementById('start');
+      var now = new Date();
+      startEl.max = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
+      function chip(p) { return '<span class="chip ' + p.cls + '">' + p.name + '</span>'; }
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        err.textContent = '';
+        var L = parseInt(document.getElementById('len').value, 10);
+        var P = parseInt(document.getElementById('plen').value, 10);
+        if (!startEl.value) { err.textContent = 'Enter the first day of your last period.'; return; }
+        if (!(L >= 21 && L <= 45)) { err.textContent = 'Enter a cycle length between 21 and 45 days.'; return; }
+        if (!(P >= 2 && P <= 10) || P >= L) { err.textContent = 'Enter a period length between 2 and 10 days.'; return; }
+        var s = startEl.value.split('-');
+        var startMs = Date.UTC(+s[0], +s[1] - 1, +s[2]);
+        var todayMs = utc(new Date());
+        if (startMs > todayMs) { err.textContent = 'The start date can\'t be in the future.'; return; }
+        if (todayMs - startMs > 400 * DAY) { err.textContent = 'That date is over a year ago. Enter the start of your most recent period.'; return; }
+        var r = window.cycleCalc(startMs, todayMs, L, P);
+        var summary = r.late
+          ? 'Today would be day ' + r.day + ', past your usual ' + L + '-day cycle.'
+          : 'Today is cycle day ' + r.day + ', in the ' + r.phase.name.toLowerCase() + ' phase.';
+        document.getElementById('out-summary').textContent = summary;
+        document.getElementById('out-next').textContent = r.late
+          ? 'Your next period was expected around ' + fmt(r.nextStart, true) + '.'
+          : 'Your next period is expected around ' + fmt(r.nextStart, true) + ' (in ' + Math.max(0, Math.round((r.nextStart - todayMs) / DAY)) + ' days).';
+        var note = document.getElementById('out-note');
+        if (r.late) { note.hidden = false; note.textContent = 'If your period has already started, enter that new first day. If it\'s late, this estimate no longer applies; talk to a doctor if you\'re worried or this keeps happening.'; }
+        else note.hidden = true;
+        var rows = '';
+        for (var i = 0; i < 7; i++) {
+          var ms = todayMs + i * DAY, d = Math.floor((ms - startMs) / DAY) + 1, ph = phaseFor(d, L, P);
+          rows += '<tr' + (i === 0 ? ' class="now"' : '') + '><td>' + fmt(ms, false) + (i === 0 ? ' (today)' : '') + '</td><td>' + d + '</td><td>' + chip(ph) + '</td></tr>';
+        }
+        document.getElementById('out-week').innerHTML = rows;
+        var prow = '';
+        r.phases.forEach(function (p) {
+          var cur = !r.late && r.day >= p.from && r.day <= p.to;
+          prow += '<tr' + (cur ? ' class="now"' : '') + '><td>' + chip(p) + '</td><td>' + (p.from === p.to ? 'Day ' + p.from : 'Days ' + p.from + ' to ' + p.to) + '</td><td>' + fmt(startMs + (p.from - 1) * DAY, false) + ' to ' + fmt(startMs + (p.to - 1) * DAY, false) + '</td></tr>';
+        });
+        document.getElementById('out-phases').innerHTML = prow;
+        var fut = [], base = r.nextStart;
+        while (base <= todayMs) base += L * DAY;
+        for (var k = 0; k < 3; k++) fut.push(fmt(base + k * L * DAY, true));
+        document.getElementById('out-future').textContent = fut.join('  \u00b7  ');
+        out.hidden = false;
+        out.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    })();
+  </script>
+</body>
+</html>
