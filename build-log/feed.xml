@@ -6,7 +6,23 @@
     <atom:link href="https://another1dd.github.io/build-log/feed.xml" rel="self" type="application/rss+xml"/>
     <description>How Chepatapa Apps' six products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Bloomelle 1.1.0 submitted for review</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-10-12-bloomelle-110-review</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Bloomelle 1.1.0, a fix release, was submitted for iOS App Store review.</description>
+    </item>
+
+    <item>
+      <title>Flare 1.2.2 live on the iOS App Store</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-10-07-flare-122-live</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Flare 1.2.2 went live on the iOS App Store.</description>
+    </item>
 
     <item>
       <title>Bloomelle: weekly cycle planner and a cycles section</title>
