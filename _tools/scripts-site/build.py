@@ -128,6 +128,7 @@ def head(title, desc, url, og_image, jsonld_blocks, kicker_type='article'):
   <style>
 {css}
   </style>
+<meta name="apple-itunes-app" content="app-id=6791076115, affiliate-data=pt=128995653&ct=web_kincompass_banner&mt=8">
 </head>
 <body>
   {bar}
