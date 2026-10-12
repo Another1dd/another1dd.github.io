@@ -82,7 +82,7 @@
       --surface: #fff;
       --text: #2B2B2B;
       --text-muted: #5C5050;
-      --text-faint: #9E8E84;
+      --text-faint: #7D6E65;
       --text-faintest: #C4B5AC;
       --border: rgba(58,48,40,0.06);
       --border-hover: rgba(58,48,40,0.1);
@@ -100,7 +100,7 @@
     }
 
     [data-theme="light"] {
-      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84; --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --border-hover: rgba(58,48,40,0.1); --shadow: rgba(58,48,40,0.05); --shadow-hover: rgba(58,48,40,0.10); --brand-shadow: rgba(58,48,40,0.22);
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #7D6E65; --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --border-hover: rgba(58,48,40,0.1); --shadow: rgba(58,48,40,0.05); --shadow-hover: rgba(58,48,40,0.10); --brand-shadow: rgba(58,48,40,0.22);
     }
 
     body {
@@ -209,6 +209,7 @@
       z-index: 20;
       display: flex;
       align-items: center;
+      gap: 8px;
       height: 40px;
     }
 
@@ -272,9 +273,12 @@
 
     .app-card:hover {
       box-shadow: 0 10px 28px var(--shadow-hover);
-      border-color: var(--border-hover);
+      border-color: var(--accent, var(--border-hover));
       transform: translateY(-2px);
     }
+    @media (prefers-color-scheme: dark) { .app-card:hover { border-color: var(--accent-dark, var(--accent, var(--border-hover))); } }
+    [data-theme="dark"] .app-card:hover { border-color: var(--accent-dark, var(--accent, var(--border-hover))); }
+    [data-theme="light"] .app-card:hover { border-color: var(--accent, var(--border-hover)); }
 
     .app-card:active {
       transform: translateY(0);
@@ -319,7 +323,7 @@
 
     .app-links a {
       font-size: 13px;
-      color: var(--accent, #E8625A);
+      color: var(--accent-text, var(--accent, #E8625A));
       text-decoration: none;
       font-weight: 500;
     }
@@ -330,6 +334,7 @@
       .app-links a { color: var(--accent-dark, var(--accent, #E8625A)); }
     }
     [data-theme="dark"] .app-links a { color: var(--accent-dark, var(--accent, #E8625A)); }
+    [data-theme="light"] .app-links a { color: var(--accent-text, var(--accent, #E8625A)); }
 
     .tag-coming-soon {
       display: inline-block;
@@ -366,6 +371,20 @@
     .res-text span { display: block; font-size: 14px; line-height: 1.5; color: var(--text-muted); }
     .res-text em { display: block; font-style: normal; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; color: var(--text-faint); margin-top: 10px; }
     .res-card:hover .res-text em { color: var(--text-muted); }
+      a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent-text, var(--accent, currentColor)); outline-offset: 3px; border-radius: 6px; }
+      .app-card:focus-within { border-color: var(--accent, var(--border-hover)); }
+    [data-theme="dark"] .res-icon { background: color-mix(in srgb, var(--accent) 26%, transparent); }
+    @media (prefers-color-scheme: dark) { .res-icon { background: color-mix(in srgb, var(--accent) 26%, transparent); } }
+    [data-theme="light"] .res-icon { background: color-mix(in srgb, var(--accent) 18%, transparent); }
+    @media (max-width: 640px) {
+      .site-nav, .theme-toggle { position: absolute; }
+      header { padding-top: 84px; }
+    }
+    @media (max-width: 420px) {
+      .app-card { padding: 20px; gap: 16px; }
+      .app-icon { width: 56px; height: 56px; }
+      .app-icon svg { width: 100%; height: 100%; }
+    }
   </style>
 
   <script type="module">
@@ -414,8 +433,8 @@
     <h2 class="section-label">Mobile Apps</h2>
 
     <div class="app-grid">
-      <div class="app-card" style="--accent:#E8625A" onclick="if (!event.target.closest('a')) window.location = '/flare/';">
-        <a href="/flare/" class="app-icon" style="background: transparent; overflow: hidden;" aria-label="Flare"><img src="/flare/assets/icon-192.png" alt="Flare app icon" width="72" height="72" style="width:100%;height:100%;display:block;"></a>
+      <div class="app-card" style="--accent:#E8625A; --accent-text:#D0271D; --accent-dark:#FF8A82" onclick="if (!event.target.closest('a')) window.location = '/flare/';">
+        <a tabindex="-1" aria-hidden="true" href="/flare/" class="app-icon" style="background: transparent; overflow: hidden;" aria-label="Flare"><img src="/flare/assets/icon-192.png" alt="Flare app icon" width="72" height="72" style="width:100%;height:100%;display:block;"></a>
         <div class="app-info">
           <h3><a href="/flare/" style="color:inherit;text-decoration:none;">Flare</a></h3>
           <p>Hot flash &amp; night sweat tracker. Know why your symptoms happen, not just when.</p>
@@ -427,8 +446,8 @@
         </div>
       </div>
 
-      <div class="app-card" style="--accent:#4F8A6E; --accent-dark:#6AAE8D" onclick="if (!event.target.closest('a')) window.location = '/kincompass/';">
-        <a href="/kincompass/" class="app-icon" style="background: transparent; overflow: hidden;" aria-label="Kin Compass"><img src="/kincompass/assets/icon-192.png" alt="Kin Compass app icon" width="72" height="72" style="width:100%;height:100%;display:block;"></a>
+      <div class="app-card" style="--accent:#4F8A6E; --accent-text:#44765E; --accent-dark:#6AAE8D" onclick="if (!event.target.closest('a')) window.location = '/kincompass/';">
+        <a tabindex="-1" aria-hidden="true" href="/kincompass/" class="app-icon" style="background: transparent; overflow: hidden;" aria-label="Kin Compass"><img src="/kincompass/assets/icon-192.png" alt="Kin Compass app icon" width="72" height="72" style="width:100%;height:100%;display:block;"></a>
         <div class="app-info">
           <h3><a href="/kincompass/" style="color:inherit;text-decoration:none;">Kin Compass</a></h3>
           <p>Daily routines &amp; communication scripts for parents of preschoolers with ADHD.</p>
@@ -440,8 +459,8 @@
         </div>
       </div>
 
-      <div class="app-card" style="--accent:#C97B90" onclick="if (!event.target.closest('a')) window.location = '/bloomelle/';">
-        <a href="/bloomelle/" class="app-icon" style="background: transparent; overflow: hidden;" aria-label="Bloomelle"><img src="/bloomelle/assets/icon-192.png" alt="Bloomelle app icon" width="72" height="72" style="width:100%;height:100%;display:block;"></a>
+      <div class="app-card" style="--accent:#C97B90; --accent-text:#B14865; --accent-dark:#E39AAE" onclick="if (!event.target.closest('a')) window.location = '/bloomelle/';">
+        <a tabindex="-1" aria-hidden="true" href="/bloomelle/" class="app-icon" style="background: transparent; overflow: hidden;" aria-label="Bloomelle"><img src="/bloomelle/assets/icon-192.png" alt="Bloomelle app icon" width="72" height="72" style="width:100%;height:100%;display:block;"></a>
         <div class="app-info">
           <h3><a href="/bloomelle/" style="color:inherit;text-decoration:none;">Bloomelle</a></h3>
           <p>Cycle-phase planning coach. Forecasts your week and suggests good days for workouts, focus, and rest.</p>
@@ -453,8 +472,8 @@
         </div>
       </div>
 
-      <div class="app-card" style="--accent:#9A64A8; --accent-dark:#BD8CCB; --tag-bg:#85508F" onclick="if (!event.target.closest('a')) window.location = '/naveli/';">
-        <a href="/naveli/" class="app-icon" style="background: transparent; overflow: hidden;" aria-label="Naveli"><img src="/naveli/assets/icon-192.png" alt="Naveli app icon" width="72" height="72" style="width:100%;height:100%;display:block;"></a>
+      <div class="app-card" style="--accent:#9A64A8; --accent-text:#7D478A; --accent-dark:#BD8CCB; --tag-bg:#85508F" onclick="if (!event.target.closest('a')) window.location = '/naveli/';">
+        <a tabindex="-1" aria-hidden="true" href="/naveli/" class="app-icon" style="background: transparent; overflow: hidden;" aria-label="Naveli"><img src="/naveli/assets/icon-192.png" alt="Naveli app icon" width="72" height="72" style="width:100%;height:100%;display:block;"></a>
         <div class="app-info">
           <h3><a href="/naveli/" style="color:inherit;text-decoration:none;">Naveli</a> <span class="tag-coming-soon">Coming soon</span></h3>
           <p>Postpartum recovery yoga. Sequences for your recovery stage and delivery type, with pelvic-floor safety cues.</p>

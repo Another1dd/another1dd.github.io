@@ -60,7 +60,7 @@
     }
 
     :root {
-      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84;
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #7D6E65;
       --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #44765E;
     }
 
@@ -71,7 +71,7 @@
       --bg: #1E1815; --surface: #2A231F; --text: #F3EAE2; --text-muted: #C7B8AC; --text-faint: #9C8B7D; --text-faintest: #7A6C60; --border: rgba(255,255,255,0.08); --shadow: rgba(0,0,0,0.35); --accent: #599B7C;
     }
     [data-theme="light"] {
-      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84; --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #44765E;
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #7D6E65; --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #44765E;
     }
 
     body {
@@ -237,9 +237,15 @@
     .source-note { font-size: 13px; color: var(--text-faint); }
     .related a.rel { display: block; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; text-decoration: none; font-weight: 600; }
     .disclaimer { font-size: 13px; color: var(--text-faint); border-top: 1px solid var(--border); padding-top: 14px; margin-top: 4px; }
-    .hub-card { display: block; padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; text-decoration: none; }
-    .hub-card strong { display: block; font-size: 16px; color: var(--text); margin-bottom: 2px; }
-    .hub-card span { font-size: 14px; color: var(--text-muted); }
+    .hub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    @media (max-width: 560px) { .hub-grid { grid-template-columns: 1fr; } }
+    .hub-card { display: block; padding: 16px 18px 18px; border: 1px solid var(--border); border-top: 3px solid var(--accent); border-radius: 12px; text-decoration: none; background: var(--bg); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .hub-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px var(--shadow); }
+    .hub-card .k { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+    .hub-card strong { display: block; font-size: 16px; line-height: 1.35; color: var(--text); margin-bottom: 6px; }
+    .hub-card .d { display: block; font-size: 14px; line-height: 1.5; color: var(--text-muted); }
+    a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent-text, var(--accent, currentColor)); outline-offset: 3px; border-radius: 6px; }
+  
 
   </style>
 </head>
@@ -266,7 +272,7 @@
 
     <section class="card">
       <h2>Scripts</h2>
-      <a class="hub-card" href="/kincompass/scripts/child-wont-leave-the-park/"><strong>What to say when your child won&#x27;t leave the park</strong><span>When a preschooler doesn&#x27;t want to leave the park, daycare or a friend&#x27;s house, shouting &quot;time to go&quot; rarely works.</span></a><a class="hub-card" href="/kincompass/scripts/keeps-getting-out-of-bed/"><strong>What to say when your child keeps getting out of bed</strong><span>When bedtime turns into ten more requests, or your child keeps walking out after lights out, long conversations tend to make it last longer.</span></a><a class="hub-card" href="/kincompass/scripts/preparing-for-the-doctor-or-a-haircut/"><strong>How to prepare your preschooler for the doctor or a haircut</strong><span>A new place, a doctor, a haircut: for some preschoolers the unknown is harder than the thing itself.</span></a><a class="hub-card" href="/kincompass/scripts/preschooler-not-listening/"><strong>What to say when your preschooler doesn&#x27;t listen</strong><span>When you&#x27;ve said it three times and nothing happens, repeating it louder rarely helps.</span></a><a class="hub-card" href="/kincompass/scripts/preschooler-refuses-to-eat-dinner/"><strong>What to say when your preschooler refuses to eat dinner</strong><span>When a preschooler says &quot;I&#x27;m not eating that&quot;, pushing, bargaining or hiding the vegetables tends to turn dinner into a standoff.</span></a><a class="hub-card" href="/kincompass/scripts/preschooler-refuses-to-get-dressed/"><strong>What to say when your preschooler refuses to get dressed</strong><span>If your preschooler digs in every morning when it&#x27;s time to get dressed, three small changes usually help: let them choose the clothes the night before, give one instruction at a time instead of a list, and connect getting dressed to something they want.</span></a><a class="hub-card" href="/kincompass/scripts/preschooler-slow-in-the-morning/"><strong>What to say when mornings are always a rush with your preschooler</strong><span>When mornings never move fast enough, repeating &quot;hurry up&quot; rarely makes anything faster.</span></a><a class="hub-card" href="/kincompass/scripts/siblings-fighting-over-a-toy/"><strong>What to say when siblings fight over a toy</strong><span>Two children, one toy, and a grab: it tends to escalate fast.</span></a><a class="hub-card" href="/kincompass/scripts/tantrum-in-the-store/"><strong>What to do when your child has a tantrum in the store</strong><span>When a preschooler melts down in the middle of a shop, the instinct is to talk, bargain or hurry.</span></a><a class="hub-card" href="/kincompass/scripts/turning-off-the-tablet/"><strong>What to say when it&#x27;s time to turn off the tablet or TV</strong><span>Turning off a tablet or TV is one of the most common daily flashpoints with a preschooler.</span></a><a class="hub-card" href="/kincompass/scripts/what-to-say-after-a-tantrum/"><strong>What to say to your child after a tantrum</strong><span>Once the tantrum is over, the temptation is to explain, lecture or ask &quot;why did you do that?&quot;.</span></a>
+      <div class="hub-grid"><a class="hub-card" href="/kincompass/scripts/child-wont-leave-the-park/"><span class="k">Transitions</span><strong>What to say when your child won&#x27;t leave the park</strong><span class="d">When a preschooler doesn&#x27;t want to leave the park, daycare or a friend&#x27;s house, shouting &quot;time to go&quot; rarely works.</span></a><a class="hub-card" href="/kincompass/scripts/keeps-getting-out-of-bed/"><span class="k">Bedtime</span><strong>What to say when your child keeps getting out of bed</strong><span class="d">When bedtime turns into ten more requests, or your child keeps walking out after lights out, long conversations tend to make it last longer.</span></a><a class="hub-card" href="/kincompass/scripts/preparing-for-the-doctor-or-a-haircut/"><span class="k">New experiences</span><strong>How to prepare your preschooler for the doctor or a haircut</strong><span class="d">A new place, a doctor, a haircut: for some preschoolers the unknown is harder than the thing itself.</span></a><a class="hub-card" href="/kincompass/scripts/preschooler-not-listening/"><span class="k">Directions</span><strong>What to say when your preschooler doesn&#x27;t listen</strong><span class="d">When you&#x27;ve said it three times and nothing happens, repeating it louder rarely helps.</span></a><a class="hub-card" href="/kincompass/scripts/preschooler-refuses-to-eat-dinner/"><span class="k">Mealtimes</span><strong>What to say when your preschooler refuses to eat dinner</strong><span class="d">When a preschooler says &quot;I&#x27;m not eating that&quot;, pushing, bargaining or hiding the vegetables tends to turn dinner into a standoff.</span></a><a class="hub-card" href="/kincompass/scripts/preschooler-refuses-to-get-dressed/"><span class="k">Mornings</span><strong>What to say when your preschooler refuses to get dressed</strong><span class="d">If your preschooler digs in every morning when it&#x27;s time to get dressed, three small changes usually help: let them choose the clothes the night before, give one instruction at a time instead of a list, and connect getting dressed to something they want.</span></a><a class="hub-card" href="/kincompass/scripts/preschooler-slow-in-the-morning/"><span class="k">Mornings</span><strong>What to say when mornings are always a rush with your preschooler</strong><span class="d">When mornings never move fast enough, repeating &quot;hurry up&quot; rarely makes anything faster.</span></a><a class="hub-card" href="/kincompass/scripts/siblings-fighting-over-a-toy/"><span class="k">Siblings</span><strong>What to say when siblings fight over a toy</strong><span class="d">Two children, one toy, and a grab: it tends to escalate fast.</span></a><a class="hub-card" href="/kincompass/scripts/tantrum-in-the-store/"><span class="k">Tantrums</span><strong>What to do when your child has a tantrum in the store</strong><span class="d">When a preschooler melts down in the middle of a shop, the instinct is to talk, bargain or hurry.</span></a><a class="hub-card" href="/kincompass/scripts/turning-off-the-tablet/"><span class="k">Screens</span><strong>What to say when it&#x27;s time to turn off the tablet or TV</strong><span class="d">Turning off a tablet or TV is one of the most common daily flashpoints with a preschooler.</span></a><a class="hub-card" href="/kincompass/scripts/what-to-say-after-a-tantrum/"><span class="k">After a meltdown</span><strong>What to say to your child after a tantrum</strong><span class="d">Once the tantrum is over, the temptation is to explain, lecture or ask &quot;why did you do that?&quot;.</span></a></div>
     </section>
 
     <section class="card">
@@ -280,7 +286,7 @@
   </main>
 
   <footer>
-    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/kincompass/">Kin Compass</a> &middot; <a href="/build-log/">Build Log</a>
+    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/kincompass/">Kin Compass</a> &middot; <a href="/about/">About</a> &middot; <a href="/build-log/">Build Log</a>
   </footer>
 
   <script>

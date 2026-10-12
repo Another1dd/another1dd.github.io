@@ -64,7 +64,7 @@
     }
 
     :root {
-      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84;
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #7D6E65;
       --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #44765E;
     }
 
@@ -75,7 +75,7 @@
       --bg: #1E1815; --surface: #2A231F; --text: #F3EAE2; --text-muted: #C7B8AC; --text-faint: #9C8B7D; --text-faintest: #7A6C60; --border: rgba(255,255,255,0.08); --shadow: rgba(0,0,0,0.35); --accent: #599B7C;
     }
     [data-theme="light"] {
-      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84; --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #44765E;
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #7D6E65; --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #44765E;
     }
 
     body {
@@ -241,9 +241,15 @@
     .source-note { font-size: 13px; color: var(--text-faint); }
     .related a.rel { display: block; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; text-decoration: none; font-weight: 600; }
     .disclaimer { font-size: 13px; color: var(--text-faint); border-top: 1px solid var(--border); padding-top: 14px; margin-top: 4px; }
-    .hub-card { display: block; padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; text-decoration: none; }
-    .hub-card strong { display: block; font-size: 16px; color: var(--text); margin-bottom: 2px; }
-    .hub-card span { font-size: 14px; color: var(--text-muted); }
+    .hub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    @media (max-width: 560px) { .hub-grid { grid-template-columns: 1fr; } }
+    .hub-card { display: block; padding: 16px 18px 18px; border: 1px solid var(--border); border-top: 3px solid var(--accent); border-radius: 12px; text-decoration: none; background: var(--bg); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .hub-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px var(--shadow); }
+    .hub-card .k { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+    .hub-card strong { display: block; font-size: 16px; line-height: 1.35; color: var(--text); margin-bottom: 6px; }
+    .hub-card .d { display: block; font-size: 14px; line-height: 1.5; color: var(--text-muted); }
+    a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent-text, var(--accent, currentColor)); outline-offset: 3px; border-radius: 6px; }
+  
 
   </style>
 </head>
@@ -330,7 +336,7 @@
   </main>
 
   <footer>
-    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/kincompass/">Kin Compass</a> &middot; <a href="/build-log/">Build Log</a>
+    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/kincompass/">Kin Compass</a> &middot; <a href="/about/">About</a> &middot; <a href="/build-log/">Build Log</a>
   </footer>
 
   <script>

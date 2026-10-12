@@ -92,7 +92,7 @@
     }
 
     :root {
-      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84;
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #7D6E65;
       --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #B14865;
     }
 
@@ -100,10 +100,10 @@
       :root { --bg:#1E1815; --surface:#2A231F; --text:#F3EAE2; --text-muted:#C7B8AC; --text-faint:#9C8B7D; --text-faintest:#7A6C60; --border:rgba(255,255,255,0.08); --shadow:rgba(0,0,0,0.35); --accent:#C97B90; }
     }
     [data-theme="dark"] {
-      --bg: #1E1815; --surface: #2A231F; --text: #F3EAE2; --text-muted: #C7B8AC; --text-faint: #9C8B7D; --text-faintest: #7A6C60; --border: rgba(255,255,255,0.08); --shadow: rgba(0,0,0,0.35); --accent: #599B7C;
+      --bg: #1E1815; --surface: #2A231F; --text: #F3EAE2; --text-muted: #C7B8AC; --text-faint: #9C8B7D; --text-faintest: #7A6C60; --border: rgba(255,255,255,0.08); --shadow: rgba(0,0,0,0.35); --accent: #C97B90;
     }
     [data-theme="light"] {
-      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84; --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #B14865;
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #7D6E65; --text-faintest: #C4B5AC; --border: rgba(58,48,40,0.06); --shadow: rgba(58,48,40,0.05); --accent: #B14865;
     }
 
     body {
@@ -275,6 +275,10 @@
     .dl a:first-child { background: var(--accent); color: var(--bg); }
     .trig { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
     .trig span { font-size: 13px; border: 1px solid var(--border); border-radius: 999px; padding: 4px 11px; color: var(--text-muted); }
+      a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent-text, var(--accent, currentColor)); outline-offset: 3px; border-radius: 6px; }
+      @media (prefers-color-scheme: dark) { .diary-prev { filter: brightness(0.9); } }
+    [data-theme="dark"] .diary-prev { filter: brightness(0.9); }
+    [data-theme="light"] .diary-prev { filter: none; }
   </style>
 </head>
 <body>
@@ -301,11 +305,11 @@
 
     <section class="card">
       <h2>Download</h2>
-      <img class="diary-prev" src="/bloomelle/weekly-planner/preview.jpg" alt="Preview of the printable weekly cycle planner: a seven-day grid with rows for cycle day, workout, focus work, big decisions, rest, energy, focus, mood and whether the plan fit" width="1100" height="778" loading="lazy">
       <div class="dl">
         <a href="/bloomelle/weekly-planner/pdf/bloomelle-weekly-cycle-planner-a4.pdf" download>Download PDF (A4)</a>
         <a href="/bloomelle/weekly-planner/pdf/bloomelle-weekly-cycle-planner-letter.pdf" download>US Letter</a>
       </div>
+      <img class="diary-prev" style="margin-top:14px" src="/bloomelle/weekly-planner/preview.jpg" alt="Preview of the printable weekly cycle planner: a seven-day grid with rows for cycle day, workout, focus work, big decisions, rest, energy, focus, mood and whether the plan fit" width="1100" height="778" loading="lazy">
     </section>
 
     <section class="card">
@@ -367,7 +371,7 @@
   </main>
 
   <footer>
-    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/bloomelle/">Bloomelle</a> &middot; <a href="/build-log/">Build Log</a>
+    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/bloomelle/">Bloomelle</a> &middot; <a href="/about/">About</a> &middot; <a href="/build-log/">Build Log</a>
   </footer>
 
   <script>

@@ -137,7 +137,7 @@ def head(title, desc, url, og_image, jsonld_blocks, kicker_type='article'):
 
 FOOT = '''
   <footer>
-    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/kincompass/">Kin Compass</a> &middot; <a href="/build-log/">Build Log</a>
+    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/kincompass/">Kin Compass</a> &middot; <a href="/about/">About</a> &middot; <a href="/build-log/">Build Log</a>
   </footer>
 
   <script>
@@ -279,8 +279,8 @@ def render_hub(pages):
         {"@type": "ListItem", "position": 3, "name": "Scripts", "item": url}]}
     out = head(title, desc, url, f'{BASE}/kincompass/scripts/assets/og-hub.png', [coll, crumbs], 'website')
     cards = ''.join(
-        f'<a class="hub-card" href="/kincompass/scripts/{p["slug"]}/"><strong>{esc(p["title"])}</strong>'
-        f'<span>{esc(p["summary"].split(". ")[0])}.</span></a>' for p in pages)
+        f'<a class="hub-card" href="/kincompass/scripts/{p["slug"]}/"><span class="k">{p["kicker"].split("&middot;")[-1].strip()}</span>'
+        f'<strong>{esc(p["title"])}</strong><span class="d">{esc(p["summary"].split(". ")[0])}.</span></a>' for p in pages)
     out += f'''
   <header>
     <a class="back" href="/kincompass/">&#8592; Kin Compass</a>
@@ -299,7 +299,7 @@ def render_hub(pages):
 
     <section class="card">
       <h2>Scripts</h2>
-      {cards}
+      <div class="hub-grid">{cards}</div>
     </section>
 
     <section class="card">

@@ -74,7 +74,7 @@
         "name": "Do I need an account, and is my child's information private?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No account or sign-up. Every routine, script, and win stays on your device — nothing about your child is ever sent to a server."
+          "text": "No account or sign-up. Every routine, script, and win stays on your device. The app sends only limited usage analytics, and none of it includes your child's name, age, or challenges."
         }
       },
       {
@@ -100,7 +100,16 @@
   }
   </script>
 
+    <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
   <style>
+    @font-face {
+      font-family: 'Fraunces';
+      font-style: normal;
+      font-weight: 500 600;
+      font-display: swap;
+      src: url('/assets/fonts/fraunces-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     @view-transition {
@@ -108,7 +117,7 @@
     }
 
     :root {
-      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84;
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #7D6E65;
       --text-faintest: #C4B5AC; --shadow: rgba(0,0,0,0.05); --accent: #4F8A6E; --accent-text: #44765E;
     }
     @media (prefers-color-scheme: dark) {
@@ -118,7 +127,7 @@
       --bg: #1E1815; --surface: #2A231F; --text: #F3EAE2; --text-muted: #C7B8AC; --text-faint: #9C8B7D; --text-faintest: #7A6C60; --shadow: rgba(0,0,0,0.35); --accent-text: #599B7C;
     }
     [data-theme="light"] {
-      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #9E8E84; --text-faintest: #C4B5AC; --shadow: rgba(0,0,0,0.05); --accent-text: #44765E;
+      --bg: #FDF6EF; --surface: #fff; --text: #2B2B2B; --text-muted: #5C5050; --text-faint: #7D6E65; --text-faintest: #C4B5AC; --shadow: rgba(0,0,0,0.05); --accent-text: #44765E;
     }
 
     .theme-toggle {
@@ -146,7 +155,7 @@
       min-height: 100vh;
     }
 
-    h1, h2, h3 { font-family: Georgia, serif; }
+    h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
     header {
       padding: 40px 24px 0;
@@ -245,18 +254,18 @@
     .store-badge.pending::after {
       content: "Coming soon";
       position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      color: #fff;
-      background: rgba(43,43,43,0.6);
-      border-radius: 8px;
+      left: 0;
+      right: 0;
+      bottom: -22px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      color: var(--text-muted);
       pointer-events: none;
     }
+    .cta-row { padding-bottom: 24px; }
 
     .badge {
       font-size: 12px;
@@ -402,6 +411,8 @@
       margin-bottom: 12px;
       min-height: 1em;
     }
+      a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent-text, var(--accent, currentColor)); outline-offset: 3px; border-radius: 6px; }
+      h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   </style>
 
   <script type="module">
@@ -492,7 +503,7 @@
           <img src="assets/google-play-badge.svg" alt="Get it on Google Play">
         </button>
       </div>
-      <p class="badge">Free &middot; No account &middot; Nothing leaves your phone</p>
+      <p class="badge">Free &middot; No account &middot; Your entries stay on your device</p>
     </section>
 
     <section class="card">
@@ -599,7 +610,7 @@
         <h3>Do I need an account, and is my child's information private?</h3>
         <p>
           No account or sign-up. Every routine, script, and win stays on your device —
-          nothing about your child is ever sent to a server.
+          the app sends only limited usage analytics, and none of it includes your child's name, age, or challenges.
         </p>
       </div>
       <div class="faq-item">
@@ -617,7 +628,7 @@
     <a href="/kincompass/privacy">Privacy Policy</a> &middot;
     <a href="/kincompass/terms">Terms of Use</a> &middot;
     <a href="/kincompass/support">Support</a> &middot;
-    <a href="/build-log/">Build Log</a>
+    <a href="/about/">About</a> &middot; <a href="/build-log/">Build Log</a>
   </footer>
 
   <div class="modal-overlay" id="android-modal">
