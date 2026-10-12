@@ -20,6 +20,7 @@ OUT = os.path.join(ROOT, 'kincompass', 'scripts')
 BASE = 'https://another1dd.github.io'
 DEFAULT_EN = os.path.abspath(os.path.join(ROOT, '..', '..', 'flutter', 'KinCompass', 'assets', 'translations', 'en.json'))
 APP_STORE = 'https://apps.apple.com/app/id6791076115'
+PROVIDER_TOKEN = '128995653'  # App Store Connect provider token, also used by the app's invite links
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 
 AUTHOR = {
@@ -237,7 +238,7 @@ def render_page(page, by_slug):
         words ready in the moment. Free to start, no account.
       </p>
       <div class="cta-row">
-        <a href="{APP_STORE}"><img src="/kincompass/assets/app-store-badge.svg" alt="Download Kin Compass on the App Store" height="44"></a>
+        <a href="{APP_STORE}?pt={PROVIDER_TOKEN}&amp;ct={page['ct']}&amp;mt=8"><img src="/kincompass/assets/app-store-badge.svg" alt="Download Kin Compass on the App Store" height="44"></a>
       </div>
     </section>
 

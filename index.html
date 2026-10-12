@@ -10,7 +10,7 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="ZXLJsdxUxTmoqbbwLorggpEP5Yp06xNDV9qlrpCvVac" />
-  <meta name="description" content="Chepatapa Apps builds mobile apps (Flare, Kin Compass) and developer SaaS tools (Perchly, Publy).">
+  <meta name="description" content="Chepatapa Apps builds privacy-first mobile apps (Flare, Kin Compass, Bloomelle, Naveli) and developer SaaS tools (Perchly, Publy), with free printables and guides.">
   <meta name="color-scheme" content="light dark">
   <title>Chepatapa Apps — Mobile Apps &amp; SaaS Tools</title>
   <link rel="canonical" href="https://another1dd.github.io/">
@@ -20,7 +20,7 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Chepatapa Apps — Mobile Apps & SaaS Tools">
-  <meta property="og:description" content="Chepatapa Apps builds mobile apps (Flare, Kin Compass) and developer SaaS tools (Perchly, Publy).">
+  <meta property="og:description" content="Chepatapa Apps builds privacy-first mobile apps (Flare, Kin Compass, Bloomelle, Naveli) and developer SaaS tools (Perchly, Publy), with free printables and guides.">
   <meta property="og:url" content="https://another1dd.github.io/">
   <meta property="og:image" content="https://another1dd.github.io/assets/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -333,7 +333,7 @@
 
     .tag-coming-soon {
       display: inline-block;
-      background: var(--accent);
+      background: var(--tag-bg, var(--accent));
       color: #fff;
       font-size: 10px;
       font-weight: 600;
@@ -349,10 +349,16 @@
       text-align: center;
       padding: 24px;
       font-size: 13px;
-      color: var(--text-faintest);
+      color: var(--text-muted);
     }
 
-    footer a { color: var(--text-faintest); }
+    footer a { color: var(--text-muted); }
+      .res-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 8px; }
+    @media (max-width: 640px) { .res-grid { grid-template-columns: 1fr; } }
+    .res-card { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; text-decoration: none; color: inherit; box-shadow: 0 2px 10px var(--shadow); transition: box-shadow 0.25s ease, transform 0.25s ease; }
+    .res-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px var(--shadow); }
+    .res-card strong { display: block; font-size: 16px; color: var(--text); margin-bottom: 4px; }
+    .res-card span { font-size: 14px; line-height: 1.5; color: var(--text-muted); }
   </style>
 
   <script type="module">
@@ -377,6 +383,7 @@
 </head>
 <body>
   <nav class="site-nav">
+    <a href="/about/">About</a>
     <a href="/build-log/">Build Log</a>
   </nav>
 
@@ -386,14 +393,14 @@
   </button>
 
   <header>
-    <img class="brand-mark" src="/assets/favicon-512.png" alt="Chepatapa Apps logo" width="56" height="56">
+    <img class="brand-mark" src="/assets/favicon-192.png" alt="Chepatapa Apps logo" width="56" height="56">
     <h1>Chepatapa Apps</h1>
     <p class="about">
       Chepatapa Apps is an independent studio building small, privacy-first mobile apps and
-      developer tools. Flare and Kin Compass are iOS apps; Perchly and Publy are private
-      package registries for Swift and Dart/Flutter teams. Built and maintained by one
-      developer, Tsimafei Lemeshchanka.
-    </p>
+      developer tools. Flare, Kin Compass and Bloomelle are on the iOS App Store and Naveli is
+      in development; Perchly and Publy are private package registries for Swift and
+      Dart/Flutter teams. Built and maintained by one developer, Tsimafei Lemeshchanka.
+      <a href="/about/">About</a></p>
   </header>
 
   <main>
@@ -413,7 +420,7 @@
         </div>
       </div>
 
-      <div class="app-card" style="--accent:#4F8A6E" onclick="if (!event.target.closest('a')) window.location = '/kincompass/';">
+      <div class="app-card" style="--accent:#4F8A6E; --accent-dark:#6AAE8D" onclick="if (!event.target.closest('a')) window.location = '/kincompass/';">
         <a href="/kincompass/" class="app-icon" style="background: transparent; overflow: hidden;" aria-label="Kin Compass"><img src="/kincompass/assets/icon-192.png" alt="Kin Compass app icon" width="72" height="72" style="width:100%;height:100%;display:block;"></a>
         <div class="app-info">
           <h3><a href="/kincompass/" style="color:inherit;text-decoration:none;">Kin Compass</a></h3>
@@ -439,7 +446,7 @@
         </div>
       </div>
 
-      <div class="app-card" style="--accent:#9A64A8" onclick="if (!event.target.closest('a')) window.location = '/naveli/';">
+      <div class="app-card" style="--accent:#9A64A8; --accent-dark:#BD8CCB; --tag-bg:#85508F" onclick="if (!event.target.closest('a')) window.location = '/naveli/';">
         <a href="/naveli/" class="app-icon" style="background: transparent; overflow: hidden;" aria-label="Naveli"><img src="/naveli/assets/icon-192.png" alt="Naveli app icon" width="72" height="72" style="width:100%;height:100%;display:block;"></a>
         <div class="app-info">
           <h3><a href="/naveli/" style="color:inherit;text-decoration:none;">Naveli</a> <span class="tag-coming-soon">Coming soon</span></h3>
@@ -451,6 +458,15 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <h2 class="section-label">Free Resources</h2>
+
+    <div class="res-grid">
+      <a class="res-card" href="/kincompass/scripts/"><strong>Scripts for hard moments with a preschooler</strong><span>Eleven pages with the exact words for tantrums, bedtime, screens, mealtimes and more, with sources.</span></a>
+      <a class="res-card" href="/kincompass/routine-charts/"><strong>Printable routine charts</strong><span>Morning, after-daycare, dinner and bedtime charts for preschoolers, in A4 and US Letter.</span></a>
+      <a class="res-card" href="/flare/trigger-diary/"><strong>Printable hot flash diary</strong><span>Log episodes and 11 common triggers for two weeks, with a tally sheet.</span></a>
+      <a class="res-card" href="/bloomelle/weekly-planner/"><strong>Printable weekly cycle planner</strong><span>Plan workouts, focus, decisions and rest around your cycle, with a daily check-in.</span></a>
     </div>
 
     <h2 class="section-label">SaaS Products</h2>
@@ -498,7 +514,7 @@
   </main>
 
   <footer>
-    &copy; 2026 Chepatapa Apps &middot; <a href="/build-log/">Build Log</a>
+    &copy; 2026 Chepatapa Apps &middot; <a href="/about/">About</a> &middot; <a href="/build-log/">Build Log</a>
   </footer>
 
   <script>

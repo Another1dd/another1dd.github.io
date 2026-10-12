@@ -22,6 +22,7 @@
 
 ## About
 
+- [About](https://another1dd.github.io/about/): Who runs Chepatapa Apps (a solo developer, not a clinician), what it makes, and how its guides and printables are sourced and checked.
 - [Build log](https://another1dd.github.io/build-log/): How these six products get built by one developer sharing a single Flutter SDK, and the AI-assisted workflow behind them.
 - [GitHub](https://github.com/Another1dd)
 - [LinkedIn](https://www.linkedin.com/in/timophei-lemeshchenko/)

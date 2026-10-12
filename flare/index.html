@@ -324,11 +324,11 @@
       text-align: center;
       padding: 24px;
       font-size: 13px;
-      color: var(--text-faintest);
+      color: var(--text-muted);
       max-width: 720px;
       margin: 0 auto;
     }
-    footer a { color: var(--text-faintest); text-decoration: none; }
+    footer a { color: var(--text-muted); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
     /* Android "coming soon" modal */
@@ -411,6 +411,13 @@
       if (supported && firebaseConfig.measurementId) window.firebaseAnalytics = getAnalytics(app);
     });
 
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+      if (link && window.firebaseAnalytics && window.firebaseLogEvent) {
+        window.firebaseLogEvent(window.firebaseAnalytics, 'app_store_click', { page_path: location.pathname });
+      }
+    });
+
     const db = getFirestore(app);
 
     const waitlistForm = document.getElementById('waitlist-form');
@@ -460,7 +467,7 @@
         ones actually correlate with your episodes, instead of guessing.
       </p>
       <div class="cta-row">
-        <a class="store-badge" href="https://apps.apple.com/app/id6776996876" id="ios-cta">
+        <a class="store-badge" href="https://apps.apple.com/app/id6776996876?pt=128995653&amp;ct=web_flare&amp;mt=8" id="ios-cta">
           <img src="assets/app-store-badge.svg" alt="Download on the App Store">
         </a>
         <button class="store-badge pending" id="android-cta">
