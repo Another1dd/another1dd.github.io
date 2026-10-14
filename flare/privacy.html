@@ -171,13 +171,13 @@
   <header>
     <a class="back" href="/flare/">&#8592; Flare</a>
     <h1>Privacy Policy</h1>
-    <p>Flare &middot; Effective date: 2026-10-06</p>
+    <p>Flare &middot; Effective date: 2026-10-14</p>
   </header>
 
   <main>
     <div class="card">
       <p>This privacy policy applies to the Flare app for mobile devices, together with any related services operated by Tsimafei Lemeshchanka (collectively, the "Application"). Tsimafei Lemeshchanka is hereby referred to as the "Service Provider".</p>
-      <p>In short: Flare has no account and no server of its own. The hot flashes you log, and any notes you add, are stored on your device only. The Application does send usage analytics to Google (Firebase), and these include limited details about each logged hot flash (such as its intensity and duration), but never your notes or trigger names. It also sends crash reports to Google (Firebase) and subscription data to Adapty, as described below.</p>
+      <p>In short: Flare has no account and no server of its own. The hot flashes you log, your notes, and your onboarding choices are stored on your device only and are never sent anywhere. The Application does send usage analytics to Google (Firebase), which describe which screens and actions are used but never what you log. It also sends crash reports to Google (Firebase) and subscription data to Adapty, as described below.</p>
 
       <hr>
 
@@ -188,7 +188,7 @@
         <li>What you choose during onboarding, such as your menopause stage and suspected triggers</li>
         <li>Your reminder settings</li>
       </ul>
-      <p>Apart from the limited details included in analytics events (see Third Party Access below), this data is not sent to the Service Provider or to any third party, and none of it is included in crash reports. Your notes and the names of your triggers are never sent.</p>
+      <p>This data is not sent to the Service Provider or to any third party, and none of it is included in analytics events or crash reports. Versions of the Application before 1.3.0 added a few values from it to analytics events (the intensity and duration of a logged hot flash, how many triggers you picked, whether you added a note or the hormonal-shift tag, and the menopause stage and number of suspected triggers chosen in onboarding); version 1.3.0 and later no longer send them.</p>
       <p>The Application does not require an account and does not ask for your name, email address, or contact details. If you email the Service Provider, your email address and message are used only to reply to you.</p>
       <p>Reminders are scheduled as local notifications on your device. They are not sent from a server, and no push-notification token is collected.</p>
       <p>Because this data lives in the Application's storage on your device, it may be included in your device's own backups (for example iCloud Backup or Android backup) if you have them turned on. Those backups are handled by Apple or Google under their own terms and your account settings, not by the Service Provider.</p>
@@ -219,7 +219,7 @@
       <h2>Third Party Access</h2>
       <p>The Application uses the following third-party services, each with its own privacy policy:</p>
       <ul>
-        <li><strong>Google Analytics for Firebase</strong> &mdash; usage events, such as which screens are opened, whether onboarding was completed, paywall views and subscription events, and settings changes. When you log or edit a hot flash, the event includes its intensity and duration, how many triggers you picked, and whether you added a note or the hormonal-shift tag; a running count of your logged hot flashes is also recorded. At the end of onboarding, the menopause stage you picked and the number of suspected triggers you selected are recorded. Firebase also records some events automatically (such as app opens and sessions) and processes an app-instance identifier, device and operating-system information, app version, and approximate location derived from your IP address. Events never include the text of your notes, the names of your triggers, or the dates and times of your hot flashes.</li>
+        <li><strong>Google Analytics for Firebase</strong> &mdash; usage events, such as which screens are opened, whether onboarding was completed, paywall views and subscription events, and settings changes. When you log or edit a hot flash, the event only records that it happened, not what you entered; a running count of your logged hot flashes is also recorded as a user property. Events from versions before 1.3.0 that still sit in Firebase also carry the values described under &ldquo;Your Hot Flash Log Stays on Your Device&rdquo;, and are deleted with the rest of the event data after 2 months. Firebase also records some events automatically (such as app opens and sessions) and processes an app-instance identifier, device and operating-system information, app version, and approximate location derived from your IP address. Events never include what you log or enter in the Application.</li>
         <li><strong>Firebase Crashlytics</strong> &mdash; crash and error reports (stack traces, device model, operating-system version, app version) from release versions of the Application, linked to a random installation identifier generated by the Application, used to find and fix bugs.</li>
         <li><strong>Firebase Remote Config</strong> &mdash; fetches configuration values for the Application (for example whether to show the rating prompt); this involves your device contacting Google's servers with an app-instance identifier.</li>
         <li><strong>Google Play Services</strong> &mdash; used on Android devices to run the Firebase services above and Google Play billing.</li>
