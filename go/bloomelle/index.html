@@ -20,6 +20,10 @@
     .badges { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .badges img { height: 48px; }
     .more { display: inline-block; margin-top: 24px; font-size: 14px; color: inherit; opacity: .7; }
+    .qr { margin-top: 28px; }
+    .qr-box { display: inline-block; padding: 12px; background: #fff; border-radius: 12px; }
+    .qr-box svg { display: block; width: 160px; height: 160px; }
+    .qr p { margin: 10px 0 0; font-size: 14px; }
   </style>
 </head>
 <body>
@@ -32,6 +36,10 @@
       <a id="android-cta" href="#"><img src="/bloomelle/assets/google-play-badge.svg" alt="Get it on Google Play"></a>
     </div>
     <p id="android-note" hidden>Android version coming later.</p>
+    <div class="qr" id="qr" hidden>
+      <div class="qr-box" id="qr-code"></div>
+      <p>Scan with your phone camera to open it in your app store</p>
+    </div>
     <a class="more" href="/bloomelle/">More about Bloomelle</a>
   </main>
 </body>

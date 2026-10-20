@@ -36,5 +36,23 @@
       android.hidden = true;
       document.getElementById('android-note').hidden = false;
     }
+
+    showQrCode(location.origin + location.pathname + '?src=' + src);
   });
+
+  // Desktop only: a QR of this same link, so a phone scan lands in the right store with the tag.
+  // The ~56 KB generator (qrcode-generator, MIT) is loaded here, never on phones.
+  function showQrCode(url) {
+    var lib = document.createElement('script');
+    lib.src = '/go/qrcode.js';
+    lib.onload = function () {
+      var qr = qrcode(0, 'M');
+      qr.addData(url);
+      qr.make();
+
+      document.getElementById('qr-code').innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
+      document.getElementById('qr').hidden = false;
+    };
+    document.head.appendChild(lib);
+  }
 })();
