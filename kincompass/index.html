@@ -47,7 +47,7 @@
       "https://another1dd.github.io/kincompass/assets/screenshot-script.png",
       "https://another1dd.github.io/kincompass/assets/screenshot-wins.png"
     ],
-    "operatingSystem": "iOS",
+    "operatingSystem": "iOS, Android",
     "applicationCategory": "HealthApplication",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "installUrl": "https://apps.apple.com/app/id6791076115",
@@ -82,7 +82,7 @@
         "name": "Is Kin Compass available yet?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Kin Compass is free on the iOS App Store. An Android version is on the roadmap — leave your email and we'll let you know when it's available."
+          "text": "Yes. Kin Compass is free on the iOS App Store and on Google Play."
         }
       }
     ]
@@ -203,27 +203,6 @@
       object-fit: contain;
       display: block;
     }
-    .store-badge.pending {
-      position: relative;
-    }
-    .store-badge.pending img {
-      filter: grayscale(1);
-      opacity: 0.55;
-    }
-    .store-badge.pending::after {
-      content: "Coming soon";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -22px;
-      text-align: center;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      line-height: 1.2;
-      color: var(--text-muted);
-      pointer-events: none;
-    }
     .cta-row { padding-bottom: 24px; }
     .badge {
       font-size: 12px;
@@ -302,63 +281,6 @@
     }
     footer a { color: var(--text-muted); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
-    /* Android "coming soon" modal */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(43,43,43,0.45);
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      z-index: 10;
-    }
-    .modal-overlay.open { display: flex; }
-    .modal-box {
-      background: var(--surface);
-      border-radius: 16px;
-      padding: 28px;
-      max-width: 360px;
-      text-align: center;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-    }
-    .modal-box h3 { font-size: 18px; margin-bottom: 10px; }
-    .modal-box p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
-    .modal-box button {
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      padding: 10px 20px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      font-family: inherit;
-    }
-    .modal-box button:disabled { opacity: 0.6; cursor: default; }
-    .waitlist-form {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-    .waitlist-input {
-      flex: 1;
-      min-width: 0;
-      border: 1px solid var(--shadow);
-      border-radius: 10px;
-      padding: 10px 12px;
-      font-size: 14px;
-      font-family: inherit;
-      background: var(--bg);
-      color: var(--text);
-    }
-    .waitlist-status {
-      font-size: 13px;
-      color: var(--accent-text);
-      line-height: 1.5;
-      margin-bottom: 12px;
-      min-height: 1em;
-    }
   </style>
 
   <script type="module">
@@ -382,47 +304,12 @@
     });
 
     document.addEventListener('click', function (e) {
-      var link = e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+      var link = e.target.closest && e.target.closest('a[href*="apps.apple.com"], a[href*="play.google.com"]');
       if (link && window.firebaseAnalytics && window.firebaseLogEvent) {
-        window.firebaseLogEvent(window.firebaseAnalytics, 'app_store_click', { page_path: location.pathname });
+        var store = link.href.indexOf('play.google.com') > -1 ? 'google_play_click' : 'app_store_click';
+        window.firebaseLogEvent(window.firebaseAnalytics, store, { page_path: location.pathname });
       }
     });
-
-    const FIRESTORE_URL = "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
-    // Firestore is only needed for the waitlist form, so load it on first use instead of with the page.
-
-    function wireWaitlistForm(platform) {
-      const form = document.getElementById('waitlist-form-' + platform);
-      const status = document.getElementById('waitlist-status-' + platform);
-      const submit = document.getElementById('waitlist-submit-' + platform);
-
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
-        var email = document.getElementById('waitlist-email-' + platform).value.trim();
-        if (!email) return;
-
-        submit.disabled = true;
-        status.textContent = '';
-
-        try {
-          const { getFirestore, collection, addDoc, serverTimestamp } = await import(FIRESTORE_URL);
-          const db = getFirestore(app);
-          await addDoc(collection(db, 'kincompass_waitlist'), {
-            email: email,
-            platform: platform,
-            createdAt: serverTimestamp()
-          });
-          form.hidden = true;
-          status.textContent = "You're on the list — thanks! We'll email you when Kin Compass launches on Android.";
-        } catch (err) {
-          status.textContent = 'Something went wrong — please try again.';
-          submit.disabled = false;
-        }
-      });
-    }
-
-    wireWaitlistForm('android');
   </script>
 </head>
 <body>
@@ -453,9 +340,9 @@
         <a class="store-badge" href="https://apps.apple.com/app/id6791076115?pt=128995653&amp;ct=web_kincompass&amp;mt=8" id="ios-cta">
           <img src="assets/app-store-badge.svg" alt="Download on the App Store">
         </a>
-        <button class="store-badge pending" id="android-cta">
+        <a class="store-badge" href="https://play.google.com/store/apps/details?id=apps.chepatapa.kincompass&amp;referrer=utm_source%3Dweb_kincompass%26utm_medium%3Dweb" id="android-cta">
           <img src="assets/google-play-badge.svg" alt="Get it on Google Play">
-        </button>
+        </a>
       </div>
       <p class="badge">Free &middot; No account &middot; Your entries stay on your device</p>
     </section>
@@ -570,8 +457,7 @@
       <div class="faq-item">
         <h3>Is Kin Compass available yet?</h3>
         <p>
-          Yes. Kin Compass is free on the iOS App Store. An Android version is on the
-          roadmap — leave your email and we'll let you know when it's available.
+          Yes. Kin Compass is free on the iOS App Store and on Google Play.
         </p>
       </div>
     </section>
@@ -585,31 +471,6 @@
     <a href="/about/">About</a> &middot; <a href="/build-log/">Build Log</a>
   </footer>
 
-  <div class="modal-overlay" id="android-modal">
-    <div class="modal-box">
-      <h3>Coming to Google Play</h3>
-      <p>Kin Compass is iOS-only for now, with no fixed date for Android yet. Leave your email and we'll let you know when it's available.</p>
-      <form class="waitlist-form" id="waitlist-form-android">
-        <input type="email" id="waitlist-email-android" class="waitlist-input" placeholder="you@example.com" required autocomplete="email">
-        <button type="submit" id="waitlist-submit-android">Notify me</button>
-      </form>
-      <p id="waitlist-status-android" class="waitlist-status" role="status"></p>
-      <button id="android-modal-close">Maybe later</button>
-    </div>
-  </div>
-
-  <script>
-    var androidModal = document.getElementById('android-modal');
-    document.getElementById('android-cta').addEventListener('click', function () {
-      androidModal.classList.add('open');
-    });
-    document.getElementById('android-modal-close').addEventListener('click', function () {
-      androidModal.classList.remove('open');
-    });
-    androidModal.addEventListener('click', function (e) {
-      if (e.target === androidModal) androidModal.classList.remove('open');
-    });
-  </script>
   <script>
     document.getElementById('theme-toggle').addEventListener('click', function () {
       var isDark = (document.documentElement.getAttribute('data-theme') ||
