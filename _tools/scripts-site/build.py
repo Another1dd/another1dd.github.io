@@ -20,6 +20,7 @@ OUT = os.path.join(ROOT, 'kincompass', 'scripts')
 BASE = 'https://another1dd.github.io'
 DEFAULT_EN = os.path.abspath(os.path.join(ROOT, '..', '..', 'flutter', 'KinCompass', 'assets', 'translations', 'en.json'))
 APP_STORE = 'https://apps.apple.com/app/id6791076115'
+PLAY_STORE = 'https://play.google.com/store/apps/details?id=apps.chepatapa.kincompass'
 PROVIDER_TOKEN = '128995653'  # App Store Connect provider token, also used by the app's invite links
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 
@@ -253,6 +254,7 @@ def render_page(page, by_slug):
       </p>
       <div class="cta-row">
         <a href="{APP_STORE}?pt={PROVIDER_TOKEN}&amp;ct={page['ct']}&amp;mt=8"><img src="/kincompass/assets/app-store-badge.svg" alt="Download Kin Compass on the App Store" height="44"></a>
+        <a href="{PLAY_STORE}&amp;referrer=utm_source%3D{page['ct']}%26utm_medium%3Dweb"><img src="/kincompass/assets/google-play-badge.svg" alt="Get Kin Compass on Google Play" height="44"></a>
       </div>
     </section>
 
