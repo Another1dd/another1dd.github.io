@@ -1,0 +1,14 @@
+{
+  "name": "Torquelle — Service Tracker for Motor Equipment",
+  "short_name": "Torquelle",
+  "description": "Service tracker for small engines and motor equipment. Track service by engine hours, tanks of fuel or months and see what is due.",
+  "start_url": "/torquelle/",
+  "scope": "/torquelle/",
+  "display": "browser",
+  "background_color": "#F2F0EC",
+  "theme_color": "#E85A0C",
+  "icons": [
+    { "src": "/torquelle/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/torquelle/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

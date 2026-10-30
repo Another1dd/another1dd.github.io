@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta name="color-scheme" content="light dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torquelle — Privacy Policy</title>
+  <meta name="description" content="Torquelle's privacy policy: your equipment and service records stay on your device, what limited technical data our service providers process, and your rights.">
+  <link rel="canonical" href="https://another1dd.github.io/torquelle/privacy">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Torquelle", "item": "https://another1dd.github.io/torquelle/" },
+      { "@type": "ListItem", "position": 3, "name": "Privacy Policy", "item": "https://another1dd.github.io/torquelle/privacy" }
+    ]
+  }
+  </script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+    :root {
+      --accent: #E85A0C;
+      --accent-text: #B04408;
+    }
+    @media (prefers-color-scheme: dark) {
+:root {
+      --accent-text:#FF8A4C;
+    }
+}
+    [data-theme="dark"] {
+      --accent-text: #FF8A4C;
+    }
+    [data-theme="light"] {
+      --accent-text: #B04408;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 40px 24px 0;
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .back {
+      font-size: 14px;
+      color: var(--accent-text);
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 32px;
+    }
+    .back:hover { text-decoration: underline; }
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 14px;
+      color: var(--text-faint);
+      margin-bottom: 40px;
+    }
+    main {
+      flex: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      width: 100%;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin: 28px 0 10px;
+      color: var(--text);
+    }
+    h2:first-child { margin-top: 0; }
+    p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    p:last-child { margin-bottom: 0; }
+    ul {
+      margin: 8px 0 12px 20px;
+    }
+    ul li {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
+    a { color: var(--accent-text); }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAH-_cLeGQ0xl_I3KNf2nfcYaQx56mCA2c",
+      authDomain: "chepatapa-hub.firebaseapp.com",
+      projectId: "chepatapa-hub",
+      storageBucket: "chepatapa-hub.firebasestorage.app",
+      messagingSenderId: "1048752122508",
+      appId: "1:1048752122508:web:9fd38afd9cb77665e4e9a9",
+      measurementId: "G-69NWKV76PR"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    isSupported().then((supported) => {
+      if (supported && firebaseConfig.measurementId) getAnalytics(app);
+    });
+  </script>
+</head>
+<body>
+  <div class="site-bar">
+    <a class="site-brand" href="/"><img src="/assets/favicon-32x32.png" alt="" width="28" height="28"><span>Chepatapa Apps</span></a>
+    <nav class="site-links" aria-label="Site">
+      <a href="/about/">About</a>
+      <a href="/build-log/">Build Log</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+    </nav>
+  </div>
+  <header>
+    <a class="back" href="/torquelle/">&#8592; Torquelle</a>
+    <h1>Privacy Policy</h1>
+    <p>Torquelle &middot; Effective date: 2026-10-30</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <p>This privacy policy applies to the Torquelle app for mobile devices, together with any related services operated by Tsimafei Lemeshchanka (collectively, the "Application"). Tsimafei Lemeshchanka is hereby referred to as the "Service Provider".</p>
+      <p>In short: Torquelle has no account and no server of its own. Your equipment, service records, usage logs, photos and receipts stay on your device and are never sent to the Service Provider. A small amount of technical data is processed by the service providers listed below so the Application can work, sell its Premium plans, and be kept free of crashes.</p>
+
+      <hr>
+
+      <h2>Your Equipment and Service Records Stay on Your Device</h2>
+      <p>The Application stores the following on your device only:</p>
+      <ul>
+        <li>The equipment you add and the service items you attach to it, with their intervals</li>
+        <li>The usage you log, such as engine hours or tanks of fuel</li>
+        <li>Your service history, including any notes</li>
+        <li>Photos and receipts you attach to service records</li>
+        <li>Your reminder settings</li>
+      </ul>
+      <p>None of this is sent to the Service Provider or to any third party, and none of it is included in analytics events or crash reports. The Application does not require an account and does not collect your name, email address, or contact details. If you email the Service Provider, your email address and message are used only to reply to you.</p>
+      <p>Because this data lives in the Application's storage on your device, it is included in your device's own backups (iCloud Backup or Android backup) if you have them turned on. Those backups are handled by Apple or Google under their own terms and your account settings, not by the Service Provider.</p>
+      <p>You can also export a backup file from the Application's Settings. The file contains your equipment and service records and goes only to the place you choose to save or share it. The Service Provider does not receive a copy. You can import a backup file later to restore your data on the same or another device.</p>
+
+      <hr>
+
+      <h2>Technical Data Processed by Service Providers</h2>
+      <p>The Application uses the following third-party services, each with its own privacy policy:</p>
+      <ul>
+        <li><strong>Google Analytics for Firebase:</strong> anonymous usage events, such as which screens are opened, whether onboarding was completed, paywall views and subscription events, and settings changes. Firebase also processes an app-instance identifier, device and operating-system information, app version, and approximate location derived from your IP address. Events never include the names of your equipment, your service records, your usage logs, or your photos and receipts.</li>
+        <li><strong>Firebase Crashlytics:</strong> crash and error reports (stack traces, device model, operating-system version, app version), used to find and fix bugs.</li>
+        <li><strong>Firebase Remote Config:</strong> fetches configuration values for the Application (for example limits and text shown on the Premium screen). This involves your device contacting Google's servers with an app-instance identifier.</li>
+        <li><strong>Adapty:</strong> manages the Premium subscription and lifetime purchase. Adapty processes a random anonymous installation identifier generated by the Application, your purchase and subscription status and the related App Store or Google Play transaction information, paywall and subscription events, basic device and app information (such as operating-system version and app version), and, by default, your device&rsquo;s IP address. It is used to unlock Premium.</li>
+        <li><strong>Apple App Store / Google Play:</strong> process all payments. The Service Provider never receives your payment card details.</li>
+      </ul>
+      <p>The Application does not use advertising identifiers, does not show ads, and does not sell or share your personal information for advertising.</p>
+      <p>The Service Provider may disclose information as required by law, for protection purposes, or with trusted service providers who comply with this policy.</p>
+
+      <hr>
+
+      <h2>Notifications</h2>
+      <p>The Application can show reminders, all scheduled as local notifications on your device, and only if you allow notifications:</p>
+      <ul>
+        <li><strong>Due reminders:</strong> when a service item is due soon or due now. For intervals in engine hours or tanks of fuel, the timing is estimated on your device from how much you usually use the machine.</li>
+        <li><strong>Trial reminder:</strong> if you start a free trial of Premium, one reminder two days before the trial ends.</li>
+      </ul>
+      <p>Reminders are not sent from a server, and no push-notification token is collected. A due reminder may show the name of the machine and the service item, but that text is put together on your device and is not sent anywhere. You can turn due reminders off in the Application's Settings, or turn off all notifications in your device settings, at any time.</p>
+
+      <hr>
+
+      <h2>Camera and Photos</h2>
+      <p>The Application asks for access to your camera or photo library only when you choose to attach a photo or receipt to a service record. The photos you attach are stored on your device with your records and are not uploaded to the Service Provider or to any third party. The Application does not read other photos in your library. You can change these permissions in your device settings at any time.</p>
+
+      <hr>
+
+      <h2>Deleting Your Data</h2>
+      <p>You can erase everything the Application stores at any time with <strong>Settings &rarr; Delete all data</strong>. This removes every machine, service item, record and photo from your device. Backup files you exported stay where you saved them, and you can delete them yourself. Uninstalling the Application also removes its data from your device (copies may remain in device backups you made earlier until those backups are replaced or deleted).</p>
+      <p>Because the Service Provider does not hold your equipment or service records, there is nothing to delete on our side. To ask about data held by Firebase or Adapty in connection with your installation, contact <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a>.</p>
+
+      <hr>
+
+      <h2>This Website</h2>
+      <p>Separately from the Torquelle app described above, this website (the page you are reading) uses Google Analytics for Firebase to understand visits and improve the site. This applies only to the website.</p>
+
+      <hr>
+
+      <h2>Your Rights</h2>
+      <p>You may request access to, correction of, or deletion of your personal data held by the Service Provider. To exercise these rights, or to withdraw consent where processing is based on consent, contact the Service Provider at <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a>.</p>
+
+      <hr>
+
+      <h2>Your California Privacy Rights (CCPA/CPRA)</h2>
+      <p>If you are a California resident, you have the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale or sharing of personal information, and the right to non-discrimination for exercising these rights. The Service Provider does not sell or share personal information. To exercise your CCPA/CPRA rights, contact the Service Provider at <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a>.</p>
+
+      <hr>
+
+      <h2>International Data Transfers</h2>
+      <p>The Service Provider's third-party service providers may process technical data in countries outside your country of residence, including outside the European Economic Area (EEA). Where applicable law requires safeguards for international transfers, appropriate mechanisms are used, including Standard Contractual Clauses approved by the European Commission.</p>
+
+      <hr>
+
+      <h2>Data Retention Policy</h2>
+      <ul>
+        <li><strong>Equipment and service records you enter:</strong> Kept on your device only, until you delete them, use Delete all data, or uninstall the Application. Backup files you export are kept wherever you save them, until you delete them</li>
+        <li><strong>Automatically collected technical data:</strong> Retained by the service providers above for up to 14 months from collection (Firebase Analytics event data is currently kept for 2 months, Google's default setting, and Firebase Crashlytics crash reports for 90 days), or as set by their own retention policies</li>
+        <li><strong>Purchase records:</strong> Retained as long as needed to provide the subscription or lifetime purchase and as required by applicable law</li>
+        <li><strong>Aggregated and anonymized data:</strong> Retained indefinitely as it no longer identifies you</li>
+      </ul>
+
+      <hr>
+
+      <h2>Children</h2>
+      <p>The Application is not directed at children, and the Service Provider does not knowingly collect personal data from anyone under 16. Contact <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a> if you are aware of any issue related to children's data.</p>
+
+      <hr>
+
+      <h2>Security</h2>
+      <p>The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains. Records stored on your device are protected by your device's own security, such as your passcode.</p>
+
+      <hr>
+
+      <h2>Data Breach Notification</h2>
+      <p>If a data breach occurs that affects your personal data, the Service Provider will notify you in accordance with applicable legal requirements.</p>
+
+      <hr>
+
+      <h2>Changes</h2>
+      <p>The Service Provider may update this Privacy Policy from time to time. You will be notified of material changes by posting the updated Privacy Policy with an effective date. Previous versions are available upon request via <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a>.</p>
+
+      <hr>
+
+      <h2>Contact Us</h2>
+      <p>If you have any questions regarding privacy while using the Application, please contact the Service Provider via email at <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Chepatapa Apps &middot; <a href="/torquelle/support" style="color:var(--text-muted)">Support</a> &middot; <a href="/torquelle/terms" style="color:var(--text-muted)">Terms of Use</a>
+  </footer>
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = (document.documentElement.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>

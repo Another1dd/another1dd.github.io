@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta name="color-scheme" content="light dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torquelle — Support</title>
+  <meta name="description" content="Get help with Torquelle, the service tracker for motor equipment: contact us or browse frequently asked questions.">
+  <link rel="canonical" href="https://another1dd.github.io/torquelle/support">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Torquelle", "item": "https://another1dd.github.io/torquelle/" },
+      { "@type": "ListItem", "position": 3, "name": "Support", "item": "https://another1dd.github.io/torquelle/support" }
+    ]
+  }
+  </script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+    :root {
+      --accent: #E85A0C;
+      --accent-text: #B04408;
+    }
+    @media (prefers-color-scheme: dark) {
+:root {
+      --accent-text:#FF8A4C;
+    }
+}
+    [data-theme="dark"] {
+      --accent-text: #FF8A4C;
+    }
+    [data-theme="light"] {
+      --accent-text: #B04408;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 40px 24px 0;
+      max-width: 640px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .back {
+      font-size: 14px;
+      color: var(--accent-text);
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 32px;
+    }
+    .back:hover { text-decoration: underline; }
+    .page-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 13px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .app-icon img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .page-title h1 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .page-title p {
+      font-size: 14px;
+      color: var(--text-faint);
+      margin-top: 2px;
+    }
+    main {
+      flex: 1;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      width: 100%;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+    .card h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .card a {
+      color: var(--accent-text);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .card a:hover { text-decoration: underline; }
+    .faq-item { margin-bottom: 24px; }
+    .faq-item:last-child { margin-bottom: 0; }
+    .faq-item h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .faq-item p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAH-_cLeGQ0xl_I3KNf2nfcYaQx56mCA2c",
+      authDomain: "chepatapa-hub.firebaseapp.com",
+      projectId: "chepatapa-hub",
+      storageBucket: "chepatapa-hub.firebasestorage.app",
+      messagingSenderId: "1048752122508",
+      appId: "1:1048752122508:web:9fd38afd9cb77665e4e9a9",
+      measurementId: "G-69NWKV76PR"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    isSupported().then((supported) => {
+      if (supported && firebaseConfig.measurementId) getAnalytics(app);
+    });
+  </script>
+</head>
+<body>
+  <div class="site-bar">
+    <a class="site-brand" href="/"><img src="/assets/favicon-32x32.png" alt="" width="28" height="28"><span>Chepatapa Apps</span></a>
+    <nav class="site-links" aria-label="Site">
+      <a href="/about/">About</a>
+      <a href="/build-log/">Build Log</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+    </nav>
+  </div>
+  <header>
+    <a class="back" href="/torquelle/">&#8592; Torquelle</a>
+    <div class="page-title">
+      <div class="app-icon"><img src="assets/icon-192.png" width="56" height="56" alt="Torquelle app icon"></div>
+      <div>
+        <h1>Torquelle Support</h1>
+        <p>Service Tracker for Motor Equipment</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p>Have a question or found a bug? Email us at<br>
+        <a href="mailto:tsimafei.lemeshchanka@gmail.com?subject=Torquelle%20%E2%80%94%20Support">tsimafei.lemeshchanka@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>What equipment does Torquelle work with?</h3>
+        <p>Lawn mowers, string trimmers, chainsaws, generators, snowblowers, boat outboard motors and motorboats. You attach service items to each machine and set intervals in engine hours, tanks of fuel or months.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Where do the service intervals come from?</h3>
+        <p>The ready templates use intervals from manufacturers' manuals. Your own machine's manual comes first, so check it and change the intervals if they differ. Torquelle is a reminder tool, not professional advice (see the <a href="/torquelle/terms">Terms of Use</a>).</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What's free, and what's in Premium?</h3>
+        <p>The free version covers one piece of equipment with your own service items, the due list, history and reminders. Premium unlocks unlimited equipment, ready service templates and seasonal storage and start-up checklists. It is available as an annual subscription, with a 7-day free trial when offered, or as a one-time lifetime purchase.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I restore my purchase on a new phone?</h3>
+        <p>In Torquelle, tap "Restore" on the Premium screen. Make sure you're signed in with the same Apple ID or Google account you used to buy Premium.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I cancel my subscription?</h3>
+        <p>Subscriptions are managed by Apple or Google, not inside the app. On iPhone, go to Settings &rarr; your name &rarr; Subscriptions; on Android, open Google Play &rarr; Payments &amp; subscriptions. Deleting the app does not cancel a subscription. The lifetime purchase does not renew, so there is nothing to cancel.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I move my data to a new phone?</h3>
+        <p>Your data is part of your phone's backup (iCloud or Google), so restoring a phone backup brings it back. You can also go to Settings &rarr; Export backup file, save the file, and use Settings &rarr; Import backup file on the new phone. Importing replaces the data on that phone.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is my data private?</h3>
+        <p>Yes. Your equipment, service records, usage logs, photos and receipts are stored on your device only and are never sent to us. No account is required. See the <a href="/torquelle/privacy">Privacy Policy</a> for the limited technical data our service providers handle.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I delete my data?</h3>
+        <p>Go to Settings &rarr; Delete all data. This removes every machine, service item, record and photo from your phone. Backup files you exported stay where you saved them. Uninstalling the app removes its data too.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is Torquelle available on Android?</h3>
+        <p>Torquelle is being built for both iPhone and Android. Neither version is available yet.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Chepatapa Apps &middot; <a href="/torquelle/privacy" style="color:var(--text-muted)">Privacy Policy</a> &middot; <a href="/torquelle/terms" style="color:var(--text-muted)">Terms of Use</a>
+  </footer>
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = (document.documentElement.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>

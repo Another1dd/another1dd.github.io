@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta name="color-scheme" content="light dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torquelle — Service Tracker for Motor Equipment</title>
+  <meta name="description" content="Torquelle is a service tracker for mowers, trimmers, chainsaws, generators, snowblowers and boat motors. Track service by engine hours, tanks of fuel or months. No account.">
+  <link rel="canonical" href="https://another1dd.github.io/torquelle/">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#F2F0EC" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1C1D1F" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Torquelle — Service Tracker for Motor Equipment">
+  <meta property="og:description" content="Service tracker for mowers, generators, snowblowers, outboards and more. Track service by engine hours, tanks of fuel or months and see what is due. No account.">
+  <meta property="og:url" content="https://another1dd.github.io/torquelle/">
+  <meta property="og:image" content="https://another1dd.github.io/torquelle/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Torquelle",
+    "url": "https://another1dd.github.io/torquelle/",
+    "image": "https://another1dd.github.io/torquelle/assets/icon-1024.png",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "UtilitiesApplication",
+    "description": "Service tracker for small engines and motor equipment: service intervals by engine hours, tanks of fuel or months, a due and overdue list, local reminders, service history, service templates from manufacturer manuals and seasonal checklists.",
+    "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What equipment does Torquelle work with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lawn mowers, string trimmers, chainsaws, generators, snowblowers, boat outboard motors and motorboats."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Torquelle has no account and no server. Your equipment and service records stay on your phone, in your phone's own backup and in backup files you export yourself."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When will Torquelle be available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Torquelle is currently in development for iPhone and Android, with no fixed release date yet. Check back on this page for updates."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Torquelle", "item": "https://another1dd.github.io/torquelle/" }
+    ]
+  }
+  </script>
+
+    <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+    :root {
+      --accent: #E85A0C;
+      --accent-text: #B04408;
+    }
+    @media (prefers-color-scheme: dark) {
+:root {
+      --accent-text:#FF8A4C;
+    }
+}
+    [data-theme="dark"] {
+      --accent-text: #FF8A4C;
+    }
+    [data-theme="light"] {
+      --accent-text: #B04408;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    header {
+      padding: 40px 24px 0;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .back {
+      font-size: 14px;
+      color: var(--accent-text);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back:hover { text-decoration: underline; }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 0 32px;
+    }
+    .hero img.icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(232,90,12,0.3);
+      margin-bottom: 20px;
+    }
+    .pill {
+      display: inline-block;
+      background: #B84A0A;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .hero p.tagline {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 480px;
+      margin-bottom: 28px;
+    }
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .store-badge {
+      display: inline-block;
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      line-height: 0;
+    }
+    .store-badge img {
+      height: 48px;
+      width: 162px;
+      object-fit: contain;
+      display: block;
+    }
+    .store-badge.pending {
+      position: relative;
+    }
+    .store-badge.pending img {
+      filter: grayscale(1);
+      opacity: 0.55;
+    }
+    .store-badge.pending::after {
+      content: "Coming soon";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -22px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+    .cta-row { padding-bottom: 24px; }
+    .badge {
+      font-size: 12px;
+      color: var(--text-faint);
+      margin-top: 10px;
+    }
+    section.card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+    section.card h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    section.card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .feature-item h3 {
+      font-size: 15px;
+      color: var(--accent-text);
+      margin-bottom: 6px;
+    }
+    .feature-item p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .faq-item h3 {
+      font-size: 16px;
+      color: var(--accent-text);
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+    .faq-item p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    footer a { color: var(--text-muted); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    /* "In development" modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(28,29,31,0.45);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 10;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 28px;
+      max-width: 360px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    }
+    .modal-box h3 { font-size: 18px; margin-bottom: 10px; }
+    .modal-box p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+    .modal-box p a { color: var(--accent-text); font-weight: 500; }
+    .modal-box button {
+      background: #B84A0A;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+  </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAH-_cLeGQ0xl_I3KNf2nfcYaQx56mCA2c",
+      authDomain: "chepatapa-hub.firebaseapp.com",
+      projectId: "chepatapa-hub",
+      storageBucket: "chepatapa-hub.firebasestorage.app",
+      messagingSenderId: "1048752122508",
+      appId: "1:1048752122508:web:9fd38afd9cb77665e4e9a9",
+      measurementId: "G-69NWKV76PR"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    isSupported().then((supported) => {
+      if (supported && firebaseConfig.measurementId) getAnalytics(app);
+    });
+  </script>
+</head>
+<body>
+  <div class="site-bar">
+    <a class="site-brand" href="/"><img src="/assets/favicon-32x32.png" alt="" width="28" height="28"><span>Chepatapa Apps</span></a>
+    <nav class="site-links" aria-label="Site">
+      <a href="/about/">About</a>
+      <a href="/build-log/">Build Log</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+    </nav>
+  </div>
+  <header>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="icon" src="assets/icon-192.png" alt="Torquelle app icon" width="88" height="88">
+      <span class="pill">Coming soon</span>
+      <h1>Know when your engines need service</h1>
+      <p class="tagline">
+        Torquelle is a service tracker for small engines and motor equipment. Add your mower,
+        generator or outboard, set service intervals, and see what is due or overdue.
+      </p>
+      <div class="cta-row">
+        <button class="store-badge pending" id="notify-cta-ios">
+          <img src="assets/app-store-badge.svg" alt="Download on the App Store">
+        </button>
+        <button class="store-badge pending" id="notify-cta-android">
+          <img src="assets/google-play-badge.svg" alt="Get it on Google Play">
+        </button>
+      </div>
+      <p class="badge">Free to start &middot; No account &middot; Your records stay on your phone</p>
+    </section>
+
+    <section class="card">
+      <h2>Made for the machines in your shed</h2>
+      <p>
+        Torquelle covers lawn mowers, string trimmers, chainsaws, generators, snowblowers,
+        boat outboard motors and motorboats. Each service item gets its own interval in
+        engine hours, tanks of fuel or months, so oil changes, filters and plugs come up
+        when they are due, not when you remember.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>What's inside</h2>
+      <p>Four pieces that work together:</p>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h3>Service items with intervals</h3>
+          <p>Attach service items to each machine and set an interval by engine hours,
+            tanks of fuel or months.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Log usage in seconds</h3>
+          <p>Note the hours or tanks you used. Torquelle shows what is due or overdue on one
+            list and sends a local reminder.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Service history</h3>
+          <p>Every completed service goes into a history for that machine, with photos and
+            receipts if you add them.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Templates and seasonal checklists</h3>
+          <p>With Premium, start from ready service templates based on manufacturer manuals,
+            and use storage and start-up checklists for the season.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>A reminder tool, not a mechanic</h2>
+      <p>
+        Template intervals come from manufacturers' manuals, but your machine's own manual
+        comes first. Torquelle reminds you when service is due. It is not professional
+        advice, and you are responsible for following the manufacturer's manual and
+        safety instructions.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Private by design</h2>
+      <p>
+        No account, no sign-up, no server holding your records. Your equipment, service
+        records, usage logs, photos and receipts are stored on your phone only. They go into
+        your phone's own backup (iCloud or Google) and into backup files you export
+        yourself. Nothing of that is sent to us.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-item">
+        <h3>What equipment does Torquelle work with?</h3>
+        <p>
+          Lawn mowers, string trimmers, chainsaws, generators, snowblowers, boat outboard
+          motors and motorboats.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need an account?</h3>
+        <p>
+          No. Torquelle has no account and no server. Your equipment and service records stay
+          on your phone, in your phone's own backup and in backup files you export yourself.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3>When will Torquelle be available?</h3>
+        <p>
+          Torquelle is currently in development for iPhone and Android, with no fixed release
+          date yet. Check back on this page for updates.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot;
+    <a href="/torquelle/privacy">Privacy Policy</a> &middot;
+    <a href="/torquelle/terms">Terms of Use</a> &middot;
+    <a href="/torquelle/support">Support</a> &middot;
+    <a href="/about/">About</a> &middot; <a href="/build-log/">Build Log</a>
+  </footer>
+
+  <div class="modal-overlay" id="notify-modal">
+    <div class="modal-box">
+      <h3>Torquelle is in development</h3>
+      <p>We're building Torquelle right now, and there's no fixed release date yet. Want to hear when it launches? Email
+        <a href="mailto:tsimafei.lemeshchanka@gmail.com?subject=Torquelle%20%E2%80%94%20Notify%20me%20at%20launch">tsimafei.lemeshchanka@gmail.com</a>
+        and we'll let you know.</p>
+      <button id="notify-modal-close">Close</button>
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById('notify-modal');
+
+    document.getElementById('notify-cta-ios').addEventListener('click', function () {
+      modal.classList.add('open');
+    });
+    document.getElementById('notify-cta-android').addEventListener('click', function () {
+      modal.classList.add('open');
+    });
+    document.getElementById('notify-modal-close').addEventListener('click', function () {
+      modal.classList.remove('open');
+    });
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) modal.classList.remove('open');
+    });
+  </script>
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = (document.documentElement.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>

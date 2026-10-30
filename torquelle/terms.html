@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta name="color-scheme" content="light dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torquelle — Terms of Use</title>
+  <meta name="description" content="Torquelle's terms of use: subscriptions, the maintenance disclaimer, acceptable use, and liability.">
+  <link rel="canonical" href="https://another1dd.github.io/torquelle/terms">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Torquelle", "item": "https://another1dd.github.io/torquelle/" },
+      { "@type": "ListItem", "position": 3, "name": "Terms of Use", "item": "https://another1dd.github.io/torquelle/terms" }
+    ]
+  }
+  </script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+    :root {
+      --accent: #E85A0C;
+      --accent-text: #B04408;
+    }
+    @media (prefers-color-scheme: dark) {
+:root {
+      --accent-text:#FF8A4C;
+    }
+}
+    [data-theme="dark"] {
+      --accent-text: #FF8A4C;
+    }
+    [data-theme="light"] {
+      --accent-text: #B04408;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 40px 24px 0;
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .back {
+      font-size: 14px;
+      color: var(--accent-text);
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 32px;
+    }
+    .back:hover { text-decoration: underline; }
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 14px;
+      color: var(--text-faint);
+      margin-bottom: 40px;
+    }
+    main {
+      flex: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      width: 100%;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin: 28px 0 10px;
+      color: var(--text);
+    }
+    h2:first-child { margin-top: 0; }
+    p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    p:last-child { margin-bottom: 0; }
+    ul {
+      margin: 8px 0 12px 20px;
+    }
+    ul li {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
+    a { color: var(--accent-text); }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAH-_cLeGQ0xl_I3KNf2nfcYaQx56mCA2c",
+      authDomain: "chepatapa-hub.firebaseapp.com",
+      projectId: "chepatapa-hub",
+      storageBucket: "chepatapa-hub.firebasestorage.app",
+      messagingSenderId: "1048752122508",
+      appId: "1:1048752122508:web:9fd38afd9cb77665e4e9a9",
+      measurementId: "G-69NWKV76PR"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    isSupported().then((supported) => {
+      if (supported && firebaseConfig.measurementId) getAnalytics(app);
+    });
+  </script>
+</head>
+<body>
+  <div class="site-bar">
+    <a class="site-brand" href="/"><img src="/assets/favicon-32x32.png" alt="" width="28" height="28"><span>Chepatapa Apps</span></a>
+    <nav class="site-links" aria-label="Site">
+      <a href="/about/">About</a>
+      <a href="/build-log/">Build Log</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+    </nav>
+  </div>
+  <header>
+    <a class="back" href="/torquelle/">&#8592; Torquelle</a>
+    <h1>Terms of Use</h1>
+    <p>Torquelle &middot; Effective date: 2026-10-30</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <p>These terms and conditions apply to the Torquelle app for mobile devices, together with any related services operated by Tsimafei Lemeshchanka (collectively, the "Application"). Tsimafei Lemeshchanka is hereby referred to as the "Service Provider".</p>
+      <p>By downloading or using the Application, you agree to these Terms and Conditions. You should read them carefully before using the Application.</p>
+
+      <hr>
+
+      <h2>License to Use the Application</h2>
+      <p>Subject to your compliance with these Terms, the Service Provider grants you a limited, non-exclusive, non-transferable, revocable license to install and use the Application on a mobile device for personal, non-commercial purposes. You may not reproduce, distribute, modify, create derivative works from, reverse engineer, decompile, or disassemble the Application, except as expressly permitted by applicable law.</p>
+
+      <hr>
+
+      <h2>Intellectual Property</h2>
+      <p>The Service Provider retains all intellectual property rights in the Application, including its code, design, service templates, checklists, written guidance, illustrations, trademarks, service marks, trade names, logos, and branding. Nothing in these Terms grants you any license or right to use the Service Provider's trademarks, logos, or branding for any purpose.</p>
+
+      <hr>
+
+      <h2>Termination</h2>
+      <p>The Service Provider may suspend your access to the Application if you materially breach these Terms. You will have 14 days from notice of the breach to remedy it. The Service Provider may terminate your access immediately without notice if you violate applicable law, infringe intellectual property rights, or engage in activity that could cause harm.</p>
+
+      <hr>
+
+      <h2>Acceptable Use</h2>
+      <p>You must be at least 16 years of age to use the Application. You agree not to:</p>
+      <ul>
+        <li>Copy, resell, or redistribute the Application's service templates, checklists, or other content</li>
+        <li>Circumvent the Premium plans or any technical limits of the Application</li>
+        <li>Use the Application in any way that is illegal or violates the rights of others</li>
+        <li>Introduce malware or interfere with the Application or the services it relies on</li>
+      </ul>
+
+      <hr>
+
+      <h2>Subscriptions and In-App Purchases</h2>
+      <p>The Application is free to use with one piece of equipment. Torquelle Premium is optional and is offered as an auto-renewing annual subscription or as a one-time lifetime purchase. Premium unlocks unlimited equipment, ready service templates and seasonal checklists. Prices, billing periods, and any free-trial length are shown in the Application before you confirm a purchase.</p>
+      <ul>
+        <li>Payment is charged to your Apple ID or Google Play account when you confirm the purchase, or at the end of a free trial if one is offered.</li>
+        <li>The annual subscription renews automatically at the same price and billing period until you cancel it. Cancel at least 24 hours before the end of the current period (or the free trial) to avoid the next charge.</li>
+        <li>If you cancel during a free trial, you will not be charged. Any unused part of a free trial is forfeited when you buy a subscription.</li>
+        <li>You can manage or cancel the subscription in your App Store or Google Play account settings. Deleting the Application does not cancel a subscription.</li>
+        <li>The lifetime purchase is a single payment with no renewal.</li>
+        <li>Refunds are handled by Apple or Google under their own policies; the Service Provider cannot issue refunds for store purchases directly.</li>
+        <li>If you reinstall the Application or switch devices, use Restore in the Application to unlock an active subscription or a lifetime purchase.</li>
+      </ul>
+      <p>Purchase status is managed through Adapty, a third-party subscription management service.</p>
+
+      <hr>
+
+      <h2>Not Professional Advice</h2>
+      <p>The Application is a reminder tool. It helps you keep track of service intervals and records. It is not professional mechanical, technical, or safety advice, and it is not a substitute for a qualified technician.</p>
+      <p>The service intervals in the Application's templates come from manufacturers' manuals, but models, engines, and conditions differ, and manuals change. Always check your own equipment's manual. If the Application and your manual disagree, follow the manual.</p>
+      <p>You are responsible for following the manufacturer's manual and safety instructions when you service, store, or start your equipment. Engines, fuel, blades, and chains can cause serious injury. Do not rely on the Application to tell you whether a machine is safe to use.</p>
+      <p>Reminders based on engine hours or tanks of fuel are estimates from the usage you log. A reminder can be late or missing if usage is not logged, if notifications are turned off, or if your device does not deliver them.</p>
+
+      <hr>
+
+      <h2>No Guarantee of Results; Assumption of Risk</h2>
+      <p>The Service Provider makes no representation or warranty that the intervals, templates, or checklists in the Application are complete, current, or suitable for your equipment or how you use it. You use the Application and carry out any service at your own risk, and you are responsible for deciding, with a qualified technician where needed, what service your equipment needs. Your records are stored on your device only; the Service Provider has no copy and cannot recover them, so keep your device backup turned on or export a backup file from time to time.</p>
+
+      <hr>
+
+      <h2>Indemnification</h2>
+      <p>You agree to indemnify and hold harmless the Service Provider from any claims, damages, losses, or expenses (including reasonable legal fees) arising out of or related to your use of the Application or your reliance on its content, except to the extent such claims arise from the Service Provider's own negligence or willful misconduct.</p>
+
+      <hr>
+
+      <h2>Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, the Service Provider shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to lost profits, data loss, equipment damage, or business interruption.</p>
+      <p>The Service Provider retains full liability for death or personal injury caused by negligence, fraud or fraudulent misrepresentation, and any other liability that cannot be excluded or limited under applicable law.</p>
+
+      <hr>
+
+      <h2>Governing Law</h2>
+      <p>These Terms and Conditions are governed by the laws of the jurisdiction in which the Service Provider is established, excluding conflict of law rules, except to the extent mandatory consumer protection laws provide otherwise.</p>
+
+      <hr>
+
+      <h2>Changes to These Terms</h2>
+      <p>The Service Provider may periodically update these Terms and Conditions. You are advised to review this page regularly for any changes. Previous versions are available upon request by contacting <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a>.</p>
+
+      <hr>
+
+      <h2>Contact Us</h2>
+      <p>If you have any questions about the Terms and Conditions, please contact the Service Provider at <a href="mailto:tsimafei.lemeshchanka@gmail.com">tsimafei.lemeshchanka@gmail.com</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Chepatapa Apps &middot; <a href="/torquelle/support" style="color:var(--text-muted)">Support</a> &middot; <a href="/torquelle/privacy" style="color:var(--text-muted)">Privacy Policy</a>
+  </footer>
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = (document.documentElement.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>
