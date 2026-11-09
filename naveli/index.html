@@ -73,7 +73,7 @@
         "name": "When will Naveli be available?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Naveli is currently in development, with no fixed release date yet. Check back on this page for updates."
+          "text": "Naveli is launching on the App Store for iPhone very soon. Check back on this page for the download link."
         }
       }
     ]
@@ -179,6 +179,24 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+    }
+    .screens {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 8px 0 16px;
+      margin: 8px -8px 0;
+    }
+    .screens picture {
+      flex-shrink: 0;
+      display: block;
+    }
+    .screens img {
+      height: 420px;
+      width: auto;
+      border-radius: 18px;
+      display: block;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     }
     .store-badge {
       display: inline-block;
@@ -375,6 +393,24 @@
         it was a vaginal birth or a C-section, and it shows you sequences that fit the
         stage you're in, from the first gentle weeks through your 6-week check and beyond.
       </p>
+      <div class="screens">
+        <picture>
+          <source srcset="assets/screenshot-home.webp" type="image/webp">
+          <img src="assets/screenshot-home.png" alt="Naveli home screen with today's sequence" width="660" height="1434" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/screenshot-player.webp" type="image/webp">
+          <img src="assets/screenshot-player.png" alt="Naveli sequence player with a pelvic-floor cue" width="660" height="1434" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/screenshot-detail.webp" type="image/webp">
+          <img src="assets/screenshot-detail.png" alt="Naveli sequence detail with modified steps marked" width="660" height="1434" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/screenshot-library.webp" type="image/webp">
+          <img src="assets/screenshot-library.png" alt="Naveli library with sequences for every stage" width="660" height="1434" loading="lazy">
+        </picture>
+      </div>
     </section>
 
     <section class="card">
@@ -446,8 +482,8 @@
       <div class="faq-item">
         <h3>When will Naveli be available?</h3>
         <p>
-          Naveli is currently in development, with no fixed release date yet. Check back on
-          this page for updates.
+          Naveli is launching on the App Store for iPhone very soon. Check back on this page
+          for the download link.
         </p>
       </div>
     </section>
@@ -463,8 +499,8 @@
 
   <div class="modal-overlay" id="notify-modal">
     <div class="modal-box">
-      <h3>Naveli is in development</h3>
-      <p>We're building Naveli right now, and there's no fixed release date yet. Want to hear when it launches? Email
+      <h3>Naveli is launching soon</h3>
+      <p>Naveli is almost ready for the App Store. Want to hear the moment it launches? Email
         <a href="mailto:tsimafei.lemeshchanka@gmail.com?subject=Naveli%20%E2%80%94%20Notify%20me%20at%20launch">tsimafei.lemeshchanka@gmail.com</a>
         and we'll let you know.</p>
       <button id="notify-modal-close">Close</button>
