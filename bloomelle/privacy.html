@@ -171,13 +171,13 @@
   <header>
     <a class="back" href="/bloomelle/">&#8592; Bloomelle</a>
     <h1>Privacy Policy</h1>
-    <p>Bloomelle &middot; Effective date: 2026-10-06</p>
+    <p>Bloomelle &middot; Effective date: 2026-11-12</p>
   </header>
 
   <main>
     <div class="card">
       <p>This privacy policy applies to the Bloomelle app for mobile devices, together with any related services operated by Tsimafei Lemeshchanka (collectively, the "Application"). Tsimafei Lemeshchanka is hereby referred to as the "Service Provider".</p>
-      <p>In short: Bloomelle has no account and no server of its own. Your cycle details and check-in history are stored on your device only. The Application does send usage analytics to Google (Firebase), and these include the energy, focus, and mood ratings from each check-in, but never your period dates or cycle details. It also sends crash reports to Google (Firebase) and subscription data to Adapty, as described below.</p>
+      <p>In short: Bloomelle has no account and no server of its own. Your cycle details and check-in history are stored on your device only, and period records you choose to import from Apple Health are read on your device only. The Application does send usage analytics to Google (Firebase), and these include the energy, focus, and mood ratings from each check-in, but never your period dates or cycle details. It also sends crash reports to Google (Firebase) and subscription data to Adapty, as described below.</p>
 
       <hr>
 
@@ -193,6 +193,11 @@
       <p>Reminders are scheduled as local notifications on your device. They are not sent from a server, and no push-notification token is collected.</p>
       <p>Because this data lives in the Application's storage on your device, it may be included in your device's own backups (for example iCloud Backup or Android backup) if you have them turned on. Those backups are handled by Apple or Google under their own terms and your account settings, not by the Service Provider.</p>
       <p>You can erase your cycle details, check-ins, and reminder settings at any time with <strong>Settings &rarr; Delete All Data</strong>, which also cancels scheduled reminders. Uninstalling the Application removes its data from your device (copies may remain in device backups you made earlier). On iPhone, the Application also stores a small, non-personal &ldquo;early user&rdquo; marker in the iOS Keychain; it contains no personal or cycle data, is not removed by Delete All Data, and can remain on the device after the Application is uninstalled.</p>
+
+      <hr>
+
+      <h2>Apple Health (iPhone)</h2>
+      <p>If you tap <strong>Import from Apple Health</strong> (during setup or in Settings), the Application asks for permission to read your menstrual flow records from Apple Health. It reads them only when you tap that button and uses them on your device to work out the start date of your last period and your average cycle length. Only these two results are kept, as your cycle details, and you can still change them. The Application does not write anything to Apple Health, does not keep a copy of the records, and never sends Health data to the Service Provider or to any third party or uses it for advertising or analytics. You can turn this access off at any time in the iOS Settings app (Health &rarr; Data Access &amp; Devices &rarr; Bloomelle).</p>
 
       <hr>
 
@@ -219,7 +224,7 @@
       <h2>Third Party Access</h2>
       <p>The Application uses the following third-party services, each with its own privacy policy:</p>
       <ul>
-        <li><strong>Google Analytics for Firebase</strong> &mdash; usage events, such as which screens are opened, whether onboarding was completed, paywall views and subscription events, and settings changes. When you save a check-in, the event includes the energy, focus, and mood levels you chose (low, medium, or high) and whether you rated the day's recommendation a good fit. Firebase also records some events automatically (such as app opens and sessions) and processes an app-instance identifier, device and operating-system information, app version, and approximate location derived from your IP address. Events never include your period dates, cycle length, goal, or the dates of your check-ins.</li>
+        <li><strong>Google Analytics for Firebase</strong> &mdash; usage events, such as which screens are opened, whether onboarding was completed, paywall views and subscription events, and settings changes. When you save a check-in, the event includes the energy, focus, and mood levels you chose (low, medium, or high) and whether you rated the day's recommendation a good fit. Firebase also records some events automatically (such as app opens and sessions) and processes an app-instance identifier, device and operating-system information, app version, and approximate location derived from your IP address. When you import from Apple Health, the event records only whether the import worked and whether it started from setup or Settings. Events never include your period dates, cycle length, goal, the dates of your check-ins, or any Apple Health data.</li>
         <li><strong>Firebase Crashlytics</strong> &mdash; crash and error reports (stack traces, device model, operating-system version, app version) from release versions of the Application, linked to a random installation identifier generated by the Application, used to find and fix bugs.</li>
         <li><strong>Firebase Remote Config</strong> &mdash; fetches configuration values for the Application (for example whether to show the rating prompt); this involves your device contacting Google's servers with an app-instance identifier.</li>
       </ul>
