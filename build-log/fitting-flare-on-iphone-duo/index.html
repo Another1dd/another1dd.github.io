@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flare 1.5.0 is built for the foldable iPhone Duo: one-sided safe areas, width caps, short windows, and a bug where folding the phone emptied the log. What the layout sweep found and how it was fixed.">
+  <meta name="color-scheme" content="light dark">
+  <title>Fitting Flare on the iPhone Duo — Chepatapa Apps Build Log</title>
+  <link rel="canonical" href="https://another1dd.github.io/build-log/fitting-flare-on-iphone-duo/">
+  <meta name="theme-color" content="#FDF6EF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1E1815" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Fitting Flare on the iPhone Duo">
+  <meta property="og:description" content="Flare 1.5.0 is built for the foldable iPhone Duo: one-sided safe areas, width caps, short windows, and a bug where folding the phone emptied the log. What the layout sweep found and how it was fixed.">
+  <meta property="og:url" content="https://another1dd.github.io/build-log/fitting-flare-on-iphone-duo/">
+  <meta property="og:image" content="https://another1dd.github.io/assets/og-image-buildlog.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Fitting Flare on the iPhone Duo",
+    "url": "https://another1dd.github.io/build-log/fitting-flare-on-iphone-duo/",
+    "datePublished": "2026-11-15",
+    "dateModified": "2026-11-15",
+    "author": {
+      "@type": "Person",
+      "@id": "https://another1dd.github.io/#tsimafei-lemeshchanka",
+      "name": "Tsimafei Lemeshchanka",
+      "url": "https://github.com/Another1dd",
+      "jobTitle": "Developer",
+      "sameAs": [
+        "https://github.com/Another1dd",
+        "https://www.linkedin.com/in/timophei-lemeshchenko/"
+      ]
+    },
+    "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Build Log", "item": "https://another1dd.github.io/build-log/" },
+      { "@type": "ListItem", "position": 3, "name": "Fitting Flare on the iPhone Duo", "item": "https://another1dd.github.io/build-log/fitting-flare-on-iphone-duo/" }
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+    :root {
+      --accent: #9E6B4A;
+    }
+    @media (prefers-color-scheme: dark) {
+:root {
+      --accent:#D9A46F;
+    }
+}
+    [data-theme="dark"] {
+      --accent: #D9A46F;
+    }
+    [data-theme="light"] {
+      --accent: #9E6B4A;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    h1, h2 { font-family: 'Fraunces', Georgia, serif; }
+    header {
+      padding: 40px 24px 0;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .back {
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back:hover { text-decoration: underline; }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+    .hero {
+      padding: 32px 0 8px;
+    }
+    .hero p.kicker {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .hero p.dek {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    section.card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+    section.card h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    section.card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    section.card p:last-child { margin-bottom: 0; }
+    section.card code {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 1px 6px;
+      font-size: 13px;
+      color: var(--text);
+    }
+    section.card a { color: var(--accent); }
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 8px 0 16px;
+    }
+    .before-after div {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .before-after .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 4px;
+    }
+    .before-after .value {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    footer a { color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <div class="site-bar">
+    <a class="site-brand" href="/"><img src="/assets/favicon-32x32.png" alt="" width="28" height="28"><span>Chepatapa Apps</span></a>
+    <nav class="site-links" aria-label="Site">
+      <a href="/about/">About</a>
+      <a href="/build-log/">Build Log</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+    </nav>
+  </div>
+
+  <header>
+    <a class="back" href="/build-log/">&#8592; Build Log</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="kicker">Nov 2026 &middot; Flare / build notes</p>
+      <h1>Fitting Flare on the iPhone Duo</h1>
+      <p class="dek">
+        The iPhone Duo folds. Its outer display is 466 by 678 points, the inner one 669 by 951,
+        and either can be used in portrait or landscape. Flare 1.5.0 is the first version built
+        for it. Most of the work was small layout fixes. One bug was not small: folding the
+        phone emptied the log.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Treat it as a window, not a device</h2>
+      <p>
+        The tempting approach is to detect the Duo and branch on it. The better one is to forget
+        the device and treat the app as a window that can be any size and change size while you
+        use it. A layout that handles that also works in iPad Split View and Stage Manager, and
+        on whatever device comes next.
+      </p>
+      <p>
+        The iOS side was already fine: no full-screen lock, a scene-based lifecycle, no
+        orientation locks, and nothing in the Dart code that read the screen size directly.
+        The rest was the Flutter layout.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>A test matrix before the simulator</h2>
+      <p>
+        The first pass was a static audit against a list of known anti-patterns: fixed heights
+        in sheets, hard-coded width caps, <code>if (wide) Row else Column</code>, height
+        thresholds, and safe areas that assume left and right are the same. Then came a layout
+        test that renders 13 screens in the four Duo window sizes, in English, German and
+        Russian (the longest strings), at text scales from 1.0 to 2.0, with a safe-area inset on
+        one side only. Any text that gets cut off or any overflow fails the test.
+      </p>
+      <div class="before-after">
+        <div><p class="label">Screens &times; windows</p><p class="value">13 &times; 4</p></div>
+        <div><p class="label">Languages &times; text scales</p><p class="value">3 &times; 1.0&ndash;2.0</p></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What the sweep found</h2>
+      <p>
+        <strong>One-sided safe areas.</strong> On the outer display in landscape, the system bar
+        sits on one side only. The tab bar now keeps the tabs clear of it, and the tablet width
+        cap no longer adds that inset twice.
+      </p>
+      <p>
+        <strong>Width caps.</strong> Forms are capped at about 480 points and reading content at
+        about 672, with full-width backgrounds behind them. On the inner display Flare's own
+        dialogs had stretched to about 790 points; they now stop at 400.
+      </p>
+      <p>
+        <strong>Short windows.</strong> The outer display in landscape is only 466 points tall.
+        The reminder time sheet was cut to 9/16 of that. Edit Entry pinned Save and Delete and
+        left about 120 points for the form, so Delete now scrolls with the form on a short
+        window. At the largest text size, the pinned tab headers filled the whole window, and
+        Insights showed no content at all. On short windows their text scale is now capped at
+        1.5.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>The bug that emptied the log</h2>
+      <p>
+        The last check was on the Duo simulator, folding and unfolding with entries loaded. After
+        a fold, the log was empty, and it stayed empty until a restart.
+      </p>
+      <p>
+        The cause was the width cap itself. Below 600 points it returned the content as is;
+        above 600 it wrapped the content in a layout builder with centering padding. To Flutter
+        those are two different widget trees, so crossing 600 points threw away every tab and
+        built it again. The old log screen's dispose step dispatched <code>EntriesReset</code>,
+        and it ran after the new screen had already loaded the entries.
+      </p>
+      <p>
+        The fix was to make the cap always build the same tree and only change its padding.
+        On a phone that never changes size, this bug can't happen, which is exactly why the
+        layout tests didn't catch it and the simulator did.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Large text, while I was there</h2>
+      <p>
+        The same release fixed the leftovers at large text sizes: tab labels grow with the
+        system text size, wrapped button labels stay centered, and the paywall comparison table
+        and the Describe it field no longer clip. Kin Compass got the same treatment a couple
+        of weeks earlier, with layout tests for every main screen at large text.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Where it stands</h2>
+      <p>
+        Flare 1.5.0 is live on iOS and Android. Everything above was checked in tests and on the
+        Duo simulator: both displays, both orientations, folding with a sheet open and mid-edit,
+        and the largest text size. It hasn't been checked on real hardware yet, so the real
+        fold and the side system bar stay on the list.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>The takeaway</h2>
+      <p>
+        A layout switch that changes the widget tree also throws away state, and you only see it
+        when the window actually changes size. Switch padding and constraints, not tree structure, and test
+        live resizing as well as fixed sizes. The fixed sizes cover most of the layout bugs, but
+        the one that lost the user's data only showed up during a resize.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/about/">About</a> &middot; <a href="/build-log/">Build Log</a>
+  </footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = (document.documentElement.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>

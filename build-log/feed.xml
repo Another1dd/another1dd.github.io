@@ -4,9 +4,145 @@
     <title>Chepatapa Apps — Build Log</title>
     <link>https://another1dd.github.io/build-log/</link>
     <atom:link href="https://another1dd.github.io/build-log/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>How Chepatapa Apps' six products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.</description>
+    <description>How Chepatapa Apps' seven products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Fitting Flare on the iPhone Duo</title>
+      <link>https://another1dd.github.io/build-log/fitting-flare-on-iphone-duo/</link>
+      <guid isPermaLink="true">https://another1dd.github.io/build-log/fitting-flare-on-iphone-duo/</guid>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Flare 1.5.0 is built for the foldable iPhone Duo: one-sided safe areas, width caps, short windows, and a bug where folding the phone emptied the log. What the layout sweep found and how it was fixed.</description>
+    </item>
+
+    <item>
+      <title>Describe It: Logging a Hot Flash in One Sentence, With No Server</title>
+      <link>https://another1dd.github.io/build-log/describe-it-on-device-parser/</link>
+      <guid isPermaLink="true">https://another1dd.github.io/build-log/describe-it-on-device-parser/</guid>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Flare 1.4.0 fills its log form from one typed or dictated sentence, using a rule-based parser that runs on the phone in ten languages. How it reads a sentence, why it never auto-saves, and what it can't do yet.</description>
+    </item>
+
+    <item>
+      <title>Five Extra Keyword Fields in the US App Store</title>
+      <link>https://another1dd.github.io/build-log/extra-keyword-fields-us-app-store/</link>
+      <guid isPermaLink="true">https://another1dd.github.io/build-log/extra-keyword-fields-us-app-store/</guid>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 GMT</pubDate>
+      <description>The US App Store also indexes the keyword fields of five other localizations. A made-up word in Flare's Korean listing ranked #1 in the US the day it went live. How the probe worked and how Flare 1.5.0 uses the extra 500 characters.</description>
+    </item>
+
+    <item>
+      <title>Bloomelle 1.2.0 live on the iOS App Store</title>
+      <link>https://another1dd.github.io/bloomelle/</link>
+      <guid isPermaLink="false">build-log-2026-11-14-bloomelle-120-live</guid>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Bloomelle 1.2.0 imports the cycle from Apple Health, shows workout ideas for each phase and adds a free trial offer.</description>
+    </item>
+
+    <item>
+      <title>Flare 1.5.0 live on iOS and Android</title>
+      <link>https://another1dd.github.io/flare/</link>
+      <guid isPermaLink="false">build-log-2026-11-14-flare-150-live</guid>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Flare 1.5.0 fits the foldable iPhone Duo and large text sizes, and Describe it understands more ways to say a time or a duration.</description>
+    </item>
+
+    <item>
+      <title>Torquelle: service photos, export and nine languages</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-11-12-torquelle-export</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Torquelle gets photos and receipts on service records, PDF and CSV export of the service book, and translations into nine languages.</description>
+    </item>
+
+    <item>
+      <title>Naveli 1.0 submitted for review</title>
+      <link>https://another1dd.github.io/naveli/</link>
+      <guid isPermaLink="false">build-log-2026-11-09-naveli-10-review</guid>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Naveli 1.0, postpartum recovery yoga, was submitted for iOS App Store review.</description>
+    </item>
+
+    <item>
+      <title>Kin Compass 1.3.0 live on iOS and Android</title>
+      <link>https://another1dd.github.io/kincompass/</link>
+      <guid isPermaLink="false">build-log-2026-11-04-kincompass-130-live</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Kin Compass 1.3.0 adds a heads-up before a routine step ends, new scripts for hard moments, a free trial offer and a Brazilian Portuguese listing.</description>
+    </item>
+
+    <item>
+      <title>Torquelle pages added</title>
+      <link>https://another1dd.github.io/torquelle/</link>
+      <guid isPermaLink="false">build-log-2026-10-30-torquelle-pages</guid>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Pages for Torquelle, a service tracker for small engines, added to the site.</description>
+    </item>
+
+    <item>
+      <title>Flare 1.4.0 live on iOS and Android</title>
+      <link>https://another1dd.github.io/flare/</link>
+      <guid isPermaLink="false">build-log-2026-10-28-flare-140-live</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Flare 1.4.0 adds Describe it, which turns one typed or dictated sentence into a filled-in log entry on the phone, plus Dutch and Swedish.</description>
+    </item>
+
+    <item>
+      <title>Torquelle started</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-10-26-torquelle-started</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Torquelle, a service tracker for mowers, chainsaws, generators and boat motors, started from Flare 1.4.0's skeleton.</description>
+    </item>
+
+    <item>
+      <title>Kin Compass live on Google Play</title>
+      <link>https://another1dd.github.io/kincompass/</link>
+      <guid isPermaLink="false">build-log-2026-10-26-kincompass-play</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Kin Compass is now available on Google Play.</description>
+    </item>
+
+    <item>
+      <title>Smart store links under /go/</title>
+      <link>https://another1dd.github.io/build-log/#timeline</link>
+      <guid isPermaLink="false">build-log-2026-10-20-go-links</guid>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+      <description>One link per app that opens the App Store or Google Play depending on the phone, with a QR code for desktop visitors.</description>
+    </item>
+
+    <item>
+      <title>Flare live on Google Play</title>
+      <link>https://another1dd.github.io/flare/</link>
+      <guid isPermaLink="false">build-log-2026-10-19-flare-play</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Flare is now available on Google Play.</description>
+    </item>
+
+    <item>
+      <title>Kin Compass 1.2.0 live on the iOS App Store</title>
+      <link>https://another1dd.github.io/kincompass/</link>
+      <guid isPermaLink="false">build-log-2026-10-18-kincompass-120-live</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Kin Compass 1.2.0 adds Delete all data in Profile, and sharing now sends a short message with the link.</description>
+    </item>
+
+    <item>
+      <title>Bloomelle 1.1.0 live on the iOS App Store</title>
+      <link>https://another1dd.github.io/bloomelle/</link>
+      <guid isPermaLink="false">build-log-2026-10-16-bloomelle-110-live</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Bloomelle 1.1.0, a fix release, went live on the iOS App Store.</description>
+    </item>
+
+    <item>
+      <title>Flare 1.3.0 live on the iOS App Store</title>
+      <link>https://another1dd.github.io/flare/</link>
+      <guid isPermaLink="false">build-log-2026-10-14-flare-130-live</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Flare 1.3.0 keeps hot flash intensity and duration out of analytics and schedules reminders more reliably.</description>
+    </item>
 
     <item>
       <title>Bloomelle 1.1.0 submitted for review</title>

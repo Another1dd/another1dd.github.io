@@ -9,7 +9,7 @@
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="How Chepatapa Apps' six products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.">
+  <meta name="description" content="How Chepatapa Apps' seven products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.">
   <meta name="color-scheme" content="light dark">
   <title>Build Log — Chepatapa Apps</title>
   <link rel="canonical" href="https://another1dd.github.io/build-log/">
@@ -19,7 +19,7 @@
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="Build Log — Chepatapa Apps">
-  <meta property="og:description" content="How six products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.">
+  <meta property="og:description" content="How seven products get built by one developer sharing a single Flutter SDK and an AI-assisted, spec-driven workflow.">
   <meta property="og:url" content="https://another1dd.github.io/build-log/">
   <meta property="og:image" content="https://another1dd.github.io/assets/og-image-buildlog.png">
   <meta property="og:image:width" content="1200">
@@ -40,7 +40,7 @@
     "headline": "How Chepatapa Apps gets built",
     "url": "https://another1dd.github.io/build-log/",
     "datePublished": "2026-08-24",
-    "dateModified": "2026-10-12",
+    "dateModified": "2026-11-15",
     "author": {
       "@type": "Person",
       "@id": "https://another1dd.github.io/#tsimafei-lemeshchanka",
@@ -214,20 +214,20 @@
     <section class="hero">
       <h1>How this all gets built</h1>
       <p class="dek">
-        Five products, one developer, one shared codebase underneath. Notes on how Flare, Kin
-        Compass, Bloomelle, Perchly, and Publy actually get made — updated as things ship.
+        Seven products, one developer, one shared codebase underneath. Notes on how Flare, Kin
+        Compass, Bloomelle, Naveli, Torquelle, Perchly, and Publy actually get made — updated as things ship.
       </p>
     </section>
 
     <section class="card">
-      <h2>One developer, six products</h2>
+      <h2>One developer, seven products</h2>
       <p>
         Chepatapa Apps isn't a company in any formal sense — it's Tsimafei Lemeshchanka building
         small, focused apps and developer tools solo, alongside a full-time job. Flare (hot flash
-        tracking) and Kin Compass (ADHD parenting routines) are consumer iOS apps; Perchly and
+        tracking) and Kin Compass (ADHD parenting routines) are consumer apps on iOS and Android; Perchly and
         Publy are private package registries for Swift and Dart/Flutter teams; Bloomelle (cycle-phase
-        planning) is live on the App Store too, and Naveli (postpartum recovery yoga) is the newest,
-        still in development.
+        planning) is live on the App Store too. Naveli (postpartum recovery yoga) is in App Store review,
+        and Torquelle (service tracking for small engines) is the newest, still in development.
       </p>
       <p>
         The apps are deliberately small in scope — no team, no funding, no roadmap beyond "does
@@ -238,13 +238,13 @@
     </section>
 
     <section class="card">
-      <h2>One SDK, not six codebases</h2>
+      <h2>One SDK, not seven codebases</h2>
       <p>
-        Flare, Kin Compass, Bloomelle, and Naveli share <code>another1DD_flutter_sdk</code>, a local
+        Flare, Kin Compass, Bloomelle, Naveli, and Torquelle share <code>another1DD_flutter_sdk</code>, a local
         package monorepo with the Redux state container, dependency injection wiring, navigation,
         theming, and localization every app needs. Kin Compass started as a literal clone of
         Flare's skeleton with the hot-flash domain code stripped out; Bloomelle was scaffolded the
-        same way from Flare a few months later, and Naveli the same way from Bloomelle. New apps start from a working, battle-tested
+        same way from Flare a few months later, Naveli the same way from Bloomelle, and Torquelle from Flare 1.4.0. New apps start from a working, battle-tested
         foundation instead of a blank Flutter project.
       </p>
       <p>
@@ -257,7 +257,7 @@
     <section class="card">
       <h2>Built with Claude Code</h2>
       <p>
-        Most of the day-to-day implementation across all six projects — and this site — is done
+        Most of the day-to-day implementation across all seven projects — and this site — is done
         with Claude Code. Each feature starts as a written spec and plan checked into the repo
         before any code exists, gets implemented against that plan, and goes through an
         adversarial review pass looking specifically for what the plan or the implementation got
@@ -268,7 +268,7 @@
       <p>
         It doesn't replace product decisions or judgment calls — positioning, what not to build,
         what a screen should actually say — those stay human. It replaces the hours of
-        boilerplate and repetition that used to be the real cost of running six codebases alone.
+        boilerplate and repetition that used to be the real cost of running seven codebases alone.
       </p>
     </section>
 
@@ -369,6 +369,74 @@
         <li>
           <time datetime="2026-10-12">Oct 2026</time>
           <div class="entry"><p>Bloomelle 1.1.0, a fix release, submitted for App Store review. <span class="tag">In review</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-10-14">Oct 2026</time>
+          <div class="entry"><p>Flare 1.3.0 live on the iOS App Store: analytics no longer include the intensity or duration of a hot flash, and reminders are scheduled more reliably. <span class="tag">Shipped</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-10-16">Oct 2026</time>
+          <div class="entry"><p>Bloomelle 1.1.0 live on the iOS App Store. <span class="tag">Shipped</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-10-18">Oct 2026</time>
+          <div class="entry"><p>Kin Compass 1.2.0 live on the iOS App Store: Delete all data in Profile, and sharing now sends a short message with the link. <span class="tag">Shipped</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-10-19">Oct 2026</time>
+          <div class="entry"><p>Flare live on <a href="/flare/">Google Play</a>. <span class="tag">Shipped</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-10-20">Oct 2026</time>
+          <div class="entry"><p>Smart store links under <code>/go/</code>: one link that opens the App Store or Google Play depending on the phone, with a QR code on desktop.</p></div>
+        </li>
+        <li>
+          <time datetime="2026-10-26">Oct 2026</time>
+          <div class="entry"><p>Kin Compass live on <a href="/kincompass/">Google Play</a>. <span class="tag">Shipped</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-10-26">Oct 2026</time>
+          <div class="entry"><p>Torquelle started, cut from Flare 1.4.0's skeleton: a service tracker for mowers, chainsaws, generators and boat motors, counted by engine hours, tanks of fuel or months.</p></div>
+        </li>
+        <li>
+          <time datetime="2026-10-28">Oct 2026</time>
+          <div class="entry"><p>Flare 1.4.0 live on iOS and Android: Describe it, which turns one typed or dictated sentence into a filled-in log entry on the phone, plus Dutch and Swedish. <span class="tag">Shipped</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-10-30">Oct 2026</time>
+          <div class="entry"><p><a href="/torquelle/">Torquelle pages</a> added to the site.</p></div>
+        </li>
+        <li>
+          <time datetime="2026-11-04">Nov 2026</time>
+          <div class="entry"><p>Kin Compass 1.3.0 live on iOS and Android: a heads-up before a routine step ends, new scripts for hard moments, a free trial offer and a Brazilian Portuguese listing. <span class="tag">Shipped</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-11-09">Nov 2026</time>
+          <div class="entry"><p>Naveli 1.0 submitted for iOS App Store review. <span class="tag">In review</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-11-12">Nov 2026</time>
+          <div class="entry"><p>Torquelle gets service photos and receipts, PDF and CSV export of the service book, and translations into nine languages.</p></div>
+        </li>
+        <li>
+          <time datetime="2026-11-14">Nov 2026</time>
+          <div class="entry"><p>Flare 1.5.0 live on iOS and Android: layouts for the foldable iPhone Duo and large text sizes, and Describe it understands more ways to say a time. <span class="tag">Shipped</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-11-14">Nov 2026</time>
+          <div class="entry"><p>Bloomelle 1.2.0 live on the iOS App Store: cycle import from Apple Health, workout ideas for each phase and a free trial offer. <span class="tag">Shipped</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-11-15">Nov 2026</time>
+          <div class="entry"><p><a href="/build-log/extra-keyword-fields-us-app-store/">How five extra keyword fields in the US App Store were tested with a made-up word, then filled for Flare 1.5.0.</a> <span class="tag">Post</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-11-15">Nov 2026</time>
+          <div class="entry"><p><a href="/build-log/describe-it-on-device-parser/">How Describe it reads a sentence on the phone, in ten languages, with no server.</a> <span class="tag">Post</span></p></div>
+        </li>
+        <li>
+          <time datetime="2026-11-15">Nov 2026</time>
+          <div class="entry"><p><a href="/build-log/fitting-flare-on-iphone-duo/">Fitting Flare on the iPhone Duo, and the bug where folding the phone emptied the log.</a> <span class="tag">Post</span></p></div>
         </li>
       </ul>
     </section>

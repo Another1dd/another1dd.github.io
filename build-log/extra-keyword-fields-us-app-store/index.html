@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The US App Store also indexes the keyword fields of five other localizations. A made-up word in Flare's Korean listing ranked #1 in the US the day it went live. How the probe worked and how Flare 1.5.0 uses the extra 500 characters.">
+  <meta name="color-scheme" content="light dark">
+  <title>Five Extra Keyword Fields in the US App Store — Chepatapa Apps Build Log</title>
+  <link rel="canonical" href="https://another1dd.github.io/build-log/extra-keyword-fields-us-app-store/">
+  <meta name="theme-color" content="#FDF6EF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1E1815" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Five Extra Keyword Fields in the US App Store">
+  <meta property="og:description" content="The US App Store also indexes the keyword fields of five other localizations. A made-up word in Flare's Korean listing ranked #1 in the US the day it went live. How the probe worked and how Flare 1.5.0 uses the extra 500 characters.">
+  <meta property="og:url" content="https://another1dd.github.io/build-log/extra-keyword-fields-us-app-store/">
+  <meta property="og:image" content="https://another1dd.github.io/assets/og-image-buildlog.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Five Extra Keyword Fields in the US App Store",
+    "url": "https://another1dd.github.io/build-log/extra-keyword-fields-us-app-store/",
+    "datePublished": "2026-11-15",
+    "dateModified": "2026-11-15",
+    "author": {
+      "@type": "Person",
+      "@id": "https://another1dd.github.io/#tsimafei-lemeshchanka",
+      "name": "Tsimafei Lemeshchanka",
+      "url": "https://github.com/Another1dd",
+      "jobTitle": "Developer",
+      "sameAs": [
+        "https://github.com/Another1dd",
+        "https://www.linkedin.com/in/timophei-lemeshchenko/"
+      ]
+    },
+    "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://another1dd.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Build Log", "item": "https://another1dd.github.io/build-log/" },
+      { "@type": "ListItem", "position": 3, "name": "Five Extra Keyword Fields in the US App Store", "item": "https://another1dd.github.io/build-log/extra-keyword-fields-us-app-store/" }
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+    :root {
+      --accent: #9E6B4A;
+    }
+    @media (prefers-color-scheme: dark) {
+:root {
+      --accent:#D9A46F;
+    }
+}
+    [data-theme="dark"] {
+      --accent: #D9A46F;
+    }
+    [data-theme="light"] {
+      --accent: #9E6B4A;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    h1, h2 { font-family: 'Fraunces', Georgia, serif; }
+    header {
+      padding: 40px 24px 0;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .back {
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back:hover { text-decoration: underline; }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+    .hero {
+      padding: 32px 0 8px;
+    }
+    .hero p.kicker {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .hero p.dek {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    section.card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+    section.card h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    section.card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    section.card p:last-child { margin-bottom: 0; }
+    section.card code {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 1px 6px;
+      font-size: 13px;
+      color: var(--text);
+    }
+    section.card a { color: var(--accent); }
+    section.card code { overflow-wrap: anywhere; }
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 8px 0 16px;
+    }
+    .before-after div {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .before-after .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 4px;
+    }
+    .before-after .value {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    footer a { color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <div class="site-bar">
+    <a class="site-brand" href="/"><img src="/assets/favicon-32x32.png" alt="" width="28" height="28"><span>Chepatapa Apps</span></a>
+    <nav class="site-links" aria-label="Site">
+      <a href="/about/">About</a>
+      <a href="/build-log/">Build Log</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+    </nav>
+  </div>
+
+  <header>
+    <a class="back" href="/build-log/">&#8592; Build Log</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="kicker">Nov 2026 &middot; Flare / App Store</p>
+      <h1>Five Extra Keyword Fields in the US App Store</h1>
+      <p class="dek">
+        Every App Store listing gets one 100-character keyword field per language. The US
+        storefront also reads the keyword fields of five other localizations. I didn't trust
+        that until a made-up word put Flare at #1 in the US. Flare 1.5.0 now uses all five
+        fields, which adds up to 500 more characters of English search terms.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>The 100-character problem</h2>
+      <p>
+        On the App Store, search matches the app name, the subtitle and a hidden keyword field
+        of 100 characters per localization. For a niche app that is very little room. Flare's
+        en-US field is already full:
+      </p>
+      <p><code>perimenopause,night,sweats,hormone,vasomotor,trigger,hrt,estrogen,flush,relief,symptoms,diary,stage</code></p>
+      <p>
+        Words in the name and subtitle are already indexed, so repeating them in the field wastes
+        characters. After that, every word that goes in pushes another one out.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>The claim, and why I tested it first</h2>
+      <p>
+        Each storefront indexes more than one localization. For the US, the extra ones are
+        Arabic (ar-SA), Simplified and Traditional Chinese, Korean and Vietnamese. A couple of ASO
+        tool vendors reported in 2022 that the keyword fields of those localizations are
+        searchable in the US. That comes from third parties, not from Apple's documentation, and
+        keyword changes only go live with a new version that passes App Review. If the claim
+        turned out to be wrong, I would lose a whole release cycle to find out.
+      </p>
+      <p>
+        So the first step was a probe, not a rollout.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>The probe: one word nobody searches for</h2>
+      <p>
+        Flare 1.3.0 added a Korean listing that copies the en-US name, subtitle, description and
+        screenshots. Its keyword field held a few real English words and one made-up token,
+        <code>qelvarith</code>, which appears nowhere else on the App Store. The rank tracker
+        started watching that token in the US storefront on October 12, and it wasn't ranked.
+      </p>
+      <div class="before-after">
+        <div><p class="label">Oct 12, before 1.3.0</p><p class="value">Not ranked</p></div>
+        <div><p class="label">Oct 14, 1.3.0 live</p><p class="value">#1, only result</p></div>
+      </div>
+      <p>
+        The day 1.3.0 went live, a US search for the token returned Flare as the only result.
+        It stayed at #1 in every snapshot after that. Since the token existed only in the Korean
+        field, that field is indexed for US search.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Swapping the probe for real words</h2>
+      <p>
+        A made-up word is fine for one test and wrong to keep: App Review Guideline 2.3.7 says
+        keywords must describe the app. So Flare 1.5.0 removes the token and gives each of the
+        five fields one topic, all in English:
+      </p>
+      <p>
+        <strong>Korean:</strong> the existing words plus the plurals <code>flashes</code> and
+        <code>flushes</code>. <strong>Vietnamese:</strong> triggers (caffeine, alcohol, spicy,
+        sugar, smoking). <strong>Simplified Chinese:</strong> features (intensity, duration,
+        export, weekly digest, correlation). <strong>Traditional Chinese:</strong> the condition
+        and who has it (menopausal, perimenopausal, midlife, sweating, flushing).
+        <strong>Arabic:</strong> doctor visits and analysis (appointment, summary, analysis,
+        episode).
+      </p>
+      <p>
+        The plurals were a separate small experiment. Apple is said to match singular and plural
+        forms on its own. But with no metadata change since 1.2.2, "hot flashes" moved between
+        #4 and #51 in the US while "hot flash" stayed at #1. Adding the plurals explicitly is
+        cheap, and the tracker will show whether they help.
+      </p>
+      <p>
+        Two rules kept the extra room from being wasted. No word appears in more than one field
+        (en-US included), and every field stays under 100 bytes. One cost: people in Korea,
+        Vietnam, China and Saudi Arabia now see an English listing. For Flare that changes
+        nothing, since the app isn't translated into those languages anyway.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Measuring it properly</h2>
+      <p>
+        A rank change means nothing without a baseline. Before 1.5.0 shipped, US tracking for
+        Flare went from 21 phrases to 48, with every new single word from the extra fields and
+        phrases built from them. The baseline already held a surprise: phrases like "hot flash
+        triggers" (#1), "hot flash diary" (#2) and "hot flash log" (#3) ranked from the existing
+        en-US words alone. The words that live only in the new fields (caffeine, alcohol,
+        journal) didn't rank yet, as expected before the release.
+      </p>
+      <p>
+        The same five localizations now exist for Kin Compass, Bloomelle, Naveli and
+        Torquelle, each with its own English words.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Where it stands</h2>
+      <p>
+        Flare 1.5.0 went live on November 14. Ranks take three or four days to settle after a
+        release, so the first fair read is around November 18. The question is simple: do the
+        words that exist only in the Vietnamese, Chinese and Arabic fields start to rank in the
+        US? The test token says they should.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>The takeaway</h2>
+      <p>
+        When a trick costs a release cycle to try, test the mechanism with something you can
+        measure without doubt before you spend real keywords on it. A token with zero
+        competition answers yes or no in one day. A real keyword moving from #40 to #30 answers
+        nothing.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 <a href="/">Chepatapa Apps</a> &middot; built by Tsimafei Lemeshchanka &middot; <a href="/about/">About</a> &middot; <a href="/build-log/">Build Log</a>
+  </footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = (document.documentElement.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>
