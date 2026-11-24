@@ -41,6 +41,7 @@
     "url": "https://another1dd.github.io/naveli/",
     "image": "https://another1dd.github.io/naveli/assets/icon-1024.png",
     "operatingSystem": "iOS",
+    "installUrl": "https://apps.apple.com/app/id6818128288",
     "applicationCategory": "HealthApplication",
     "description": "Postpartum recovery yoga with stage-based sequences, routing by delivery type (vaginal or C-section), pelvic-floor safety cues in every sequence, and a diastasis recti self-check.",
     "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
@@ -70,10 +71,10 @@
       },
       {
         "@type": "Question",
-        "name": "When will Naveli be available?",
+        "name": "Where can I get Naveli?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Naveli is launching on the App Store for iPhone very soon. Check back on this page for the download link."
+          "text": "Naveli is available now on the App Store for iPhone. An Android version is coming to Google Play soon."
         }
       }
     ]
@@ -367,7 +368,6 @@
   <main>
     <section class="hero">
       <img class="icon" src="assets/icon-192.png" alt="Naveli app icon" width="88" height="88">
-      <span class="pill">Coming soon</span>
       <h1>Yoga for the body that just gave birth</h1>
       <p class="tagline">
         Naveli is postpartum recovery yoga built around where you are: the stage of recovery
@@ -375,9 +375,9 @@
         cues in every one.
       </p>
       <div class="cta-row">
-        <button class="store-badge pending" id="notify-cta-ios">
+        <a class="store-badge" href="https://apps.apple.com/app/id6818128288?pt=128995653&amp;ct=web_naveli&amp;mt=8" id="ios-cta">
           <img src="assets/app-store-badge.svg" alt="Download on the App Store">
-        </button>
+        </a>
         <button class="store-badge pending" id="notify-cta-android">
           <img src="assets/google-play-badge.svg" alt="Get it on Google Play">
         </button>
@@ -480,10 +480,10 @@
         </p>
       </div>
       <div class="faq-item">
-        <h3>When will Naveli be available?</h3>
+        <h3>Where can I get Naveli?</h3>
         <p>
-          Naveli is launching on the App Store for iPhone very soon. Check back on this page
-          for the download link.
+          Naveli is available now on the App Store for iPhone. An Android version is coming
+          to Google Play soon.
         </p>
       </div>
     </section>
@@ -499,9 +499,9 @@
 
   <div class="modal-overlay" id="notify-modal">
     <div class="modal-box">
-      <h3>Naveli is launching soon</h3>
-      <p>Naveli is almost ready for the App Store. Want to hear the moment it launches? Email
-        <a href="mailto:tsimafei.lemeshchanka@gmail.com?subject=Naveli%20%E2%80%94%20Notify%20me%20at%20launch">tsimafei.lemeshchanka@gmail.com</a>
+      <h3>Naveli for Android is coming soon</h3>
+      <p>Naveli is on the App Store for iPhone now, and the Android version is on its way to Google Play. Want to hear the moment it launches? Email
+        <a href="mailto:tsimafei.lemeshchanka@gmail.com?subject=Naveli%20%E2%80%94%20Notify%20me%20when%20Android%20launches">tsimafei.lemeshchanka@gmail.com</a>
         and we'll let you know.</p>
       <button id="notify-modal-close">Close</button>
     </div>
@@ -510,9 +510,6 @@
   <script>
     var modal = document.getElementById('notify-modal');
 
-    document.getElementById('notify-cta-ios').addEventListener('click', function () {
-      modal.classList.add('open');
-    });
     document.getElementById('notify-cta-android').addEventListener('click', function () {
       modal.classList.add('open');
     });
