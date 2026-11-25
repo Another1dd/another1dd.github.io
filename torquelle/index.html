@@ -41,6 +41,7 @@
     "url": "https://another1dd.github.io/torquelle/",
     "image": "https://another1dd.github.io/torquelle/assets/icon-1024.png",
     "operatingSystem": "iOS, Android",
+    "installUrl": "https://apps.apple.com/app/id6828796409",
     "applicationCategory": "UtilitiesApplication",
     "description": "Service tracker for small engines and motor equipment: service intervals by engine hours, tanks of fuel or months, a due and overdue list, local reminders, service history, service templates from manufacturer manuals and seasonal checklists.",
     "publisher": { "@type": "Organization", "name": "Chepatapa Apps", "url": "https://another1dd.github.io/" }
@@ -70,10 +71,10 @@
       },
       {
         "@type": "Question",
-        "name": "When will Torquelle be available?",
+        "name": "Where can I get Torquelle?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Torquelle is currently in development for iPhone and Android, with no fixed release date yet. Check back on this page for updates."
+          "text": "Torquelle is available now on the App Store for iPhone. An Android version is coming to Google Play soon."
         }
       }
     ]
@@ -349,16 +350,15 @@
   <main>
     <section class="hero">
       <img class="icon" src="assets/icon-192.png" alt="Torquelle app icon" width="88" height="88">
-      <span class="pill">Coming soon</span>
       <h1>Know when your engines need service</h1>
       <p class="tagline">
         Torquelle is a service tracker for small engines and motor equipment. Add your mower,
         generator or outboard, set service intervals, and see what is due or overdue.
       </p>
       <div class="cta-row">
-        <button class="store-badge pending" id="notify-cta-ios">
+        <a class="store-badge" href="https://apps.apple.com/app/id6828796409?pt=128995653&amp;ct=web_torquelle&amp;mt=8" id="ios-cta">
           <img src="assets/app-store-badge.svg" alt="Download on the App Store">
-        </button>
+        </a>
         <button class="store-badge pending" id="notify-cta-android">
           <img src="assets/google-play-badge.svg" alt="Get it on Google Play">
         </button>
@@ -440,10 +440,10 @@
         </p>
       </div>
       <div class="faq-item">
-        <h3>When will Torquelle be available?</h3>
+        <h3>Where can I get Torquelle?</h3>
         <p>
-          Torquelle is currently in development for iPhone and Android, with no fixed release
-          date yet. Check back on this page for updates.
+          Torquelle is available now on the App Store for iPhone. An Android version is coming
+          to Google Play soon.
         </p>
       </div>
     </section>
@@ -459,9 +459,9 @@
 
   <div class="modal-overlay" id="notify-modal">
     <div class="modal-box">
-      <h3>Torquelle is in development</h3>
-      <p>We're building Torquelle right now, and there's no fixed release date yet. Want to hear when it launches? Email
-        <a href="mailto:tsimafei.lemeshchanka@gmail.com?subject=Torquelle%20%E2%80%94%20Notify%20me%20at%20launch">tsimafei.lemeshchanka@gmail.com</a>
+      <h3>Torquelle for Android is coming soon</h3>
+      <p>Torquelle is on the App Store for iPhone now, and the Android version is on its way to Google Play. Want to hear the moment it launches? Email
+        <a href="mailto:tsimafei.lemeshchanka@gmail.com?subject=Torquelle%20%E2%80%94%20Notify%20me%20when%20Android%20launches">tsimafei.lemeshchanka@gmail.com</a>
         and we'll let you know.</p>
       <button id="notify-modal-close">Close</button>
     </div>
@@ -470,9 +470,6 @@
   <script>
     var modal = document.getElementById('notify-modal');
 
-    document.getElementById('notify-cta-ios').addEventListener('click', function () {
-      modal.classList.add('open');
-    });
     document.getElementById('notify-cta-android').addEventListener('click', function () {
       modal.classList.add('open');
     });
